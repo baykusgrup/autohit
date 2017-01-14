@@ -19,7 +19,7 @@
                 <div class="row">
                     <div class="col-xs-6">
                         <input class="form-control form-control-solid placeholder-no-fix form-group" type="text"
-                               autocomplete="off" placeholder="Username" name="username" required/></div>
+                               autocomplete="off" placeholder="Email" name="email" required/></div>
                     <div class="col-xs-6">
                         <input class="form-control form-control-solid placeholder-no-fix form-group" type="password"
                                autocomplete="off" placeholder="Password" name="password" required/></div>
