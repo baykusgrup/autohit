@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 if ($_SERVER['SERVER_NAME'] === '127.0.0.1') {
-    $config['base_url'] = '';
+    $config['base_url'] = 'http://127.0.0.1/autohit/';
 } else {
     $config['base_url'] = '';
 }
@@ -39,7 +39,7 @@ if ($_SERVER['SERVER_NAME'] === '127.0.0.1') {
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ $config['index_page'] = 'index.php';
 |
 | WARNING: If you set this to 'PATH_INFO', URIs will always be URL-decoded!
 */
-$config['uri_protocol']	= 'REQUEST_URI';
+$config['uri_protocol']	= 'AUTO';
 
 /*
 |--------------------------------------------------------------------------
