@@ -5,11 +5,13 @@ if (!class_exists('Login')) {
 
 </div>
 <div class="col-md-3">
+
+
     <!-- BEGIN ORDERED LISTS PORTLET-->
     <div class="portlet box blue">
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-gift"></i>Ordered Lists
+                <i class="fa fa-gift"></i>Daily Top 250
             </div>
         </div>
         <div class="portlet-body">
@@ -30,7 +32,30 @@ if (!class_exists('Login')) {
     <div class="portlet box yellow">
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-gift"></i>Unstyled Lists
+                <i class="fa fa-gift"></i>Weekly Top 250
+            </div>
+        </div>
+        <div class="portlet-body">
+            <ul class="list-unstyled">
+                <li> Lorem ipsum dolor sit amet</li>
+                <li> Consectetur adipiscing elit</li>
+                <li> Integer molestie lorem at massa</li>
+                <li> Facilisis in pretium nisl aliquet</li>
+                <li> Nulla volutpat aliquam velit
+                </li>
+                <li> Faucibus porta lacus fringilla vel</li>
+                <li> Aenean sit amet erat nunc</li>
+                <li> Eget porttitor lorem</li>
+            </ul>
+        </div>
+    </div>
+    <!-- END UNSTYLED LISTS PORTLET-->
+
+    <!-- BEGIN UNSTYLED LISTS PORTLET-->
+    <div class="portlet box red">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift"></i>Monthly Top 250
             </div>
         </div>
         <div class="portlet-body">

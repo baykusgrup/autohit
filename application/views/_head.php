@@ -112,7 +112,7 @@ if (!class_exists('Login')) {
         <div class="page-header-inner container">
             <!-- BEGIN LOGO -->
             <div class="page-logo">
-                <a href="index.html">
+                <a href="<?php echo base_url() ?>">
                     <img src="<?php echo base_url() ?>assets/layouts/layout/img/logo.png" alt="logo"
                          class="logo-default"/> </a>
                 <div class="menu-toggler sidebar-toggler">
