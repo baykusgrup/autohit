@@ -32,7 +32,7 @@
     <script language="javascript" type="text/javascript">
         <?php
         if ($_SERVER['SERVER_NAME'] === '127.0.0.1') {
-            echo 'var base_url = "http://127.0.0.1/picfy";';
+            echo 'var base_url = "http://127.0.0.1/autohit";';
         } else {
             echo 'var base_url = "http://sss.com";';
         }

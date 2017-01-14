@@ -13,15 +13,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-md-12">
                 <form id="form_sample_4" class="form-horizontal">
                     <div class="form-body">
+
                         <div class="form-group">
-                            <label class="col-md-2">Username</label>
-                            <div class="col-md-10">
-                                <input type="text" class="form-control" placeholder="Enter Name.."
-                                       name="userName" id="userName">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2"> Email address </label>
+                            <label class="col-md-2"> Email Address </label>
                             <div class="col-md-10">
                                 <input type="text" class="form-control"
                                        placeholder="Enter Mail Adress.."
@@ -38,8 +32,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     </div>
                     <div class="form-actions">
+                        <div id="register_alert" class="alert alert-success" style="display: none;"><strong>Başarılı
+                                !</strong> Uploaded Successfully
+                        </div>
                         <div class="row">
-                            <button class="btn blue btn-block">New Member</button>
+                            <a role="button" onclick="insertMember();" class="btn blue btn-block">New Member</a>
 
                         </div>
                     </div>
@@ -54,23 +51,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <script type="text/javascript">
 
-    function insertNewMember() {
+    function insertMember() {
 
-        var userName = document.getElementById("userName").value;
-        var userSurname = document.getElementById("userSurname").value;
         var e_mail_member = document.getElementById("e_mail_member").value;
         var password_member = document.getElementById("password_member").value;
 
-        var dataString = "user_name=" + userName + "&user_surname=" + userSurname + "&e_mail=" + e_mail_member + "&password=" + password_member;
+        var dataString = "e_mail=" + e_mail_member + "&password=" + password_member;
 
         $.ajax({
             type: "POST",
-            url: base_url + "/index.php/Register/insertFreelancer",
+            url: base_url + "/index.php/Register/insertMember",
             data: dataString,
             cache: false,
             success: function (result) {
-
-                alert("Basarili");
+                SuccessAlert("We added you successfull","register_alert");
             }
         });
 

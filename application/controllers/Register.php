@@ -14,87 +14,28 @@ class Register extends CI_Controller
         $this->load->view('_foot');
     }
 
-    public function insertFreelancer(){
+    public function insertMember(){
 
         $dateTime = date('Y-m-d H:i:s');
 
         $data=array();
-        $data["user_name"]= $this->input->post("user_name");
-        $data["user_surname"] = $this->input->post("user_surname");
-        $data["e_mail"]= $this->input->post("e_mail");
+        $data["email"]= $this->input->post("e_mail");
         $data["password"] = $this->input->post("password");
         $data["password_md5"] = md5($this->input->post("password"));
-        $data["firm"] = 0;
-        $data["e_mail"]= $this->input->post("e_mail");
 
-        $data["status"] = 1;
-        $data["reg_date"] = $dateTime;
-        $data["reg_user_id"] =0;
-        $data["up_date"] = $dateTime;
-        $data["up_user_id"]= 0;
+        $data["record_status"] = 1;
+        $data["insert_date"] = $dateTime;
+        $data["insert_user"] =0;
+        $data["update_date"] = $dateTime;
+        $data["update_user"]= 0;
 
-        $deger = $this->generalTables_model->insertTables("user_data",$data);
-
-        if ($deger !="0"){
-            $data2=array();
-            $data2["user_id"]=$deger;
-            $data2["freelancer_name"] =  $data["user_name"];
-            $data2["freelancer_surname"]=  $data["user_surname"];
+        $id = $this->generalTables_model->insertTables("users",$data);
 
 
-            $data2["status"] = 1;
-            $data2["reg_date"] = $dateTime;
-            $data2["reg_user_id"] =0;
-            $data2["up_date"] = $dateTime;
-            $data2["up_user_id"]= 0;
-
-            $deger2 = $this->generalTables_model->insertTables("freelancer",$data2);
-        }
-
-        return true;
+        return $id;
 
     }
 
-    public function insertFirm(){
-
-        $dateTime = date('Y-m-d H:i:s');
-
-        $data=array();
-        $data["user_name"]= $this->input->post("user_name");
-        $data["user_surname"] = $this->input->post("user_surname");
-        $data["e_mail"]= $this->input->post("e_mail");
-        $data["password"] = $this->input->post("password");
-        $data["password_md5"] = md5($this->input->post("password"));
-        $data["firm"] = 1;
-        $data["e_mail"]= $this->input->post("e_mail");
-
-        $data["status"] = 1;
-        $data["reg_date"] = $dateTime;
-        $data["reg_user_id"] =0;
-        $data["up_date"] = $dateTime;
-        $data["up_user_id"]= 0;
-
-        $deger = $this->generalTables_model->insertTables("user_data",$data);
-
-        if ($deger !="0"){
-            $data2=array();
-            $data2["user_id"]=$deger;
-            $data2["responsible_name"] =  $data["user_name"];
-            $data2["responsible_surname"]=  $data["user_surname"];
-            $data2["firm_name"]=  $this->input->post("firm_name");
-
-            $data2["status"] = 1;
-            $data2["reg_date"] = $dateTime;
-            $data2["reg_user_id"] =0;
-            $data2["up_date"] = $dateTime;
-            $data2["up_user_id"]= 0;
-
-            $deger2 = $this->generalTables_model->insertTables("firm",$data2);
-        }
-
-        return true;
-
-    }
 
     public function changeUserPass(){
 
