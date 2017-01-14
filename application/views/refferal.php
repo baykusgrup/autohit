@@ -26,7 +26,7 @@
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
                     <tr>
-                        <th colspan="2" class="font-red-intense">
+                        <th colspan="4" class="font-red-intense">
                             Your referrals
                         </th>
                     </tr>

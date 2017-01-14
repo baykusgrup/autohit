@@ -66,9 +66,13 @@
         <hr/>
         <div class="row">
             <div class="col-md-12">
-                <p class="text-info">Your active sites </p>
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
+                    <tr>
+                        <th colspan="4" class="font-red-intense">
+                            Your active sites
+                        </th>
+                    </tr>
                     <tr>
                         <th>Site Name</th>
                         <th>
