@@ -6,9 +6,6 @@
             <div class="caption">
                 <i class="fa fa-gift"></i>Ordered Lists
             </div>
-            <div class="tools">
-                <a href="javascript:;" class="collapse"> </a>
-            </div>
         </div>
         <div class="portlet-body">
             <ol>
@@ -29,9 +26,6 @@
         <div class="portlet-title">
             <div class="caption">
                 <i class="fa fa-gift"></i>Unstyled Lists
-            </div>
-            <div class="tools">
-                <a href="javascript:;" class="collapse"> </a>
             </div>
         </div>
         <div class="portlet-body">

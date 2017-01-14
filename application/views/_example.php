@@ -4,6 +4,17 @@
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
             <span class="caption-subject font-blue-sharp bold uppercase">My Account</span>
         </div>
+        <div class="actions">
+            <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                <i class="icon-cloud-upload"></i>
+            </a>
+            <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                <i class="icon-wrench"></i>
+            </a>
+            <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                <i class="icon-trash"></i>
+            </a>
+        </div>
     </div>
     <div class="portlet-body">
         <div class="row">
