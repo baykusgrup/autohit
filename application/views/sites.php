@@ -8,10 +8,14 @@
     <div class="portlet-body">
         <div class="row">
             <div class="col-md-12">
-                <p class="text-info">Easy Distribution</p>
 
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
+                    <tr>
+                        <th colspan="2" class="font-red-intense">
+                            Easy Distribution
+                        </th>
+                    </tr>
                     <tr>
                         <td colspan="2"> Easy Distribution - <a class="font-red-mint"> Available Credits: 2222</a></td>
                     </tr>
@@ -29,10 +33,14 @@
                     </tbody>
                 </table>
                 <hr/>
-                <p class="text-info">Active website</p>
 
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
+                    <tr>
+                        <th colspan="4" class="font-red-intense">
+                            Active website
+                        </th>
+                    </tr>
                     <tr>
                     <th>Site name</th>
                     <th>Url</th>
@@ -52,7 +60,7 @@
 
                 <hr />
 
-                <p class="text-info">Site Management</p>
+                <p  class="font-red-intense">Site Management</p>
 
             </div>
         </div>

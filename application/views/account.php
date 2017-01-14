@@ -8,9 +8,13 @@
     <div class="portlet-body">
         <div class="row">
             <div class="col-md-12">
-                <p class="text-info">Account İnfo</p>
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
+                    <tr>
+                        <th colspan="2" class="font-red-intense">
+                            Account İnfo
+                        </th>
+                    </tr>
                     <tr>
                         <td>Member ID</td>
                         <td>
@@ -78,9 +82,13 @@
         <hr/>
         <div class="row">
             <div class="col-md-12">
-                <p class="text-info">Account Settings </p>
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
+                    <tr>
+                        <th colspan="2" class="font-red-intense">
+                            Account Settings
+                        </th>
+                    </tr>
                     <tr>
                         <td>Auto Distribution</td>
                         <td>
