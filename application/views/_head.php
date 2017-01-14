@@ -570,7 +570,7 @@ if (!class_exists('Login')) {
                         </li>
                         <li class="nav-item  ">
                             <a href="<?php echo base_url() ?>Blocked" class="nav-link nav-toggle">
-                                <i class="icon-wallet"></i>
+                                <i class="icon-dislike"></i>
                                 <span class="title">Blocked Sites</span>
                             </a>
                         </li>
@@ -580,7 +580,7 @@ if (!class_exists('Login')) {
                         </li>
                         <li class="nav-item  ">
                             <a href="<?php echo base_url() ?>Buy" class="nav-link nav-toggle">
-                                <i class="icon-bulb"></i>
+                                <i class="icon-wallet"></i>
                                 <span class="title">Buy Credits</span>
                             </a>
                         </li>
