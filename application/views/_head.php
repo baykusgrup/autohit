@@ -10,11 +10,36 @@
 
 <head>
     <meta charset="utf-8"/>
-    <title>Metronic Admin Theme #1 | Boxed Page Layout</title>
+
+    <?php if (isset($title)) {
+        echo "<title>". $title ."</title>";
+        echo "<meta name=\"description\" content=\" . $description . \"/>";
+    }else {
+        echo "<title>Autosurf | This autosurf can help you to increase your rankings.</title>";
+    }
+    ?>
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta content="Preview page of Metronic Admin Theme #1 for boxed page layout" name="description"/>
-    <meta content="" name="author"/>
+    <meta content="Autosurf, get free geo-targeted visitors to your video, website or blog. This autosurf can help you to increase your rankings. Helpful SEO tool." name="description"/>
+    <meta content="BaykusGrup" name="author"/>
+    <link rel="shortcut icon" href="<?php echo base_url() ?>favicon.ico"/>
+
+    <?php if (!isset($_COOKIE['dil'])) {
+        $_COOKIE['dil'] = "en";
+    }
+    ?>
+    <script language="javascript" type="text/javascript">
+        <?php
+        if ($_SERVER['SERVER_NAME'] === '127.0.0.1') {
+            echo 'var base_url = "http://127.0.0.1/picfy";';
+        } else {
+            echo 'var base_url = "http://sss.com";';
+        }
+        ?>
+    </script>
+
+
     <!-- BEGIN GLOBAL MANDATORY STYLES -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet"
           type="text/css"/>
@@ -38,7 +63,6 @@
           type="text/css" id="style_color"/>
     <link href="<?php echo base_url() ?>assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="favicon.ico"/>
 </head>
 <!-- END HEAD -->
 
