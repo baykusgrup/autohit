@@ -52,6 +52,34 @@
     <link href="<?php echo base_url() ?>assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css"
           rel="stylesheet" type="text/css"/>
     <!-- END GLOBAL MANDATORY STYLES -->
+
+
+    <?php
+    if (class_exists('Login')) {
+    ?>
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="<?php echo base_url(); ?>assets/global/plugins/select2/css/select2.min.css?vlogin" rel="stylesheet"
+          type="text/css"/>
+    <link href="<?php echo base_url(); ?>assets/global/plugins/select2/css/select2-bootstrap.min.css?vlogin"
+          rel="stylesheet"
+          type="text/css"/>
+    <!-- END PAGE LEVEL PLUGINS --><!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="<?php echo base_url(); ?>assets/global/css/components-md.min.css?vlogin" rel="stylesheet"
+          id="style_components"
+          type="text/css"/>
+    <link href="<?php echo base_url(); ?>assets/global/css/plugins-md.min.css?vlogin" rel="stylesheet" type="text/css"/>
+    <!-- END THEME GLOBAL STYLES --><!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="<?php echo base_url(); ?>assets/pages/css/login-5.min.css?vlogin" rel="stylesheet" type="text/css"/>
+    <!-- END PAGE LEVEL STYLES -->
+
+
+        <?php
+    } else {
+    ?>
+
+        <?php
+    }
+    ?>
     <!-- BEGIN THEME GLOBAL STYLES -->
     <link href="<?php echo base_url() ?>assets/global/css/components-md.min.css" rel="stylesheet" id="style_components"
           type="text/css"/>
@@ -65,8 +93,18 @@
     <!-- END THEME LAYOUT STYLES -->
 </head>
 <!-- END HEAD -->
+<?php
+if (class_exists('Login')) {
+    echo "<body class=\"login\" style=\" background-color: #fff;\">";
+} else {
+    echo "<body class=\"page-header-fixed page-sidebar-opened page-content-white page-sidebar-fixed  page-boxed page-md\">";
+}
+?>
 
-<body class="page-header-fixed page-sidebar-opened page-content-white page-sidebar-fixed  page-boxed page-md">
+<?php
+if (!class_exists('Login')) {
+?>
+
 <div class="page-wrapper">
     <!-- BEGIN HEADER -->
     <div class="page-header navbar navbar-fixed-top">
@@ -91,6 +129,43 @@
             <!-- BEGIN TOP NAVIGATION MENU -->
             <div class="top-menu">
                 <ul class="nav navbar-nav pull-right">
+
+                    <!-- BEGIN LANGUAGE BAR -->
+                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                    <li class="dropdown dropdown-language"><a href="javascript:;" class="dropdown-toggle"
+                                                              data-toggle="dropdown" data-hover="dropdown"
+                                                              data-close-others="true"> <img alt=""
+                                                                                             src="<?php echo base_url() ?>assets/global/img/flags/<?php echo $_COOKIE['dil']; ?>.png">
+                            &nbsp;
+                            <span class="langname"><?php echo $_COOKIE['dil']; ?></span> <i
+                                    class="fa fa-angle-down"></i> </a>
+                        <ul class="dropdown-menu dropdown-menu-default">
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/en"> <img alt=""
+                                                                                                        src="<?php echo base_url() ?>assets/global/img/flags/en.png">
+                                    English
+                                </a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/tr"> <img alt=""
+                                                                                                        src="<?php echo base_url() ?>assets/global/img/flags/tr.png">
+                                    Turkish
+                                </a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/fa"> <img alt=""
+                                                                                                        src="<?php echo base_url() ?>assets/global/img/flags/fa.png">
+                                    Persian
+                                </a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/de"> <img alt=""
+                                                                                                        src="<?php echo base_url() ?>assets/global/img/flags/de.png">
+                                    German
+                                </a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/ru"> <img alt=""
+                                                                                                        src="<?php echo base_url() ?>assets/global/img/flags/ru.png">
+                                    Russian
+                                </a></li>
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/it"> <img alt=""
+                                                                                                        src="<?php echo base_url() ?>assets/global/img/flags/it.png">
+                                    Italian
+                                </a></li>
+                        </ul>
+                    </li>
                     <!-- BEGIN NOTIFICATION DROPDOWN -->
                     <!-- DOC: Apply "dropdown-dark" class after "dropdown-extended" to change the dropdown styte -->
                     <!-- DOC: Apply "dropdown-hoverable" class after below "dropdown" and remove data-toggle="dropdown" data-hover="dropdown" data-close-others="true" attributes to enable hover dropdown mode -->
@@ -573,3 +648,6 @@
                         <div class="row">
                             <div class="col-md-9">
 
+                                <?php
+                                }
+                                ?>

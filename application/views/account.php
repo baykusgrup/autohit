@@ -2,13 +2,13 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
-            <span class="caption-subject font-blue-sharp bold uppercase">My Account</span>
+            <span class="caption-subject font-blue-sharp bold uppercase">My Account - <?php echo lang("welcome"); ?></span>
         </div>
     </div>
     <div class="portlet-body">
         <div class="row">
             <div class="col-md-12">
-                <p class="text-info">Account İnfo </p>
+                <p class="text-info">Account İnfo</p>
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
                     <tr>
