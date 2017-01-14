@@ -1,11 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Account extends CI_Controller {
+class Top extends CI_Controller
+{
 
     public function index()
     {
-
         $this->load->helper(['language', 'lang', 'url']);
         dilSecici();
 
@@ -16,7 +16,6 @@ class Account extends CI_Controller {
 
     public function Weekly()
     {
-
         $this->load->helper(['language', 'lang', 'url']);
         dilSecici();
 
@@ -28,7 +27,6 @@ class Account extends CI_Controller {
 
     public function Monthly()
     {
-
         $this->load->helper(['language', 'lang', 'url']);
         dilSecici();
 
