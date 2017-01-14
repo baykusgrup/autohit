@@ -586,26 +586,26 @@ if (!class_exists('Login')) {
                         </li>
                         <li class="nav-item  ">
                             <a href="<?php echo base_url() ?>index.php/Refferal" class="nav-link nav-toggle">
-                                <i class="icon-pointer"></i>
+                                <i class="icon-users"></i>
                                 <span class="title">Refferal</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
                             <a href="<?php echo base_url() ?>index.php/Statistics" class="nav-link nav-toggle">
-                                <i class="icon-pointer"></i>
+                                <i class="icon-bar-chart"></i>
                                 <span class="title">Statistics</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
                             <a href="<?php echo base_url() ?>index.php/Help" class="nav-link nav-toggle">
-                                <i class="icon-pointer"></i>
+                                <i class="icon-directions"></i>
                                 <span class="title">Help</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
                             <a href="mailto:info@autohit.com?subject=#sss Comments&body=Hi!"
                                class="nav-link nav-toggle">
-                                <i class="icon-pointer"></i>
+                                <i class="icon-envelope-letter"></i>
                                 <span class="title">Contact us</span>
                             </a>
                         </li>
