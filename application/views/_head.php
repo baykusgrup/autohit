@@ -605,15 +605,15 @@ if (!class_exists('Login')) {
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="<?php echo base_url() ?>index.php/Statistics" class="nav-link nav-toggle">
-                                <i class="icon-pointer"></i>
-                                <span class="title">Statistics</span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
                             <a href="<?php echo base_url() ?>index.php/Refferal" class="nav-link nav-toggle">
                                 <i class="icon-pointer"></i>
                                 <span class="title">Refferal</span>
+                            </a>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="<?php echo base_url() ?>index.php/Statistics" class="nav-link nav-toggle">
+                                <i class="icon-pointer"></i>
+                                <span class="title">Statistics</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
