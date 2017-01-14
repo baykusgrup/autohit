@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 if ($_SERVER['SERVER_NAME'] === '127.0.0.1') {
-    $config['base_url'] = 'http://127.0.0.1/autohit/';
+    $config['base_url'] = '';
 } else {
     $config['base_url'] = '';
 }
@@ -39,7 +39,7 @@ if ($_SERVER['SERVER_NAME'] === '127.0.0.1') {
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = 'index.php';
 
 /*
 |--------------------------------------------------------------------------

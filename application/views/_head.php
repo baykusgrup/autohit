@@ -491,12 +491,12 @@ if (!class_exists('Login')) {
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
                             <li>
-                                <a href="<?php echo base_url() ?>Account">
+                                <a href="<?php echo base_url() ?>index.php/Account">
                                     <i class="icon-user"></i> My Account </a>
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="<?php echo base_url() ?>VerifyLogin/sessionDestroy">
+                                <a href="<?php echo base_url() ?>index.php/VerifyLogin/sessionDestroy">
                                     <i class="icon-key"></i> Log Out </a>
                             </li>
                         </ul>
@@ -548,7 +548,7 @@ if (!class_exists('Login')) {
                         <!-- END SIDEBAR TOGGLER BUTTON -->
 
                         <li class="nav-item start ">
-                            <a href="<?php echo base_url() ?>Account" class="nav-link nav-toggle">
+                            <a href="<?php echo base_url() ?>index.php/Account" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
                                 <span class="title">My Account</span>
                             </a>
@@ -557,19 +557,19 @@ if (!class_exists('Login')) {
                             <h3 class="uppercase">About Site</h3>
                         </li>
                         <li class="nav-item  ">
-                            <a href="<?php echo base_url() ?>Earn" class="nav-link nav-toggle">
+                            <a href="<?php echo base_url() ?>index.php/Earn" class="nav-link nav-toggle">
                                 <i class="icon-settings"></i>
                                 <span class="title">Earn Credits</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="<?php echo base_url() ?>Sites" class="nav-link nav-toggle">
+                            <a href="<?php echo base_url() ?>index.php/Sites" class="nav-link nav-toggle">
                                 <i class="icon-diamond"></i>
                                 <span class="title">My Sites</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="<?php echo base_url() ?>Blocked" class="nav-link nav-toggle">
+                            <a href="<?php echo base_url() ?>index.php/Blocked" class="nav-link nav-toggle">
                                 <i class="icon-dislike"></i>
                                 <span class="title">Blocked Sites</span>
                             </a>
@@ -579,25 +579,25 @@ if (!class_exists('Login')) {
                             <h3 class="uppercase">Other Thinks</h3>
                         </li>
                         <li class="nav-item  ">
-                            <a href="<?php echo base_url() ?>Buy" class="nav-link nav-toggle">
+                            <a href="<?php echo base_url() ?>index.php/Buy" class="nav-link nav-toggle">
                                 <i class="icon-wallet"></i>
                                 <span class="title">Buy Credits</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="<?php echo base_url() ?>Refferal" class="nav-link nav-toggle">
+                            <a href="<?php echo base_url() ?>index.php/Refferal" class="nav-link nav-toggle">
                                 <i class="icon-pointer"></i>
                                 <span class="title">Refferal</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="<?php echo base_url() ?>Statistics" class="nav-link nav-toggle">
+                            <a href="<?php echo base_url() ?>index.php/Statistics" class="nav-link nav-toggle">
                                 <i class="icon-pointer"></i>
                                 <span class="title">Statistics</span>
                             </a>
                         </li>
                         <li class="nav-item  ">
-                            <a href="<?php echo base_url() ?>Help" class="nav-link nav-toggle">
+                            <a href="<?php echo base_url() ?>index.php/Help" class="nav-link nav-toggle">
                                 <i class="icon-pointer"></i>
                                 <span class="title">Help</span>
                             </a>

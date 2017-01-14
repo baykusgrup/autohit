@@ -23,7 +23,7 @@ if (!class_exists('Login')) {
                 <li> Nulla volutpat aliquam velit</li>
                 <li> Faucibus porta lacus fringilla vel</li>
                 <li> Aenean sit amet erat nunc</li>
-                <li class="text-center"> <a class="font-red-mint"> See more</a></li>
+                <li class="text-center"> <a href="<?php echo base_url() ?>index.php/Top" class="font-red-mint"> See more</a></li>
             </ul>
         </div>
     </div>
@@ -45,7 +45,7 @@ if (!class_exists('Login')) {
                 </li>
                 <li> Faucibus porta lacus fringilla vel</li>
                 <li> Aenean sit amet erat nunc</li>
-                <li class="text-center"> <a class="font-red-mint"> See more</a></li>
+                <li class="text-center"> <a href="<?php echo base_url() ?>index.php/Top/Weekly" class="font-red-mint"> See more</a></li>
             </ul>
         </div>
     </div>
@@ -68,7 +68,7 @@ if (!class_exists('Login')) {
                 </li>
                 <li> Faucibus porta lacus fringilla vel</li>
                 <li> Aenean sit amet erat nunc</li>
-                <li class="text-center"> <a class="font-red-mint"> See more</a></li>
+                <li class="text-center"> <a href="<?php echo base_url() ?>index.php/Top/Monthly" class="font-red-mint"> See more</a></li>
             </ul>
         </div>
     </div>
