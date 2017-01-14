@@ -22,12 +22,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> Username</td>
-                        <td>
-                            sss
-                        </td>
-                    </tr>
-                    <tr>
                         <td> Email</td>
                         <td>
                             sss
