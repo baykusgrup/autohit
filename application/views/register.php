@@ -71,28 +71,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     }
 
-    function insertNewFirm() {
-
-        var firmName = document.getElementById("firmName").value;
-        var userName = document.getElementById("userName_firm").value;
-        var userSurname = document.getElementById("userSurname_firm").value;
-        var e_mail_member = document.getElementById("e_mail_firm").value;
-        var password_member = document.getElementById("password_firm").value;
-
-        var dataString = "firm_name=" + firmName + "&user_name=" + userName + "&user_surname=" + userSurname + "&e_mail=" + e_mail_member + "&password=" + password_member;
-
-        $.ajax({
-            type: "POST",
-            url: base_url + "/index.php/Register/insertFirm",
-            data: dataString,
-            cache: false,
-            success: function (result) {
-
-                alert("Basarili Firma");
-            }
-        });
-
-
-    }
 
 </script>
