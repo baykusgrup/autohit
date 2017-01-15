@@ -22,11 +22,11 @@
                     <tr>
                         <td> 1</td>
                         <td>
+
                             http://www.meinsuperjob.de/?af=58
                         </td>
-                        <td>
-                            sss
-                        </td>
+                        <td width="82px"><a  href="javascript:;" class="btn btn-outline green btn-sm purple">
+                                <i class="fa fa-edit"></i> Delete </a></td>
                     </tr>
                     </tbody>
                 </table>
@@ -35,3 +35,4 @@
 
     </div>
 </div>
+

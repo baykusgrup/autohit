@@ -30,6 +30,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <label class="col-md-2"> Referral  </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" placeholder="Enter Password.."
+                                       name="password_member" id="password_member">
+                            </div>
+                        </div>
                     </div>
                     <div class="form-actions">
                         <div id="register_alert" class="alert alert-success" style="display: none;"><strong>Başarılı

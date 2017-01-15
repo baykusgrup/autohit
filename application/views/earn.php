@@ -21,15 +21,30 @@
                     <tbody>
 
                     <tr>
-                        <td>Auto distribution</td>
+                        <td>Auto Distribution</td>
+
                         <td>
-                            1223
+                            <label class="mt-checkbox mt-checkbox-outline">
+                                No
+                                <input type="checkbox" value="1" name="test"/>
+                                <span></span>
+                            </label>
+                        </td>
+                        <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
+                            data-original-title="
+When enabled, this option allows you to automatically distribute the credits earned through the viewer to your active sites. To accumulate credits in your bank you should disable this option. This option do not have any impact on credits purchased or already in the bank. ">
+                            <span class="badge badge-primary badge-roundless"> ? </span>
+
                         </td>
                     </tr>
                     <tr>
                         <td> Light Viewer Link</td>
                         <td>
                             sss
+                        </td>
+                        <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
+                            data-original-title="tooltips">
+                            <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
                     </tbody>
