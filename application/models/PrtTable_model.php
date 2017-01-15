@@ -12,6 +12,13 @@ class PrtTable_model extends CI_Model {
         return $sorgu->result_array();
     }
 
+    function getHelps(){
+        $this->db->select("prt_help_id,help_question,help_answer,help_status");
+        $this->db->where("record_status",1);
+        $sorgu=$this->db->get("prt_help");
+        return $sorgu->result_array();
+    }
+
 
 
 }

@@ -8,8 +8,11 @@ class Help extends CI_Controller {
         $this->load->helper(['language', 'lang', 'url']);
         dilSecici();
 
+        $data=array();
+        $data["helps"] = $this->prtTable_model->getHelps();
+
         $this->load->view('_head');
-        $this->load->view('help');
+        $this->load->view('help',$data);
         $this->load->view('_foot');
     }
 }
