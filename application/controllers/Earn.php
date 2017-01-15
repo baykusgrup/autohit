@@ -12,4 +12,15 @@ class Earn extends CI_Controller {
         $this->load->view('earn');
         $this->load->view('_foot');
     }
+
+
+    public function Surf()
+    {
+        $this->load->helper(['language', 'lang', 'url']);
+        dilSecici();
+
+        $this->load->view('_head');
+        $this->load->view('surf');
+        $this->load->view('_foot');
+    }
 }

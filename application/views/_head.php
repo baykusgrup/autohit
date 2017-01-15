@@ -12,16 +12,17 @@
     <meta charset="utf-8"/>
 
     <?php if (isset($title)) {
-        echo "<title>". $title ."</title>";
+        echo "<title>" . $title . "</title>";
         echo "<meta name=\"description\" content=\" . $description . \"/>";
-    }else {
+    } else {
         echo "<title>Autosurf | This autosurf can help you to increase your rankings.</title>";
     }
     ?>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta content="Autosurf, get free geo-targeted visitors to your video, website or blog. This autosurf can help you to increase your rankings. Helpful SEO tool." name="description"/>
+    <meta content="Autosurf, get free geo-targeted visitors to your video, website or blog. This autosurf can help you to increase your rankings. Helpful SEO tool."
+          name="description"/>
     <meta content="BaykusGrup" name="author"/>
     <link rel="shortcut icon" href="<?php echo base_url() ?>favicon.ico"/>
 
@@ -56,26 +57,17 @@
 
     <?php
     if (class_exists('Login')) {
-    ?>
-    <!-- BEGIN PAGE LEVEL PLUGINS -->
-    <link href="<?php echo base_url(); ?>assets/global/plugins/select2/css/select2.min.css?vlogin" rel="stylesheet"
-          type="text/css"/>
-    <link href="<?php echo base_url(); ?>assets/global/plugins/select2/css/select2-bootstrap.min.css?vlogin"
-          rel="stylesheet"
-          type="text/css"/>
-    <!-- END PAGE LEVEL PLUGINS --><!-- BEGIN THEME GLOBAL STYLES -->
-    <link href="<?php echo base_url(); ?>assets/global/css/components-md.min.css?vlogin" rel="stylesheet"
-          id="style_components"
-          type="text/css"/>
-    <link href="<?php echo base_url(); ?>assets/global/css/plugins-md.min.css?vlogin" rel="stylesheet" type="text/css"/>
-    <!-- END THEME GLOBAL STYLES --><!-- BEGIN PAGE LEVEL STYLES -->
-    <link href="<?php echo base_url(); ?>assets/pages/css/login-5.min.css?vlogin" rel="stylesheet" type="text/css"/>
-    <!-- END PAGE LEVEL STYLES -->
-
-
+        ?>
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <link href="<?php echo base_url(); ?>assets/global/plugins/select2/css/select2.min.css?vlogin" rel="stylesheet"
+              type="text/css"/>
+        <link href="<?php echo base_url(); ?>assets/global/plugins/select2/css/select2-bootstrap.min.css?vlogin"
+              rel="stylesheet"
+              type="text/css"/>
+        <!-- END PAGE LEVEL PLUGINS -->
         <?php
     } else {
-    ?>
+        ?>
 
         <?php
     }
@@ -85,6 +77,19 @@
           type="text/css"/>
     <link href="<?php echo base_url() ?>assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME GLOBAL STYLES -->
+    <?php
+    if (class_exists('Login')) {
+        ?>
+        <!-- BEGIN PAGE LEVEL STYLES -->
+        <link href="<?php echo base_url(); ?>assets/pages/css/login-5.min.css?vlogin" rel="stylesheet" type="text/css"/>
+        <!-- END PAGE LEVEL STYLES -->
+        <?php
+    } else {
+        ?>
+
+        <?php
+    }
+    ?>
     <!-- BEGIN THEME LAYOUT STYLES -->
     <link href="<?php echo base_url() ?>assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo base_url() ?>assets/layouts/layout/css/themes/light2.min.css" rel="stylesheet"
@@ -140,27 +145,27 @@ if (!class_exists('Login')) {
                             <span class="langname"><?php echo $_COOKIE['dil']; ?></span> <i
                                     class="fa fa-angle-down"></i> </a>
                         <ul class="dropdown-menu dropdown-menu-default">
-                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/en"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/en"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/en.png">
                                     English
                                 </a></li>
-                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/tr"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/tr"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/tr.png">
                                     Turkish
                                 </a></li>
-                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/fa"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/fa"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/fa.png">
                                     Persian
                                 </a></li>
-                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/de"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/de"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/de.png">
                                     German
                                 </a></li>
-                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/ru"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/ru"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/ru.png">
                                     Russian
                                 </a></li>
-                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/it"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/it"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/it.png">
                                     Italian
                                 </a></li>
