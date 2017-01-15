@@ -34,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <label class="col-md-2"> Referral  </label>
                             <div class="col-md-10">
                                 <input type="text" class="form-control" placeholder="Enter Password.."
-                                       name="password_member" id="password_member">
+                                       name="referral" id="referral">
                             </div>
                         </div>
                     </div>
@@ -62,8 +62,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         var e_mail_member = document.getElementById("e_mail_member").value;
         var password_member = document.getElementById("password_member").value;
+        var referral = document.getElementById("referral").value;
 
-        var dataString = "e_mail=" + e_mail_member + "&password=" + password_member;
+        var dataString = "e_mail=" + e_mail_member + "&password=" + password_member + "&referral=" + referral;
 
         $.ajax({
             type: "POST",

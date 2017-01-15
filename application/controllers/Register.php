@@ -38,8 +38,13 @@ class Register extends CI_Controller
             $dataDetail["registered_date"] = $dateTime;
             $dataDetail["view_rate"] = 0.8;
             $dataDetail["referance_code"] = uniqid();
-            $dataDetail["referance_code_to"] = 0;
 
+            if($this->input->post("referral")!=""){
+                $dataDetail["referance_code_to"] =$this->input->post("referral");
+            }
+            else{
+                $dataDetail["referance_code_to"] = 0;
+            }
 
             $dataDetail["record_status"] = 1;
             $dataDetail["insert_date"] = $dateTime;
