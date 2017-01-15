@@ -5,17 +5,22 @@ class Sites extends CI_Controller {
 
     public function index()
     {
-        $user_id=$this->session->userdata("user_id");
-        $this->load->helper(['language', 'lang', 'url']);
-        dilSecici();
+        if ($this->session->userdata('user_id') == NULL)
+            redirect("index.php/Login");
+        else {
+            $user_id=$this->session->userdata("user_id");
+            $this->load->helper(['language', 'lang', 'url']);
+            dilSecici();
 
-        $data=array();
-        $data["durations"]=$this->prtTable_model->getDurations();
-        $data["sites"]=$this->sites_model->getMySitesByUserID($user_id);
+            $data=array();
+            $data["durations"]=$this->prtTable_model->getDurations();
+            $data["sites"]=$this->sites_model->getMySitesByUserID($user_id);
 
-        $this->load->view('_head');
-        $this->load->view('sites',$data);
-        $this->load->view('_foot');
+            $this->load->view('_head');
+            $this->load->view('sites',$data);
+            $this->load->view('_foot');
+        }
+
     }
 
     public function addSite()

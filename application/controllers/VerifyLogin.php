@@ -75,7 +75,7 @@ class VerifyLogin extends CI_Controller
 
     public function sessionDestroy()
     {
-        $this->User->saveLogoutConnection();
+        $this->user->saveLogoutConnection();
         $this->session->sess_destroy();
         redirect("index.php/Login");
     }

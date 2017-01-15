@@ -5,12 +5,16 @@ class Earn extends CI_Controller {
 
     public function index()
     {
-        $this->load->helper(['language', 'lang', 'url']);
-        dilSecici();
+        if ($this->session->userdata('user_id') == NULL)
+            redirect("index.php/Login");
+        else {
+            $this->load->helper(['language', 'lang', 'url']);
+            dilSecici();
 
-        $this->load->view('_head');
-        $this->load->view('earn');
-        $this->load->view('_foot');
+            $this->load->view('_head');
+            $this->load->view('earn');
+            $this->load->view('_foot');
+        }
     }
 
 
