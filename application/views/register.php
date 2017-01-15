@@ -34,7 +34,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <label class="col-md-2"> Referral  </label>
                             <div class="col-md-10">
                                 <input type="text" class="form-control" placeholder="Enter Password.."
-                                       name="referral" id="referral">
+                                       name="referral" id="referral" value="<?php
+                                    if(isset($ref)){
+                                        echo $ref;
+                                    }
+                                ?>">
                             </div>
                         </div>
                     </div>

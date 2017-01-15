@@ -9,8 +9,21 @@ class Register extends CI_Controller
         $this->load->helper(['language', 'lang', 'url']);
         dilSecici();
 
+        $id = $_GET['ref'];
+
+        $data=array();
+
+        if($id==00000){
+            $data["ref"]="";
+        }
+        else{
+            $data["ref"]=$id;
+        }
+
+
+
         $this->load->view('_head');
-        $this->load->view('register');
+        $this->load->view('register',$data);
         $this->load->view('_foot');
     }
 
