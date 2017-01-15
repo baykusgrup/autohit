@@ -52,14 +52,33 @@
                         <th>Credits</th>
                         <th>Received today</th>
                     </tr>
-                    <tr>
+                    <div id="mySites_table">
+                        <?php
+
+                        foreach ($sites as $site){
+                            echo "<tr>
+                            <td>". $site["page_title"] ."</td>
+                            <td>". $site["url"] ."</td>
+                            <td>". $site["credits"] ."</td>
+                            <td>Total Amount Credit</td>
+    
+    
+                        </tr>";
+                        }
+
+                        ?>
+
+                    </div>
+
+
+                   <!-- <tr>
                         <td>(Aucun)</td>
                         <td>http://baykusgrup.com/?rastgele</td>
                         <td>11.299</td>
                         <td>Total Amount Credit</td>
 
 
-                    </tr>
+                    </tr> -->
                     </tbody>
                 </table>
 
@@ -155,8 +174,22 @@
             data: dataString,
             cache: false,
             success: function (result) {
-                alert(dataString);
+                //alert(dataString);
                 SuccessAlert("We added your url! ", "addSite_alert");
+                controllSites();
+            }
+        });
+
+    }
+    function controllSites() {
+
+        $.ajax({
+            type: "POST",
+            url: base_url + "/index.php/Sites/controllMySites",
+            cache: false,
+            success: function (result) {
+                //alert(dataString);
+                document.getElementById("mySites_table").innerHTML=result;
             }
         });
 
