@@ -15,7 +15,7 @@
                     option. To start the Viewer, click below.
 
                 </p>
-                <button class="btn blue btn-block">Start Viewer</button>
+                <a role="button" onclick="startSearching()" class="btn blue btn-block">Start Viewer</a>
 <br />
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
@@ -75,3 +75,16 @@
 
     </div>
 </div>
+
+<script type="text/javascript">
+
+    function startSearching() {
+            for(var i=0 ;i<=5 ;i++){
+                setTimeout(function () {
+                    window.open("http://serbayacar.com", '_blank');
+                }, 3000);
+            }
+
+    }
+
+</script>
