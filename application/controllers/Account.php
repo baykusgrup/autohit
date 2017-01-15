@@ -13,7 +13,7 @@ class Account extends CI_Controller {
         $data=array();
         $data["userInfo"] = $this->account_model->getUserAllInfoByUserID($user_id);
 
-        $this->load->view('_head');
+        $this->load->view('_head',$data);
         $this->load->view('account',$data);
         $this->load->view('_foot');
     }
