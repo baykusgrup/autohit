@@ -63,7 +63,6 @@
                 <div class="portlet-fit ">
                     <div class="table-scrollable">
                         <table class="table table-bordered table-hover">
-                            <tbody>
                             <tr>
                                 <th colspan="2" class="font-red-intense">
                                     Active website
@@ -85,14 +84,10 @@
                                 <th>Received<br> today</th>
                                 <th>Edit</th>
                             </tr>
-
-                            <div id="mySites_table">
-
+                            <tbody id="mySites_table">
                                 <?php
-
-
-                                    foreach ($sites as $site) {
-                                        echo "<tr>
+                                foreach ($sites as $site) {
+                                    echo "<tr>
                                                 <td>" . substr($site["page_title"], 0, 15) . "</td>
                                                 <td>" . substr($site["url"], 0, 25) . "</td>
                                                 <td>" . $site["credits"] . "</td>
@@ -100,98 +95,96 @@
                                                 <td><a href=\"javascript:;\" class=\"btn btn-outline green btn-sm purple\">
                                                                                     <i class=\"fa fa-edit\"></i> Edit </a></td>
                                             </tr>";
-                                    }
+                                }
 
-                                    ?>
-                             </div>
-
-                    </tbody>
-                    </table>
+                                ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
-        <!--Modal Payment Type-->
-        <div id="modal_addSite" class="modal fade" tabindex="-1" role="dialog"
-             aria-labelledby="modal_addSite" aria-hidden="true" style="display: none;">
-            <div class="modal-dialog  modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"
-                                aria-hidden="true"></button>
-                        <h4 class="modal-title">Add Site Detail</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form class="form-horizontal" role="form">
+            <!--Modal Payment Type-->
+            <div id="modal_addSite" class="modal fade" tabindex="-1" role="dialog"
+                 aria-labelledby="modal_addSite" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog  modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"
+                                    aria-hidden="true"></button>
+                            <h4 class="modal-title">Add Site Detail</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal" role="form">
 
-                            <div class="form-group">
-                                <label class="col-md-3">Site Title :</label>
-                                <div class="col-md-9">
-                                    <input type="text" class="form-control" placeholder="Site Title.."
-                                           name="site_title" id="site_title"/>
-                                    <div class="help-block">
-                                        enter a brief description of the site.
+                                <div class="form-group">
+                                    <label class="col-md-3">Site Title :</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" placeholder="Site Title.."
+                                               name="site_title" id="site_title"/>
+                                        <div class="help-block">
+                                            enter a brief description of the site.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-3">URL :</label>
-                                <div class="col-md-9">
-                                    <input type="text" class="form-control" placeholder="Site URL.."
-                                           name="site_url" id="site_url"/>
+                                <div class="form-group">
+                                    <label class="col-md-3">URL :</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" placeholder="Site URL.."
+                                               name="site_url" id="site_url"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-3">Remaining Credits :</label>
-                                <div class="col-md-9">
-                                    <input type="number" class="form-control" placeholder="Enter Credits.."
-                                           name="credits" id="credits"/>
+                                <div class="form-group">
+                                    <label class="col-md-3">Remaining Credits :</label>
+                                    <div class="col-md-9">
+                                        <input type="number" class="form-control" placeholder="Enter Credits.."
+                                               name="credits" id="credits"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-3">Visits Cost :</label>
-                                <div class="col-md-9">
-                                    <input readonly type="number" class="form-control" placeholder="Enter Amount.."
-                                           value="0.00"
-                                           name="visits_cost" id="visits_cost"/>
+                                <div class="form-group">
+                                    <label class="col-md-3">Visits Cost :</label>
+                                    <div class="col-md-9">
+                                        <input readonly type="number" class="form-control" placeholder="Enter Amount.."
+                                               value="0.00"
+                                               name="visits_cost" id="visits_cost"/>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-3">Visits Durations :</label>
-                                <div class="col-md-9">
-                                    <select id="visits_durations" class="form-control" name="package_selector">
-                                        <option value="-1"> Select Durations</option>
+                                <div class="form-group">
+                                    <label class="col-md-3">Visits Durations :</label>
+                                    <div class="col-md-9">
+                                        <select id="visits_durations" class="form-control" name="package_selector">
+                                            <option value="-1"> Select Durations</option>
 
-                                        <?php
+                                            <?php
 
-                                        foreach ($durations as $duration) {
-                                            echo "<option value=\"" . $duration["prt_durations_id"] . "\"> " . $duration["durations_sec"] . " seconds" . "</option>";
-                                        }
+                                            foreach ($durations as $duration) {
+                                                echo "<option value=\"" . $duration["prt_durations_id"] . "\"> " . $duration["durations_sec"] . " seconds" . "</option>";
+                                            }
 
 
-                                        ?>
+                                            ?>
 
-                                    </select>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
+                        <div id="addSite_alert" class="alert alert-success"
+                             style="display: none;"><strong>Başarılı
+                                !</strong> Uploaded Successfully
+                        </div>
+                        <div class="modal-footer">
+                            <button id="search_UserClose" class="btn default" data-dismiss="modal"
+                                    aria-hidden="true">Close
+                            </button>
+                            <a onclick="addSite();" type="button" class="btn btn-icon-only red">
+                                <i class="fa fa-plus"></i> </a></div>
                     </div>
-                    <div id="addSite_alert" class="alert alert-success"
-                         style="display: none;"><strong>Başarılı
-                            !</strong> Uploaded Successfully
-                    </div>
-                    <div class="modal-footer">
-                        <button id="search_UserClose" class="btn default" data-dismiss="modal"
-                                aria-hidden="true">Close
-                        </button>
-                        <a onclick="addSite();" type="button" class="btn btn-icon-only red">
-                            <i class="fa fa-plus"></i> </a></div>
                 </div>
             </div>
+            <!--/Modal Add Installment -->
         </div>
-        <!--/Modal Add Installment -->
-    </div>
 
-</div>
+    </div>
 </div>
 
 <script type="text/javascript">
@@ -225,9 +218,8 @@
             type: "POST",
             url: base_url + "/index.php/Sites/controllMySites",
             cache: false,
-            success: function (result) {
-                //alert(dataString);
-                document.getElementById("mySites_table").innerHTML = result;
+            success: function (html) {
+                $('#mySites_table').html(html)
             }
         });
 

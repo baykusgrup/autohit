@@ -109,21 +109,17 @@ When enabled, this option allows you to automatically distribute the credits ear
 </div>
 
 <script type="text/javascript">
-    var base = 'http://baykusgrup.com';
     var theurls=new Array(
-
         "http://{website}.whoisbucket.com/",
         "http://{website}.websitetrafficspy.com/",
         "http://validator.w3.org/check?uri=http://{website}",
         "http://www.alexa.com/siteinfo/{website}",
         "http://jigsaw.w3.org/css-validator/validator?uri=http://{website}",
         "http://who.is/whois/{website}",
-
         "http://www.similarsites.com/site/{website}",
         "http://baykusgrup.com");
 
-
-    maxsub=300;
+    maxsub=10;
 
     function geturl(){
         current1 = parseInt(document.getElementById("currentk").value);

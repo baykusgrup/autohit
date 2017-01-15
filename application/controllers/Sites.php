@@ -50,17 +50,17 @@ class Sites extends CI_Controller {
     public function controllMySites()
     {
         $user_id = $this->session->userdata("user_id");
-        $return=$this->sites_model->getMySitesByUserID($user_id);
+        $return = $this->sites_model->getMySitesByUserID($user_id);
         $HTML ="";
         foreach ($return as $site){
             $HTML .= "<tr>
-                            <td>". $site["page_title"] ."</td>
-                            <td>". $site["url"] ."</td>
-                            <td>". $site["credits"] ."</td>
-                            <td>Total Amount Credit</td>
-    
-    
-                     </tr>";
+                                                <td>" . substr($site["page_title"], 0, 15) . "</td>
+                                                <td>" . substr($site["url"], 0, 25) . "</td>
+                                                <td>" . $site["credits"] . "</td>
+                                                <td>sss</td>
+                                                <td><a href=\"javascript:;\" class=\"btn btn-outline green btn-sm purple\">
+                                                                                    <i class=\"fa fa-edit\"></i> Edit </a></td>
+                                            </tr>";
         }
         echo $HTML;
     }
