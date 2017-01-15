@@ -85,25 +85,25 @@
                                 <th>Received<br> today</th>
                                 <th>Edit</th>
                             </tr>
-                            <divid
-                            ="mySites_table">
 
-                            <?php
+                            <div id="mySites_table">
+
+                                <?php
 
 
-                            foreach ($sites as $site) {
-                                echo "<tr>
-                            <td>" . substr($site["page_title"], 0, 15) . "</td>
-                            <td>" . substr($site["url"], 0, 25) . "</td>
-                            <td>" . $site["credits"] . "</td>
-                            <td>sss</td>
-                            <td><a href=\"javascript:;\" class=\"btn btn-outline green btn-sm purple\">
-                                                                <i class=\"fa fa-edit\"></i> Edit </a></td>
-                        </tr>";
-                            }
+                                    foreach ($sites as $site) {
+                                        echo "<tr>
+                                                <td>" . substr($site["page_title"], 0, 15) . "</td>
+                                                <td>" . substr($site["url"], 0, 25) . "</td>
+                                                <td>" . $site["credits"] . "</td>
+                                                <td>sss</td>
+                                                <td><a href=\"javascript:;\" class=\"btn btn-outline green btn-sm purple\">
+                                                                                    <i class=\"fa fa-edit\"></i> Edit </a></td>
+                                            </tr>";
+                                    }
 
-                            ?>
-                    </div>
+                                    ?>
+                             </div>
 
                     </tbody>
                     </table>
