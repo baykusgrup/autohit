@@ -8,6 +8,9 @@
     <div class="portlet-body">
         <div class="row">
             <div class="col-md-12">
+                <div id="account_alert" class="alert alert-success" style="display: none;"><strong>Başarılı
+                        !</strong> Uploaded Successfully
+                </div>
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
                     <tr>
@@ -46,7 +49,24 @@
                     </tr>
                     <tr>
                         <td> Password</td>
-                        <td>sss
+                        <td>
+                            <?php
+                            if (isset($userInfo[0]["password"])) {
+                                echo "<a id='passLink' style='display: block' role=\"button\" onclick=\"changePassDiv();\">". $userInfo[0]["password"]."</a>";
+                            }
+                            ?>
+
+                            <div class="form-group" id="password_changeDiv" style="display: none" >
+                                <input class="form-action" type="password" id="new_password" >
+                            </div>
+                            <div class="form-group" id="password_changeDiv2" style="display: none" >
+                                <input class="form-action" type="password" id="new_password2" >
+                            </div>
+
+                            <div class="form-group" id="password_Done" style="display: none" >
+                                <a  type="button" onclick="changePassword();"   >Done</a>
+                            </div>
+
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
                             data-original-title="tooltips">
@@ -115,7 +135,7 @@
                         <td>
                             <?php
                             if (isset($userInfo[0]["referance_code"])) {
-                                echo $userInfo[0]["referance_code"];
+                                echo "<a href=\"".base_url()."index.php/Register/?ref=".$userInfo[0]["referance_code"]."\" >".$userInfo[0]["referance_code"]."</a>";
                             } ?>
                         </td>
 
@@ -173,3 +193,40 @@ When enabled, this option allows you to automatically distribute the credits ear
 
     </div>
 </div>
+
+<script type="text/javascript">
+
+   function changePassDiv(){
+       document.getElementById("password_changeDiv").style = "display: block";
+       document.getElementById("password_changeDiv2").style = "display: block";
+       document.getElementById("passLink").style = "display: none";
+       document.getElementById("password_Done").style = "display: block";
+   }
+
+   function changePassword() {
+
+       var pass = document.getElementById("new_password").value;
+       var controll_pass = document.getElementById("new_password2").value;
+       var dataString = "pass=" +pass;
+       if(pass==controll_pass){
+           $.ajax({
+               type: "POST",
+               url: base_url + "/index.php/Account/changePassword",
+               data: dataString,
+               cache: false,
+               success: function (result) {
+                   SuccessAlert("We updated your password successfully!","account_alert");
+               }
+           });
+       }
+       else{
+           WarningAlert ("Plese give the same password for updating!", "account_alert");
+       }
+
+
+
+
+
+
+   }
+</script>
