@@ -49,7 +49,7 @@
                     </tr>
                     <tr>
                         <td> Password</td>
-                        <td>
+                        <td id="pass_td">
                             <?php
                             if (isset($userInfo[0]["password"])) {
                                 echo "<a id='passLink' style='display: block' role=\"button\" onclick=\"changePassDiv();\">". $userInfo[0]["password"]."</a>";
@@ -216,6 +216,12 @@ When enabled, this option allows you to automatically distribute the credits ear
                cache: false,
                success: function (result) {
                    SuccessAlert("We updated your password successfully!","account_alert");
+
+                   document.getElementById("password_changeDiv").style = "display: none";
+                   document.getElementById("password_changeDiv2").style = "display: none";
+                   document.getElementById("passLink").style = "display: block";
+                   document.getElementById("password_Done").style = "display: none";
+                   document.getElementById("pass_td").innerHTML = "<a id='passLink' style='display: block' role=\"button\" onclick=\"changePassDiv();\">"+pass+"</a>";
                }
            });
        }
