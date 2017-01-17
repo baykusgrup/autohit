@@ -31,13 +31,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-2"> Referral  </label>
+                            <label class="col-md-2"> Referral </label>
                             <div class="col-md-10">
-                                <input type="text" class="form-control" placeholder="Enter Password.."
+                                <input type="text" class="form-control" placeholder="<?php
+                                if (isset($ref)) {
+                                    echo $ref;
+                                }
+                                ?>"
                                        name="referral" id="referral" value="<?php
-                                    if(isset($ref)){
-                                        echo $ref;
-                                    }
+                                if (isset($ref)) {
+                                    echo $ref;
+                                }
                                 ?>">
                             </div>
                         </div>
@@ -76,7 +80,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             data: dataString,
             cache: false,
             success: function (result) {
-                SuccessAlert("We added you successfull","register_alert");
+                SuccessAlert("We added you successfull", "register_alert");
             }
         });
 

@@ -9,18 +9,7 @@ class Register extends CI_Controller
         $this->load->helper(['language', 'lang', 'url']);
         dilSecici();
 
-        $id = $_GET['ref'];
-
-        $data=array();
-
-        if($id==00000){
-            $data["ref"]="";
-        }
-        else{
-            $data["ref"]=$id;
-        }
-
-
+        $data['ref'] = isset($_GET['ref']) ? $_GET['ref'] : '00000';
 
         $this->load->view('_head');
         $this->load->view('register',$data);

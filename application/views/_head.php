@@ -172,31 +172,37 @@ if (!class_exists('Login')) {
                         </ul>
                     </li>
 
-                    <!-- BEGIN USER LOGIN DROPDOWN -->
-                    <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
-                    <li class="dropdown dropdown-user">
-                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
-                           data-close-others="true">
+                    <?php
+                    if (!class_exists('Register')) {
+                        ?>
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                               data-close-others="true">
 
                             <span class="username username-hide-on-mobile">       <?php
                                 if (isset($userInfo[0]["email"])) {
                                     echo $userInfo[0]["email"];
                                 } ?> </span>
-                            <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-default">
-                            <li>
-                                <a href="<?php echo base_url() ?>index.php/Account">
-                                    <i class="icon-user"></i> My Account </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="<?php echo base_url() ?>index.php/VerifyLogin/sessionDestroy">
-                                    <i class="icon-key"></i> Log Out </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- END USER LOGIN DROPDOWN -->
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="<?php echo base_url() ?>index.php/Account">
+                                        <i class="icon-user"></i> My Account </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="<?php echo base_url() ?>index.php/VerifyLogin/sessionDestroy">
+                                        <i class="icon-key"></i> Log Out </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                        <?php
+                    }
+                    ?>
                 </ul>
             </div>
             <!-- END TOP NAVIGATION MENU -->
