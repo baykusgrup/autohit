@@ -40,4 +40,21 @@ class Account extends CI_Controller {
         return $updateRowID;
     }
 
+    public function changeEmail(){
+        $email = $this->input->post("email");
+        $user_id = $this->session->userdata("user_id");
+
+        $dateTime = date('Y-m-d H:i:s');
+
+        $dataEmail=array();
+        $dataEmail["email"] =$email;
+
+        $dataEmail["update_user"]=$user_id;
+        $dataEmail["update_date"]=$dateTime;
+
+        $updateRowID= $this->generalTables_model->updateTable("users",$user_id,$dataEmail);
+
+        return $updateRowID;
+    }
+
 }

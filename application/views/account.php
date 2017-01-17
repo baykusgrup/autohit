@@ -36,15 +36,24 @@
                     </tr>
                     <tr>
                         <td> Email</td>
-                        <td>
+                        <td id="email_td">
                             <?php
                             if (isset($userInfo[0]["email"])) {
-                                echo $userInfo[0]["email"];
-                            } ?>
+                                echo "<div id='emailLink' type=\"email\"  style='display: block' role=\"button\" onclick=\"changeEmailDiv();\">" . $userInfo[0]["email"] . "</div>";
+                            }
+                            ?>
+                            <div class="form-group" id="email_changeDiv" style="display: none">
+                                <input id="new_email" type="email" class="form-control" placeholder="new email">
+                            </div>
+
                         </td>
-                        <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
-                            <span class="badge badge-primary badge-roundless"> ? </span>
+                        <td id="email_td2">
+                            <span id='emailLink2' type="email" style='display: block' role="button"
+                                  onclick="changeEmailDiv();" class="badge badge-primary badge-roundless"> edit </span>
+
+                            <span id='email_Done' type="email" style='display: none' role="button"
+                                  class="badge badge-primary badge-roundless" onclick="changeEmail();"> Save </span>
+
                         </td>
                     </tr>
                     <tr>
@@ -52,25 +61,24 @@
                         <td id="pass_td">
                             <?php
                             if (isset($userInfo[0]["password"])) {
-                                echo "<a id='passLink' style='display: block' role=\"button\" onclick=\"changePassDiv();\">". $userInfo[0]["password"]."</a>";
+                                echo "<div id='passLink' type=\"password\"  style='display: block' role=\"button\" onclick=\"changePassDiv();\">******</div>";
                             }
                             ?>
-
-                            <div class="form-group" id="password_changeDiv" style="display: none" >
-                                <input class="form-action" type="password" id="new_password" >
-                            </div>
-                            <div class="form-group" id="password_changeDiv2" style="display: none" >
-                                <input class="form-action" type="password" id="new_password2" >
+                            <div class="form-group" id="password_changeDiv" style="display: none">
+                                <input id="new_password" type="password" class="form-control" placeholder="password">
                             </div>
 
-                            <div class="form-group" id="password_Done" style="display: none" >
-                                <a  type="button" onclick="changePassword();"   >Done</a>
+                            <div class="form-group" id="password_changeDiv2" style="display: none">
+                                <input id="new_password2" type="password" class="form-control" placeholder="password">
                             </div>
-
                         </td>
-                        <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
-                            <span class="badge badge-primary badge-roundless"> ? </span>
+                        <td id="pass_td2">
+                            <span id='passLink2' type="password" style='display: block' role="button"
+                                  onclick="changePassDiv();" class="badge badge-primary badge-roundless"> edit </span>
+
+                            <span id='password_Done' type="password" style='display: none' role="button"
+                                  class="badge badge-primary badge-roundless" onclick="changePassword();"> Save </span>
+
                         </td>
                     </tr>
                     <tr>
@@ -135,7 +143,7 @@
                         <td>
                             <?php
                             if (isset($userInfo[0]["referance_code"])) {
-                                echo "<a href=\"".base_url()."index.php/Register/?ref=".$userInfo[0]["referance_code"]."\" >".$userInfo[0]["referance_code"]."</a>";
+                                echo "<a href=\"" . base_url() . "index.php/Register/?ref=" . $userInfo[0]["referance_code"] . "\" >" . $userInfo[0]["referance_code"] . "</a>";
                             } ?>
                         </td>
 
@@ -196,43 +204,75 @@ When enabled, this option allows you to automatically distribute the credits ear
 
 <script type="text/javascript">
 
-   function changePassDiv(){
-       document.getElementById("password_changeDiv").style = "display: block";
-       document.getElementById("password_changeDiv2").style = "display: block";
-       document.getElementById("passLink").style = "display: none";
-       document.getElementById("password_Done").style = "display: block";
-   }
+    function changePassDiv() {
+        document.getElementById("password_changeDiv").style = "display: block";
+        document.getElementById("password_changeDiv2").style = "display: block";
+        document.getElementById("passLink").style = "display: none";
+        document.getElementById("passLink2").style = "display: none";
+        document.getElementById("password_Done").style = "display: block";
+    }
 
-   function changePassword() {
+    function changePassword() {
 
-       var pass = document.getElementById("new_password").value;
-       var controll_pass = document.getElementById("new_password2").value;
-       var dataString = "pass=" +pass;
-       if(pass==controll_pass){
-           $.ajax({
-               type: "POST",
-               url: base_url + "/index.php/Account/changePassword",
-               data: dataString,
-               cache: false,
-               success: function (result) {
-                   SuccessAlert("We updated your password successfully!","account_alert");
+        var pass = document.getElementById("new_password").value;
+        var controll_pass = document.getElementById("new_password2").value;
+        var dataString = "pass=" + pass;
+        if (pass == controll_pass && pass != "") {
+            $.ajax({
+                type: "POST",
+                url: base_url + "/index.php/Account/changePassword",
+                data: dataString,
+                cache: false,
+                success: function (result) {
+                    SuccessAlert("We updated your password successfully!", "account_alert");
 
-                   document.getElementById("password_changeDiv").style = "display: none";
-                   document.getElementById("password_changeDiv2").style = "display: none";
-                   document.getElementById("passLink").style = "display: block";
-                   document.getElementById("password_Done").style = "display: none";
-                   document.getElementById("pass_td").innerHTML = "<a id='passLink' style='display: block' role=\"button\" onclick=\"changePassDiv();\">"+pass+"</a>";
-               }
-           });
-       }
-       else{
-           WarningAlert ("Plese give the same password for updating!", "account_alert");
-       }
-
-
-
-
+                    document.getElementById("password_changeDiv").style = "display: none";
+                    document.getElementById("password_changeDiv2").style = "display: none";
+                    document.getElementById("passLink").style = "display: block";
+                    document.getElementById("password_Done").style = "display: none";
+                    document.getElementById("pass_td").innerHTML = "<div id='passLink' style='display: block' role=\"button\" onclick=\"changePassDiv();\">" + pass + "</div>";
+                    document.getElementById("pass_td2").innerHTML = "<span style='display: block' role='button' onclick='changePassDiv();' class='badge badge-primary badge-roundless'> saved </span>";
+                }
+            });
+        }
+        else {
+            WarningAlert("Plese give the same password for updating!", "account_alert");
+        }
+    }
 
 
-   }
+    function changeEmailDiv() {
+        document.getElementById("email_changeDiv").style = "display: block";
+        document.getElementById("emailLink").style = "display: none";
+        document.getElementById("emailLink2").style = "display: none";
+        document.getElementById("email_Done").style = "display: block";
+    }
+
+    function changeEmail() {
+
+        var email = document.getElementById("new_email").value;
+        var dataString = "email=" + email;
+        if (email != "") {
+            $.ajax({
+                type: "POST",
+                url: base_url + "/index.php/Account/changeEmail",
+                data: dataString,
+                cache: false,
+                success: function (result) {
+                    SuccessAlert("We updated your email successfully!", "account_alert");
+
+                    document.getElementById("email_changeDiv").style = "display: none";
+                    document.getElementById("emailLink").style = "display: block";
+                    document.getElementById("emailLink2").style = "display: none";
+                    document.getElementById("email_Done").style = "display: none";
+                    document.getElementById("email_td").innerHTML = "<div id='emailLink' style='display: block' role=\"button\" onclick=\"changeEmailDiv();\">" + email + "</div>";
+                    document.getElementById("email_td2").innerHTML = "<span style='display: block' role='button' onclick='changeEmailDiv();' class='badge badge-primary badge-roundless'> saved </span>";
+
+                }
+            });
+        }
+        else {
+            WarningAlert("Plese give the same email for updating!", "account_alert");
+        }
+    }
 </script>
