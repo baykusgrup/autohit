@@ -259,6 +259,12 @@ if (!class_exists('Login')) {
                                     <span class="title">Login</span>
                                 </a>
                             </li>
+                            <li class="nav-item  ">
+                                <a href="<?php echo base_url() ?>index.php/Register" class="nav-link nav-toggle">
+                                    <i class="icon-user"></i>
+                                    <span class="title">Register</span>
+                                </a>
+                            </li>
                             <li class="heading">
                                 <h3 class="uppercase">Other Thinks</h3>
                             </li>

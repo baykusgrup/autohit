@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                         <div class="form-group">
                             <label class="col-md-2"> Referral </label>
-                            <div class="col-md-10">
+                            <div class="col-md-9">
                                 <input type="text" class="form-control" placeholder="<?php
                                 if (isset($ref)) {
                                     echo $ref;
@@ -44,6 +44,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 }
                                 ?>">
                             </div>
+
+                            <div  class="tooltips col-md-1 " data-container="body" data-placement="bottom"
+                                data-original-title="tooltips">
+                                <span class="badge badge-primary badge-roundless"> ? </span>
+                            </div>
+
                         </div>
                     </div>
                     <div class="form-actions">
