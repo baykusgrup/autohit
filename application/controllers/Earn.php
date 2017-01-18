@@ -27,4 +27,18 @@ class Earn extends CI_Controller {
         $this->load->view('surf');
         $this->load->view('_foot');
     }
+
+    public function getUrlsFromDatabase()
+    {
+        $result= $this->sites_model->getUrlsFromDatabase();
+        $HTML = "";
+
+        foreach ($result as $site){
+            $HTML .= "<tr>
+                        <td name='sites_selector'>".$site["url"]."</td>
+                      </tr>";
+        }
+
+        echo $HTML;
+    }
 }

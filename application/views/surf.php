@@ -32,7 +32,7 @@
                         </td>
                     </tr>
                 </table>
-                <a role="button" onclick="startSearching()" class="btn blue btn-block">Start Viewer</a>
+                <a role="button" onclick="beginu()" class="btn blue btn-block">Start Viewer</a>
                 <br />
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
@@ -102,6 +102,12 @@ When enabled, this option allows you to automatically distribute the credits ear
                     </tr>
                     </tbody>
                 </table>
+                <table class="table table-hover table-striped table-bordered">
+                    <tbody id="sites_urls">
+
+
+                    </tbody>
+                </table>
             </div>
         </div>
 
@@ -121,7 +127,28 @@ When enabled, this option allows you to automatically distribute the credits ear
 
     maxsub=10;
 
+    function getUrlsFromDatabase() {
+        $.ajax({
+            type: "POST",
+            url: base_url + "/index.php/Earn/getUrlsFromDatabase",
+            cache: false,
+            success: function (result) {
+                document.getElementById("sites_urls").innerHTML=result;
+                geturl();
+            }
+        });
+    }
+
     function geturl(){
+
+        var theurls=new Array();
+        var sites_selector = document.getElementsByName("sites_selector");
+        for (var i=0; i<sites_selector.length; i++){
+            theurls.push(sites_selector[i].innerText);
+        }
+
+        maxsub=sites_selector.length;
+
         current1 = parseInt(document.getElementById("currentk").value);
         //current1 = document.getElementById("currentk").value;
         if(current1<maxsub){
@@ -129,7 +156,7 @@ When enabled, this option allows you to automatically distribute the credits ear
             document.getElementById("totalbl").innerHTML=currentk2;
             document.getElementById("statusk").innerHTML="Çalışıyor...";
             document.getElementById("currentk").value= currentk2;
-            url = theurls[current1].replace("{website}", cdomain);
+            url = theurls[current1];
             window.open(url,"frame1");
             timerId = setTimeout(geturl, 5000);
         }else{
@@ -143,7 +170,7 @@ When enabled, this option allows you to automatically distribute the credits ear
         cdomain=cdomain.replace("http://", "");
         cdomain=cdomain.replace("www.", "");
 
-        geturl();
+        getUrlsFromDatabase();
         // chatinterval = setInterval ( "geturl()", 5000 );
     }
 

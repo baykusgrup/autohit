@@ -12,4 +12,13 @@ Class Sites_model extends CI_Model
         return $query->result_array();
 
     }
+
+    function getUrlsFromDatabase(){
+        $_SQL = "SELECT `websites_id`,`page_title`,`url` FROM `websites` WHERE `record_status`=1";
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
 }
