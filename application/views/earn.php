@@ -11,7 +11,7 @@
                 <p>State: <span id='statusk'></span></p>
                 <p>Total Earned Link Count:<span id='totalbl'></span></p>
                 <p>Current Site : <span id="currentSite"></span></p>
-                <p>Next site in 2 seconds.</p>
+                <p>Next site in <span id="duration_time"></span> seconds.</p>
                 <hr/>
                 <p>You will earn 0.8 credits by visiting this site.</p>
 
@@ -26,6 +26,7 @@
                         </td>
                     </tr>
                 </table>
+                <br/>
                 <a role="button" onclick="beginu()" class="btn blue btn-block">Start Viewer</a>
                 <br/>
                 <table class="table table-hover table-striped table-bordered">
@@ -60,58 +61,57 @@ When enabled, this option allows you to automatically distribute the credits ear
                     </tr>
                     </tbody>
                 </table>
-            </div>
         </div>
-        <hr/>
-        <div class="row">
-            <div class="col-md-12">
-                <p class="font-red-intense">Multiple Viewers </p>
-                <p>
-                    To use Multiple Viewers, each viewers must have their own IP adresse. In order to have Multiple IPs
-                    you can use VPS.
-                </p>
-
-                <p class="font-red-intense">Active Viewers </p>
-                <table class="table table-hover table-striped table-bordered">
-                    <tbody>
-                    <tr>
-                        <th>
-                            IP Address
-                        </th>
-                        <th>
-                            Delay
-                        </th>
-                        <th>
-                            Last Url
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>88.241.39.87 <br> TURKEY</td>
-                        <td>
-                            9 sec
-                        </td>
-                        <td>
-                            http://www.hamilton-radio.com <br>
-                            Type: Classic Windows Chrome 55.0.2883.87
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-                <table style="display: none" class="table table-hover table-striped table-bordered">
-                    <tbody id="sites_urls">
-
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
     </div>
+    <hr/>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="font-red-intense">Multiple Viewers </p>
+            <p>
+                To use Multiple Viewers, each viewers must have their own IP adresse. In order to have Multiple IPs
+                you can use VPS.
+            </p>
+
+            <p class="font-red-intense">Active Viewers </p>
+            <table class="table table-hover table-striped table-bordered">
+                <tbody>
+                <tr>
+                    <th>
+                        IP Address
+                    </th>
+                    <th>
+                        Delay
+                    </th>
+                    <th>
+                        Last Url
+                    </th>
+                </tr>
+                <tr>
+                    <td>88.241.39.87 <br> TURKEY</td>
+                    <td>
+                        9 sec
+                    </td>
+                    <td>
+                        http://www.hamilton-radio.com <br>
+                        Type: Classic Windows Chrome 55.0.2883.87
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <table class="table table-hover table-striped table-bordered">
+                <tbody id="sites_urls">
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 </div>
 
 <script type="text/javascript">
     var myWindow;
-    var urlLast=new Array();
+    var urlLast = new Array();
 
     function getUrlsFromDatabase() {
         $.ajax({
@@ -131,8 +131,12 @@ When enabled, this option allows you to automatically distribute the credits ear
 
         var sites_selector = document.getElementsByName("sites_selector");
         for (var i = 0; i < sites_selector.length; i++) {
-            theurls.push(sites_selector[i].innerText);
+            theurls.push();
+            theurls.push({urls_g:sites_selector[i].innerText,
+                          visit_cost:sites_selector[i].getAttribute("visit_cost"),
+                          durations:sites_selector[i].getAttribute("durations")});
         }
+
 
         current1 = parseInt(document.getElementById("currentk").value);
 
@@ -147,13 +151,15 @@ When enabled, this option allows you to automatically distribute the credits ear
                 document.getElementById("statusk").innerHTML = "Surfing...";
 
                 document.getElementById("currentk").value = currentk2;
-                url = theurls[current1];
+                url = theurls[current1].urls_g;
                 window.open(url, "myWindow");
-                urlLast.push("<li>"+url+"</li>");
+                urlLast.push("<li>" + url + "</li>");
                 document.getElementById("LastSites_5").innerHTML = urlLast.slice(Math.max(urlLast.length - 5, 1)).join(" ");
 
                 document.getElementById("currentSite").innerHTML = url;
-                timerId = setTimeout(geturl, 2000);
+
+                document.getElementById("duration_time").innerHTML = theurls[current1].durations;
+                timerId = setTimeout(geturl, theurls[current1].durations*1000);
             }
         }
 
