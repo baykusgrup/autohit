@@ -70,4 +70,21 @@ Class User extends CI_Model
             return false;
         }
     }
+
+    function getIPInfo() {
+        $data=array();
+
+        $data["ip"] = $_SERVER["REMOTE_ADDR"];
+        $data["tarayiciversiyonu"] = $_SERVER["HTTP_USER_AGENT"];
+        $data["serverversiyonu"] = $_SERVER["SERVER_SOFTWARE"];
+        $data["scriptdili"] = $_SERVER["GATEWAY_INTERFACE"];
+        $data["baglantituru"] = $_SERVER["HTTP_CONNECTION"];
+        $data["serveradi"] = $_SERVER["SERVER_NAME"];
+        $data["kodlamaturu"] = $_SERVER["HTTP_ACCEPT_ENCODING"];
+        $data["serverportu"] = $_SERVER["SERVER_PORT"];
+        $data["oncekisayfa"] = $_SERVER["HTTP_REFERER"];
+
+        return $data;
+
+    }
 }

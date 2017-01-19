@@ -110,6 +110,8 @@ When enabled, this option allows you to automatically distribute the credits ear
 </div>
 
 <script type="text/javascript">
+
+
     var myWindow;
     var urlLast = new Array();
 
