@@ -97,7 +97,7 @@ When enabled, this option allows you to automatically distribute the credits ear
                     </tr>
                     </tbody>
                 </table>
-                <table class="table table-hover table-striped table-bordered">
+                <table style="display: none" class="table table-hover table-striped table-bordered">
                     <tbody id="sites_urls">
 
 
