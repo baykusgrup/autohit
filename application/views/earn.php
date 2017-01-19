@@ -7,14 +7,18 @@
     </div>
     <div class="portlet-body">
         <div class="row">
-            <div class="col-md-12">
-                <p>Durum: <span id='statusk'></span></p>
-                <p>Toplam Kazanılan Link Sayısı:<span id='totalbl'></span></p>
+            <ul class="col-md-12">
+                <p>State: <span id='statusk'></span></p>
+                <p>Total Earned Link Count:<span id='totalbl'></span></p>
+                <p>Current Site : <span id="currentSite"></span></p>
                 <p>Next site in 2 seconds.</p>
                 <hr/>
                 <p>You will earn 0.8 credits by visiting this site.</p>
-                <p>Current Site</p>
+
                 <p>List of recently visited sites</p>
+                <ul id="LastSites_5">
+
+                </ul>
                 <table>
                     <tr>
                         <td>
@@ -107,6 +111,7 @@ When enabled, this option allows you to automatically distribute the credits ear
 
 <script type="text/javascript">
     var myWindow;
+    var urlLast=new Array();
 
     function getUrlsFromDatabase() {
         $.ajax({
@@ -123,6 +128,7 @@ When enabled, this option allows you to automatically distribute the credits ear
     function geturl() {
 
         var theurls = new Array();
+
         var sites_selector = document.getElementsByName("sites_selector");
         for (var i = 0; i < sites_selector.length; i++) {
             theurls.push(sites_selector[i].innerText);
@@ -134,14 +140,19 @@ When enabled, this option allows you to automatically distribute the credits ear
             document.getElementById("msg").innerHTML = "Window has never been opened!";
         } else {
             if (myWindow.closed) {
-                document.getElementById("statusk").innerHTML = "Sonlandı...";
+                document.getElementById("statusk").innerHTML = "Stopted...";
             } else {
                 currentk2 = parseInt(document.getElementById("currentk").value) + 1;
                 document.getElementById("totalbl").innerHTML = currentk2;
-                document.getElementById("statusk").innerHTML = "Çalışıyor...";
+                document.getElementById("statusk").innerHTML = "Surfing...";
+
                 document.getElementById("currentk").value = currentk2;
                 url = theurls[current1];
                 window.open(url, "myWindow");
+                urlLast.push("<li>"+url+"</li>");
+                document.getElementById("LastSites_5").innerHTML = urlLast.slice(Math.max(urlLast.length - 5, 1)).join(" ");
+
+                document.getElementById("currentSite").innerHTML = url;
                 timerId = setTimeout(geturl, 2000);
             }
         }
