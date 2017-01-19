@@ -115,6 +115,7 @@ When enabled, this option allows you to automatically distribute the credits ear
 </div>
 
 <script type="text/javascript">
+    var myWindow;
 
     maxsub=10;
 
@@ -141,29 +142,32 @@ When enabled, this option allows you to automatically distribute the credits ear
         maxsub=sites_selector.length;
 
         current1 = parseInt(document.getElementById("currentk").value);
-        //current1 = document.getElementById("currentk").value;
-        if(current1<maxsub){
-            currentk2=parseInt(document.getElementById("currentk").value)+1;
-            document.getElementById("totalbl").innerHTML=currentk2;
-            document.getElementById("statusk").innerHTML="Çalışıyor...";
-            document.getElementById("currentk").value= currentk2;
-            url = theurls[current1];
-            window.open(url,"frame1");
-            timerId = setTimeout(geturl, 5000);
-        }else{
-            document.getElementById("statusk").innerHTML="Submission Completed";
-            //  clearInterval(chatinterval);
+
+        if (!myWindow) {
+            document.getElementById("msg").innerHTML = "Window has never been opened!";
+        } else {
+            if (myWindow.closed) {
+                alert("dd");
+                document.getElementById("statusk").innerHTML="Submission Completed";
+            } else {
+                currentk2=parseInt(document.getElementById("currentk").value)+1;
+                document.getElementById("totalbl").innerHTML=currentk2;
+                document.getElementById("statusk").innerHTML="Çalışıyor...";
+                document.getElementById("currentk").value= currentk2;
+                url = theurls[current1];
+                window.open(url,"myWindow");
+                timerId = setTimeout(geturl, 2000);
+            }
         }
+
     }
 
     function beginu(){
         cdomain=document.getElementById("domain").value;
         cdomain=cdomain.replace("http://", "");
         cdomain=cdomain.replace("www.", "");
-
-        window.open("http://127.0.0.1/autohit/index.php/Earn/","frame1");
+        myWindow = window.open("", "myWindow");
         getUrlsFromDatabase();
-        // chatinterval = setInterval ( "geturl()", 5000 );
     }
 
     function getFlashMovieObject(movieName)
@@ -178,7 +182,7 @@ When enabled, this option allows you to automatically distribute the credits ear
             if (document.embeds && document.embeds[movieName])
                 return document.embeds[movieName];
         }
-        else // if (navigator.appName.indexOf("Microsoft Internet")!=-1)
+        else
         {
             return document.getElementById(movieName);
         }
