@@ -75,9 +75,4 @@ class Earn extends CI_Controller
         $id = $this->user->getIPInfo_Close();
         echo $id;
     }
-
-    public function controlIP()
-    {
-
-    }
 }
