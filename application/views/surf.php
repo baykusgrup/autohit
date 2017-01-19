@@ -147,8 +147,7 @@ When enabled, this option allows you to automatically distribute the credits ear
             document.getElementById("msg").innerHTML = "Window has never been opened!";
         } else {
             if (myWindow.closed) {
-                alert("dd");
-                document.getElementById("statusk").innerHTML="Submission Completed";
+                document.getElementById("statusk").innerHTML="Sonlandı...";
             } else {
                 currentk2=parseInt(document.getElementById("currentk").value)+1;
                 document.getElementById("totalbl").innerHTML=currentk2;
