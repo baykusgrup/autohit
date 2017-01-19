@@ -11,22 +11,19 @@
                 <p>Durum: <span id='statusk'></span></p>
                 <p>Toplam Kazanılan Link Sayısı:<span id='totalbl'></span></p>
                 <p>Next site in 2 seconds.</p>
-                <hr />
+                <hr/>
                 <p>You will earn 0.8 credits by visiting this site.</p>
                 <p>Current Site</p>
                 <p>List of recently visited sites</p>
                 <table>
                     <tr>
                         <td>
-                            <input type='hidden' id='currentk' value='0' >
-                            <input type='hidden' id='cwindow' value='0' >
-                            </td>
-                        <td colspan='2'><input type='text' name='domain' id='domain' value='baykusgrup.com' ></td>
+                            <input type='hidden' id='currentk' value='0'>
+                        </td>
                     </tr>
-
                 </table>
                 <a role="button" onclick="beginu()" class="btn blue btn-block">Start Viewer</a>
-                <br />
+                <br/>
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
 
@@ -66,7 +63,8 @@ When enabled, this option allows you to automatically distribute the credits ear
             <div class="col-md-12">
                 <p class="font-red-intense">Multiple Viewers </p>
                 <p>
-                    To use Multiple Viewers, each viewers must have their own IP adresse. In order to have Multiple IPs you can use VPS.
+                    To use Multiple Viewers, each viewers must have their own IP adresse. In order to have Multiple IPs
+                    you can use VPS.
                 </p>
 
                 <p class="font-red-intense">Active Viewers </p>
@@ -116,17 +114,17 @@ When enabled, this option allows you to automatically distribute the credits ear
             url: base_url + "/index.php/Earn/getUrlsFromDatabase",
             cache: false,
             success: function (result) {
-                document.getElementById("sites_urls").innerHTML=result;
+                document.getElementById("sites_urls").innerHTML = result;
                 geturl();
             }
         });
     }
 
-    function geturl(){
+    function geturl() {
 
-        var theurls=new Array();
+        var theurls = new Array();
         var sites_selector = document.getElementsByName("sites_selector");
-        for (var i=0; i<sites_selector.length; i++){
+        for (var i = 0; i < sites_selector.length; i++) {
             theurls.push(sites_selector[i].innerText);
         }
 
@@ -136,82 +134,69 @@ When enabled, this option allows you to automatically distribute the credits ear
             document.getElementById("msg").innerHTML = "Window has never been opened!";
         } else {
             if (myWindow.closed) {
-                document.getElementById("statusk").innerHTML="Sonlandı...";
+                document.getElementById("statusk").innerHTML = "Sonlandı...";
             } else {
-                currentk2=parseInt(document.getElementById("currentk").value)+1;
-                document.getElementById("totalbl").innerHTML=currentk2;
-                document.getElementById("statusk").innerHTML="Çalışıyor...";
-                document.getElementById("currentk").value= currentk2;
+                currentk2 = parseInt(document.getElementById("currentk").value) + 1;
+                document.getElementById("totalbl").innerHTML = currentk2;
+                document.getElementById("statusk").innerHTML = "Çalışıyor...";
+                document.getElementById("currentk").value = currentk2;
                 url = theurls[current1];
-                window.open(url,"myWindow");
+                window.open(url, "myWindow");
                 timerId = setTimeout(geturl, 2000);
             }
         }
 
     }
 
-    function beginu(){
+    function beginu() {
         myWindow = window.open("", "myWindow");
         getUrlsFromDatabase();
     }
 
-    function getFlashMovieObject(movieName)
-    {
-        if (window.document[movieName])
-        {
+    function getFlashMovieObject(movieName) {
+        if (window.document[movieName]) {
             return window.document[movieName];
             alert(movieName);
         }
-        if (navigator.appName.indexOf("Microsoft Internet")==-1)
-        {
+        if (navigator.appName.indexOf("Microsoft Internet") == -1) {
             if (document.embeds && document.embeds[movieName])
                 return document.embeds[movieName];
         }
-        else
-        {
+        else {
             return document.getElementById(movieName);
         }
     }
 
-    function SendDataToFlashMovie(fgh,tr)
-    {
-        var flashMovie=getFlashMovieObject("predoll");
-        flashMovie.changetop(fgh,tr);
-        using(fgh,tr);
+    function SendDataToFlashMovie(fgh, tr) {
+        var flashMovie = getFlashMovieObject("predoll");
+        flashMovie.changetop(fgh, tr);
+        using(fgh, tr);
     }
 
-    function GetXmlHttpObject()
-    {
-        var xmlHttp=null;
-        try
-        {
+    function GetXmlHttpObject() {
+        var xmlHttp = null;
+        try {
             // Firefox, Opera 8.0+, Safari
-            xmlHttp=new XMLHttpRequest();
+            xmlHttp = new XMLHttpRequest();
         }
-        catch (e)
-        {
+        catch (e) {
             // Internet explorer
-            try
-            {
-                xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+            try {
+                xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
             }
-            catch (e)
-            {
-                xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+            catch (e) {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
             }
         }
         return xmlHttp;
     }
 
-    function stateChanged()
-    {
-        if (xmlHttp.readyState==3)
-        {
-            tid=xmlHttp.responseText;
+    function stateChanged() {
+        if (xmlHttp.readyState == 3) {
+            tid = xmlHttp.responseText;
             alert(tid);
         }
     }
-
 
 
 </script>
