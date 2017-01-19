@@ -134,9 +134,11 @@ When enabled, this option allows you to automatically distribute the credits ear
         var sites_selector = document.getElementsByName("sites_selector");
         for (var i = 0; i < sites_selector.length; i++) {
             theurls.push();
-            theurls.push({urls_g:sites_selector[i].innerText,
-                          visit_cost:sites_selector[i].getAttribute("visit_cost"),
-                          durations:sites_selector[i].getAttribute("durations")});
+            theurls.push({
+                urls_g: sites_selector[i].innerText,
+                visit_cost: sites_selector[i].getAttribute("visit_cost"),
+                durations: sites_selector[i].getAttribute("durations")
+            });
         }
 
 
@@ -147,6 +149,17 @@ When enabled, this option allows you to automatically distribute the credits ear
         } else {
             if (myWindow.closed) {
                 document.getElementById("statusk").innerHTML = "Stopted...";
+
+                $.ajax({
+                    type: "POST",
+                    url: base_url + "/index.php/Earn/closedIP",
+                    cache: false,
+                    success: function (result) {
+
+                    }
+                });
+
+
             } else {
                 currentk2 = parseInt(document.getElementById("currentk").value) + 1;
                 document.getElementById("totalbl").innerHTML = currentk2;
@@ -161,15 +174,32 @@ When enabled, this option allows you to automatically distribute the credits ear
                 document.getElementById("currentSite").innerHTML = url;
 
                 document.getElementById("duration_time").innerHTML = theurls[current1].durations;
-                timerId = setTimeout(geturl, theurls[current1].durations*1000);
+                timerId = setTimeout(geturl, theurls[current1].durations * 1000);
             }
         }
 
     }
 
     function beginu() {
-        myWindow = window.open("", "myWindow");
-        getUrlsFromDatabase();
+
+        $.ajax({
+            type: "POST",
+            url: base_url + "/index.php/Earn/saveIP",
+            cache: false,
+            success: function (result) {
+                alert(result);
+              if(result == 1){
+
+                  alert("hata");
+              }
+              else{
+                  myWindow = window.open("", "myWindow");
+                  getUrlsFromDatabase();
+              }
+            }
+        });
+
+
     }
 
     function getFlashMovieObject(movieName) {

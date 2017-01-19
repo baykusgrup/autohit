@@ -41,6 +41,9 @@ class logProcess_model extends CI_Model {
             case "users";
                 $tableid="user_id";
                 break;
+            case "ip_info";
+                $tableid="ipInfo_id";
+                break;
             default:
                 echo "Hata";
                 break;
