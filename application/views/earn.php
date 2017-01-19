@@ -8,6 +8,8 @@
     <div class="portlet-body">
         <div class="row">
             <div class="col-md-12">
+                <p>Durum: <span id='statusk'></span></p>
+                <p>Toplam Kazanılan Link Sayısı:<span id='totalbl'></span></p>
                 <p>Next site in 2 seconds.</p>
                 <hr />
                 <p>You will earn 0.8 credits by visiting this site.</p>
@@ -18,19 +20,10 @@
                         <td>
                             <input type='hidden' id='currentk' value='0' >
                             <input type='hidden' id='cwindow' value='0' >
-                            <label>Site: http://www.</label></td>
+                            </td>
                         <td colspan='2'><input type='text' name='domain' id='domain' value='baykusgrup.com' ></td>
-                        <td><input type='button' value='Başlat!' name='submit' onclick="beginu();" ></td>
                     </tr>
-                    <tr>
-                        <td colspan='4'>
-                            <p>
-                                <b>Durum:</b> <span id='statusk'></span>
-                                <br />
-                                <b>Toplam Kazanılan Link Sayısı:</b><span id='totalbl'></span>
-                            </p>
-                        </td>
-                    </tr>
+
                 </table>
                 <a role="button" onclick="beginu()" class="btn blue btn-block">Start Viewer</a>
                 <br />
