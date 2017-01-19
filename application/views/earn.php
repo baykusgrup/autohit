@@ -110,8 +110,6 @@ When enabled, this option allows you to automatically distribute the credits ear
 <script type="text/javascript">
     var myWindow;
 
-    maxsub=10;
-
     function getUrlsFromDatabase() {
         $.ajax({
             type: "POST",
@@ -131,8 +129,6 @@ When enabled, this option allows you to automatically distribute the credits ear
         for (var i=0; i<sites_selector.length; i++){
             theurls.push(sites_selector[i].innerText);
         }
-
-        maxsub=sites_selector.length;
 
         current1 = parseInt(document.getElementById("currentk").value);
 
@@ -155,9 +151,6 @@ When enabled, this option allows you to automatically distribute the credits ear
     }
 
     function beginu(){
-        cdomain=document.getElementById("domain").value;
-        cdomain=cdomain.replace("http://", "");
-        cdomain=cdomain.replace("www.", "");
         myWindow = window.open("", "myWindow");
         getUrlsFromDatabase();
     }
