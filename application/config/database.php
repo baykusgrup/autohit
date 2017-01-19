@@ -102,9 +102,9 @@ if ($_SERVER['SERVER_NAME'] === '127.0.0.1') {
     $db['default'] = array(
         'dsn' => '',
         'hostname' => 'localhost',
-        'username' => 'narusta_db',
-        'password' => 'cp5+!ZC@Jsr3',
-        'database' => 'narustadb',
+        'username' => 'vt',
+        'password' => 'Dp5K!ZC@Jsr3',
+        'database' => 'nearlyweb',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
         'pconnect' => FALSE,
