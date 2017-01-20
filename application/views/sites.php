@@ -195,7 +195,7 @@
                                 !</strong> Uploaded Successfully
                         </div>
                         <div class="modal-footer">
-                            <a onclick="addSite();" type="button" class="btn btn-icon-only blue">
+                            <a onclick="deleteSite();" type="button" class="btn btn-icon-only blue">
                                 <i class="fa fa-trash"></i> </a>
                             <button id="search_UserClose" class="btn default" data-dismiss="modal"
                                     aria-hidden="true">Close
@@ -260,6 +260,21 @@
             success: function (result) {
                 //alert(dataString);
                 SuccessAlert("We updated your url! ", "addSite_alert");
+                controllSites();
+            }
+        });
+
+    }
+function deleteSite() {
+        var site_id = document.getElementById("site_id").value;
+
+        $.ajax({
+            type: "POST",
+            url: base_url + "/index.php/Sites/deleteSite/" +site_id,
+            cache: false,
+            success: function (result) {
+                //alert(dataString);
+                SuccessAlert("We inactivated your url! ", "addSite_alert");
                 controllSites();
             }
         });
