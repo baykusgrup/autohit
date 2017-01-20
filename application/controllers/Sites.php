@@ -79,6 +79,15 @@ class Sites extends CI_Controller {
         return $site_id ;
     }
 
+    public function deleteSite($site_id)
+        {
+            $user_id=$this->session->userdata("user_id");
+            $this->db->where('websites_id', $site_id);
+            $this->db->where('user_id', $user_id );
+            $this->db->delete('websites');
+            return true;
+        }
+
     public function controllMySites()
     {
         $user_id = $this->session->userdata("user_id");
