@@ -136,6 +136,7 @@ When enabled, this option allows you to automatically distribute the credits ear
             theurls.push();
             theurls.push({
                 urls_g: sites_selector[i].innerText,
+                site_id: sites_selector[i].getAttribute("site_id"),
                 visit_cost: sites_selector[i].getAttribute("visit_cost"),
                 durations: sites_selector[i].getAttribute("durations")
             });
@@ -168,7 +169,7 @@ When enabled, this option allows you to automatically distribute the credits ear
                 document.getElementById("currentk").value = currentk2;
                 url = theurls[current1].urls_g;
                 window.open(url, "myWindow");
-                urlLast.push("<li>" + url + "</li>");
+                urlLast.push("<li>" + url + "<a id='blockedStatus_"+theurls[current1].site_id+"' onclick='getBlocked("+theurls[current1].site_id+");'>Block</a></li>");
                 document.getElementById("LastSites_5").innerHTML = urlLast.slice(Math.max(urlLast.length - 5, 1)).join(" ");
 
                 document.getElementById("currentSite").innerHTML = url;
@@ -247,5 +248,16 @@ When enabled, this option allows you to automatically distribute the credits ear
         }
     }
 
+    function getBlocked(id) {
+
+        $.ajax({
+            type: "POST",
+            url: base_url + "/index.php/Blocked/getBlocked/" +id,
+            cache: false,
+            success: function (result) {
+                document.getElementById("blockedStatus_"+id).innerHTML="Blocked";
+            }
+        });
+    }
 
 </script>

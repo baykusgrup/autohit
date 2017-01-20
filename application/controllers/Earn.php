@@ -36,7 +36,7 @@ class Earn extends CI_Controller
 
         foreach ($result as $site) {
             $HTML .= "<tr>
-                        <td name='sites_selector'  visit_cost='" . $site["visit_cost"] . "'  credits='" . $site["credits"] . "'  durations='" . $site["durations_sec"] . "'  >" . $site["url"] . "</td>
+                        <td name='sites_selector'  site_id='".$site["websites_id"]."'  visit_cost='" . $site["visit_cost"] . "'  credits='" . $site["credits"] . "'  durations='" . $site["durations_sec"] . "'  >" . $site["url"] . "</td>
                       </tr>";
         }
 

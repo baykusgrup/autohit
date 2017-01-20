@@ -38,6 +38,21 @@ class Blocked extends CI_Controller {
         return $site_id;
 
     }
+    public function getBlocked($site_id)
+    {
+        $dateTime = date('Y-m-d H:i:s');
+        $dataSites=array();
+
+        $dataSites["blocked"]=1;
+
+        $dataSites["record_status"]=1;
+        $dataSites["update_user"]=$this->session->userdata("user_id");
+        $dataSites["update_date"]=$dateTime;
+
+        $site_id = $this->generalTables_model->updateTable("websites",$site_id,$dataSites);
+        return $site_id;
+
+    }
     public function controllBlockedSites()
     {
         $user_id=$this->session->userdata('user_id');
