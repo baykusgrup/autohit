@@ -170,7 +170,7 @@ When enabled, this option allows you to automatically distribute the credits ear
                 url = theurls[current1].urls_g;
                 window.open(url, "myWindow");
                 urlLast.push("<li>" + url + "<a id='blockedStatus_"+theurls[current1].site_id+"' onclick='getBlocked("+theurls[current1].site_id+");'>Block</a></li>");
-                document.getElementById("LastSites_5").innerHTML = urlLast.slice(Math.max(urlLast.length - 5, 1)).join(" ");
+                document.getElementById("LastSites_5").innerHTML = urlLast.slice(Math.max(urlLast.length - 5, 0)).join(" ");
 
                 document.getElementById("currentSite").innerHTML = url;
 
