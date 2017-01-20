@@ -173,13 +173,13 @@
                                 <div class="form-group">
                                     <label class="col-md-3">Visits Durations :</label>
                                     <div class="col-md-9">
-                                        <select id="visits_durations" class="form-control" name="package_selector">
+                                        <select id="visits_durations" onchange="calculateVisitCost()" class="form-control" name="package_selector">
                                             <option value="-1"> Select Durations</option>
 
                                             <?php
 
                                             foreach ($durations as $duration) {
-                                                echo "<option value=\"" . $duration["prt_durations_id"] . "\"> " . $duration["durations_sec"] . " seconds" . "</option>";
+                                                echo "<option sec=\"".$duration["durations_sec"]."\" value=\"" . $duration["prt_durations_id"] . "\"> " . $duration["durations_sec"] . " seconds" . "</option>";
                                             }
 
 
@@ -302,6 +302,7 @@ function deleteSite() {
         document.getElementById("site_url").value = document.getElementById("updateSite_url_" + id).innerText;
         document.getElementById("credits").value = document.getElementById("updateSite_credits_" + id).innerText;
         $("#visits_durations").val(document.getElementById("updateSite_duration_" + id).innerText);
+        calculateVisitCost();
 
     }
 
@@ -386,6 +387,14 @@ function deleteSite() {
         else {
             WarningAlert("Your credits aren't enough! ", "dis_alert");
         }
+
+    }
+
+    function calculateVisitCost() {
+        var durations = $('option:selected', "#visits_durations").attr('sec');
+        var calculation_value = parseFloat(durations) * 0.06666;
+        calculation_value =  Math.round(calculation_value);
+        document.getElementById("visits_cost").value =calculation_value;
 
     }
 </script>
