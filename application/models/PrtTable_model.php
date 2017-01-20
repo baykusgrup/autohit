@@ -19,6 +19,15 @@ class PrtTable_model extends CI_Model {
         return $sorgu->result_array();
     }
 
+    function getHelpsByLanguageID($langID){
+        $SQL ="SELECT h.prt_help_id,h.help_question,h.help_answer,ph.help_status FROM help_language h 
+              inner join prt_help ph on ph.record_status=1 and ph.prt_help_id=h.prt_help_id
+              WHERE h.record_status=1 and h.language_id=".$langID." order by h.prt_help_id";
+
+        $query = $this->db->query($SQL);
+        return $query->result_array();
+    }
+
 
 
 }

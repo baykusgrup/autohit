@@ -12,7 +12,7 @@ class Help extends CI_Controller {
             dilSecici();
 
             $data = array();
-            $data["helps"] = $this->prtTable_model->getHelps();
+            $data["helps"] = $this->prtTable_model->getHelpsByLanguageID(1);
 
             $this->load->view('_head');
             $this->load->view('help', $data);
