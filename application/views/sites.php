@@ -47,9 +47,9 @@
 
                         <td class="col-md-5">
                             <div class="input-group input-medium">
-                                <input type="text" class="form-control">
+                                <input id="total_per_credit" type="text" class="form-control">
                                 <span class="input-group-btn">
-                                                            <button class="btn btn-outline blue "
+                                                            <button onclick="perDisCredit()" class="btn btn-outline blue "
                                                                     type="button">Add!</button>
                                                         </span>
                             </div>
@@ -316,7 +316,7 @@
             for(var i=0 ;i<sites_selector.length;i++){
 
                 site_id =sites_selector[i].getAttribute("site_id");
-                alert(site_id);
+
                 $.ajax({
                     type: "POST",
                     url: base_url + "/index.php/Distrubition/DistrubitionTotalAmountDisCredit/"+site_id,
@@ -330,6 +330,41 @@
                     }
                 });
             }
+        }
+
+    }
+
+    function perDisCredit() {
+        var i_credit= document.getElementById("i_credit").innerText;
+        var credit= document.getElementById("total_per_credit").value;
+        var sites_selector = document.getElementsByName("sites_selector");
+        var countSites= (sites_selector.length);
+        var total_credit_waste = countSites * credit;
+        var disturbation_value = credit;
+        var site_id=0;
+        var dataString = "per_cost="+disturbation_value;
+
+        if(total_credit_waste <= i_credit){
+            for(var i=0 ;i<sites_selector.length;i++){
+
+                site_id =sites_selector[i].getAttribute("site_id");
+
+                $.ajax({
+                    type: "POST",
+                    url: base_url + "/index.php/Distrubition/DistrubitionTotalAmountDisCredit/"+site_id,
+                    data: dataString,
+                    cache: false,
+                    success: function (result) {
+
+                        SuccessAlert("We distrubuted your urls! ", "dis_alert");
+                        controllSites();
+                        controllCredits();
+                    }
+                });
+            }
+        }
+        else{
+            WarningAlert("Your credits aren't enough! ", "dis_alert");
         }
 
     }
