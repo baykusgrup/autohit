@@ -138,5 +138,13 @@ Class User extends CI_Model
         return $query->result_array();
 
     }
+    function controllActiveViewer($user_id){
+        $_SQL = "SELECT user_id,user_ip,user_browser FROM ip_info  WHERE record_status=1 and user_id=".$user_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
 
 }

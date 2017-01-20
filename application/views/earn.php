@@ -80,25 +80,25 @@ When enabled, this option allows you to automatically distribute the credits ear
                         IP Address
                     </th>
                     <th>
-                        Delay
-                    </th>
-                    <th>
-                        Last Url
+                        Browser
                     </th>
                 </tr>
-                <tr>
-                    <td>88.241.39.87 <br> TURKEY</td>
-                    <td>
-                        9 sec
-                    </td>
-                    <td>
-                        http://www.hamilton-radio.com <br>
-                        Type: Classic Windows Chrome 55.0.2883.87
-                    </td>
-                </tr>
+                <div id="active_viewerTable">
+                 <!--   <tr>
+                        <td>88.241.39.87 <br> TURKEY</td>
+                        <td>
+                            9 sec
+                        </td>
+                        <td>
+                            http://www.hamilton-radio.com <br>
+                            Type: Classic Windows Chrome 55.0.2883.87
+                        </td>
+                    </tr> -->
+                </div>
+
                 </tbody>
             </table>
-            <table class="table table-hover table-striped table-bordered">
+            <table style="display: none" class="table table-hover table-striped table-bordered">
                 <tbody id="sites_urls">
 
 
@@ -194,6 +194,9 @@ When enabled, this option allows you to automatically distribute the credits ear
                     }
                 }, 1000);
 
+
+                controllActiveViewer();
+
                 timerId = setTimeout(geturl, theurls[current1].durations * 1000);
             }
         }
@@ -275,6 +278,17 @@ When enabled, this option allows you to automatically distribute the credits ear
             cache: false,
             success: function (result) {
                 document.getElementById("blockedStatus_" + id).innerHTML = "Blocked";
+            }
+        });
+    }
+ function controllActiveViewer() {
+
+        $.ajax({
+            type: "POST",
+            url: base_url + "/index.php/Earn/controllActiveViewer/",
+            cache: false,
+            success: function (result) {
+                document.getElementById("active_viewerTable").innerHTML = result;
             }
         });
     }

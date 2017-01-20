@@ -75,4 +75,23 @@ class Earn extends CI_Controller
         $id = $this->user->getIPInfo_Close();
         echo $id;
     }
+
+    public function controllActiveViewer()
+    {
+      $user_id =  $this->session->userdata("user_id");
+        $result = $this->user->controllActiveViewer($user_id);
+        $HTML = "";
+
+        foreach ($result as $ip) {
+            $HTML .= "<tr>
+                        <td>".$ip["user_ip"]."</td>
+                        <td>
+                            Type: ".$ip["user_browser"]."
+                        </td>
+                    </tr>";
+        }
+
+        echo $HTML;
+    }
+
 }
