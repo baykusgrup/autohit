@@ -309,11 +309,12 @@
         var i_credit = document.getElementById("i_credit").innerText;
         var credit = document.getElementById("total_amount_credit").value;
         var sites_selector = document.getElementsByName("sites_selector");
-        var countSites = (sites_selector.length + 1);
-        var disturbation_value = parseFloat(credit) / countSites;
+        var countSites = (sites_selector.length);
+        var disturbation_value = parseFloat(credit) /parseFloat(countSites);
+
         var site_id = 0;
         var dataString = "per_cost=" + disturbation_value;
-        if (credit > i_credit) {
+        if (parseFloat(credit) > parseFloat(i_credit)) {
             WarningAlert("Your credits aren't enough! ", "dis_alert");
         }
         else {
