@@ -192,6 +192,8 @@
                                 !</strong> Uploaded Successfully
                         </div>
                         <div class="modal-footer">
+                            <a onclick="addSite();" type="button" class="btn btn-icon-only blue">
+                                <i class="fa fa-trash"></i> </a>
                             <button id="search_UserClose" class="btn default" data-dismiss="modal"
                                     aria-hidden="true">Close
                             </button>
