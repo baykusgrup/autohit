@@ -158,7 +158,7 @@ When enabled, this option allows you to automatically distribute the credits ear
                     url: base_url + "/index.php/Earn/closedIP",
                     cache: false,
                     success: function (result) {
-
+                        controllActiveViewer();
                     }
                 });
 
