@@ -20,9 +20,10 @@
                         </th>
                     </tr>
                     <tr>
-                        <td colspan="3" class="font-red"> Available Credits:<div id="i_credit"><?php if(isset($userWallet[0]["total_credits"])) {
+                        <td colspan="3" class="font-red"> Available Credits: <a
+                                    id="i_credit"><?php if (isset($userWallet[0]["total_credits"])) {
                                     echo $userWallet[0]["total_credits"];
-                                } ?></div> </td>
+                                } ?></a></td>
                     </tr>
                     <tr>
                         <td> Total Amount Credit</td>
@@ -30,7 +31,8 @@
                             <div class="input-group input-medium">
                                 <input type="text" id="total_amount_credit" class="form-control">
                                 <span class="input-group-btn">
-                                                            <button onclick="totalAmountDisCredit()" class="btn btn-outline blue "
+                                                            <button onclick="totalAmountDisCredit()"
+                                                                    class="btn btn-outline blue "
                                                                     type="button">Add!</button>
                                                         </span>
                             </div>
@@ -49,7 +51,8 @@
                             <div class="input-group input-medium">
                                 <input id="total_per_credit" type="text" class="form-control">
                                 <span class="input-group-btn">
-                                                            <button onclick="perDisCredit()" class="btn btn-outline blue "
+                                                            <button onclick="perDisCredit()"
+                                                                    class="btn btn-outline blue "
                                                                     type="button">Add!</button>
                                                         </span>
                             </div>
@@ -91,21 +94,21 @@
                                 <th>Edit</th>
                             </tr>
                             <tbody id="mySites_table">
-                                <?php
-                                foreach ($sites as $site) {
-                                    echo "<tr>
-                                                <td id='updateSite_siteID_".$site["websites_id"]."' >".  $site["websites_id"]."</td>
-                                                <td id='updateSite_title_".$site["websites_id"]."'>" . substr($site["page_title"], 0, 15) . "</td>
-                                                <td id='updateSite_url_".$site["websites_id"]."'>" . substr($site["url"], 0, 25) . "</td>
-                                                <td id='updateSite_credits_".$site["websites_id"]."'>" . $site["credits"] . "</td>
-                                                <td style='display:none' id='updateSite_duration_".$site["websites_id"]."'>" . $site["duration_sec_id"] . "</td>
+                            <?php
+                            foreach ($sites as $site) {
+                                echo "<tr>
+                                                <td id='updateSite_siteID_" . $site["websites_id"] . "' >" . $site["websites_id"] . "</td>
+                                                <td id='updateSite_title_" . $site["websites_id"] . "'>" . substr($site["page_title"], 0, 15) . "</td>
+                                                <td id='updateSite_url_" . $site["websites_id"] . "'>" . substr($site["url"], 0, 25) . "</td>
+                                                <td id='updateSite_credits_" . $site["websites_id"] . "'>" . $site["credits"] . "</td>
+                                                <td style='display:none' id='updateSite_duration_" . $site["websites_id"] . "'>" . $site["duration_sec_id"] . "</td>
                                                 <td>sss</td>
-                                                <td><a name='sites_selector' site_id='".$site["websites_id"]."' onclick=\"setUpdateSite(".$site["websites_id"].");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
+                                                <td><a name='sites_selector' site_id='" . $site["websites_id"] . "' onclick=\"setUpdateSite(" . $site["websites_id"] . ");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
                                                        <i class=\"fa fa-edit\"></i> Edit </a></td>
                                             </tr>";
-                                }
+                            }
 
-                                ?>
+                            ?>
                             </tbody>
                         </table>
                     </div>
@@ -211,7 +214,7 @@
 <script type="text/javascript">
 
     function addSite() {
-        var site_id=document.getElementById("site_id").value;
+        var site_id = document.getElementById("site_id").value;
         var title = document.getElementById("site_title").value;
         var url = document.getElementById("site_url").value;
         var credits = document.getElementById("credits").value;
@@ -220,7 +223,7 @@
 
         var dataString = "title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost;
 
-        if(site_id=="-2"){
+        if (site_id == "-2") {
             $.ajax({
                 type: "POST",
                 url: base_url + "/index.php/Sites/addSite",
@@ -233,15 +236,14 @@
                 }
             });
         }
-        else{
+        else {
             updateSite();
         }
 
 
-
     }
     function updateSite() {
-        var site_id=document.getElementById("site_id").value;
+        var site_id = document.getElementById("site_id").value;
         var title = document.getElementById("site_title").value;
         var url = document.getElementById("site_url").value;
         var credits = document.getElementById("credits").value;
@@ -280,11 +282,11 @@
 
     function setUpdateSite(id) {
 
-        document.getElementById("site_id").value = document.getElementById("updateSite_siteID_"+id).innerText;
-        document.getElementById("site_title").value = document.getElementById("updateSite_title_"+id).innerText;
-        document.getElementById("site_url").value = document.getElementById("updateSite_url_"+id).innerText;
-        document.getElementById("credits").value = document.getElementById("updateSite_credits_"+id).innerText;
-        $("#visits_durations").val( document.getElementById("updateSite_duration_"+id).innerText ) ;
+        document.getElementById("site_id").value = document.getElementById("updateSite_siteID_" + id).innerText;
+        document.getElementById("site_title").value = document.getElementById("updateSite_title_" + id).innerText;
+        document.getElementById("site_url").value = document.getElementById("updateSite_url_" + id).innerText;
+        document.getElementById("credits").value = document.getElementById("updateSite_credits_" + id).innerText;
+        $("#visits_durations").val(document.getElementById("updateSite_duration_" + id).innerText);
 
     }
 
@@ -298,30 +300,30 @@
             url: base_url + "/index.php/Distrubition/getMyCreditsInfo",
             cache: false,
             success: function (result) {
-                    document.getElementById("i_credit").innerHTML=result;
+                document.getElementById("i_credit").innerHTML = result;
             }
         });
     }
 
     function totalAmountDisCredit() {
-        var i_credit= document.getElementById("i_credit").innerText;
-        var credit= document.getElementById("total_amount_credit").value;
+        var i_credit = document.getElementById("i_credit").innerText;
+        var credit = document.getElementById("total_amount_credit").value;
         var sites_selector = document.getElementsByName("sites_selector");
-        var countSites= (sites_selector.length+1);
-        var disturbation_value = parseFloat(credit)/countSites;
-        var site_id=0;
-        var dataString = "per_cost="+disturbation_value;
-        if(credit>i_credit){
+        var countSites = (sites_selector.length + 1);
+        var disturbation_value = parseFloat(credit) / countSites;
+        var site_id = 0;
+        var dataString = "per_cost=" + disturbation_value;
+        if (credit > i_credit) {
             WarningAlert("Your credits aren't enough! ", "dis_alert");
         }
         else {
-            for(var i=0 ;i<sites_selector.length;i++){
+            for (var i = 0; i < sites_selector.length; i++) {
 
-                site_id =sites_selector[i].getAttribute("site_id");
+                site_id = sites_selector[i].getAttribute("site_id");
 
                 $.ajax({
                     type: "POST",
-                    url: base_url + "/index.php/Distrubition/DistrubitionTotalAmountDisCredit/"+site_id,
+                    url: base_url + "/index.php/Distrubition/DistrubitionTotalAmountDisCredit/" + site_id,
                     data: dataString,
                     cache: false,
                     success: function (result) {
@@ -337,23 +339,23 @@
     }
 
     function perDisCredit() {
-        var i_credit= document.getElementById("i_credit").innerText;
-        var credit= document.getElementById("total_per_credit").value;
+        var i_credit = document.getElementById("i_credit").innerText;
+        var credit = document.getElementById("total_per_credit").value;
         var sites_selector = document.getElementsByName("sites_selector");
-        var countSites= (sites_selector.length);
+        var countSites = (sites_selector.length);
         var total_credit_waste = countSites * credit;
         var disturbation_value = credit;
-        var site_id=0;
-        var dataString = "per_cost="+disturbation_value;
+        var site_id = 0;
+        var dataString = "per_cost=" + disturbation_value;
 
-        if(total_credit_waste <= i_credit){
-            for(var i=0 ;i<sites_selector.length;i++){
+        if (total_credit_waste <= i_credit) {
+            for (var i = 0; i < sites_selector.length; i++) {
 
-                site_id =sites_selector[i].getAttribute("site_id");
+                site_id = sites_selector[i].getAttribute("site_id");
 
                 $.ajax({
                     type: "POST",
-                    url: base_url + "/index.php/Distrubition/DistrubitionTotalAmountDisCredit/"+site_id,
+                    url: base_url + "/index.php/Distrubition/DistrubitionTotalAmountDisCredit/" + site_id,
                     data: dataString,
                     cache: false,
                     success: function (result) {
@@ -365,7 +367,7 @@
                 });
             }
         }
-        else{
+        else {
             WarningAlert("Your credits aren't enough! ", "dis_alert");
         }
 
