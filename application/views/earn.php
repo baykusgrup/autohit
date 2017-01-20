@@ -169,12 +169,31 @@ When enabled, this option allows you to automatically distribute the credits ear
                 document.getElementById("currentk").value = currentk2;
                 url = theurls[current1].urls_g;
                 window.open(url, "myWindow");
-                urlLast.push("<li>" + url + "<a id='blockedStatus_"+theurls[current1].site_id+"' onclick='getBlocked("+theurls[current1].site_id+");'>Block</a></li>");
+                urlLast.push("<li>" + url + "<a id='blockedStatus_" + theurls[current1].site_id + "' onclick='getBlocked(" + theurls[current1].site_id + ");'>Block</a></li>");
                 document.getElementById("LastSites_5").innerHTML = urlLast.slice(Math.max(urlLast.length - 5, 0)).join(" ");
 
                 document.getElementById("currentSite").innerHTML = url;
 
-                document.getElementById("duration_time").innerHTML = theurls[current1].durations;
+                //document.getElementById("duration_time").innerHTML = theurls[current1].durations;
+
+                var downloadButton = document.getElementById("duration_time");
+                var counter = theurls[current1].durations;
+                var newElement = document.getElementById("duration_time");
+                newElement.innerHTML = counter;
+                var id;
+
+                downloadButton.parentNode.replaceChild(newElement, downloadButton);
+
+                id = setInterval(function () {
+                    counter--;
+                    if (counter < 0) {
+                        newElement.parentNode.replaceChild(downloadButton, newElement);
+                        clearInterval(id);
+                    } else {
+                        newElement.innerHTML = counter.toString();
+                    }
+                }, 1000);
+
                 timerId = setTimeout(geturl, theurls[current1].durations * 1000);
             }
         }
@@ -189,14 +208,14 @@ When enabled, this option allows you to automatically distribute the credits ear
             cache: false,
             success: function (result) {
                 alert(result);
-              if(result == 1){
+                if (result == 1) {
 
-                  alert("hata");
-              }
-              else{
-                  myWindow = window.open("", "myWindow");
-                  getUrlsFromDatabase();
-              }
+                    alert("hata");
+                }
+                else {
+                    myWindow = window.open("", "myWindow");
+                    getUrlsFromDatabase();
+                }
             }
         });
 
@@ -252,10 +271,10 @@ When enabled, this option allows you to automatically distribute the credits ear
 
         $.ajax({
             type: "POST",
-            url: base_url + "/index.php/Blocked/getBlocked/" +id,
+            url: base_url + "/index.php/Blocked/getBlocked/" + id,
             cache: false,
             success: function (result) {
-                document.getElementById("blockedStatus_"+id).innerHTML="Blocked";
+                document.getElementById("blockedStatus_" + id).innerHTML = "Blocked";
             }
         });
     }
