@@ -52,19 +52,47 @@ class Sites extends CI_Controller {
         return $site_id ;
     }
 
+    public function updateSite()
+    {
+        $site_id = $this->input->post("siteID");
+        $dateTime = date('Y-m-d H:i:s');
+
+        $dataSites =array();
+        $dataSites["page_title"] = $this->input->post("title");
+        $dataSites["url"] = $this->input->post("url");
+        $dataSites["credits"] = $this->input->post("credits");
+        $dataSites["visit_cost"] = $this->input->post("visits_cost");
+        $dataSites["duration_sec_id"] = $this->input->post("duration_id");
+
+        /*daha sonra doldurulabilir
+        $dataSites["unique_ip"] = $this->input->post();
+        $dataSites["hide_referer"] = $this->input->post();
+        $dataSites["random_referer"] = $this->input->post();
+        */
+
+        $dataSites["record_status"] = 1;
+        $dataSites["update_date"] = $dateTime;
+        $dataSites["update_user"]= $this->session->userdata("user_id");
+
+        $site_id = $this->generalTables_model->updateTable("websites",$site_id,$dataSites);
+        return $site_id ;
+    }
+
     public function controllMySites()
     {
         $user_id = $this->session->userdata("user_id");
         $return = $this->sites_model->getMySitesByUserID($user_id);
         $HTML ="";
         foreach ($return as $site){
-            $HTML .= "<tr>
-                                                <td>" . substr($site["page_title"], 0, 15) . "</td>
-                                                <td>" . substr($site["url"], 0, 25) . "</td>
-                                                <td>" . $site["credits"] . "</td>
+            $HTML .=  "<tr>
+                                                <td id='updateSite_siteID_".$site["websites_id"]."' >".  $site["websites_id"]."</td>
+                                                <td id='updateSite_title_".$site["websites_id"]."'>" . substr($site["page_title"], 0, 15) . "</td>
+                                                <td id='updateSite_url_".$site["websites_id"]."'>" . substr($site["url"], 0, 25) . "</td>
+                                                <td id='updateSite_credits_".$site["websites_id"]."'>" . $site["credits"] . "</td>
+                                                <td style='display:none' id='updateSite_duration_".$site["websites_id"]."'>" . $site["duration_sec_id"] . "</td>
                                                 <td>sss</td>
-                                                <td><a href=\"javascript:;\" class=\"btn btn-outline green btn-sm purple\">
-                                                                                    <i class=\"fa fa-edit\"></i> Edit </a></td>
+                                                <td><a onclick=\"setUpdateSite(".$site["websites_id"].");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
+                                                       <i class=\"fa fa-edit\"></i> Edit </a></td>
                                             </tr>";
         }
         echo $HTML;

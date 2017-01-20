@@ -70,7 +70,7 @@
                                 </th>
                                 <th colspan="3">
 
-                                    <a type="button"
+                                    <a type="button" onclick="clearAddsiteForm();"
                                        href="#modal_addSite" class="btn blue btn-block"
                                        data-toggle="modal" role="button"> <i class="fa fa-plus-square-o"></i>
                                         Add Site </a>
@@ -78,6 +78,7 @@
 
                             </tr>
                             <tr>
+                                <th>#</th>
                                 <th>Site name</th>
                                 <th>Url</th>
                                 <th>Crdt</th>
@@ -88,12 +89,14 @@
                                 <?php
                                 foreach ($sites as $site) {
                                     echo "<tr>
-                                                <td>" . substr($site["page_title"], 0, 15) . "</td>
-                                                <td>" . substr($site["url"], 0, 25) . "</td>
-                                                <td>" . $site["credits"] . "</td>
+                                                <td id='updateSite_siteID_".$site["websites_id"]."' >".  $site["websites_id"]."</td>
+                                                <td id='updateSite_title_".$site["websites_id"]."'>" . substr($site["page_title"], 0, 15) . "</td>
+                                                <td id='updateSite_url_".$site["websites_id"]."'>" . substr($site["url"], 0, 25) . "</td>
+                                                <td id='updateSite_credits_".$site["websites_id"]."'>" . $site["credits"] . "</td>
+                                                <td style='display:none' id='updateSite_duration_".$site["websites_id"]."'>" . $site["duration_sec_id"] . "</td>
                                                 <td>sss</td>
-                                                <td><a href=\"javascript:;\" class=\"btn btn-outline green btn-sm purple\">
-                                                                                    <i class=\"fa fa-edit\"></i> Edit </a></td>
+                                                <td><a onclick=\"setUpdateSite(".$site["websites_id"].");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
+                                                       <i class=\"fa fa-edit\"></i> Edit </a></td>
                                             </tr>";
                                 }
 
@@ -114,7 +117,18 @@
                             <h4 class="modal-title">Add Site Detail</h4>
                         </div>
                         <div class="modal-body">
-                            <form class="form-horizontal" role="form">
+                            <form class="form-horizontal" role="form" id="addSite_form">
+
+                                <div style="display: none;" class="form-group">
+                                    <label class="col-md-3">Site ID :</label>
+                                    <div class="col-md-9">
+                                        <input readonly type="text" class="form-control" placeholder="Site Title.."
+                                               name="site_id" id="site_id" value="-2"/>
+                                        <div class="help-block">
+                                            enter a brief description of the site.
+                                        </div>
+                                    </div>
+                                </div>
 
                                 <div class="form-group">
                                     <label class="col-md-3">Site Title :</label>
@@ -190,7 +204,7 @@
 <script type="text/javascript">
 
     function addSite() {
-
+        var site_id=document.getElementById("site_id").value;
         var title = document.getElementById("site_title").value;
         var url = document.getElementById("site_url").value;
         var credits = document.getElementById("credits").value;
@@ -199,19 +213,51 @@
 
         var dataString = "title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost;
 
+        if(site_id=="-2"){
+            $.ajax({
+                type: "POST",
+                url: base_url + "/index.php/Sites/addSite",
+                data: dataString,
+                cache: false,
+                success: function (result) {
+                    //alert(dataString);
+                    SuccessAlert("We added your url! ", "addSite_alert");
+                    controllSites();
+                }
+            });
+        }
+        else{
+            updateSite();
+        }
+
+
+
+    }
+    function updateSite() {
+        var site_id=document.getElementById("site_id").value;
+        var title = document.getElementById("site_title").value;
+        var url = document.getElementById("site_url").value;
+        var credits = document.getElementById("credits").value;
+        var visits_cost = document.getElementById("visits_cost").value;
+        var duration_id = $("#visits_durations").val();
+
+        var dataString = "siteID=" + site_id + "&title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost;
+
         $.ajax({
             type: "POST",
-            url: base_url + "/index.php/Sites/addSite",
+            url: base_url + "/index.php/Sites/updateSite",
             data: dataString,
             cache: false,
             success: function (result) {
                 //alert(dataString);
-                SuccessAlert("We added your url! ", "addSite_alert");
+                SuccessAlert("We updated your url! ", "addSite_alert");
                 controllSites();
             }
         });
 
     }
+
+
     function controllSites() {
 
         $.ajax({
@@ -225,5 +271,17 @@
 
     }
 
+    function setUpdateSite(id) {
 
+        document.getElementById("site_id").value = document.getElementById("updateSite_siteID_"+id).innerText;
+        document.getElementById("site_title").value = document.getElementById("updateSite_title_"+id).innerText;
+        document.getElementById("site_url").value = document.getElementById("updateSite_url_"+id).innerText;
+        document.getElementById("credits").value = document.getElementById("updateSite_credits_"+id).innerText;
+        $("#visits_durations").val( document.getElementById("updateSite_duration_"+id).innerText ) ;
+
+    }
+
+    function clearAddsiteForm() {
+        document.getElementById("addSite_form").reset();
+    }
 </script>
