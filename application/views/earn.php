@@ -74,7 +74,7 @@ When enabled, this option allows you to automatically distribute the credits ear
 
             <p class="font-red-intense">Active Viewers </p>
             <table class="table table-hover table-striped table-bordered">
-                <tbody>
+                <thead>
                 <tr>
                     <th>
                         IP Address
@@ -83,18 +83,20 @@ When enabled, this option allows you to automatically distribute the credits ear
                         Browser
                     </th>
                 </tr>
-                <div id="active_viewerTable">
-                 <!--   <tr>
-                        <td>88.241.39.87 <br> TURKEY</td>
-                        <td>
-                            9 sec
-                        </td>
-                        <td>
-                            http://www.hamilton-radio.com <br>
-                            Type: Classic Windows Chrome 55.0.2883.87
-                        </td>
-                    </tr> -->
-                </div>
+                </thead>
+                <tbody id="active_viewerTable">
+
+                <!--   <tr>
+                       <td>88.241.39.87 <br> TURKEY</td>
+                       <td>
+                           9 sec
+                       </td>
+                       <td>
+                           http://www.hamilton-radio.com <br>
+                           Type: Classic Windows Chrome 55.0.2883.87
+                       </td>
+                   </tr> -->
+
 
                 </tbody>
             </table>
@@ -281,7 +283,7 @@ When enabled, this option allows you to automatically distribute the credits ear
             }
         });
     }
- function controllActiveViewer() {
+    function controllActiveViewer() {
 
         $.ajax({
             type: "POST",

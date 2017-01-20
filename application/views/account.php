@@ -109,7 +109,9 @@
                     </tr>
                     <tr>
                         <td> Available Credits</td>
-                        <td>sss
+                        <td><?php if (isset($userInfo[0]["total_credits"])) {
+                                    echo $userInfo[0]["total_credits"];
+                                } ?>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
                             data-original-title="tooltips">
