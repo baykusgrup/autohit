@@ -23,4 +23,14 @@ Class Sites_model extends CI_Model
         return $query->result_array();
 
     }
+
+    function getMyBlockedSitesByUserID($user_id){
+        $_SQL = "SELECT w.`websites_id`,w.`url` FROM `websites` w 
+                  WHERE w.`record_status`=1 and w.`blocked`=1 and w.`user_id`=".$user_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
 }
