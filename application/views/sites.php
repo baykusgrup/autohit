@@ -8,7 +8,10 @@
     <div class="portlet-body">
         <div class="row">
             <div class="col-md-12">
-
+                <div id="dis_alert" class="alert alert-success"
+                     style="display: none;"><strong>Başarılı
+                        !</strong> Uploaded Successfully
+                </div>
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
                     <tr>
@@ -17,15 +20,17 @@
                         </th>
                     </tr>
                     <tr>
-                        <td colspan="3" class="font-red"> Available Credits: 2222</td>
+                        <td colspan="3" class="font-red"> Available Credits:<div id="i_credit"><?php if(isset($userWallet[0]["total_credits"])) {
+                                    echo $userWallet[0]["total_credits"];
+                                } ?></div> </td>
                     </tr>
                     <tr>
                         <td> Total Amount Credit</td>
                         <td class="col-md-5">
                             <div class="input-group input-medium">
-                                <input type="text" class="form-control">
+                                <input type="text" id="total_amount_credit" class="form-control">
                                 <span class="input-group-btn">
-                                                            <button class="btn btn-outline blue "
+                                                            <button onclick="totalAmountDisCredit()" class="btn btn-outline blue "
                                                                     type="button">Add!</button>
                                                         </span>
                             </div>
@@ -95,7 +100,7 @@
                                                 <td id='updateSite_credits_".$site["websites_id"]."'>" . $site["credits"] . "</td>
                                                 <td style='display:none' id='updateSite_duration_".$site["websites_id"]."'>" . $site["duration_sec_id"] . "</td>
                                                 <td>sss</td>
-                                                <td><a onclick=\"setUpdateSite(".$site["websites_id"].");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
+                                                <td><a name='sites_selector' site_id='".$site["websites_id"]."' onclick=\"setUpdateSite(".$site["websites_id"].");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
                                                        <i class=\"fa fa-edit\"></i> Edit </a></td>
                                             </tr>";
                                 }
@@ -283,5 +288,49 @@
 
     function clearAddsiteForm() {
         document.getElementById("addSite_form").reset();
+    }
+
+    function controllCredits() {
+        $.ajax({
+            type: "POST",
+            url: base_url + "/index.php/Distrubition/getMyCreditsInfo",
+            cache: false,
+            success: function (result) {
+                    document.getElementById("i_credit").innerHTML=result;
+            }
+        });
+    }
+
+    function totalAmountDisCredit() {
+        var i_credit= document.getElementById("i_credit").innerText;
+        var credit= document.getElementById("total_amount_credit").value;
+        var sites_selector = document.getElementsByName("sites_selector");
+        var countSites= (sites_selector.length+1);
+        var disturbation_value = parseFloat(credit)/countSites;
+        var site_id=0;
+        var dataString = "per_cost="+disturbation_value;
+        if(credit>i_credit){
+            WarningAlert("Your credits aren't enough! ", "dis_alert");
+        }
+        else {
+            for(var i=0 ;i<sites_selector.length;i++){
+
+                site_id =sites_selector[i].getAttribute("site_id");
+                alert(site_id);
+                $.ajax({
+                    type: "POST",
+                    url: base_url + "/index.php/Distrubition/DistrubitionTotalAmountDisCredit/"+site_id,
+                    data: dataString,
+                    cache: false,
+                    success: function (result) {
+
+                        SuccessAlert("We distrubuted your urls! ", "dis_alert");
+                        controllSites();
+                        controllCredits();
+                    }
+                });
+            }
+        }
+
     }
 </script>

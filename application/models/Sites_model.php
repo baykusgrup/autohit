@@ -33,4 +33,22 @@ Class Sites_model extends CI_Model
         return $query->result_array();
 
     }
+    function getWalletByUserID($user_id){
+        $_SQL = "SELECT user_wallet_id,user_id,total_credits,earn_credits,wasted_credits  FROM user_wallet WHERE record_status=1 and user_id=".$user_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
+    function getSitesInfoBySiteID($site_id){
+        $_SQL = "SELECT `websites_id`,`page_title`,`url`,`credits`,`visit_cost`,`duration_sec_id`,`unique_ip`,`hide_referer`,`random_referer`,`blocked`
+                 FROM `websites`
+                 WHERE `record_status`=1 and `websites_id`=".$site_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
 }

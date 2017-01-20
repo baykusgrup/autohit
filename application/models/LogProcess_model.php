@@ -47,6 +47,9 @@ class logProcess_model extends CI_Model {
             case "websites";
                 $tableid="websites_id";
                 break;
+            case "user_wallet";
+                $tableid="user_wallet_id";
+                break;
             default:
                 echo "Hata";
                 break;

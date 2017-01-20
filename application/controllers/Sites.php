@@ -15,6 +15,7 @@ class Sites extends CI_Controller {
             $data=array();
             $data["durations"]=$this->prtTable_model->getDurations();
             $data["sites"]=$this->sites_model->getMySitesByUserID($user_id);
+            $data["userWallet"]=$this->sites_model->getWalletByUserID($user_id);
 
             $this->load->view('_head');
             $this->load->view('sites',$data);
@@ -91,7 +92,7 @@ class Sites extends CI_Controller {
                                                 <td id='updateSite_credits_".$site["websites_id"]."'>" . $site["credits"] . "</td>
                                                 <td style='display:none' id='updateSite_duration_".$site["websites_id"]."'>" . $site["duration_sec_id"] . "</td>
                                                 <td>sss</td>
-                                                <td><a onclick=\"setUpdateSite(".$site["websites_id"].");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
+                                                <td><a name='sites_selector' site_id='".$site["websites_id"]."' onclick=\"setUpdateSite(".$site["websites_id"].");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
                                                        <i class=\"fa fa-edit\"></i> Edit </a></td>
                                             </tr>";
         }
