@@ -93,6 +93,28 @@ class Distrubition extends CI_Controller {
 
         $wallet_id = $this->generalTables_model->updateTable("user_wallet",$wallet_id,$dataWallet);
     }
+    public function SiteVisitInfoCalculate($site_id)
+    {
+            $user_id= $this->session->userdata("user_id");
+
+
+            $dateTime = date('Y-m-d H:i:s');
+
+            $dataVisit=array();
+            $dataVisit["user_id"] =$user_id;
+            $dataVisit["ip"] = $_SERVER["REMOTE_ADDR"];
+            $dataVisit["website_id"] = $site_id;
+            $dataVisit["surf_date"] = $dateTime;
+
+            $dataVisit["record_status"] = 1;
+            $dataVisit["update_date"] = $dateTime;
+            $dataVisit["update_user"]= $user_id;
+            $dataVisit["insert_date"] = $dateTime;
+            $dataVisit["insert_user"]= $user_id;
+
+            $visit_id = $this->generalTables_model->insertTables("static_sitesurf_info",$dataVisit);
+            return $visit_id;
+    }
 
 
     public function Surf($siteID)
@@ -104,6 +126,7 @@ class Distrubition extends CI_Controller {
             echo "1";
         }
         else{
+            $this->SiteVisitInfoCalculate($siteID);
             $this->SurfingCostCalculation($siteID);
             echo "2";
         }
