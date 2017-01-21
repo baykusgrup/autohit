@@ -14,7 +14,7 @@ class Sites extends CI_Controller {
 
             $data=array();
             $data["durations"]=$this->prtTable_model->getDurations();
-            $data["sites"]=$this->sites_model->getMySitesByUserID($user_id);
+            $data["sites"]=$this->sites_model->getMySitesByUserIDAll($user_id);
             $data["userWallet"]=$this->sites_model->getWalletByUserID($user_id);
 
             $this->load->view('_head');
@@ -71,7 +71,7 @@ class Sites extends CI_Controller {
         $dataSites["random_referer"] = $this->input->post();
         */
 
-        $dataSites["record_status"] = 1;
+        $dataSites["record_status"] = $this->input->post("status");
         $dataSites["update_date"] = $dateTime;
         $dataSites["update_user"]= $this->session->userdata("user_id");
 
@@ -91,7 +91,7 @@ class Sites extends CI_Controller {
     public function controllMySites()
     {
         $user_id = $this->session->userdata("user_id");
-        $return = $this->sites_model->getMySitesByUserID($user_id);
+        $return = $this->sites_model->getMySitesByUserIDAll($user_id);
         $HTML ="";
         foreach ($return as $site){
             $HTML .=  "<tr>

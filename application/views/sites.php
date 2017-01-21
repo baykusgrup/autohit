@@ -72,8 +72,8 @@
                     <div class="table-scrollable">
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <th colspan="2" class="font-red-intense">
-                                    Active website
+                                <th colspan="3" class="font-red-intense">
+                                    My websites
 
                                 </th>
                                 <th colspan="3">
@@ -100,6 +100,7 @@
                                                 <td id='updateSite_siteID_" . $site["websites_id"] . "' >" . $site["websites_id"] . "</td>
                                                 <td id='updateSite_title_" . $site["websites_id"] . "'>" . substr($site["page_title"], 0, 15) . "</td>
                                                 <td id='updateSite_url_" . $site["websites_id"] . "'>" . substr($site["url"], 0, 25) . "</td>
+                                                <td style='display: none' id='updateSite_status_" . $site["websites_id"] . "'>" . $site["record_status"] . "</td>
                                                 <td id='updateSite_credits_" . $site["websites_id"] . "'>" . $site["credits"] . "</td>
                                                 <td style='display:none' id='updateSite_duration_" . $site["websites_id"] . "'>" . $site["duration_sec_id"] . "</td>
                                                 <td>sss</td>
@@ -113,6 +114,8 @@
                         </table>
                     </div>
                 </div>
+                <hr/>
+
             </div>
             <!--Modal Payment Type-->
             <div id="modal_addSite" class="modal fade" tabindex="-1" role="dialog"
@@ -192,9 +195,15 @@
                                 <div class="form-group">
                                     <label class="col-md-3">Website Status :</label>
                                     <div class="col-md-9">
-                                        <input type="checkbox" class="make-switch" checked data-size="small"
-                                               data-on-color="success" data-on-text="ON" data-off-color="default"
-                                               data-off-text="OFF"></div>
+                                        <select id="siteStatus_selector"
+                                                class="form-control" name="siteStatus_selector">
+                                            <option value="-1"> Select Status</option>
+                                            <option value="0"> Passive</option>
+                                            <option value="1"> Active </option>
+
+
+                                        </select>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -228,8 +237,9 @@
         var credits = document.getElementById("credits").value;
         var visits_cost = document.getElementById("visits_cost").value;
         var duration_id = $("#visits_durations").val();
+        var status =$("#siteStatus_selector").val();
 
-        var dataString = "title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost;
+        var dataString = "title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost+ "&status=" + status;
 
         if (site_id == "-2") {
             $.ajax({
@@ -257,8 +267,9 @@
         var credits = document.getElementById("credits").value;
         var visits_cost = document.getElementById("visits_cost").value;
         var duration_id = $("#visits_durations").val();
+        var status =$("#siteStatus_selector").val();
 
-        var dataString = "siteID=" + site_id + "&title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost;
+        var dataString = "siteID=" + site_id + "&title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost+ "&status=" + status;
 
         $.ajax({
             type: "POST",
@@ -310,6 +321,7 @@
         document.getElementById("site_url").value = document.getElementById("updateSite_url_" + id).innerText;
         document.getElementById("credits").value = document.getElementById("updateSite_credits_" + id).innerText;
         $("#visits_durations").val(document.getElementById("updateSite_duration_" + id).innerText);
+        $('#siteStatus_selector').val(document.getElementById("updateSite_status_" + id).innerText);
         calculateVisitCost();
 
     }

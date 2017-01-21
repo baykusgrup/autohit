@@ -12,6 +12,16 @@ Class Sites_model extends CI_Model
         return $query->result_array();
 
     }
+function getMySitesByUserIDAll($user_id){
+        $_SQL = "SELECT w.websites_id,w.page_title,w.url,w.credits,w.visit_cost,w.duration_sec_id, w.record_status
+                 FROM websites w 
+                 WHERE  w.user_id=".$user_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
 
     function getUrlsFromDatabase(){
         $_SQL = "SELECT w.`websites_id`,w.`page_title`,w.`url`,w.`credits`,w.`visit_cost`,pd.`durations_sec` FROM `websites` w 
