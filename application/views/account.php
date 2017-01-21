@@ -35,6 +35,28 @@
                         </td>
                     </tr>
                     <tr>
+                        <td> Username</td>
+                        <td id="email_td">
+                            <?php
+                            if (isset($userInfo[0]["username"])) {
+                                echo "<div id='usernameLink' type=\"email\"  style='display: block' role=\"button\" onclick=\"changeUusernameDiv();\">" . $userInfo[0]["username"] . "</div>";
+                            }
+                            ?>
+                            <div class="form-group" id="email_changeDiv" style="display: none">
+                                <input id="new_username" type="username" class="form-control" placeholder="new username">
+                            </div>
+
+                        </td>
+                        <td id="email_td2">
+                            <span id='usernameLink2' type="username" style='display: block' role="button"
+                                  onclick="changeUsernameDiv();" class="badge badge-primary badge-roundless"> edit </span>
+
+                            <span id='username_Done' type="username" style='display: none' role="button"
+                                  class="badge badge-primary badge-roundless" onclick="changeUsername();"> Save </span>
+
+                        </td>
+                    </tr>
+                    <tr>
                         <td> Email</td>
                         <td id="email_td">
                             <?php

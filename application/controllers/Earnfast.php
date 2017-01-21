@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Earn extends CI_Controller
+class Earnfast extends CI_Controller
 {
 
     public function index()
@@ -12,15 +12,13 @@ class Earn extends CI_Controller
             $this->load->helper(['language', 'lang', 'url']);
             dilSecici();
 
-            $user_id = $this->session->userdata("user_id");
             $data=array();
-            $data["userInfo"] = $this->account_model->getUserAllInfoByUserID($user_id);
             $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
             $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
             $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
 
             $this->load->view('_head');
-            $this->load->view('earn',$data);
+            $this->load->view('earnfast',$data);
             $this->load->view('_foot');
         }
     }
@@ -77,7 +75,7 @@ class Earn extends CI_Controller
 
     public function controllActiveViewer()
     {
-      $user_id =  $this->session->userdata("user_id");
+        $user_id =  $this->session->userdata("user_id");
         $result = $this->user->controllActiveViewer($user_id);
         $HTML = "";
 

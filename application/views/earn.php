@@ -52,7 +52,11 @@ When enabled, this option allows you to automatically distribute the credits ear
                     <tr>
                         <td> Light Viewer Link</td>
                         <td>
-                            sss
+                            <strong> <?php
+                                    if (isset($userInfo[0]["referance_code"])) {
+                                        echo "<a href=\"" . base_url() . "index.php/Register/?id=" . $userInfo[0]["user_id"] . "\" >" . base_url() . "index.php/Earnfast/?id=" . $userInfo[0]["user_id"] . "</a>";
+                                    } ?></strong>
+
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
                             data-original-title="tooltips">
