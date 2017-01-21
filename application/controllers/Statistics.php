@@ -10,9 +10,16 @@ class Statistics extends CI_Controller {
         else {
             $this->load->helper(['language', 'lang', 'url']);
             dilSecici();
+            $user_id =$this->session->userdata('user_id');
+            $data=array();
+            $data["todayCount"]= $this->statics_model->getViewedTodayCount();
+            $data["websitesCount"]= $this->statics_model->getWebsitesCount();
+            $data["getUserCount"]= $this->statics_model->getUserCount();
+            $data["getOnlineViewer"]= $this->statics_model->getOnlineMemberViewerCount();
+            $data["todayVisitedByUser"]= $this->statics_model->getViewedTodayByUserCount($user_id);
 
             $this->load->view('_head');
-            $this->load->view('statistics');
+            $this->load->view('statistics',$data);
             $this->load->view('_foot');
         }
     }

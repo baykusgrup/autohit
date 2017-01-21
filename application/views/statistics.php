@@ -13,7 +13,9 @@
                     <tr>
                         <td>Members Online</td>
                         <td>
-                            1223
+                            <?php if(isset( $getOnlineViewer[0]["countOnline"])){
+                                echo  $getOnlineViewer[0]["countOnline"];
+                            }  ?>
                         </td>
                     </tr>
                     <tr>
@@ -26,7 +28,9 @@
                     <tr>
                         <td> Registered Members</td>
                         <td>
-                            sss
+                            <?php if(isset( $getUserCount[0]["usersCount"])){
+                                echo  $getUserCount[0]["usersCount"];
+                            }  ?>
                         </td>
                     </tr>
                     <tr>
@@ -36,7 +40,16 @@
                     </tr>
                     <tr>
                         <td> Websites</td>
-                        <td>sss
+                        <td><?php if(isset( $websitesCount[0]["countWebsite"])){
+                                echo  $websitesCount[0]["countWebsite"];
+                            }  ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> Visits today</td>
+                        <td> <?php if(isset( $todayCount[0]["today"])){
+                                echo  $todayCount[0]["today"];
+                            }  ?>
                         </td>
                     </tr>
                     <tr>
@@ -46,7 +59,9 @@
                     </tr>
                     <tr>
                         <td> Sites you've visited today</td>
-                        <td>sss
+                        <td><?php if(isset( $todayVisitedByUser[0]["todayUserVisited"])){
+                                echo  $todayVisitedByUser[0]["todayUserVisited"];
+                            }  ?>
                         </td>
                     </tr>
                     <tr>
