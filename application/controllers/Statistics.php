@@ -18,6 +18,10 @@ class Statistics extends CI_Controller {
             $data["getOnlineViewer"]= $this->statics_model->getOnlineMemberViewerCount();
             $data["todayVisitedByUser"]= $this->statics_model->getViewedTodayByUserCount($user_id);
 
+            $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
+            $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
+            $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
+
             $this->load->view('_head');
             $this->load->view('statistics',$data);
             $this->load->view('_foot');

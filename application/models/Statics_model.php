@@ -43,4 +43,35 @@ Class Statics_model extends CI_Model
         return $query->result_array();
 
     }
+
+    function getTop250DailyVisit(){
+        $_SQL = " SELECT u.user_id,u.email, (select count(ss.website_id) from static_sitesurf_info ss where ss.user_id=u.user_id and DATE(ss.surf_date) = DATE(CURDATE())
+                  limit 1) AS visitCount 
+                  FROM users u 
+                  ORDER BY visitCount DESC limit 250";
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
+    function getTop250MountlyVisit(){
+        $_SQL = " SELECT u.user_id,u.email, (select count(ss.website_id) from static_sitesurf_info ss where ss.user_id=u.user_id and DATE(ss.surf_date)  >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)
+                  limit 1) AS visitCount FROM users u ORDER BY visitCount DESC";
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
+    function getTop250WeeklyVisit(){
+        $_SQL = " SELECT u.user_id,u.email, (select count(ss.website_id) from static_sitesurf_info ss where ss.user_id=u.user_id and YEARWEEK(ss.surf_date) = YEARWEEK(CURRENT_DATE)
+                  limit 1) AS visitCount FROM users u
+                  ORDER BY visitCount DESC";
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
 }

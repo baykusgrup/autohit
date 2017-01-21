@@ -11,8 +11,13 @@ class Buy extends CI_Controller {
             $this->load->helper(['language', 'lang', 'url']);
             dilSecici();
 
+            $data=array();
+            $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
+            $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
+            $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
+
             $this->load->view('_head');
-            $this->load->view('buy');
+            $this->load->view('buy',$data);
             $this->load->view('_foot');
         }
     }

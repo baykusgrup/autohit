@@ -16,13 +16,13 @@ if (!class_exists('Login')) {
         </div>
         <div class="portlet-body">
             <ul class="list-unstyled">
-                <li> Lorem ipsum dolor sit amet</li>
-                <li> Consectetur adipiscing elit</li>
-                <li> Integer molestie lorem at massa</li>
-                <li> Facilisis in pretium nisl aliquet</li>
-                <li> Nulla volutpat aliquam velit</li>
-                <li> Faucibus porta lacus fringilla vel</li>
-                <li> Aenean sit amet erat nunc</li>
+                <?php
+                if($todayTop250) {
+                    foreach ($todayTop250 as $listToday) {
+                        echo "<li>" . $listToday["email"] . "(" . $listToday["visitCount"] . ") </li>";
+                    }
+                }
+                ?>
                 <li class="text-center"> <a href="<?php echo base_url() ?>index.php/Top" class="font-red-mint"> See more</a></li>
             </ul>
         </div>
@@ -37,14 +37,15 @@ if (!class_exists('Login')) {
         </div>
         <div class="portlet-body">
             <ul class="list-unstyled">
-                <li> Lorem ipsum dolor sit amet</li>
-                <li> Consectetur adipiscing elit</li>
-                <li> Integer molestie lorem at massa</li>
-                <li> Facilisis in pretium nisl aliquet</li>
-                <li> Nulla volutpat aliquam velit
-                </li>
-                <li> Faucibus porta lacus fringilla vel</li>
-                <li> Aenean sit amet erat nunc</li>
+                <?php
+                    if($weeklyTop250){
+                        foreach ($weeklyTop250 as $listWeekly){
+                            echo "<li>".$listWeekly["email"]."(".$listWeekly["visitCount"].") </li>" ;
+                        }
+                    }
+
+
+                ?>
                 <li class="text-center"> <a href="<?php echo base_url() ?>index.php/Top/Weekly" class="font-red-mint"> See more</a></li>
             </ul>
         </div>
@@ -60,14 +61,14 @@ if (!class_exists('Login')) {
         </div>
         <div class="portlet-body">
             <ul class="list-unstyled">
-                <li> Lorem ipsum dolor sit amet</li>
-                <li> Consectetur adipiscing elit</li>
-                <li> Integer molestie lorem at massa</li>
-                <li> Facilisis in pretium nisl aliquet</li>
-                <li> Nulla volutpat aliquam velit
-                </li>
-                <li> Faucibus porta lacus fringilla vel</li>
-                <li> Aenean sit amet erat nunc</li>
+                <?php
+                if($weeklyTop250){
+                    foreach ($monthlyTop250 as $listMonthly){
+                        echo "<li>".$listMonthly["email"]."(".$listMonthly["visitCount"].") </li>" ;
+                    }
+                }
+
+                ?>
                 <li class="text-center"> <a href="<?php echo base_url() ?>index.php/Top/Monthly" class="font-red-mint"> See more</a></li>
             </ul>
         </div>

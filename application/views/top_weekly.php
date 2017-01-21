@@ -2,7 +2,7 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
-            <span class="caption-subject font-blue-sharp bold uppercase">Daily Top 250</span>
+            <span class="caption-subject font-blue-sharp bold uppercase">Weekly Top 250</span>
         </div>
 
     </div>
@@ -66,27 +66,25 @@
                     </thead>
                     <tbody>
 
-                            <?php
-                                if($todayTop250){
-                                    $i=0;
-                                    foreach ($todayTop250 as $listToday){
-                                        $i++;
-                                        echo " <tr>
-                                                <td> ". $i."</td>
-                                                <td>
-                                                    ".$listToday["email"]."
-                                                </td>
-                                                <td>
-                                                   ".$listToday["visitCount"]."
-                                                </td>
-                                            </tr>";
-                                    }
-                                }
+                    <?php
+                        if($weeklyTop250){
+                            $i=0;
+                            foreach ($weeklyTop250 as $listWeekly){
+                                $i++;
+                                echo " <tr>
+                                                    <td> ". $i."</td>
+                                                    <td>
+                                                        ".$listWeekly["email"]."
+                                                    </td>
+                                                    <td>
+                                                       ".$listWeekly["visitCount"]."
+                                                    </td>
+                                                </tr>";
+                            }
+                        }
 
 
-                            ?>
-
-
+                    ?>
                     </tbody>
                 </table>
             </div>

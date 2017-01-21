@@ -17,6 +17,10 @@ class Sites extends CI_Controller {
             $data["sites"]=$this->sites_model->getMySitesByUserIDAll($user_id);
             $data["userWallet"]=$this->sites_model->getWalletByUserID($user_id);
 
+            $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
+            $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
+            $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
+
             $this->load->view('_head');
             $this->load->view('sites',$data);
             $this->load->view('_foot');

@@ -18,6 +18,10 @@ class Blocked extends CI_Controller {
             $data=array();
             $data["blocked"]=$this->sites_model->getMyBlockedSitesByUserID($user_id);
 
+            $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
+            $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
+            $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
+
             $this->load->view('_head');
             $this->load->view('blocked',$data);
             $this->load->view('_foot');

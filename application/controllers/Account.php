@@ -17,6 +17,10 @@ class Account extends CI_Controller {
             $data["userInfo"] = $this->account_model->getUserAllInfoByUserID($user_id);
             $data["todayCount"]= $this->statics_model->getViewedTodayCount();
 
+            $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
+            $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
+            $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
+
             $this->load->view('_head');
             $this->load->view('account', $data);
             $this->load->view('_foot');

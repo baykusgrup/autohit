@@ -23,6 +23,10 @@ class Help extends CI_Controller
             $data = array();
             $data["helps"] = $this->prtTable_model->getHelpsByLanguageID($dil);
 
+            $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
+            $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
+            $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
+
             $this->load->view('_head');
             $this->load->view('help', $data);
             $this->load->view('_foot');

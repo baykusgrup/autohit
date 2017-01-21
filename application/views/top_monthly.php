@@ -2,7 +2,7 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
-            <span class="caption-subject font-blue-sharp bold uppercase">Daily Top 250</span>
+            <span class="caption-subject  font-blue-sharp bold uppercase">Monthly Top 250</span>
         </div>
 
     </div>
@@ -54,39 +54,37 @@
                 <p class="text-info">Order </p>
                 <table class="table table-hover table-striped table-bordered">
                     <thead>
-                    <tr>
-                        <th>Position</th>
-                        <th>
-                            Username
-                        </th>
-                        <th>
-                            Points
-                        </th>
-                    </tr>
+                        <tr>
+                            <th>Position</th>
+                            <th>
+                                Username
+                            </th>
+                            <th>
+                                Points
+                            </th>
+                        </tr>
                     </thead>
                     <tbody>
 
-                            <?php
-                                if($todayTop250){
-                                    $i=0;
-                                    foreach ($todayTop250 as $listToday){
-                                        $i++;
-                                        echo " <tr>
-                                                <td> ". $i."</td>
-                                                <td>
-                                                    ".$listToday["email"]."
-                                                </td>
-                                                <td>
-                                                   ".$listToday["visitCount"]."
-                                                </td>
-                                            </tr>";
-                                    }
-                                }
+                    <?php
+                    if($monthlyTop250){
+                        $i=0;
+                        foreach ($monthlyTop250 as $listMonthly){
+                            $i++;
+                            echo " <tr>
+                                                    <td> ". $i."</td>
+                                                    <td>
+                                                        ".$listMonthly["email"]."
+                                                    </td>
+                                                    <td>
+                                                       ".$listMonthly["visitCount"]."
+                                                    </td>
+                                                </tr>";
+                        }
+                    }
 
 
-                            ?>
-
-
+                    ?>
                     </tbody>
                 </table>
             </div>
