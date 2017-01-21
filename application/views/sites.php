@@ -29,7 +29,7 @@
                         <td> Total Amount Credit</td>
                         <td class="col-md-5">
                             <div class="input-group input-medium">
-                                <input type="text" id="total_amount_credit" class="form-control">
+                                <input type="number" min="0" id="total_amount_credit" class="form-control">
                                 <span class="input-group-btn">
                                                             <button onclick="totalAmountDisCredit()"
                                                                     class="btn btn-outline blue "
@@ -49,7 +49,7 @@
 
                         <td class="col-md-5">
                             <div class="input-group input-medium">
-                                <input id="total_per_credit" type="text" class="form-control">
+                                <input id="total_per_credit" type="number" min="0" class="form-control">
                                 <span class="input-group-btn">
                                                             <button onclick="perDisCredit()"
                                                                     class="btn btn-outline blue "
@@ -161,7 +161,7 @@
                                 <div class="form-group">
                                     <label class="col-md-3">Remaining Credits :</label>
                                     <div class="col-md-9">
-                                        <input type="number" class="form-control" placeholder="Enter Credits.."
+                                        <input type="number" min="0" class="form-control" placeholder="Enter Credits.."
                                                name="credits" id="credits"/>
                                     </div>
                                 </div>
@@ -235,6 +235,7 @@
         var title = document.getElementById("site_title").value;
         var url = document.getElementById("site_url").value;
         var credits = document.getElementById("credits").value;
+        var i_credit = document.getElementById("i_credit").innerText;
         var visits_cost = document.getElementById("visits_cost").value;
         var duration_id = $("#visits_durations").val();
         var status =$("#siteStatus_selector").val();
@@ -242,17 +243,24 @@
         var dataString = "title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost+ "&status=" + status;
 
         if (site_id == "-2") {
-            $.ajax({
-                type: "POST",
-                url: base_url + "/index.php/Sites/addSite",
-                data: dataString,
-                cache: false,
-                success: function (result) {
-                    //alert(dataString);
-                    SuccessAlert("We added your url! ", "addSite_alert");
-                    controllSites();
-                }
-            });
+            if(parseFloat(i_credit)>=parseFloat(credits)){
+                $.ajax({
+                    type: "POST",
+                    url: base_url + "/index.php/Sites/addSite",
+                    data: dataString,
+                    cache: false,
+                    success: function (result) {
+                        //alert(dataString);
+                        SuccessAlert("We added your url! ", "addSite_alert");
+                        controllCredits();
+                        controllSites();
+                    }
+                });
+            }
+            else{
+                WarningAlert("Your credits arent lower than site credits ", "addSite_alert");
+            }
+
         }
         else {
             updateSite();
@@ -265,23 +273,29 @@
         var title = document.getElementById("site_title").value;
         var url = document.getElementById("site_url").value;
         var credits = document.getElementById("credits").value;
+        var i_credit = document.getElementById("i_credit").innerText;
         var visits_cost = document.getElementById("visits_cost").value;
         var duration_id = $("#visits_durations").val();
         var status =$("#siteStatus_selector").val();
 
         var dataString = "siteID=" + site_id + "&title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost+ "&status=" + status;
+        if(parseFloat(i_credit)>=parseFloat(credits)){
+            $.ajax({
+                type: "POST",
+                url: base_url + "/index.php/Sites/updateSite",
+                data: dataString,
+                cache: false,
+                success: function (result) {
+                    //alert(dataString);
+                    SuccessAlert("We updated your url! ", "addSite_alert");
+                    controllCredits();
+                    controllSites();
+                }
+            });
+        }else{
+            WarningAlert("Your credits arent lower than site credits ", "addSite_alert");
+        }
 
-        $.ajax({
-            type: "POST",
-            url: base_url + "/index.php/Sites/updateSite",
-            data: dataString,
-            cache: false,
-            success: function (result) {
-                //alert(dataString);
-                SuccessAlert("We updated your url! ", "addSite_alert");
-                controllSites();
-            }
-        });
 
     }
     function deleteSite() {
@@ -374,6 +388,8 @@
         }
 
     }
+
+
 
     function perDisCredit() {
         var i_credit = document.getElementById("i_credit").innerText;
