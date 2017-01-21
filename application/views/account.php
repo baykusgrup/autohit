@@ -133,7 +133,10 @@
                     </tr>
                     <tr>
                         <td> Websites viewed today</td>
-                        <td>sss
+                        <td><?php
+                            if (isset($todayCount[0]["today"])) {
+                                echo $todayCount[0]["today"];
+                            } ?>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
                             data-original-title="tooltips">

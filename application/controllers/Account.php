@@ -15,6 +15,7 @@ class Account extends CI_Controller {
 
             $data = array();
             $data["userInfo"] = $this->account_model->getUserAllInfoByUserID($user_id);
+            $data["todayCount"]= $this->statics_model->getViewedTodayCount();
 
             $this->load->view('_head');
             $this->load->view('account', $data);
