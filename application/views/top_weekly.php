@@ -74,7 +74,7 @@
                                 echo " <tr>
                                                     <td> ". $i."</td>
                                                     <td>
-                                                        ".$listWeekly["email"]."
+                                                        ".$listWeekly["username"]."
                                                     </td>
                                                     <td>
                                                        ".$listWeekly["visitCount"]."

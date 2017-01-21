@@ -19,7 +19,7 @@ if (!class_exists('Login')) {
                 <?php
                 if($todayTop250) {
                     foreach ($todayTop250 as $listToday) {
-                        echo "<li>" . $listToday["email"] . "(" . $listToday["visitCount"] . ") </li>";
+                        echo "<li>" . $listToday["username"] . "(" . $listToday["visitCount"] . ") </li>";
                     }
                 }
                 ?>
@@ -40,7 +40,7 @@ if (!class_exists('Login')) {
                 <?php
                     if($weeklyTop250){
                         foreach ($weeklyTop250 as $listWeekly){
-                            echo "<li>".$listWeekly["email"]."(".$listWeekly["visitCount"].") </li>" ;
+                            echo "<li>".$listWeekly["username"]."(".$listWeekly["visitCount"].") </li>" ;
                         }
                     }
 
@@ -64,7 +64,7 @@ if (!class_exists('Login')) {
                 <?php
                 if($weeklyTop250){
                     foreach ($monthlyTop250 as $listMonthly){
-                        echo "<li>".$listMonthly["email"]."(".$listMonthly["visitCount"].") </li>" ;
+                        echo "<li>".$listMonthly["username"]."(".$listMonthly["visitCount"].") </li>" ;
                     }
                 }
 

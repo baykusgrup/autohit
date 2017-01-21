@@ -77,7 +77,7 @@ Class Statics_model extends CI_Model
     }
 
     function getTop250DailyVisit(){
-        $_SQL = " SELECT u.user_id,u.email, (select count(ss.website_id) from static_sitesurf_info ss where ss.user_id=u.user_id and DATE(ss.surf_date) = DATE(CURDATE())
+        $_SQL = " SELECT u.user_id,u.username,u.email, (select count(ss.website_id) from static_sitesurf_info ss where ss.user_id=u.user_id and DATE(ss.surf_date) = DATE(CURDATE())
                   limit 1) AS visitCount 
                   FROM users u 
                   ORDER BY visitCount DESC limit 250";
@@ -88,7 +88,7 @@ Class Statics_model extends CI_Model
 
     }
     function getTop250MountlyVisit(){
-        $_SQL = " SELECT u.user_id,u.email, (select count(ss.website_id) from static_sitesurf_info ss where ss.user_id=u.user_id and DATE(ss.surf_date)  >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)
+        $_SQL = " SELECT u.user_id,u.username,u.email, (select count(ss.website_id) from static_sitesurf_info ss where ss.user_id=u.user_id and DATE(ss.surf_date)  >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)
                   limit 1) AS visitCount FROM users u ORDER BY visitCount DESC";
 
 
@@ -97,7 +97,7 @@ Class Statics_model extends CI_Model
 
     }
     function getTop250WeeklyVisit(){
-        $_SQL = " SELECT u.user_id,u.email, (select count(ss.website_id) from static_sitesurf_info ss where ss.user_id=u.user_id and YEARWEEK(ss.surf_date) = YEARWEEK(CURRENT_DATE)
+        $_SQL = " SELECT u.user_id,u.username,u.email, (select count(ss.website_id) from static_sitesurf_info ss where ss.user_id=u.user_id and YEARWEEK(ss.surf_date) = YEARWEEK(CURRENT_DATE)
                   limit 1) AS visitCount FROM users u
                   ORDER BY visitCount DESC";
 
