@@ -9,6 +9,7 @@ class Sites extends CI_Controller {
             redirect("index.php/Login");
         else {
             $user_id=$this->session->userdata("user_id");
+
             $this->load->helper(['language', 'lang', 'url']);
             dilSecici();
 

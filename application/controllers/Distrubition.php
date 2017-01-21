@@ -87,6 +87,7 @@ class Distrubition extends CI_Controller {
 
         $dataWallet=array();
         $dataWallet["total_credits"] = $userWallet[0]["total_credits"] + $earn_total;
+        $dataWallet["earn_credits"]  = $userWallet[0]["earn_credits"] + $earn_total;
 
         $dataWallet["update_date"] = $dateTime;
         $dataWallet["update_user"]= $this->session->userdata("user_id");

@@ -12,7 +12,7 @@ Class User extends CI_Model
 
     }
     function getAllUserInfobyUserId($user_id){
-        $_SQL = "SELECT * FROM users WHERE record_status=1";
+        $_SQL = "SELECT * FROM users WHERE record_status=1 and user_id=".$user_id;
 
 
         $query = $this->db->query($_SQL);

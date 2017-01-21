@@ -177,7 +177,7 @@ When enabled, this option allows you to automatically distribute the credits ear
                     success: function (result) {
                             if(result=="1")
                             {
-                                alert(result);
+
                                 controllActiveViewer();
                                 timerId = setTimeout(geturl, 1000);
 
@@ -188,7 +188,7 @@ When enabled, this option allows you to automatically distribute the credits ear
                                 document.getElementById("LastSites_5").innerHTML = urlLast.slice(Math.max(urlLast.length - 5, 0)).join(" ");
 
                                 document.getElementById("currentSite").innerHTML = url;
-                                alert(result);
+
 
 
                                 var downloadButton = document.getElementById("duration_time");
@@ -231,7 +231,6 @@ When enabled, this option allows you to automatically distribute the credits ear
             url: base_url + "/index.php/Earn/saveIP",
             cache: false,
             success: function (result) {
-                alert(result);
                 if (result == 1) {
 
                     alert("hata");

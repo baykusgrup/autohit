@@ -22,7 +22,9 @@
                         <td> Members Online
                             (last 24 hours)</td>
                         <td>
-                            sss
+                            <?php if(isset( $getOnlineViewerLast24Hour[0]["countOnline24Hour"])){
+                                echo  $getOnlineViewerLast24Hour[0]["countOnline24Hour"];
+                            }  ?>
                         </td>
                     </tr>
                     <tr>
@@ -34,8 +36,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> New Members</td>
-                        <td>sss
+                        <td> New Members(24 Hours)</td>
+                        <td><?php if(isset( $getUserCountLast24Hour[0]["usersCount24Hour"])){
+                                echo  $getUserCountLast24Hour[0]["usersCount24Hour"];
+                            }  ?>
                         </td>
                     </tr>
                     <tr>
@@ -66,50 +70,16 @@
                     </tr>
                     <tr>
                         <td> Sites you've visited this week</td>
-                        <td>sss
+                        <td><?php if(isset( $weeklyVisitedByUser[0]["weeklyUserVisited"])){
+                                echo  $weeklyVisitedByUser[0]["weeklyUserVisited"];
+                            }  ?>
                         </td>
                     </tr>
                     <tr>
                         <td> Sites you've visited this month.</td>
-                        <td>sss
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <hr/>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-hover table-striped table-bordered">
-                    <tbody>
-                    <tr>
-                        <th colspan="4" class="font-red-intense">
-                            Your active sites
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>Site Name</th>
-                        <th>
-                            Url
-                        </th>
-                        <th>
-                            Visits today
-                        </th>
-                        <th>
-                            Total Visits
-                        </th>
-                    </tr>
-                    <tr>
-                        <td>sss</td>
-                        <td>
-                            sss
-                        </td>
-                        <td>
-                            sss
-                        </td>
-                        <td>
-                            sss
+                        <td><?php if(isset( $monthlyVisitedByUser[0]["montlyUserVisited"])){
+                                echo  $monthlyVisitedByUser[0]["montlyUserVisited"];
+                            }  ?>
                         </td>
                     </tr>
                     </tbody>

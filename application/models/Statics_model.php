@@ -19,6 +19,22 @@ Class Statics_model extends CI_Model
         return $query->result_array();
 
     }
+    function getViewedWeeklyByUserCount($user_id){
+        $_SQL = "SELECT count(`website_id`) weeklyUserVisited FROM `static_sitesurf_info` WHERE YEARWEEK(`surf_date`) = YEARWEEK(CURRENT_DATE) and record_status=1 and user_id=".$user_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
+    function getViewedMonthlyByUserCount($user_id){
+        $_SQL = "SELECT count(`website_id`) montlyUserVisited FROM `static_sitesurf_info` WHERE DATE(surf_date)  >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH) and record_status=1 and user_id=".$user_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
     function getWebsitesCount(){
         $_SQL = " SELECT count(`websites_id`) countWebsite FROM `websites` WHERE record_status=1 ";
 
@@ -35,8 +51,24 @@ Class Statics_model extends CI_Model
         return $query->result_array();
 
     }
+    function getUserCountLast24Hour(){
+        $_SQL = " SELECT count(`user_id`) usersCount24Hour FROM `users` where (`insert_date` >=  DATE_ADD(NOW(), INTERVAL -1 DAY) and `insert_date` <=  NOW()) and record_status=1 ";
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
     function getOnlineMemberViewerCount(){
         $_SQL = " SELECT count(`ipInfo_id`) countOnline FROM `ip_info` WHERE record_status=1 ";
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
+    function getOnlineMemberViewerCountLast24Hour(){
+        $_SQL = " SELECT count(`ipInfo_id`) countOnline24Hour FROM `ip_info` where (`insert_date` >=  DATE_ADD(NOW(), INTERVAL -1 DAY) and `insert_date` <=  NOW())";
 
 
         $query = $this->db->query($_SQL);
