@@ -12,6 +12,8 @@ class Earnfast extends CI_Controller
             $this->load->helper(['language', 'lang', 'url']);
             dilSecici();
 
+            $ref = isset($_GET['ref']) ? $_GET['ref'] : '00000';
+
             $data=array();
             $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
             $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();

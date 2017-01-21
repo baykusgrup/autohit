@@ -54,7 +54,7 @@ When enabled, this option allows you to automatically distribute the credits ear
                         <td>
                             <strong> <?php
                                     if (isset($userInfo[0]["referance_code"])) {
-                                        echo "<a href=\"" . base_url() . "index.php/Register/?id=" . $userInfo[0]["user_id"] . "\" >" . base_url() . "index.php/Earnfast/?id=" . $userInfo[0]["user_id"] . "</a>";
+                                        echo "<a href=\"" . base_url() . "index.php/Earnfast/?ref=" . $userInfo[0]["user_id"] . "\" >" . base_url() . "index.php/Earnfast/?id=" . $userInfo[0]["user_id"] . "</a>";
                                     } ?></strong>
 
                         </td>
