@@ -15,6 +15,7 @@ class Refferal extends CI_Controller {
 
             $data = array();
             $data["userInfo"] = $this->account_model->getUserAllInfoByUserID($user_id);
+           // $data["refferrals"] = $this->account_model->getReferallsbyUserID($user_id);
             $this->load->view('_head');
             $this->load->view('refferal', $data);
             $this->load->view('_foot');

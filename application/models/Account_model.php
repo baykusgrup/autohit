@@ -15,5 +15,15 @@ Class Account_model extends CI_Model
         return $query->result_array();
 
     }
+     function getReferallsbyUserID($userID)
+        {
+
+            $_SQL = "".$userID;
+
+
+            $query = $this->db->query($_SQL);
+            return $query->result_array();
+
+        }
 
 }
