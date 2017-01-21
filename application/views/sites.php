@@ -173,13 +173,14 @@
                                 <div class="form-group">
                                     <label class="col-md-3">Visits Durations :</label>
                                     <div class="col-md-9">
-                                        <select id="visits_durations" onchange="calculateVisitCost()" class="form-control" name="package_selector">
+                                        <select id="visits_durations" onchange="calculateVisitCost()"
+                                                class="form-control" name="package_selector">
                                             <option value="-1"> Select Durations</option>
 
                                             <?php
 
                                             foreach ($durations as $duration) {
-                                                echo "<option sec=\"".$duration["durations_sec"]."\" value=\"" . $duration["prt_durations_id"] . "\"> " . $duration["durations_sec"] . " seconds" . "</option>";
+                                                echo "<option sec=\"" . $duration["durations_sec"] . "\" value=\"" . $duration["prt_durations_id"] . "\"> " . $duration["durations_sec"] . " seconds" . "</option>";
                                             }
 
 
@@ -187,6 +188,13 @@
 
                                         </select>
                                     </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3">Website Status :</label>
+                                    <div class="col-md-9">
+                                        <input type="checkbox" class="make-switch" checked data-size="small"
+                                               data-on-color="success" data-on-text="ON" data-off-color="default"
+                                               data-off-text="OFF"></div>
                                 </div>
                             </form>
                         </div>
@@ -265,12 +273,12 @@
         });
 
     }
-function deleteSite() {
+    function deleteSite() {
         var site_id = document.getElementById("site_id").value;
 
         $.ajax({
             type: "POST",
-            url: base_url + "/index.php/Sites/deleteSite/" +site_id,
+            url: base_url + "/index.php/Sites/deleteSite/" + site_id,
             cache: false,
             success: function (result) {
                 //alert(dataString);
@@ -326,7 +334,7 @@ function deleteSite() {
         var credit = document.getElementById("total_amount_credit").value;
         var sites_selector = document.getElementsByName("sites_selector");
         var countSites = (sites_selector.length);
-        var disturbation_value = parseFloat(credit) /parseFloat(countSites);
+        var disturbation_value = parseFloat(credit) / parseFloat(countSites);
 
         var site_id = 0;
         var dataString = "per_cost=" + disturbation_value;
@@ -393,8 +401,8 @@ function deleteSite() {
     function calculateVisitCost() {
         var durations = $('option:selected', "#visits_durations").attr('sec');
         var calculation_value = parseFloat(durations) * 0.06666;
-        calculation_value =  Math.round(calculation_value);
-        document.getElementById("visits_cost").value =calculation_value;
+        calculation_value = Math.round(calculation_value);
+        document.getElementById("visits_cost").value = calculation_value;
 
     }
 </script>
