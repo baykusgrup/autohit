@@ -117,20 +117,74 @@ class Distrubition extends CI_Controller {
             return $visit_id;
     }
 
-
-    public function Surf($siteID)
+    public function AutoDistributionCalculate($userID)
     {
+        $user_id= $this->session->userdata("user_id");
+
+        $return=$this->sites_model->getMySitesByUserID($userID);
+        $userWallet=$this->sites_model->getWalletByUserID($user_id);
+
+        $wallet_id = $userWallet[0]["user_wallet_id"];
+
+        $dateTime = date('Y-m-d H:i:s');
+
+        if($userWallet[0]["total_credits"]>count($return)){
+
+            $perCost = $userWallet[0]["total_credits"]/count($return);
+            $sub_credit =$userWallet[0]["total_credits"];
+            foreach ($return as $site){
+
+                $dataAuto=array();
+                $dataAuto["credits"] = $site["credits"] + $perCost;
+
+                $dataAuto["update_user"] =$user_id;
+                $dataAuto["update_date"] =$dateTime;
+                $update_id = $this->generalTables_model->updateTable("websites",$site["websites_id"],$dataAuto);
+
+                $dataWallet=array();
+                $dataWallet["total_credits"] = $userWallet[0]["total_credits"] - $sub_credit;
+                $dataWallet["wasted_credits"]  = $userWallet[0]["wasted_credits"] + $sub_credit;
+
+                $dataWallet["update_date"] = $dateTime;
+                $dataWallet["update_user"]= $this->session->userdata("user_id");
+
+                $wallet_id = $this->generalTables_model->updateTable("user_wallet",$wallet_id,$dataWallet);
+            }
+
+        }
+
+
+    }
+
+    public function Surf($siteID,$autoID)
+    {
+        $userID =$this->session->userdata("user_id");
 
         $return=$this->sites_model->getSitesInfoBySiteID($siteID);
 
-        if($return[0]["credits"]<$return[0]["visit_cost"]){
-            echo "1";
+        if($autoID ==1){
+            if($return[0]["credits"]<$return[0]["visit_cost"]){
+                echo "1";
+            }
+            else{
+                $this->AutoDistributionCalculate($userID);
+                $this->SiteVisitInfoCalculate($siteID);
+                $this->SurfingCostCalculation($siteID);
+
+                echo "2";
+            }
+        } else{
+            if($return[0]["credits"]<$return[0]["visit_cost"]){
+                echo "1";
+            }
+            else{
+                $this->SiteVisitInfoCalculate($siteID);
+                $this->SurfingCostCalculation($siteID);
+                echo "2";
+            }
         }
-        else{
-            $this->SiteVisitInfoCalculate($siteID);
-            $this->SurfingCostCalculation($siteID);
-            echo "2";
-        }
+
+
 
 
     }

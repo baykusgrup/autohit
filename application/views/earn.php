@@ -38,7 +38,7 @@
                         <td>
                             <label class="mt-checkbox mt-checkbox-outline">
                                 No
-                                <input type="checkbox" value="1" name="test"/>
+                                <input type="checkbox"  value="1" id="dis_selector" name="dis_selector"/>
                                 <span></span>
                             </label>
                         </td>
@@ -173,10 +173,15 @@ When enabled, this option allows you to automatically distribute the credits ear
                 document.getElementById("statusk").innerHTML = "Surfing...";
                 document.getElementById("currentk").value = currentk2;
                 var siteID = theurls[current1].site_id;
+                var value_s =$("#dis_selector").is(':checked');
+                var autoID =0;
+                if (value_s==true){
+                    autoID =1;
+                }
 
                 $.ajax({
                     type: "POST",
-                    url: base_url + "/index.php/Distrubition/Surf/"+siteID,
+                    url: base_url + "/index.php/Distrubition/Surf/"+siteID+"/"+autoID,
                     cache: false,
                     success: function (result) {
                             if(result=="1")
@@ -305,6 +310,7 @@ When enabled, this option allows you to automatically distribute the credits ear
             }
         });
     }
+
     function controllActiveViewer() {
 
         $.ajax({
