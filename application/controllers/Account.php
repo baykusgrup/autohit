@@ -62,4 +62,21 @@ class Account extends CI_Controller {
         return $updateRowID;
     }
 
+    public function changeUsername(){
+        $username = $this->input->post("username");
+        $user_id = $this->session->userdata("user_id");
+
+        $dateTime = date('Y-m-d H:i:s');
+
+        $dataUsername=array();
+        $dataUsername["username"] =$username;
+
+        $dataUsername["update_user"]=$user_id;
+        $dataUsername["update_date"]=$dateTime;
+
+        $updateRowID= $this->generalTables_model->updateTable("users",$user_id,$dataUsername);
+
+        return $updateRowID;
+    }
+
 }

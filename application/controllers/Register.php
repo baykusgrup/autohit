@@ -21,6 +21,7 @@ class Register extends CI_Controller
         $dateTime = date('Y-m-d H:i:s');
 
         $dataUser=array();
+        $dataUser["username"] = $this->input->post("username_member");
         $dataUser["email"]= $this->input->post("e_mail");
         $dataUser["password"] = $this->input->post("password");
         $dataUser["password_md5"] = md5($this->input->post("password"));

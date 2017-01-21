@@ -36,14 +36,14 @@
                     </tr>
                     <tr>
                         <td> Username</td>
-                        <td id="email_td">
+                        <td id="username_td">
                             <?php
                             if (isset($userInfo[0]["username"])) {
-                                echo "<div id='usernameLink' type=\"email\"  style='display: block' role=\"button\" onclick=\"changeUusernameDiv();\">" . $userInfo[0]["username"] . "</div>";
+                                echo "<div id='usernameLink' type=\"email\"  style='display: block' role=\"button\" onclick=\"changeUsernameDiv();\">" . $userInfo[0]["username"] . "</div>";
                             }
                             ?>
-                            <div class="form-group" id="email_changeDiv" style="display: none">
-                                <input id="new_username" type="username" class="form-control" placeholder="new username">
+                            <div class="form-group" id="username_changeDiv" style="display: none">
+                                <input id="new_username" type="text" class="form-control" placeholder="New Username..">
                             </div>
 
                         </td>
@@ -273,6 +273,41 @@ When enabled, this option allows you to automatically distribute the credits ear
         document.getElementById("emailLink").style = "display: none";
         document.getElementById("emailLink2").style = "display: none";
         document.getElementById("email_Done").style = "display: block";
+    }
+
+    function changeUsernameDiv() {
+        document.getElementById("usernameLink").style = "display: none";
+        document.getElementById("username_changeDiv").style = "display: block";
+        document.getElementById("usernameLink2").style = "display: none";
+        document.getElementById("username_Done").style = "display: block";
+    }
+
+    function changeUsername() {
+        var username = document.getElementById("new_username").value;
+        var dataString = "username=" + username;
+        if (username != "") {
+            $.ajax({
+                type: "POST",
+                url: base_url + "/index.php/Account/changeUsername",
+                data: dataString,
+                cache: false,
+                success: function (result) {
+                    SuccessAlert("We updated your username successfully!", "account_alert");
+
+                    document.getElementById("email_changeDiv").style = "display: none";
+                    document.getElementById("emailLink").style = "display: block";
+                    document.getElementById("emailLink2").style = "display: none";
+                    document.getElementById("email_Done").style = "display: none";
+                    document.getElementById("email_td").innerHTML = "<div id='emailLink' style='display: block' role=\"button\" onclick=\"changeEmailDiv();\">" + email + "</div>";
+                    document.getElementById("email_td2").innerHTML = "<span style='display: block' role='button' onclick='changeEmailDiv();' class='badge badge-primary badge-roundless'> saved </span>";
+
+                }
+            });
+        }
+        else {
+            WarningAlert("Plese give the username for updating!", "account_alert");
+        }
+
     }
 
     function changeEmail() {
