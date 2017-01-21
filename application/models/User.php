@@ -20,6 +20,15 @@ Class User extends CI_Model
 
     }
 
+    function getAllUserInfobyRefCode($refCode){
+        $this -> db -> select('user_id, e_mail AS email');
+        $this -> db -> where('referance_code', $refCode);
+        $this -> db -> limit(1);
+        $query = $this -> db -> get("users_detail");
+        return $query->result_array();
+
+    }
+
 
     function saveLoginConnection() {
         $dateTime = date('Y-m-d H:i:s');

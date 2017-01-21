@@ -2,7 +2,7 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
-            <span class="caption-subject font-blue-sharp bold uppercase">Light Viewer | member 881606</span>
+            <span class="caption-subject font-blue-sharp bold uppercase">Light Viewer | Welcome <?php if(isset($userInfo[0]["username"])){echo $userInfo[0]["username"];} ?></span>
         </div>
     </div>
     <div class="portlet-body">
@@ -15,11 +15,29 @@
                 <hr/>
                 <p>You will earn 0.8 credits by visiting this site.</p>
 
+                <p>List of recently visited sites</p>
+                <ul id="LastSites_5">
+
+                </ul>
+                <table>
+                    <tr>
+                        <td>
+                            <input type='hidden' id='currentk' value='0'>
+                        </td>
+                    </tr>
+                </table>
                 <br/>
                 <a role="button" onclick="beginu()" class="btn blue btn-block">Start Viewer</a>
                 <br/>
+
         </div>
     </div>
+    <table style="display: none" class="table table-hover table-striped table-bordered">
+        <tbody id="sites_urls">
+
+
+        </tbody>
+    </table>
 
 </div>
 
@@ -70,7 +88,7 @@
                     url: base_url + "/index.php/Earn/closedIP",
                     cache: false,
                     success: function (result) {
-                        controllActiveViewer();
+
                     }
                 });
 
@@ -90,7 +108,7 @@
                         if(result=="1")
                         {
 
-                            controllActiveViewer();
+
                             timerId = setTimeout(geturl, 1000);
 
                         }else{
@@ -213,16 +231,6 @@
             }
         });
     }
-    function controllActiveViewer() {
 
-        $.ajax({
-            type: "POST",
-            url: base_url + "/index.php/Earn/controllActiveViewer/",
-            cache: false,
-            success: function (result) {
-                document.getElementById("active_viewerTable").innerHTML = result;
-            }
-        });
-    }
 
 </script>
