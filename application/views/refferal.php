@@ -43,22 +43,24 @@
                             Username
                         </th>
                         <th>
-                            credits earned
-                        </th>
-                        <th>
                             Registered
                         </th>
                     </tr>
-                       <tr>
-                            <td> ss
-                            </td>
-                            <td>sss
-                            </td>
-                            <td>sss
-                            </td>
-                            <td> sss
-                            </td>
-                        </tr>
+                        <?php
+                            foreach ($refferrals as $ref){
+
+                                echo " <tr>
+                                                <td>".$ref["refID"]. " </td>
+                                                <td> ".$ref["username"]. " </td>
+                                                <td> ".$ref["registered_date"]. " </td>
+                                       </tr>";
+                            }
+
+
+
+
+                        ?>
+
 
 
                     </tbody>

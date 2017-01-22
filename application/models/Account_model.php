@@ -18,7 +18,11 @@ Class Account_model extends CI_Model
      function getReferallsbyUserID($userID)
         {
 
-            $_SQL = "".$userID;
+            $_SQL = "SELECT ud.user_id,u.user_id refID,us.username,u.registered_date
+                     FROM users_detail ud
+                     inner join users_detail u on u.referance_code_to=ud.referance_code
+                     inner join users us on us.record_status=1 and us.user_id=u.user_id
+                     where ud.user_id=".$userID;
 
 
             $query = $this->db->query($_SQL);
