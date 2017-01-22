@@ -169,8 +169,8 @@
                         <td> Referance Code</td>
                         <td>
                             <?php
-                            if (isset($userInfo[0]["referance_code"])) {
-                                echo "<a href=\"" . base_url() . "index.php/Register/?ref=" . $userInfo[0]["referance_code"] . "\" >" . $userInfo[0]["referance_code"] . "</a>";
+                            if (isset($referanceShort)) {
+                                echo "<a href=\"" .$referanceShort. "\" >" . $referanceShort . "</a>";
                             } ?>
                         </td>
 

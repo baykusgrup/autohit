@@ -21,6 +21,9 @@ class Account extends CI_Controller {
             $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
             $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
 
+            $url =  base_url()."index.php/Earnfast/?ref=".$data["userInfo"][0]["referance_code"];
+            $data["referanceShort"] = $this->bitly->shorten($url);
+
             $this->load->view('_head');
             $this->load->view('account', $data);
             $this->load->view('_foot');
