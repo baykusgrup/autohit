@@ -15,7 +15,7 @@ class Sites extends CI_Controller {
 
             $data=array();
             $data["durations"]=$this->prtTable_model->getDurations();
-            $data["sites"]=$this->sites_model->getMySitesByUserIDAll($user_id);
+            $data["sites"]=$this->sites_model->getMySitesByUserIDAllWithVisits($user_id);
             $data["userWallet"]=$this->sites_model->getWalletByUserID($user_id);
 
             $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
@@ -96,17 +96,19 @@ class Sites extends CI_Controller {
     public function controllMySites()
     {
         $user_id = $this->session->userdata("user_id");
-        $return = $this->sites_model->getMySitesByUserIDAll($user_id);
+        $return = $this->sites_model->getMySitesByUserIDAllWithVisits($user_id);
         $HTML ="";
         foreach ($return as $site){
             $HTML .=  "<tr>
-                                                <td id='updateSite_siteID_".$site["websites_id"]."' >".  $site["websites_id"]."</td>
-                                                <td id='updateSite_title_".$site["websites_id"]."'>" . substr($site["page_title"], 0, 15) . "</td>
-                                                <td id='updateSite_url_".$site["websites_id"]."'>" . substr($site["url"], 0, 25) . "</td>
-                                                <td id='updateSite_credits_".$site["websites_id"]."'>" . $site["credits"] . "</td>
-                                                <td style='display:none' id='updateSite_duration_".$site["websites_id"]."'>" . $site["duration_sec_id"] . "</td>
-                                                <td>sss</td>
-                                                <td><a name='sites_selector' site_id='".$site["websites_id"]."' onclick=\"setUpdateSite(".$site["websites_id"].");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
+                                                <td id='updateSite_siteID_" . $site["websites_id"] . "' >" . $site["websites_id"] . "</td>
+                                                <td id='updateSite_title_" . $site["websites_id"] . "'>" . substr($site["page_title"], 0, 15) . "</td>
+                                                <td id='updateSite_url_" . $site["websites_id"] . "'>" . substr($site["url"], 0, 25) . "</td>
+                                                <td style='display: none' id='updateSite_status_" . $site["websites_id"] . "'>" . $site["record_status"] . "</td>
+                                                <td id='updateSite_credits_" . $site["websites_id"] . "'>" . $site["credits"] . "</td>
+                                                <td style='display:none' id='updateSite_duration_" . $site["websites_id"] . "'>" . $site["duration_sec_id"] . "</td>
+                                                <td>" . $site["TotalVisit"] . "</td>
+                                                <td>" . $site["TodayVisit"] . "</td>
+                                                <td><a name='sites_selector' site_id='" . $site["websites_id"] . "' onclick=\"setUpdateSite(" . $site["websites_id"] . ");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
                                                        <i class=\"fa fa-edit\"></i> Edit </a></td>
                                             </tr>";
         }

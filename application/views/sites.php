@@ -90,20 +90,22 @@
                                 <th>Site name</th>
                                 <th>Url</th>
                                 <th>Crdt</th>
-                                <th>Received<br> today</th>
+                                <th>Received<br> total</th>
+                                <th>Received<br> today </th>
                                 <th>Edit</th>
                             </tr>
                             <tbody id="mySites_table">
                             <?php
                             foreach ($sites as $site) {
-                                echo "<tr>
+                                echo  "<tr>
                                                 <td id='updateSite_siteID_" . $site["websites_id"] . "' >" . $site["websites_id"] . "</td>
                                                 <td id='updateSite_title_" . $site["websites_id"] . "'>" . substr($site["page_title"], 0, 15) . "</td>
                                                 <td id='updateSite_url_" . $site["websites_id"] . "'>" . substr($site["url"], 0, 25) . "</td>
                                                 <td style='display: none' id='updateSite_status_" . $site["websites_id"] . "'>" . $site["record_status"] . "</td>
                                                 <td id='updateSite_credits_" . $site["websites_id"] . "'>" . $site["credits"] . "</td>
                                                 <td style='display:none' id='updateSite_duration_" . $site["websites_id"] . "'>" . $site["duration_sec_id"] . "</td>
-                                                <td>sss</td>
+                                                <td>" . $site["TotalVisit"] . "</td>
+                                                <td>" . $site["TodayVisit"] . "</td>
                                                 <td><a name='sites_selector' site_id='" . $site["websites_id"] . "' onclick=\"setUpdateSite(" . $site["websites_id"] . ");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
                                                        <i class=\"fa fa-edit\"></i> Edit </a></td>
                                             </tr>";

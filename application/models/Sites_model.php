@@ -23,6 +23,19 @@ Class Sites_model extends CI_Model
         return $query->result_array();
 
     }
+ function getMySitesByUserIDAllWithVisits($user_id){
+        $_SQL = "SELECT w.websites_id,w.page_title,w.url,w.credits,w.visit_cost,w.duration_sec_id, w.record_status,
+                (select count(s.static_siteSurf_info_id)  from static_sitesurf_info s where s.website_id=w.websites_id and s.record_status=1) TotalVisit,
+                (select count(s.static_siteSurf_info_id)  from static_sitesurf_info s where s.website_id=w.websites_id and s.record_status=1 and (s.surf_date >=  DATE_ADD(NOW(), INTERVAL -1 DAY) 
+                 and s.surf_date <=  NOW()) ) TodayVisit
+                 FROM websites w 
+                 WHERE  w.user_id=".$user_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
 
     function getUrlsFromDatabase(){
         $_SQL = "SELECT w.`websites_id`,w.`page_title`,w.`url`,w.`credits`,w.`visit_cost`,pd.`durations_sec` FROM `websites` w 
