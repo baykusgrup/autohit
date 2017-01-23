@@ -65,6 +65,19 @@ Class Sites_model extends CI_Model
         return $query->result_array();
 
     }
+
+    function getReferanceUserIDByUserID($user_id){
+        $_SQL = "SELECT u.user_id,ud.user_id  ref,u.referance_code_to,uw.user_wallet_id refWalletID FROM users_detail u 
+                inner join users_detail ud on ud.record_status=1 and ud.referance_code=u.referance_code_to
+                inner join user_wallet uw on uw.record_status=1 and uw.user_id=ud.user_id
+                WHERE u.record_status=1 and u.user_id=".$user_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
+
     function getSitesInfoBySiteID($site_id){
         $_SQL = "SELECT `websites_id`,`page_title`,`url`,`credits`,`visit_cost`,`duration_sec_id`,`unique_ip`,`hide_referer`,`random_referer`,`blocked`
                  FROM `websites`

@@ -68,9 +68,9 @@ class Distrubition extends CI_Controller {
         $wallet_id = $userWallet[0]["user_wallet_id"];
 
         $dateTime = date('Y-m-d H:i:s');
+                                                                              // krediden visit cost cikariliyor
 
-
-        $visitCost_subTotal = $return[0]["credits"] - $return[0]["visit_cost"];  // krediden visit cost cikariliyor
+        $visitCost_subTotal = $return[0]["credits"] - $return[0]["visit_cost"];
 
         $dataSites=array();
         $dataSites["credits"] =$visitCost_subTotal;
@@ -81,9 +81,36 @@ class Distrubition extends CI_Controller {
         $site_id = $this->generalTables_model->updateTable("websites",$site_id,$dataSites);
 
 
+
+                                                                                // krediden visit cost cikariliyor son
+                                                    //cost hesaplamaları
         $earn_total= $return[0]["visit_cost"] * 0.8;
+        $commision = $return[0]["visit_cost"] * 0.1;
+                                                    //cost hesaplamaları
 
+                                                                        //Kullanan kullanıcının referansı var mı
 
+        $referanceUserID = $this->sites_model->getReferanceUserIDByUserID($user_id);
+        if ($referanceUserID != null){
+                                                                        //Kullanan kullanıcının referansı var mı son
+
+            //Varsa referansına 0.1 pay ver
+            $ref_wallet_id = $referanceUserID[0]["refWalletID"];
+            $ref_user_id= $referanceUserID[0]["ref"];
+            $refWallet=$this->sites_model->getWalletByUserID($ref_user_id);
+            $dataCommision=array();
+            $dataCommision["total_credits"] = $refWallet[0]["total_credits"] + $commision;
+            $dataCommision["earn_credits"]  = $refWallet[0]["earn_credits"] + $commision;
+
+            $dataCommision["update_date"] = $dateTime;
+            $dataCommision["update_user"]= $this->session->userdata("user_id");
+
+            $refwallet_id = $this->generalTables_model->updateTable("user_wallet",$ref_wallet_id,$dataCommision);
+            //Varsa referansına 0.1 pay ver son
+
+        }
+
+        // Kazanılan kredinin kullanıcıya aktarılması
 
         $dataWallet=array();
         $dataWallet["total_credits"] = $userWallet[0]["total_credits"] + $earn_total;
@@ -93,6 +120,10 @@ class Distrubition extends CI_Controller {
         $dataWallet["update_user"]= $this->session->userdata("user_id");
 
         $wallet_id = $this->generalTables_model->updateTable("user_wallet",$wallet_id,$dataWallet);
+        // Kazanılan kredinin kullanıcıya aktarılması son
+
+
+
     }
     public function SiteVisitInfoCalculate($site_id)
     {
