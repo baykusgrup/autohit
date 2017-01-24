@@ -1,104 +1,106 @@
-
 <?php
 if (!class_exists('Login')) {
-?>
+    ?>
 
-</div>
-<div class="col-md-3">
-
-
-    <!-- BEGIN ORDERED LISTS PORTLET-->
-    <div class="portlet box blue">
-        <div class="portlet-title">
-            <div class="caption">
-                <i class="fa fa-gift"></i>Daily Top 250
-            </div>
-        </div>
-        <div class="portlet-body">
-            <ul class="list-unstyled">
-                <?php
-                if($todayTop250) {
-                    foreach ($todayTop250 as $listToday) {
-                        echo "<li>" . $listToday["username"] . "(" . $listToday["visitCount"] . ") </li>";
-                    }
-                }
-                ?>
-                <li class="text-center"> <a href="<?php echo base_url() ?>index.php/Top" class="font-red-mint"> See more</a></li>
-            </ul>
-        </div>
     </div>
-    <!-- END ORDERED LISTS PORTLET-->
-    <!-- BEGIN UNSTYLED LISTS PORTLET-->
-    <div class="portlet box yellow">
-        <div class="portlet-title">
-            <div class="caption">
-                <i class="fa fa-gift"></i>Weekly Top 250
+    <div class="col-md-3">
+
+
+        <!-- BEGIN ORDERED LISTS PORTLET-->
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i><?php echo lang("DailyTop"); ?>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <ul class="list-unstyled">
+                    <?php
+                    if ($todayTop250) {
+                        foreach ($todayTop250 as $listToday) {
+                            echo "<li>" . $listToday["username"] . "(" . $listToday["visitCount"] . ") </li>";
+                        }
+                    }
+                    ?>
+                    <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top"
+                                               class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
+                </ul>
             </div>
         </div>
-        <div class="portlet-body">
-            <ul class="list-unstyled">
-                <?php
-                    if($weeklyTop250){
-                        foreach ($weeklyTop250 as $listWeekly){
-                            echo "<li>".$listWeekly["username"]."(".$listWeekly["visitCount"].") </li>" ;
+        <!-- END ORDERED LISTS PORTLET-->
+        <!-- BEGIN UNSTYLED LISTS PORTLET-->
+        <div class="portlet box yellow">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i><?php echo lang("WeeklyTop"); ?>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <ul class="list-unstyled">
+                    <?php
+                    if ($weeklyTop250) {
+                        foreach ($weeklyTop250 as $listWeekly) {
+                            echo "<li>" . $listWeekly["username"] . "(" . $listWeekly["visitCount"] . ") </li>";
                         }
                     }
 
 
-                ?>
-                <li class="text-center"> <a href="<?php echo base_url() ?>index.php/Top/Weekly" class="font-red-mint"> See more</a></li>
-            </ul>
-        </div>
-    </div>
-    <!-- END UNSTYLED LISTS PORTLET-->
-
-    <!-- BEGIN UNSTYLED LISTS PORTLET-->
-    <div class="portlet box red">
-        <div class="portlet-title">
-            <div class="caption">
-                <i class="fa fa-gift"></i>Monthly Top 250
+                    ?>
+                    <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top/Weekly"
+                                               class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
+                </ul>
             </div>
         </div>
-        <div class="portlet-body">
-            <ul class="list-unstyled">
-                <?php
-                if($weeklyTop250){
-                    foreach ($monthlyTop250 as $listMonthly){
-                        echo "<li>".$listMonthly["username"]."(".$listMonthly["visitCount"].") </li>" ;
-                    }
-                }
+        <!-- END UNSTYLED LISTS PORTLET-->
 
-                ?>
-                <li class="text-center"> <a href="<?php echo base_url() ?>index.php/Top/Monthly" class="font-red-mint"> See more</a></li>
-            </ul>
+        <!-- BEGIN UNSTYLED LISTS PORTLET-->
+        <div class="portlet box red">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-gift"></i><?php echo lang("MonthlyTop"); ?>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <ul class="list-unstyled">
+                    <?php
+                    if ($weeklyTop250) {
+                        foreach ($monthlyTop250 as $listMonthly) {
+                            echo "<li>" . $listMonthly["username"] . "(" . $listMonthly["visitCount"] . ") </li>";
+                        }
+                    }
+
+                    ?>
+                    <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top/Monthly"
+                                               class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
+                </ul>
+            </div>
         </div>
+        <!-- END UNSTYLED LISTS PORTLET-->
     </div>
-    <!-- END UNSTYLED LISTS PORTLET-->
-</div>
-</div>
-</div>
-<!-- END CONTENT BODY -->
-</div>
-<!-- END CONTENT BODY -->
-</div>
-<!-- END CONTENT -->
-</div>
-<!-- END CONTAINER -->
-</div>
-<div class="container">
-    <!-- BEGIN FOOTER -->
-    <div class="page-footer">
-        <div class="page-footer-inner">2017 &copy; Autohit By
-            <a target="_blank" href="http://baykusgrup.com">BaykusGrup</a> | Page rendered in
-            <strong>{elapsed_time}</strong> seconds
-        </div>
-        <div class="scroll-to-top">
-            <i class="icon-arrow-up"></i>
-        </div>
     </div>
-    <!-- END FOOTER -->
-</div>
-</div>
+    </div>
+    <!-- END CONTENT BODY -->
+    </div>
+    <!-- END CONTENT BODY -->
+    </div>
+    <!-- END CONTENT -->
+    </div>
+    <!-- END CONTAINER -->
+    </div>
+    <div class="container">
+        <!-- BEGIN FOOTER -->
+        <div class="page-footer">
+            <div class="page-footer-inner">2017 &copy; <?php echo lang("NearlyWebBy"); ?>
+                <a target="_blank" href="http://baykusgrup.com">BaykusGrup</a> | <?php echo lang("PageRenderedIn"); ?>
+                <strong>{elapsed_time}</strong> <?php echo lang("Seconds"); ?>
+            </div>
+            <div class="scroll-to-top">
+                <i class="icon-arrow-up"></i>
+            </div>
+        </div>
+        <!-- END FOOTER -->
+    </div>
+    </div>
 
     <?php
 }
@@ -144,7 +146,7 @@ if (class_exists('Login')) {
     <!-- END PAGE LEVEL SCRIPTS -->
     <?php
 } else {
-?>
+    ?>
 
 
     <?php

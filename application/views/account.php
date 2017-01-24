@@ -2,25 +2,27 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
-            <span class="caption-subject font-blue-sharp bold uppercase">My Account - <?php echo lang("welcome"); ?></span>
+            <span class="caption-subject font-blue-sharp bold uppercase"><?php echo lang("MyAccount"); ?>
+                - <?php echo lang("Welcome"); ?></span>
         </div>
     </div>
     <div class="portlet-body">
         <div class="row">
             <div class="col-md-12">
-                <div id="account_alert" class="alert alert-success" style="display: none;"><strong>Başarılı
-                        !</strong> Uploaded Successfully
+                <div id="account_alert" class="alert alert-success" style="display: none;">
+                    <strong><?php echo lang("WellDone"); ?>
+                        !</strong> <?php echo lang("UploadedSuccessfully"); ?>
                 </div>
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
                     <tr>
                         <th colspan="3" class="font-red-intense">
-                            Account İnfo
+                            <?php echo lang("AccountInfo"); ?>
                         </th>
 
                     </tr>
                     <tr>
-                        <td>Member ID</td>
+                        <td><?php echo lang("MemberID"); ?></td>
                         <td>
 
                             <?php
@@ -35,7 +37,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> Username</td>
+                        <td> <?php echo lang("Welcome"); ?></td>
                         <td id="username_td">
                             <?php
                             if (isset($userInfo[0]["username"])) {
@@ -49,15 +51,17 @@
                         </td>
                         <td id="email_td2">
                             <span id='usernameLink2' type="username" style='display: block' role="button"
-                                  onclick="changeUsernameDiv();" class="badge badge-primary badge-roundless"> edit </span>
+                                  onclick="changeUsernameDiv();"
+                                  class="badge badge-primary badge-roundless"> <?php echo lang("Edit"); ?> </span>
 
                             <span id='username_Done' type="username" style='display: none' role="button"
-                                  class="badge badge-primary badge-roundless" onclick="changeUsername();"> Save </span>
+                                  class="badge badge-primary badge-roundless"
+                                  onclick="changeUsername();"> <?php echo lang("Save"); ?> </span>
 
                         </td>
                     </tr>
                     <tr>
-                        <td> Email</td>
+                        <td> <?php echo lang("Email"); ?></td>
                         <td id="email_td">
                             <?php
                             if (isset($userInfo[0]["email"])) {
@@ -71,15 +75,17 @@
                         </td>
                         <td id="email_td2">
                             <span id='emailLink2' type="email" style='display: block' role="button"
-                                  onclick="changeEmailDiv();" class="badge badge-primary badge-roundless"> edit </span>
+                                  onclick="changeEmailDiv();"
+                                  class="badge badge-primary badge-roundless"> <?php echo lang("Edit"); ?> </span>
 
                             <span id='email_Done' type="email" style='display: none' role="button"
-                                  class="badge badge-primary badge-roundless" onclick="changeEmail();"> Save </span>
+                                  class="badge badge-primary badge-roundless"
+                                  onclick="changeEmail();"> <?php echo lang("Save"); ?> </span>
 
                         </td>
                     </tr>
                     <tr>
-                        <td> Password</td>
+                        <td> <?php echo lang("Password"); ?></td>
                         <td id="pass_td">
                             <?php
                             if (isset($userInfo[0]["password"])) {
@@ -96,15 +102,17 @@
                         </td>
                         <td id="pass_td2">
                             <span id='passLink2' type="password" style='display: block' role="button"
-                                  onclick="changePassDiv();" class="badge badge-primary badge-roundless"> edit </span>
+                                  onclick="changePassDiv();"
+                                  class="badge badge-primary badge-roundless"> <?php echo lang("Edit"); ?> </span>
 
                             <span id='password_Done' type="password" style='display: none' role="button"
-                                  class="badge badge-primary badge-roundless" onclick="changePassword();"> Save </span>
+                                  class="badge badge-primary badge-roundless"
+                                  onclick="changePassword();"> <?php echo lang("Save"); ?> </span>
 
                         </td>
                     </tr>
                     <tr>
-                        <td> Registered</td>
+                        <td> <?php echo lang("Registered"); ?></td>
                         <td>
                             <?php
                             if (isset($userInfo[0]["registered_date"])) {
@@ -117,7 +125,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> Viewer Rate</td>
+                        <td> <?php echo lang("ViewerRate"); ?></td>
                         <td>
                             <?php
                             if (isset($userInfo[0]["view_rate"])) {
@@ -130,10 +138,10 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> Available Credits</td>
+                        <td> <?php echo lang("AvailableCredits"); ?></td>
                         <td><?php if (isset($userInfo[0]["total_credits"])) {
-                                    echo $userInfo[0]["total_credits"];
-                                } ?>
+                                echo $userInfo[0]["total_credits"];
+                            } ?>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
                             data-original-title="tooltips">
@@ -141,7 +149,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> Total Credits</td>
+                        <td> <?php echo lang("TotalCredits"); ?></td>
                         <td>
                             <?php
                             if (isset($userInfo[0]["total_credits"])) {
@@ -154,7 +162,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> Websites viewed today</td>
+                        <td> <?php echo lang("WebsitesViewedToday"); ?></td>
                         <td><?php
                             if (isset($todayCount[0]["today"])) {
                                 echo $todayCount[0]["today"];
@@ -166,11 +174,11 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> Referance Code</td>
+                        <td> <?php echo lang("ReferanceCode"); ?></td>
                         <td>
                             <?php
                             if (isset($referanceShort)) {
-                                echo "<a href=\"" .$referanceShort. "\" >" . $referanceShort . "</a>";
+                                echo "<a href=\"" . $referanceShort . "\" >" . $referanceShort . "</a>";
                             } ?>
                         </td>
 
@@ -180,8 +188,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> Credits by promotion
-                            (last 24 hours)
+                        <td> <?php echo lang("CreditsByPromotion"); ?>
                         </td>
                         <td>sss
                         </td>
@@ -201,15 +208,15 @@
                     <tbody>
                     <tr>
                         <th colspan="3" class="font-red-intense">
-                            Account Settings
+                            <?php echo lang("AccountSettings"); ?>
                         </th>
                     </tr>
                     <tr>
-                        <td>Auto Distribution</td>
+                        <td><?php echo lang("AutoDistribution"); ?></td>
 
                         <td>
                             <label class="mt-checkbox mt-checkbox-outline">
-                                No
+
                                 <input type="checkbox" value="1" name="test"/>
                                 <span></span>
                             </label>

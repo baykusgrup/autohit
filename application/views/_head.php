@@ -181,17 +181,18 @@ if (!class_exists('Login')) {
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                                data-close-others="true">
 
-                            <span class="username username-hide-on-mobile"> <i class="icon-user"></i><i class="fa fa-angle-down"></i>
+                            <span class="username username-hide-on-mobile"> <i class="icon-user"></i><i
+                                        class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-default">
                                 <li>
                                     <a href="<?php echo base_url() ?>index.php/Account">
-                                        <i class="icon-home"></i> My Account </a>
+                                        <i class="icon-home"></i> <?php echo lang("MyAccount"); ?> </a>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
                                     <a href="<?php echo base_url() ?>index.php/VerifyLogin/sessionDestroy">
-                                        <i class="icon-key"></i> Log Out </a>
+                                        <i class="icon-key"></i> <?php echo lang("Logout"); ?> </a>
                                 </li>
                             </ul>
                         </li>
@@ -229,7 +230,8 @@ if (!class_exists('Login')) {
                         <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
                         <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
                         <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-                        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true"
+                        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false"
+                            data-auto-scroll="true"
                             data-slide-speed="200" style="padding-top: 20px">
                             <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
                             <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
@@ -243,50 +245,50 @@ if (!class_exists('Login')) {
                             <li class="nav-item start ">
                                 <a href="<?php echo base_url() ?>index.php/Login" class="nav-link nav-toggle">
                                     <i class="icon-home"></i>
-                                    <span class="title">HomePage</span>
+                                    <span class="title"><?php echo lang("HomePage"); ?></span>
                                 </a>
                             </li>
                             <li class="heading">
-                                <h3 class="uppercase">Welcome Site</h3>
+                                <h3 class="uppercase"><?php echo lang("WelcomeSite"); ?></h3>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Login" class="nav-link nav-toggle">
                                     <i class="icon-settings"></i>
-                                    <span class="title">Login</span>
+                                    <span class="title"><?php echo lang("Login"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Register" class="nav-link nav-toggle">
                                     <i class="icon-user"></i>
-                                    <span class="title">Register</span>
+                                    <span class="title"><?php echo lang("Register"); ?></span>
                                 </a>
                             </li>
                             <li class="heading">
-                                <h3 class="uppercase">Other Thinks</h3>
+                                <h3 class="uppercase"><?php echo lang("OtherThinks"); ?></h3>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Buy" class="nav-link nav-toggle">
                                     <i class="icon-wallet"></i>
-                                    <span class="title">Buy Credits</span>
+                                    <span class="title"><?php echo lang("BuyCredits"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Statistics" class="nav-link nav-toggle">
                                     <i class="icon-bar-chart"></i>
-                                    <span class="title">Statistics</span>
+                                    <span class="title"><?php echo lang("Statistics"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Help" class="nav-link nav-toggle">
                                     <i class="icon-directions"></i>
-                                    <span class="title">Help</span>
+                                    <span class="title"><?php echo lang("Help"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="mailto:info@autohit.com?subject=#sss Comments&body=Hi!"
+                                <a href="mailto:info@nearlyweb.com?subject=#NearlyWeb Comments&body=Hi!"
                                    class="nav-link nav-toggle">
                                     <i class="icon-envelope-letter"></i>
-                                    <span class="title">Contact us</span>
+                                    <span class="title"><?php echo lang("ContactUs"); ?></span>
                                 </a>
                             </li>
                         </ul>
@@ -297,7 +299,7 @@ if (!class_exists('Login')) {
                 </div>
                 <!-- END SIDEBAR -->
                 <?php
-            }else {
+            } else {
                 ?>
 
                 <!-- BEGIN SIDEBAR -->
@@ -313,7 +315,8 @@ if (!class_exists('Login')) {
                         <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
                         <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
                         <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-                        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false" data-auto-scroll="true"
+                        <ul class="page-sidebar-menu  page-header-fixed " data-keep-expanded="false"
+                            data-auto-scroll="true"
                             data-slide-speed="200" style="padding-top: 20px">
                             <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
                             <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
@@ -327,63 +330,63 @@ if (!class_exists('Login')) {
                             <li class="nav-item start ">
                                 <a href="<?php echo base_url() ?>index.php/Account" class="nav-link nav-toggle">
                                     <i class="icon-home"></i>
-                                    <span class="title">My Account</span>
+                                    <span class="title"><?php echo lang("MyAccount"); ?></span>
                                 </a>
                             </li>
                             <li class="heading">
-                                <h3 class="uppercase">About Site</h3>
+                                <h3 class="uppercase"><?php echo lang("AboutSite"); ?></h3>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Earn" class="nav-link nav-toggle">
                                     <i class="icon-settings"></i>
-                                    <span class="title">Earn Credits</span>
+                                    <span class="title"><?php echo lang("EarnCredits"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Sites" class="nav-link nav-toggle">
                                     <i class="icon-diamond"></i>
-                                    <span class="title">My Sites</span>
+                                    <span class="title"><?php echo lang("MySites"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Blocked" class="nav-link nav-toggle">
                                     <i class="icon-dislike"></i>
-                                    <span class="title">Blocked Sites</span>
+                                    <span class="title"><?php echo lang("BlockedSites"); ?></span>
                                 </a>
                             </li>
 
                             <li class="heading">
-                                <h3 class="uppercase">Other Thinks</h3>
+                                <h3 class="uppercase"><?php echo lang("OtherThinks"); ?></h3>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Buy" class="nav-link nav-toggle">
                                     <i class="icon-wallet"></i>
-                                    <span class="title">Buy Credits</span>
+                                    <span class="title"><?php echo lang("BuyCredits"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Refferal" class="nav-link nav-toggle">
                                     <i class="icon-users"></i>
-                                    <span class="title">Refferal</span>
+                                    <span class="title"><?php echo lang("Refferal"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Statistics" class="nav-link nav-toggle">
                                     <i class="icon-bar-chart"></i>
-                                    <span class="title">Statistics</span>
+                                    <span class="title"><?php echo lang("Statistics"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Help" class="nav-link nav-toggle">
                                     <i class="icon-directions"></i>
-                                    <span class="title">Help</span>
+                                    <span class="title"><?php echo lang("Help"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
                                 <a href="mailto:info@autohit.com?subject=#sss Comments&body=Hi!"
                                    class="nav-link nav-toggle">
                                     <i class="icon-envelope-letter"></i>
-                                    <span class="title">Contact us</span>
+                                    <span class="title"><?php echo lang("ContactUs"); ?> </span>
                                 </a>
                             </li>
                         </ul>
@@ -393,7 +396,7 @@ if (!class_exists('Login')) {
                     <!-- END SIDEBAR -->
                 </div>
                 <!-- END SIDEBAR -->
-            <?php
+                <?php
             }
             ?>
             <!-- BEGIN CONTENT -->

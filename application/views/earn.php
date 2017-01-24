@@ -37,7 +37,7 @@
 
                         <td>
                             <label class="mt-checkbox mt-checkbox-outline">
-                                No
+
                                 <input type="checkbox"  value="1" id="dis_selector" name="dis_selector"/>
                                 <span></span>
                             </label>
