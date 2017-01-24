@@ -12,7 +12,7 @@
                         !</strong> <?php echo lang("UploadedSuccessfully"); ?>
                 </div>
                 <table class="table table-hover table-striped table-bordered">
-                    <tbody id="table_blockedSites">
+                    <thead>
                     <tr>
                         <th>#</th>
                         <th>
@@ -22,6 +22,9 @@
                             <?php echo lang("Active"); ?>
                         </th>
                     </tr>
+                    </thead>
+                    <tbody id="table_blockedSites">
+
 
                     <?php
 
