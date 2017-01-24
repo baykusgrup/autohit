@@ -50,4 +50,24 @@ $lang["CreditsByPromotion"] = "Promosyon gelen kredi miktarı (son 24 saat)";
 $lang["AccountSettings"] = "Kullanıcı Ayarları";
 $lang["AutoDistribution"] = "Otomatik Dağıtım";
 
+// MY Sites
+$lang["sites_EasyDistribution"] = "Kolay Paylaşım";
+
+$lang["AvailableCredits"] = "Toplam Kredi";
+$lang["EqualRatioDistrubition"] = "Eşit Oranlı Paylaşım";
+$lang["PerSiteEqualDistribution"] = "Eşit Paylaşım (Adet)";
+
+$lang["sites_add"] = "Ekle";
+$lang["sites_addSite"] = "Website Ekle";
+$lang["sites_edit"] = "Düzenle";
+
+$lang["sites_MyWebSites"] = "Web Sayfalarım";
+$lang["sites_tableName"] = "Site Adı";
+$lang["sites_tableUrl"] = "Link";
+$lang["sites_tableCredit"] = "Kredi";
+$lang["sites_tableRTotal"] = "Toplam </br> Ziyaretçi";
+$lang["sites_tableRToday"] = "Günlük </br> Ziyaretçi";
+$lang["sites_tableEdit"] = "Düzenle";
+
+
 ?>

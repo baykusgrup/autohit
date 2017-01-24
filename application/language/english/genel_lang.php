@@ -74,4 +74,25 @@ $lang["BuyExp1"] = "Password";
 $lang["BuyExp1"] = "Referral";
 $lang["NewMember"] = "New Member";
 
+// MY Sites
+$lang["sites_EasyDistribution"] = "Easy Distribution";
+
+$lang["AvailableCredits"] = "Available Credits";
+$lang["EqualRatioDistrubition"] = "Equal Ratio Distrubition";
+$lang["PerSiteEqualDistribution"] = "Per Site Equal Distribution";
+
+$lang["sites_add"] = "Add";
+$lang["sites_addSite"] = "Add Website";
+$lang["sites_edit"] = "Edit";
+
+$lang["sites_MyWebSites"] = "My Websites";
+$lang["sites_tableName"] = "Site Name";
+$lang["sites_tableUrl"] = "Url";
+$lang["sites_tableCredit"] = "Credit";
+$lang["sites_tableRTotal"] = "Received<br> total";
+$lang["sites_tableRToday"] = "Received<br> today";
+$lang["sites_tableEdit"] = "Edit";
+
+
+
 ?>

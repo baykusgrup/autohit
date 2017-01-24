@@ -16,24 +16,24 @@
                     <tbody>
                     <tr>
                         <th colspan="3" class="font-red-intense">
-                            Easy Distribution
+                            <?php echo lang("sites_EasyDistribution"); ?>
                         </th>
                     </tr>
                     <tr>
-                        <td colspan="3" class="font-red"> Available Credits: <a
+                        <td colspan="3" class="font-red"><?php echo lang("AvailableCredits"); ?>: <a
                                     id="i_credit"><?php if (isset($userWallet[0]["total_credits"])) {
                                     echo $userWallet[0]["total_credits"];
                                 } ?></a></td>
                     </tr>
                     <tr>
-                        <td> Total Amount Credit</td>
+                        <td><?php echo lang("EqualRatioDistrubition"); ?> </td>
                         <td class="col-md-5">
                             <div class="input-group input-medium">
                                 <input type="number" min="0" id="total_amount_credit" class="form-control">
                                 <span class="input-group-btn">
                                                             <button onclick="totalAmountDisCredit()"
                                                                     class="btn btn-outline blue "
-                                                                    type="button">Add!</button>
+                                                                    type="button"><?php echo lang("sites_add"); ?></button>
                                                         </span>
                             </div>
 
@@ -45,7 +45,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> Per Site Amount Credit</td>
+                        <td> <?php echo lang("PerSiteEqualDistribution"); ?></td>
 
                         <td class="col-md-5">
                             <div class="input-group input-medium">
@@ -53,7 +53,7 @@
                                 <span class="input-group-btn">
                                                             <button onclick="perDisCredit()"
                                                                     class="btn btn-outline blue "
-                                                                    type="button">Add!</button>
+                                                                    type="button"><?php echo lang("sites_add"); ?></button>
                                                         </span>
                             </div>
 
@@ -73,7 +73,7 @@
                         <table class="table table-bordered table-hover">
                             <tr>
                                 <th colspan="3" class="font-red-intense">
-                                    My websites
+                                    <?php echo lang("sites_MyWebSites"); ?>
 
                                 </th>
                                 <th colspan="3">
@@ -81,18 +81,18 @@
                                     <a type="button" onclick="clearAddsiteForm();"
                                        href="#modal_addSite" class="btn blue btn-block"
                                        data-toggle="modal" role="button"> <i class="fa fa-plus-square-o"></i>
-                                        Add Site </a>
+                                        <?php echo lang("sites_addSite"); ?> </a>
                                 </th>
 
                             </tr>
                             <tr>
                                 <th>#</th>
-                                <th>Site name</th>
-                                <th>Url</th>
-                                <th>Crdt</th>
-                                <th>Received<br> total</th>
-                                <th>Received<br> today </th>
-                                <th>Edit</th>
+                                <th><?php echo lang("sites_tableName"); ?></th>
+                                <th><?php echo lang("sites_tableUrl"); ?></th>
+                                <th><?php echo lang("sites_tableCredit"); ?></th>
+                                <th><?php echo lang("sites_tableRTotal"); ?></th>
+                                <th><?php echo lang("sites_tableRToday"); ?> </th>
+                                <th><?php echo lang("sites_tableEdit"); ?> </th>
                             </tr>
                             <tbody id="mySites_table">
                             <?php
@@ -107,7 +107,7 @@
                                                 <td>" . $site["TotalVisit"] . "</td>
                                                 <td>" . $site["TodayVisit"] . "</td>
                                                 <td><a name='sites_selector' site_id='" . $site["websites_id"] . "' onclick=\"setUpdateSite(" . $site["websites_id"] . ");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
-                                                       <i class=\"fa fa-edit\"></i> Edit </a></td>
+                                                       <i class=\"fa fa-edit\"></i> ".lang("sites_edit")." </a></td>
                                             </tr>";
                             }
 

@@ -99,7 +99,7 @@ class Sites extends CI_Controller {
         $return = $this->sites_model->getMySitesByUserIDAllWithVisits($user_id);
         $HTML ="";
         foreach ($return as $site){
-            $HTML .=  "<tr>
+            $HTML .=   "<tr>
                                                 <td id='updateSite_siteID_" . $site["websites_id"] . "' >" . $site["websites_id"] . "</td>
                                                 <td id='updateSite_title_" . $site["websites_id"] . "'>" . substr($site["page_title"], 0, 15) . "</td>
                                                 <td id='updateSite_url_" . $site["websites_id"] . "'>" . substr($site["url"], 0, 25) . "</td>
@@ -109,7 +109,7 @@ class Sites extends CI_Controller {
                                                 <td>" . $site["TotalVisit"] . "</td>
                                                 <td>" . $site["TodayVisit"] . "</td>
                                                 <td><a name='sites_selector' site_id='" . $site["websites_id"] . "' onclick=\"setUpdateSite(" . $site["websites_id"] . ");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
-                                                       <i class=\"fa fa-edit\"></i> Edit </a></td>
+                                                       <i class=\"fa fa-edit\"></i> ".lang("sites_edit")." </a></td>
                                             </tr>";
         }
         echo $HTML;
