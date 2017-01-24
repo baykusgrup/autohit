@@ -60,8 +60,9 @@ Class Sites_model extends CI_Model
     }
 
     function getMyBlockedSitesByUserID($user_id){
-        $_SQL = "SELECT w.`websites_id`,w.`url` FROM `websites` w 
-                  WHERE w.`record_status`=1 and w.`blocked`=1 and w.`user_id`=".$user_id;
+        $_SQL = "SELECT ub.blocked_webSite_id,w.url FROM `users_blocked` ub 
+                    inner join websites w on w.record_status=1 and w.websites_id=ub.blocked_webSite_id
+                    WHERE ub.record_status=1 and ub.user_id=".$user_id;
 
 
         $query = $this->db->query($_SQL);
