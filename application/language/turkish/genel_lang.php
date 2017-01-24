@@ -13,6 +13,12 @@ $lang["WeeklyTop"] = "Haftalık 250";
 $lang["MonthlyTop"] = "Aylık 250";
 $lang["SeeMore"] = "Daha Fazla";
 
+//blocked
+
+$lang["ListOfBlockedWebsites"] = "Bloke Edilmiş Web Siteleri";
+$lang["URL"] = "Link";
+$lang["Active"] = "Aktif";
+
 
 //sidebar
 $lang["MyAccount"] = "Hesabım";
