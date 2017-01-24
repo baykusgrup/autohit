@@ -366,28 +366,35 @@
 
         var site_id = 0;
         var dataString = "per_cost=" + disturbation_value;
-        if (parseFloat(credit) > parseFloat(i_credit)) {
-            WarningAlert("Your credits aren't enough! ", "dis_alert");
-        }
-        else {
-            for (var i = 0; i < sites_selector.length; i++) {
 
-                site_id = sites_selector[i].getAttribute("site_id");
+        if(parseFloat(credit)<0 ){
+            WarningAlert("Your credits can't be negative ! ", "dis_alert");
+        }else{
+            if (parseFloat(credit) > parseFloat(i_credit)) {
+                WarningAlert("Your credits aren't enough! ", "dis_alert");
+            }
+            else {
+                for (var i = 0; i < sites_selector.length; i++) {
 
-                $.ajax({
-                    type: "POST",
-                    url: base_url + "/index.php/Distrubition/DistrubitionTotalAmountDisCredit/" + site_id,
-                    data: dataString,
-                    cache: false,
-                    success: function (result) {
+                    site_id = sites_selector[i].getAttribute("site_id");
 
-                        SuccessAlert("We distrubuted your urls! ", "dis_alert");
-                        controllSites();
-                        controllCredits();
-                    }
-                });
+                    $.ajax({
+                        type: "POST",
+                        url: base_url + "/index.php/Distrubition/DistrubitionTotalAmountDisCredit/" + site_id,
+                        data: dataString,
+                        cache: false,
+                        success: function (result) {
+
+                            SuccessAlert("We distrubuted your urls! ", "dis_alert");
+                            controllSites();
+                            controllCredits();
+                        }
+                    });
+                }
             }
         }
+
+
 
     }
 
@@ -403,27 +410,32 @@
         var site_id = 0;
         var dataString = "per_cost=" + disturbation_value;
 
-        if (total_credit_waste <= i_credit) {
-            for (var i = 0; i < sites_selector.length; i++) {
+        if(parseFloat(credit)<0 ){
+            WarningAlert("Your credits can't be negative ! ", "dis_alert");
+        }else {
 
-                site_id = sites_selector[i].getAttribute("site_id");
+            if (total_credit_waste <= i_credit) {
+                for (var i = 0; i < sites_selector.length; i++) {
 
-                $.ajax({
-                    type: "POST",
-                    url: base_url + "/index.php/Distrubition/DistrubitionTotalAmountDisCredit/" + site_id,
-                    data: dataString,
-                    cache: false,
-                    success: function (result) {
+                    site_id = sites_selector[i].getAttribute("site_id");
 
-                        SuccessAlert("We distrubuted your urls! ", "dis_alert");
-                        controllSites();
-                        controllCredits();
-                    }
-                });
+                    $.ajax({
+                        type: "POST",
+                        url: base_url + "/index.php/Distrubition/DistrubitionTotalAmountDisCredit/" + site_id,
+                        data: dataString,
+                        cache: false,
+                        success: function (result) {
+
+                            SuccessAlert("We distrubuted your urls! ", "dis_alert");
+                            controllSites();
+                            controllCredits();
+                        }
+                    });
+                }
             }
-        }
-        else {
-            WarningAlert("Your credits aren't enough! ", "dis_alert");
+            else {
+                WarningAlert("Your credits aren't enough! ", "dis_alert");
+            }
         }
 
     }
