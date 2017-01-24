@@ -98,17 +98,7 @@
     <!-- END THEME LAYOUT STYLES -->
 </head>
 <!-- END HEAD -->
-<?php
-if (class_exists('Login')) {
-    echo "<body class=\"login\" style=\" background-color: #fff;\">";
-} else {
-    echo "<body class=\"page-header-fixed page-sidebar-opened page-content-white page-sidebar-fixed  page-boxed page-md\">";
-}
-?>
-
-<?php
-if (!class_exists('Login')) {
-?>
+<body class="page-header-fixed page-sidebar-opened page-content-white page-sidebar-fixed  page-boxed page-md">
 
 <div class="page-wrapper">
     <!-- BEGIN HEADER -->
@@ -173,15 +163,43 @@ if (!class_exists('Login')) {
                     </li>
 
                     <?php
-                    if (!class_exists('Register')) {
+                    if (class_exists('Register') || class_exists('Home') || class_exists('Login')) {
                         ?>
+                        <li class="dropdown dropdown-user">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                               data-close-others="true">
+
+                            <span class="username username-hide-on-mobile"> <i class="icon-user"></i> <span
+                                        class="username username-hide-on-mobile"> USER AREA</span> <i
+                                        class="fa fa-angle-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="<?php echo base_url() ?>index.php/Login">
+                                        <i class="icon-home"></i> <?php echo lang("Login"); ?> </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="<?php echo base_url() ?>index.php/Register">
+                                        <i class="icon-key"></i> <?php echo lang("welcome"); ?> </a>
+                                </li>
+                                <li class="divider"></li>
+                            </ul>
+                        </li>
+                        <?php
+                    } else {
+                        ?>
+
+
                         <!-- BEGIN USER LOGIN DROPDOWN -->
                         <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
                         <li class="dropdown dropdown-user">
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                                data-close-others="true">
 
-                            <span class="username username-hide-on-mobile"> <i class="icon-user"></i><i
+                            <span class="username username-hide-on-mobile"> <i class="icon-user"></i> <span
+                                        class="username username-hide-on-mobile"> USER </span> <i
                                         class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-default">
@@ -197,6 +215,8 @@ if (!class_exists('Login')) {
                             </ul>
                         </li>
                         <!-- END USER LOGIN DROPDOWN -->
+
+
                         <?php
                     }
                     ?>
@@ -215,7 +235,7 @@ if (!class_exists('Login')) {
         <div class="page-container">
 
             <?php
-            if (class_exists('Register')) {
+            if (class_exists('Register') || class_exists('Home') || class_exists('Login')) {
                 ?>
                 <!-- BEGIN SIDEBAR -->
                 <div class="page-sidebar-wrapper">
@@ -243,7 +263,7 @@ if (!class_exists('Login')) {
                             <!-- END SIDEBAR TOGGLER BUTTON -->
 
                             <li class="nav-item start ">
-                                <a href="<?php echo base_url() ?>index.php/Login" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>index.php/Home" class="nav-link nav-toggle">
                                     <i class="icon-home"></i>
                                     <span class="title"><?php echo lang("HomePage"); ?></span>
                                 </a>
@@ -410,7 +430,3 @@ if (!class_exists('Login')) {
                         <!-- END PAGE HEADER-->
                         <div class="row">
                             <div class="col-md-9">
-
-                                <?php
-                                }
-                                ?>

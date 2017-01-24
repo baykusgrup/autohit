@@ -9,6 +9,9 @@ class Login extends CI_Controller {
 
     function index()
     {
+        $this->load->helper(['language', 'lang', 'url']);
+        dilSecici();
+
         $this->load->helper(array('form','url'));
         $this->load->view('_head');
         $this->load->view('login');

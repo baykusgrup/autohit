@@ -1,6 +1,4 @@
-<?php
-if (!class_exists('Login')) {
-    ?>
+
 
     </div>
     <div class="col-md-3">
@@ -102,9 +100,6 @@ if (!class_exists('Login')) {
     </div>
     </div>
 
-    <?php
-}
-?>
 
 <!--[if lt IE 9]>
 <script src="<?php echo base_url() ?>assets/global/plugins/respond.min.js"></script>
@@ -124,29 +119,7 @@ if (!class_exists('Login')) {
 <!-- END CORE PLUGINS -->
 
 
-<?php
-if (class_exists('Login')) {
-    ?>
 
-    <!-- BEGIN PAGE LEVEL PLUGINS -->
-    <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-validation/js/jquery.validate.min.js?vLogin"
-            type="text/javascript"></script>
-    <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-validation/js/additional-methods.min.js?vLogin"
-            type="text/javascript"></script>
-    <script src="<?php echo base_url(); ?>assets/global/plugins/select2/js/select2.full.min.js?vLogin"
-            type="text/javascript"></script>
-    <script src="<?php echo base_url(); ?>assets/global/plugins/backstretch/jquery.backstretch.min.js?vLogin"
-            type="text/javascript"></script>
-    <!-- END PAGE LEVEL PLUGINS -->
-    <!-- BEGIN THEME GLOBAL SCRIPTS -->
-    <script src="<?php echo base_url(); ?>assets/global/scripts/app.min.js?vLogin" type="text/javascript"></script>
-    <!-- END THEME GLOBAL SCRIPTS -->
-    <!-- BEGIN PAGE LEVEL SCRIPTS -->
-    <script src="<?php echo base_url(); ?>assets/pages/scripts/login-5.js?vLogin" type="text/javascript"></script>
-    <!-- END PAGE LEVEL SCRIPTS -->
-    <?php
-} else {
-    ?>
 
 
     <!-- BEGIN PAGE LEVEL PLUGINS -->
@@ -155,9 +128,7 @@ if (class_exists('Login')) {
     <script src="<?php echo base_url(); ?>assets/global/plugins/backstretch/jquery.backstretch.min.js?vLogin"
             type="text/javascript"></script>
     <!-- END PAGE LEVEL PLUGINS -->
-    <?php
-}
-?>
+
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
 <script src="<?php echo base_url() ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
 <!-- END THEME GLOBAL SCRIPTS -->
