@@ -11,6 +11,10 @@ class Register extends CI_Controller
 
         $data['ref'] = isset($_GET['ref']) ? $_GET['ref'] : '00000';
 
+        $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
+        $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
+        $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
+
         $this->load->view('_head');
         $this->load->view('register',$data);
         $this->load->view('_foot');

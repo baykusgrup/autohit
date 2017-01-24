@@ -12,9 +12,14 @@ class Login extends CI_Controller {
         $this->load->helper(['language', 'lang', 'url']);
         dilSecici();
 
+        $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
+        $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
+        $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
+
+
         $this->load->helper(array('form','url'));
         $this->load->view('_head');
-        $this->load->view('login');
+        $this->load->view('login',$data);
         $this->load->view('_foot');
     }
 
