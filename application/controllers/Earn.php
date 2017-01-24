@@ -30,7 +30,7 @@ class Earn extends CI_Controller
 
     public function getUrlsFromDatabase()
     {
-        $result = $this->sites_model->getUrlsFromDatabase();
+        $result = $this->sites_model->getUrlsFromDatabaseNotBlockedAndNotMySites();
         $HTML = "";
 
         foreach ($result as $site) {

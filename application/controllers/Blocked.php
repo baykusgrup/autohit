@@ -16,7 +16,7 @@ class Blocked extends CI_Controller {
 
 
             $data=array();
-            $data["blocked"]=$this->sites_model->getMyBlockedSitesByUserID($user_id);
+            //$data["blocked"]=$this->sites_model->getMyBlockedSitesByUserID($user_id);
 
             $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
             $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
@@ -29,17 +29,8 @@ class Blocked extends CI_Controller {
     }
     public function getActiveSite($site_id)
     {
-        $dateTime = date('Y-m-d H:i:s');
-        $dataSites=array();
 
-        $dataSites["blocked"]=0;
-
-        $dataSites["record_status"]=1;
-        $dataSites["update_user"]=$this->session->userdata("user_id");
-        $dataSites["update_date"]=$dateTime;
-
-        $site_id = $this->generalTables_model->updateTable("websites",$site_id,$dataSites);
-        return $site_id;
+       $this->sites_model->getActiveSite($site_id);
 
     }
     public function getBlocked($site_id)
@@ -47,13 +38,17 @@ class Blocked extends CI_Controller {
         $dateTime = date('Y-m-d H:i:s');
         $dataSites=array();
 
-        $dataSites["blocked"]=1;
+        $dataSites["user_id"]=$this->session->userdata("user_id");
+        $dataSites["blocked_webSite_id"]=$site_id;
+
 
         $dataSites["record_status"]=1;
-        $dataSites["update_user"]=$this->session->userdata("user_id");
+        $dataSites["insert_user_id"]=$this->session->userdata("user_id");
+        $dataSites["insert_date"]=$dateTime;
+        $dataSites["update_user_id"]=$this->session->userdata("user_id");
         $dataSites["update_date"]=$dateTime;
 
-        $site_id = $this->generalTables_model->updateTable("websites",$site_id,$dataSites);
+        $site_id = $this->generalTables_model->insertTables("users_blocked",$dataSites);
         return $site_id;
 
     }

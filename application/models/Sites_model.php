@@ -37,10 +37,21 @@ Class Sites_model extends CI_Model
 
     }
 
-    function getUrlsFromDatabase(){
+       function getUrlsFromDatabase(){
         $_SQL = "SELECT w.`websites_id`,w.`page_title`,w.`url`,w.`credits`,w.`visit_cost`,pd.`durations_sec` FROM `websites` w 
                   inner join prt_durations pd on pd.`record_status`=1 and pd.`prt_durations_id`= w.`duration_sec_id`
                   WHERE w.`record_status`=1";
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
+       function getUrlsFromDatabaseNotBlockedAndNotMySites($user_id){
+        $_SQL = "SELECT w.`websites_id`,w.`page_title`,w.`url`,w.`credits`,w.`visit_cost`,pd.`durations_sec` FROM `websites` w 
+				  inner join prt_durations pd on pd.`record_status`=1 and pd.`prt_durations_id`= w.`duration_sec_id`
+              	  where w.record_status=1 and w.user_id!=".$user_id."
+                  and  w.`websites_id` NOT IN (select ub.blocked_webSite_id from users_blocked ub where ub.record_status=1 and ub.blocked_webSite_id=w.`websites_id`)";
 
 
         $query = $this->db->query($_SQL);
@@ -79,13 +90,23 @@ Class Sites_model extends CI_Model
     }
 
     function getSitesInfoBySiteID($site_id){
-        $_SQL = "SELECT `websites_id`,`page_title`,`url`,`credits`,`visit_cost`,`duration_sec_id`,`unique_ip`,`hide_referer`,`random_referer`,`blocked`
+        $_SQL = "SELECT `websites_id`,`page_title`,`url`,`credits`,`visit_cost`,`duration_sec_id`,`unique_ip`,`hide_referer`,`random_referer`
                  FROM `websites`
                  WHERE `record_status`=1 and `websites_id`=".$site_id;
 
 
         $query = $this->db->query($_SQL);
         return $query->result_array();
+
+    }
+
+    function getActiveSite($site_id){
+        $user_id=$this->session->userdata("user_id");
+
+        $this->db->where('blocked_webSite_id', $site_id);
+        $this->db->where('user_id', $user_id );
+        $this->db->delete('users_blocked');
+        return true;
 
     }
 }
