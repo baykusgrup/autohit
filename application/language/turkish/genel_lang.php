@@ -7,6 +7,12 @@ $lang["Edit"] = "Düzenle";
 $lang["Save"] = "Kaydet";
 $lang["Saved"] = "Kaydedildi";
 
+//top
+$lang["DailyTop"] = "Günlük 250";
+$lang["WeeklyTop"] = "Haftalık 250";
+$lang["MonthlyTop"] = "Aylık 250";
+$lang["SeeMore"] = "Daha Fazla";
+
 
 //sidebar
 $lang["MyAccount"] = "Hesabım";
@@ -35,7 +41,7 @@ $lang["Username"] = "Kullanıcı Adı";
 $lang["Email"] = "Email";
 $lang["Password"] = "Şifre";
 $lang["Registered"] = "Kayıt";
-$lang["ViewerRate"] = "Viewer Rate";
+$lang["ViewerRate"] = "Görüntüleme Oranı";
 $lang["AvailableCredits"] = "Sahip Olunan Kredi";
 $lang["TotalCredits"] = "Toplam Kredi";
 $lang["WebsitesViewedToday"] = "Bugün ziyaret edilen website sayısı";
