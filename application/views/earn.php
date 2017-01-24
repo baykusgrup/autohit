@@ -8,14 +8,14 @@
     <div class="portlet-body">
         <div class="row">
             <ul class="col-md-12">
-                <p>State: <span id='statusk'></span></p>
-                <p>Total Earned Link Count:<span id='totalbl'></span></p>
-                <p>Current Site : <span id="currentSite"></span></p>
-                <p>Next site in <span id="duration_time"></span> seconds.</p>
+                <p> <?php echo lang("earn_State"); ?>: <span id='statusk'></span></p>
+                <p> <?php echo lang("earn_TotalEarnedLinkCount"); ?>:<span id='totalbl'></span></p>
+                <p><?php echo lang("earn_CurrentSite"); ?> : <span id="currentSite"></span></p>
+                <p><?php echo lang("earn_NextSite"); ?> <span id="duration_time"></span> <?php echo lang("earn_second"); ?>.</p>
                 <hr/>
-                <p>You will earn 0.8 credits by visiting this site.</p>
+                <p> <?php echo lang("earn_youwillearn"); ?>.</p>
 
-                <p>List of recently visited sites</p>
+                <p> <?php echo lang("earn_listofsites"); ?></p>
                 <ul id="LastSites_5">
 
                 </ul>
@@ -27,13 +27,13 @@
                     </tr>
                 </table>
                 <br/>
-                <a role="button" onclick="beginu()" class="btn blue btn-block">Start Viewer</a>
+                <a role="button" onclick="beginu()" class="btn blue btn-block"> <?php echo lang("earn_viewer"); ?></a>
                 <br/>
                 <table class="table table-hover table-striped table-bordered">
                     <tbody>
 
                     <tr>
-                        <td>Auto Distribution</td>
+                        <td><?php echo lang("earn_autoDistribution"); ?></td>
 
                         <td>
                             <label class="mt-checkbox mt-checkbox-outline">
@@ -50,7 +50,7 @@ When enabled, this option allows you to automatically distribute the credits ear
                         </td>
                     </tr>
                     <tr>
-                        <td> Light Viewer Link</td>
+                        <td><?php echo lang("earn_lightViewer"); ?></td>
                         <td>
                             <strong> <?php
                                     if (isset($userInfo[0]["referance_code"])) {
@@ -70,21 +70,20 @@ When enabled, this option allows you to automatically distribute the credits ear
     <hr/>
     <div class="row">
         <div class="col-md-12">
-            <p class="font-red-intense">Multiple Viewers </p>
+            <p class="font-red-intense"><?php echo lang("earn_MultipleViewer"); ?> </p>
             <p>
-                To use Multiple Viewers, each viewers must have their own IP adresse. In order to have Multiple IPs
-                you can use VPS.
+                <?php echo lang("earn_MultipleViewer_exp"); ?>
             </p>
 
-            <p class="font-red-intense">Active Viewers </p>
+            <p class="font-red-intense"> <?php echo lang("earn_ActiveViewer"); ?> </p>
             <table class="table table-hover table-striped table-bordered">
                 <thead>
                 <tr>
                     <th>
-                        IP Address
+                        <?php echo lang("earn_IPAdress"); ?>
                     </th>
                     <th>
-                        Browser
+                        <?php echo lang("earn_Browser"); ?>
                     </th>
                 </tr>
                 </thead>

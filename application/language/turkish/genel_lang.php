@@ -75,5 +75,25 @@ $lang["sites_tableRTotal"] = "Toplam </br> Ziyaretçi";
 $lang["sites_tableRToday"] = "Günlük </br> Ziyaretçi";
 $lang["sites_tableEdit"] = "Düzenle";
 
+// Earn Credits
+$lang["earn_State"] = "Kolay Paylaşım";
+$lang["earn_TotalEarnedLinkCount"] = "Toplam Kazanılan Link Sayısı";
+$lang["earn_CurrentSite"] = "Gezinen Web Sitesi";
+$lang["earn_NextSite"] = "Sıradaki web sitesi";
+$lang["earn_second"] = "saniye";
+
+$lang["earn_youwillearn"] = "Ziyaret ettiğin site başına 0.8 kredi kazanıyorsun.";
+$lang["earn_listofsites"] = "Ziyaret edilen web siteleri";
+$lang["earn_viewer"] = "Ziyaret Motorunu Başlat";
+$lang["earn_autoDistribution"] = "Sıradaki web sitesi";
+$lang["earn_lightViewer"] = "Sade Ziyaret Motoru Linki";
+
+$lang["earn_MultipleViewer"] = "Çoklu Ziyaret Motorları";
+$lang["earn_MultipleViewer_exp"] = "Birden fazla ziyaret motoru kullanabilmek için , her ziyaret motoru için farklı IP adresleri sağlanmalıdır.";
+$lang["earn_ActiveViewer"] = "Aktif Ziyaret Motorları";
+$lang["earn_IPAdress"] = "IP Adresi";
+$lang["earn_Browser"] = "Tarayıcı";
+
+
 
 ?>

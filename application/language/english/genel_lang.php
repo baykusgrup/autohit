@@ -93,6 +93,25 @@ $lang["sites_tableRTotal"] = "Received<br> total";
 $lang["sites_tableRToday"] = "Received<br> today";
 $lang["sites_tableEdit"] = "Edit";
 
+// Earn Credits
+$lang["earn_State"] = "State";
+$lang["earn_TotalEarnedLinkCount"] = "Total Earned Link Count";
+$lang["earn_CurrentSite"] = "Current Site";
+$lang["earn_NextSite"] = "Next site in";
+$lang["earn_second"] = "second";
+
+$lang["earn_youwillearn"] = "You will earn 0.8 credits by visiting this site";
+$lang["earn_listofsites"] = "List of recently visited sites";
+$lang["earn_viewer"] = "Start Viewer";
+$lang["earn_autoDistribution"] = "Auto </br> Distribution";
+$lang["earn_lightViewer"] = "Light Viewer </br> Link";
+
+$lang["earn_MultipleViewer"] = "Multiple Viewers";
+$lang["earn_MultipleViewer_exp"] = "To use Multiple Viewers, each viewers must have their own IP adresse. In order to have Multiple IPs you can use VPS.";
+$lang["earn_ActiveViewer"] = "Active Viewers";
+$lang["earn_IPAdress"] = "IP Address";
+$lang["earn_Browser"] = "Browser";
+
 
 
 ?>
