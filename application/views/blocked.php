@@ -28,10 +28,10 @@
                         foreach ($blocked as $site){
 
                             echo "<tr>
-                                    <td> ".$site["websites_id"]."</td>
+                                    <td> ".$site["blocked_webSite_id"]."</td>
                                     <td>".$site["url"]."
                                     </td>
-                                    <td width=\"82px\"><a  onclick=\"getActiveSite(".$site["websites_id"].")\" class=\"btn btn-outline green btn-sm purple\">
+                                    <td width=\"82px\"><a  onclick=\"getActiveSite(".$site["blocked_webSite_id"].")\" class=\"btn btn-outline green btn-sm purple\">
                                             <i class=\"fa fa-edit\"></i> " . lang("Active"). " </a></td>
                                 </tr>";
 
