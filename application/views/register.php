@@ -5,7 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
-            <span class="caption-subject font-blue-sharp bold uppercase">Register - <?php echo lang("welcome"); ?></span>
+            <span class="caption-subject font-blue-sharp bold uppercase"><?php echo lang("Register"); ?>
+                - <?php echo lang("welcome"); ?></span>
         </div>
     </div>
     <div class="portlet-body">
@@ -14,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <form id="form_sample_4" class="form-horizontal">
                     <div class="form-body">
                         <div class="form-group">
-                            <label class="col-md-2"> User Name </label>
+                            <label class="col-md-2"><?php echo lang("Username"); ?>  </label>
                             <div class="col-md-10">
                                 <input type="text" class="form-control"
                                        placeholder="Enter User Name.."
@@ -22,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-2"> Email Address </label>
+                            <label class="col-md-2"> <?php echo lang("Email"); ?>  </label>
                             <div class="col-md-10">
                                 <input type="text" class="form-control"
                                        placeholder="Enter Mail Adress.."
@@ -30,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-2"> Password </label>
+                            <label class="col-md-2"> <?php echo lang("Password"); ?>  </label>
                             <div class="col-md-10">
                                 <input type="text" class="form-control" placeholder="Enter Password.."
                                        name="password_member" id="password_member">
@@ -38,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-2"> Referral </label>
+                            <label class="col-md-2"> <?php echo lang("Refferal"); ?>  </label>
                             <div class="col-md-9">
                                 <input readonly type="text" class="form-control" placeholder="<?php
                                 if (isset($ref)) {
@@ -52,19 +53,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 ?>">
                             </div>
 
-                            <div  class="tooltips col-md-1 " data-container="body" data-placement="bottom"
-                                data-original-title="tooltips">
+                            <div class="tooltips col-md-1 " data-container="body" data-placement="bottom"
+                                 data-original-title="tooltips">
                                 <span class="badge badge-primary badge-roundless"> ? </span>
                             </div>
 
                         </div>
                     </div>
                     <div class="form-actions">
-                        <div id="register_alert" class="alert alert-success" style="display: none;"><strong>Başarılı
-                                !</strong> Uploaded Successfully
+                        <div id="register_alert" class="alert alert-success" style="display: none;">
+                            <strong><?php echo lang("WellDone"); ?>
+                                !</strong><?php echo lang("UploadedSuccessfully"); ?>
                         </div>
                         <div class="row">
-                            <a role="button" onclick="insertMember();" class="btn blue btn-block">New Member</a>
+                            <a role="button" onclick="insertMember();"
+                               class="btn blue btn-block"><?php echo lang("NewMember"); ?> </a>
 
                         </div>
                     </div>
@@ -85,7 +88,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         var password_member = document.getElementById("password_member").value;
         var referral = document.getElementById("referral").value;
 
-        var dataString = "username_member=" +username_member+ "&e_mail=" + e_mail_member + "&password=" + password_member + "&referral=" + referral;
+        var dataString = "username_member=" + username_member + "&e_mail=" + e_mail_member + "&password=" + password_member + "&referral=" + referral;
 
         $.ajax({
             type: "POST",

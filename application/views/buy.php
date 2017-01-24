@@ -8,7 +8,9 @@
     <div class="portlet-body">
         <div class="row">
             <div class="col-md-12">
-                <p><?php echo lang("BuyExp1"); ?></p>
+                <p>
+                    <?php echo lang("BuyExpOne"); ?>
+                </p>
 
             </div>
         </div>

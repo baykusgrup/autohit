@@ -149,12 +149,22 @@ if (class_exists('Login')) {
     ?>
 
 
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-validation/js/jquery.validate.min.js?vLogin"
+            type="text/javascript"></script>
+    <script src="<?php echo base_url(); ?>assets/global/plugins/backstretch/jquery.backstretch.min.js?vLogin"
+            type="text/javascript"></script>
+    <!-- END PAGE LEVEL PLUGINS -->
     <?php
 }
 ?>
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
 <script src="<?php echo base_url() ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
 <!-- END THEME GLOBAL SCRIPTS -->
+
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="<?php echo base_url(); ?>assets/pages/scripts/login-5.js?vLogin" type="text/javascript"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
 <!-- BEGIN THEME LAYOUT SCRIPTS -->
 <script src="<?php echo base_url() ?>assets/layouts/layout/scripts/layout.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url() ?>assets/layouts/layout/scripts/demo.min.js" type="text/javascript"></script>

@@ -44,7 +44,7 @@ $lang["Seconds"] = "Seconds";
 $lang["AccountInfo"] = "Account Info";
 $lang["MemberID"] = "Member ID";
 $lang["Username"] = "Username";
-$lang["Email"] = "Email";
+$lang["Email"] = "Email ";
 $lang["Password"] = "Password";
 $lang["Registered"] = "Registered";
 $lang["ViewerRate"] = "Viewer Rate";
@@ -64,10 +64,14 @@ $lang["Active"] = "Active";
 
 //buy
 
-$lang["BuyExp1"] = "If the viewer does not generate enough credits for your needs, you can increase the number of visits received per day on your site by purchasing additional credits. We offer several convenient payment options. SMS (Allopass), or by debit or credit card (Paypal). You can choose the currency - Euro or Dollars (US) - whichever suits you best.";
+$lang["BuyExpOne"] = "If the viewer does not generate enough credits for your needs, you can increase the number of visits received per day on your site by purchasing additional credits. We offer several convenient payment options. SMS (Allopass), or by debit or credit card (Paypal). You can choose the currency - Euro or Dollars (US) - whichever suits you best.";
 
-//earn
+//register
 
-//earnfast
+$lang["UserName"] = "User Name";
+$lang["EmailAddress"] = "Email Address";
+$lang["BuyExp1"] = "Password";
+$lang["BuyExp1"] = "Referral";
+$lang["NewMember"] = "New Member";
 
 ?>
