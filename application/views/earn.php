@@ -33,7 +33,7 @@
                     <tbody>
 
                     <tr>
-                        <td><?php echo lang("earn_autoDistribution"); ?></td>
+                        <td><?php echo lang("AutoDistribution"); ?></td>
 
                         <td>
                             <label class="mt-checkbox mt-checkbox-outline">
@@ -43,8 +43,7 @@
                             </label>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="
-When enabled, this option allows you to automatically distribute the credits earned through the viewer to your active sites. To accumulate credits in your bank you should disable this option. This option do not have any impact on credits purchased or already in the bank. ">
+                            data-original-title="<?php echo lang("tipAutoDistribution"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
 
                         </td>
@@ -59,7 +58,7 @@ When enabled, this option allows you to automatically distribute the credits ear
 
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
+                            data-original-title="<?php echo lang("tip_earn_lightViewer"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>

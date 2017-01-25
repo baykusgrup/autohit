@@ -1,104 +1,105 @@
+</div>
+<div class="col-md-3">
 
 
-    </div>
-    <div class="col-md-3">
-
-
-        <!-- BEGIN ORDERED LISTS PORTLET-->
-        <div class="portlet box blue">
-            <div class="portlet-title">
-                <div class="caption">
-                    <i class="fa fa-gift"></i><?php echo lang("DailyTop"); ?>
-                </div>
+    <!-- BEGIN ORDERED LISTS PORTLET-->
+    <div class="portlet box blue">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift"></i><?php echo lang("DailyTop"); ?>
             </div>
-            <div class="portlet-body">
-                <ul class="list-unstyled">
-                    <?php
-                    if ($todayTop250) {
-                        foreach ($todayTop250 as $listToday) {
-                            echo "<li>" . $listToday["username"] . "(" . $listToday["visitCount"] . ") </li>";
-                        }
+        </div>
+        <div class="portlet-body">
+            <ul class="list-unstyled">
+                <?php
+                if ($todayTop250) {
+                    foreach ($todayTop250 as $listToday) {
+                        echo "<li>" . $listToday["username"] . "(" . $listToday["visitCount"] . ") </li>";
                     }
-                    ?>
-                    <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top"
-                                               class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
-                </ul>
+                }
+                ?>
+                <li><br/></li>
+                <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top"
+                                           class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END ORDERED LISTS PORTLET-->
+    <!-- BEGIN UNSTYLED LISTS PORTLET-->
+    <div class="portlet box yellow">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift"></i><?php echo lang("WeeklyTop"); ?>
             </div>
         </div>
-        <!-- END ORDERED LISTS PORTLET-->
-        <!-- BEGIN UNSTYLED LISTS PORTLET-->
-        <div class="portlet box yellow">
-            <div class="portlet-title">
-                <div class="caption">
-                    <i class="fa fa-gift"></i><?php echo lang("WeeklyTop"); ?>
-                </div>
-            </div>
-            <div class="portlet-body">
-                <ul class="list-unstyled">
-                    <?php
-                    if ($weeklyTop250) {
-                        foreach ($weeklyTop250 as $listWeekly) {
-                            echo "<li>" . $listWeekly["username"] . "(" . $listWeekly["visitCount"] . ") </li>";
-                        }
+        <div class="portlet-body">
+            <ul class="list-unstyled">
+                <?php
+                if ($weeklyTop250) {
+                    foreach ($weeklyTop250 as $listWeekly) {
+                        echo "<li>" . $listWeekly["username"] . "(" . $listWeekly["visitCount"] . ") </li>";
                     }
+                }
 
 
-                    ?>
-                    <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top/Weekly"
-                                               class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
-                </ul>
+                ?>
+                <li><br/></li>
+                <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top/Weekly"
+                                           class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END UNSTYLED LISTS PORTLET-->
+
+    <!-- BEGIN UNSTYLED LISTS PORTLET-->
+    <div class="portlet box red">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift"></i><?php echo lang("MonthlyTop"); ?>
             </div>
         </div>
-        <!-- END UNSTYLED LISTS PORTLET-->
-
-        <!-- BEGIN UNSTYLED LISTS PORTLET-->
-        <div class="portlet box red">
-            <div class="portlet-title">
-                <div class="caption">
-                    <i class="fa fa-gift"></i><?php echo lang("MonthlyTop"); ?>
-                </div>
-            </div>
-            <div class="portlet-body">
-                <ul class="list-unstyled">
-                    <?php
-                    if ($weeklyTop250) {
-                        foreach ($monthlyTop250 as $listMonthly) {
-                            echo "<li>" . $listMonthly["username"] . "(" . $listMonthly["visitCount"] . ") </li>";
-                        }
+        <div class="portlet-body">
+            <ul class="list-unstyled">
+                <?php
+                if ($weeklyTop250) {
+                    foreach ($monthlyTop250 as $listMonthly) {
+                        echo "<li>" . $listMonthly["username"] . "(" . $listMonthly["visitCount"] . ") </li>";
                     }
+                }
 
-                    ?>
-                    <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top/Monthly"
-                                               class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
-                </ul>
-            </div>
+                ?>
+                <li><br/></li>
+                <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top/Monthly"
+                                           class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
+            </ul>
         </div>
-        <!-- END UNSTYLED LISTS PORTLET-->
     </div>
-    </div>
-    </div>
-    <!-- END CONTENT BODY -->
-    </div>
-    <!-- END CONTENT BODY -->
-    </div>
-    <!-- END CONTENT -->
-    </div>
-    <!-- END CONTAINER -->
-    </div>
-    <div class="container">
-        <!-- BEGIN FOOTER -->
-        <div class="page-footer">
-            <div class="page-footer-inner">2017 &copy; <?php echo lang("NearlyWebBy"); ?>
-                <a target="_blank" href="http://baykusgrup.com">BaykusGrup</a> | <?php echo lang("PageRenderedIn"); ?>
-                <strong>{elapsed_time}</strong> <?php echo lang("Seconds"); ?>
-            </div>
-            <div class="scroll-to-top">
-                <i class="icon-arrow-up"></i>
-            </div>
+    <!-- END UNSTYLED LISTS PORTLET-->
+</div>
+</div>
+</div>
+<!-- END CONTENT BODY -->
+</div>
+<!-- END CONTENT BODY -->
+</div>
+<!-- END CONTENT -->
+</div>
+<!-- END CONTAINER -->
+</div>
+<div class="container">
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer">
+        <div class="page-footer-inner">2017 &copy; <?php echo lang("NearlyWebBy"); ?>
+            <a target="_blank" href="http://baykusgrup.com">BaykusGrup</a> | <?php echo lang("PageRenderedIn"); ?>
+            <strong>{elapsed_time}</strong> <?php echo lang("Seconds"); ?>
         </div>
-        <!-- END FOOTER -->
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
     </div>
-    </div>
+    <!-- END FOOTER -->
+</div>
+</div>
 
 
 <!--[if lt IE 9]>
@@ -119,15 +120,12 @@
 <!-- END CORE PLUGINS -->
 
 
-
-
-
-    <!-- BEGIN PAGE LEVEL PLUGINS -->
-    <script src="<?php echo base_url(); ?>assets/global/plugins/jquery-validation/js/jquery.validate.min.js?vLogin"
-            type="text/javascript"></script>
-    <script src="<?php echo base_url(); ?>assets/global/plugins/backstretch/jquery.backstretch.min.js?vLogin"
-            type="text/javascript"></script>
-    <!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="<?php echo base_url(); ?>assets/global/plugins/jquery-validation/js/jquery.validate.min.js?vLogin"
+        type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>assets/global/plugins/backstretch/jquery.backstretch.min.js?vLogin"
+        type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
 
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
 <script src="<?php echo base_url() ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
@@ -142,10 +140,8 @@
 <script src="<?php echo base_url() ?>assets/layouts/global/scripts/quick-sidebar.min.js"
         type="text/javascript"></script>
 <script src="<?php echo base_url() ?>assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
-
 <script src="<?php echo base_url() ?>assets/global/plugins/alert.js" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
 
 </body>
-
 </html>

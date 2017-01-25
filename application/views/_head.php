@@ -94,7 +94,7 @@
     <link href="<?php echo base_url() ?>assets/layouts/layout/css/layout.min.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo base_url() ?>assets/layouts/layout/css/themes/light2.min.css" rel="stylesheet"
           type="text/css" id="style_color"/>
-    <link href="<?php echo base_url() ?>assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo base_url() ?>assets/layouts/layout/css/custom.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME LAYOUT STYLES -->
 </head>
 <!-- END HEAD -->
@@ -107,13 +107,14 @@
         <div class="page-header-inner container">
             <!-- BEGIN LOGO -->
             <div class="page-logo">
-                <a href="<?php echo base_url() ?>">
-                    <img src="<?php echo base_url() ?>assets/layouts/layout/img/logo.png" alt="logo"
-                         class="logo-default"/> </a>
+
+                <a style="text-decoration: none;" href="<?php echo base_url() ?>"><h1 class="logoa"><span>Nearly</span>Web
+                    </h1></a>
                 <div class="menu-toggler sidebar-toggler">
                     <span></span>
                 </div>
             </div>
+
             <!-- END LOGO -->
             <!-- BEGIN RESPONSIVE MENU TOGGLER -->
             <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"

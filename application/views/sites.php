@@ -95,19 +95,20 @@
                                 <th><?php echo lang("sites_tableEdit"); ?> </th>
                             </tr>
                             <tbody id="mySites_table">
+
                             <?php
                             foreach ($sites as $site) {
-                                echo  "<tr>
+                                echo "<tr>
                                                 <td id='updateSite_siteID_" . $site["websites_id"] . "' >" . $site["websites_id"] . "</td>
                                                 <td id='updateSite_title_" . $site["websites_id"] . "'>" . substr($site["page_title"], 0, 15) . "</td>
-                                                <td id='updateSite_url_" . $site["websites_id"] . "'>" . substr($site["url"], 0, 25) . "</td>
+                                                <td id='updateSite_url_" . $site["websites_id"] . "'>" . substr(preg_replace('#^https?://#', '', rtrim($site["url"],'/')), 0, 20) . "</td>
                                                 <td style='display: none' id='updateSite_status_" . $site["websites_id"] . "'>" . $site["record_status"] . "</td>
                                                 <td id='updateSite_credits_" . $site["websites_id"] . "'>" . $site["credits"] . "</td>
                                                 <td style='display:none' id='updateSite_duration_" . $site["websites_id"] . "'>" . $site["duration_sec_id"] . "</td>
                                                 <td>" . $site["TotalVisit"] . "</td>
                                                 <td>" . $site["TodayVisit"] . "</td>
                                                 <td><a name='sites_selector' site_id='" . $site["websites_id"] . "' onclick=\"setUpdateSite(" . $site["websites_id"] . ");\"  href=\"#modal_addSite\"  data-toggle=\"modal\" class=\"btn btn-outline green btn-sm purple\">
-                                                       <i class=\"fa fa-edit\"></i> ".lang("sites_edit")." </a></td>
+                                                       <i class=\"fa fa-edit\"></i> " . lang("sites_edit") . " </a></td>
                                             </tr>";
                             }
 
@@ -201,7 +202,7 @@
                                                 class="form-control" name="siteStatus_selector">
                                             <option value="-1"> Select Status</option>
                                             <option value="0"> Passive</option>
-                                            <option value="1"> Active </option>
+                                            <option value="1"> Active</option>
 
 
                                         </select>
@@ -240,12 +241,12 @@
         var i_credit = document.getElementById("i_credit").innerText;
         var visits_cost = document.getElementById("visits_cost").value;
         var duration_id = $("#visits_durations").val();
-        var status =$("#siteStatus_selector").val();
+        var status = $("#siteStatus_selector").val();
 
-        var dataString = "title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost+ "&status=" + status;
+        var dataString = "title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost + "&status=" + status;
 
         if (site_id == "-2") {
-            if(parseFloat(i_credit)>=parseFloat(credits)){
+            if (parseFloat(i_credit) >= parseFloat(credits)) {
                 $.ajax({
                     type: "POST",
                     url: base_url + "/index.php/Sites/addSite",
@@ -259,7 +260,7 @@
                     }
                 });
             }
-            else{
+            else {
                 WarningAlert("Your credits arent lower than site credits ", "addSite_alert");
             }
 
@@ -278,10 +279,10 @@
         var i_credit = document.getElementById("i_credit").innerText;
         var visits_cost = document.getElementById("visits_cost").value;
         var duration_id = $("#visits_durations").val();
-        var status =$("#siteStatus_selector").val();
+        var status = $("#siteStatus_selector").val();
 
-        var dataString = "siteID=" + site_id + "&title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost+ "&status=" + status;
-        if(parseFloat(i_credit)>=parseFloat(credits)){
+        var dataString = "siteID=" + site_id + "&title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost + "&status=" + status;
+        if (parseFloat(i_credit) >= parseFloat(credits)) {
             $.ajax({
                 type: "POST",
                 url: base_url + "/index.php/Sites/updateSite",
@@ -294,7 +295,7 @@
                     controllSites();
                 }
             });
-        }else{
+        } else {
             WarningAlert("Your credits arent lower than site credits ", "addSite_alert");
         }
 
@@ -367,9 +368,9 @@
         var site_id = 0;
         var dataString = "per_cost=" + disturbation_value;
 
-        if(parseFloat(credit)<0 ){
+        if (parseFloat(credit) < 0) {
             WarningAlert("Your credits can't be negative ! ", "dis_alert");
-        }else{
+        } else {
             if (parseFloat(credit) > parseFloat(i_credit)) {
                 WarningAlert("Your credits aren't enough! ", "dis_alert");
             }
@@ -395,9 +396,7 @@
         }
 
 
-
     }
-
 
 
     function perDisCredit() {
@@ -410,9 +409,9 @@
         var site_id = 0;
         var dataString = "per_cost=" + disturbation_value;
 
-        if(parseFloat(credit)<0 ){
+        if (parseFloat(credit) < 0) {
             WarningAlert("Your credits can't be negative ! ", "dis_alert");
-        }else {
+        } else {
 
             if (total_credit_waste <= i_credit) {
                 for (var i = 0; i < sites_selector.length; i++) {

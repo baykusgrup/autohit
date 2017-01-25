@@ -32,12 +32,12 @@
                         </td>
 
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
+                            data-original-title="<?php echo lang("tipMemberID"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
                     <tr>
-                        <td> <?php echo lang("Welcome"); ?></td>
+                        <td> <?php echo lang("UserName"); ?></td>
                         <td id="username_td">
                             <?php
                             if (isset($userInfo[0]["username"])) {
@@ -113,16 +113,13 @@
                     </tr>
                     <tr>
                         <td> <?php echo lang("Registered"); ?></td>
-                        <td>
+                        <td colspan="2">
                             <?php
                             if (isset($userInfo[0]["registered_date"])) {
                                 echo $userInfo[0]["registered_date"];
                             } ?>
                         </td>
-                        <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
-                            <span class="badge badge-primary badge-roundless"> ? </span>
-                        </td>
+
                     </tr>
                     <tr>
                         <td> <?php echo lang("ViewerRate"); ?></td>
@@ -133,7 +130,7 @@
                             } ?>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
+                            data-original-title="<?php echo lang("tipViewerRate"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
@@ -144,7 +141,7 @@
                             } ?>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
+                            data-original-title="<?php echo lang("tipAvailableCredits"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
@@ -157,7 +154,7 @@
                             } ?>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
+                            data-original-title="<?php echo lang("tipTotalCredits"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
@@ -169,7 +166,7 @@
                             } ?>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
+                            data-original-title="<?php echo lang("tipWebsitesViewedToday"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
@@ -183,7 +180,7 @@
                         </td>
 
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
+                            data-original-title="<?php echo lang("tipReferanceCode"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
@@ -193,7 +190,7 @@
                         <td>sss
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
+                            data-original-title="<?php echo lang("tipCreditsByPromotion"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
@@ -222,8 +219,7 @@
                             </label>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="
-When enabled, this option allows you to automatically distribute the credits earned through the viewer to your active sites. To accumulate credits in your bank you should disable this option. This option do not have any impact on credits purchased or already in the bank. ">
+                            data-original-title="<?php echo lang("tipAutoDistribution"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
 
                         </td>
