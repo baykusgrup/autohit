@@ -17,12 +17,12 @@
                     <tbody>
                     <tr>
                         <th colspan="3" class="font-red-intense">
-                            <?php echo lang("AccountInfo"); ?>
+                            <?php echo lang("account_AccountInfo"); ?>
                         </th>
 
                     </tr>
                     <tr>
-                        <td><?php echo lang("MemberID"); ?></td>
+                        <td><?php echo lang("account_MemberID"); ?></td>
                         <td>
 
                             <?php
@@ -32,12 +32,12 @@
                         </td>
 
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("tipMemberID"); ?>">
+                            data-original-title="<?php echo lang("account_tipMemberID"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
                     <tr>
-                        <td> <?php echo lang("UserName"); ?></td>
+                        <td> <?php echo lang("account_UserName"); ?></td>
                         <td id="username_td">
                             <?php
                             if (isset($userInfo[0]["username"])) {
@@ -61,7 +61,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> <?php echo lang("Email"); ?></td>
+                        <td> <?php echo lang("account_Email"); ?></td>
                         <td id="email_td">
                             <?php
                             if (isset($userInfo[0]["email"])) {
@@ -85,7 +85,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> <?php echo lang("Password"); ?></td>
+                        <td> <?php echo lang("account_Password"); ?></td>
                         <td id="pass_td">
                             <?php
                             if (isset($userInfo[0]["password"])) {
@@ -112,7 +112,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td> <?php echo lang("Registered"); ?></td>
+                        <td> <?php echo lang("account_Registered"); ?></td>
                         <td colspan="2">
                             <?php
                             if (isset($userInfo[0]["registered_date"])) {
@@ -122,7 +122,7 @@
 
                     </tr>
                     <tr>
-                        <td> <?php echo lang("ViewerRate"); ?></td>
+                        <td> <?php echo lang("account_ViewerRate"); ?></td>
                         <td>
                             <?php
                             if (isset($userInfo[0]["view_rate"])) {
@@ -130,23 +130,23 @@
                             } ?>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("tipViewerRate"); ?>">
+                            data-original-title="<?php echo lang("account_tipViewerRate"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
                     <tr>
-                        <td> <?php echo lang("AvailableCredits"); ?></td>
+                        <td> <?php echo lang("account_AvailableCredits"); ?></td>
                         <td><?php if (isset($userInfo[0]["total_credits"])) {
                                 echo $userInfo[0]["total_credits"];
                             } ?>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("tipAvailableCredits"); ?>">
+                            data-original-title="<?php echo lang("account_tipAvailableCredits"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
                     <tr>
-                        <td> <?php echo lang("TotalCredits"); ?></td>
+                        <td> <?php echo lang("account_TotalCredits"); ?></td>
                         <td>
                             <?php
                             if (isset($userInfo[0]["total_credits"])) {
@@ -154,24 +154,24 @@
                             } ?>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("tipTotalCredits"); ?>">
+                            data-original-title="<?php echo lang("account_tipTotalCredits"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
                     <tr>
-                        <td> <?php echo lang("WebsitesViewedToday"); ?></td>
+                        <td> <?php echo lang("account_WebsitesViewedToday"); ?></td>
                         <td><?php
                             if (isset($todayCount[0]["today"])) {
                                 echo $todayCount[0]["today"];
                             } ?>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("tipWebsitesViewedToday"); ?>">
+                            data-original-title="<?php echo lang("account_tipWebsitesViewedToday"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
                     <tr>
-                        <td> <?php echo lang("ReferanceCode"); ?></td>
+                        <td> <?php echo lang("account_ReferanceCode"); ?></td>
                         <td>
                             <?php
                             if (isset($referanceShort)) {
@@ -180,17 +180,17 @@
                         </td>
 
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("tipReferanceCode"); ?>">
+                            data-original-title="<?php echo lang("account_tipReferanceCode"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
                     <tr>
-                        <td> <?php echo lang("CreditsByPromotion"); ?>
+                        <td> <?php echo lang("account_CreditsByPromotion"); ?>
                         </td>
                         <td>sss
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("tipCreditsByPromotion"); ?>">
+                            data-original-title="<?php echo lang("account_tipCreditsByPromotion"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
@@ -205,11 +205,11 @@
                     <tbody>
                     <tr>
                         <th colspan="3" class="font-red-intense">
-                            <?php echo lang("AccountSettings"); ?>
+                            <?php echo lang("account_AccountSettings"); ?>
                         </th>
                     </tr>
                     <tr>
-                        <td><?php echo lang("AutoDistribution"); ?></td>
+                        <td><?php echo lang("account_AutoDistribution"); ?></td>
 
                         <td>
                             <label class="mt-checkbox mt-checkbox-outline">
@@ -219,7 +219,7 @@
                             </label>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("tipAutoDistribution"); ?>">
+                            data-original-title="<?php echo lang("account_tipAutoDistribution"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
 
                         </td>

@@ -20,13 +20,13 @@
                         </th>
                     </tr>
                     <tr>
-                        <td colspan="3" class="font-red"><?php echo lang("AvailableCredits"); ?>: <a
+                        <td colspan="3" class="font-red"><?php echo lang("sites_AvailableCredits"); ?>: <a
                                     id="i_credit"><?php if (isset($userWallet[0]["total_credits"])) {
                                     echo $userWallet[0]["total_credits"];
                                 } ?></a></td>
                     </tr>
                     <tr>
-                        <td><?php echo lang("EqualRatioDistrubition"); ?> </td>
+                        <td><?php echo lang("sites_EqualRatioDistrubition"); ?> </td>
                         <td class="col-md-5">
                             <div class="input-group input-medium">
                                 <input type="number" min="0" id="total_amount_credit" class="form-control">
@@ -40,12 +40,12 @@
 
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
+                            data-original-title="<?php echo lang("sites_tipEqualRatioDistrubition"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
                     <tr>
-                        <td> <?php echo lang("PerSiteEqualDistribution"); ?></td>
+                        <td> <?php echo lang("sites_PerSiteEqualDistribution"); ?></td>
 
                         <td class="col-md-5">
                             <div class="input-group input-medium">
@@ -60,7 +60,7 @@
 
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="tooltips">
+                            data-original-title="<?php echo lang("sites_tipPerSiteEqualDistribution"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>

@@ -41,60 +41,62 @@ $lang["Seconds"] = "Seconds";
 
 //Account
 
-$lang["AccountInfo"] = "Account Info";
-$lang["MemberID"] = "Member ID";
-$lang["Username"] = "Username";
-$lang["Email"] = "Email ";
-$lang["Password"] = "Password";
-$lang["Registered"] = "Registered";
-$lang["ViewerRate"] = "Viewer Rate";
-$lang["AvailableCredits"] = "Available Credits";
-$lang["TotalCredits"] = "Total Credits";
-$lang["WebsitesViewedToday"] = "Websites viewed today";
-$lang["ReferanceCode"] = "Referance Code";
-$lang["CreditsByPromotion"] = "Credits by promotion (last 24 hours)";
-$lang["AccountSettings"] = "Account Settings";
-$lang["AutoDistribution"] = "Auto Distribution";
+$lang["account_AccountInfo"] = "Account Info";
+$lang["account_MemberID"] = "Member ID";
+$lang["account_UserName"] = "Username";
+$lang["account_Email"] = "Email ";
+$lang["account_Password"] = "Password";
+$lang["account_Registered"] = "Registered";
+$lang["account_ViewerRate"] = "Viewer Rate";
+$lang["account_AvailableCredits"] = "Available Credits";
+$lang["account_TotalCredits"] = "Total Credits";
+$lang["account_WebsitesViewedToday"] = "Websites viewed today";
+$lang["account_ReferanceCode"] = "Referance Code";
+$lang["account_CreditsByPromotion"] = "Credits by promotion (last 24 hours)";
+$lang["account_AccountSettings"] = "Account Settings";
+$lang["account_AutoDistribution"] = "Auto Distribution";
 
 //Account tips
-$lang["tipMemberID"] = "This number is used to identify yourself when you contact customer support.";
-$lang["tipViewerRate"] = "Number of credits you earn each time you visit the site of another member using the viewer..";
-$lang["tipAvailableCredits"] = "Credits that are not distributed on your websites";
-$lang["tipTotalCredits"] = "This number includes both available credits and distributed on your website.";
-$lang["tipWebsitesViewedToday"] = "The number of websites you've visited today using the viewer.";
-$lang["tipReferanceCode"] = "This link is used to earn extra credits. By promoting Websyndic, you will earn 1 credits every time that page will be displayed on another computer (max 1 time / 24 hours). You can share this link on social networks or other autosurfs.";
-$lang["tipCreditsByPromotion"] = "Number of credits earned in the last 24 hours by promotion.";
-$lang["tipAutoDistribution"] = "When enabled, this option allows you to automatically distribute the credits earned through the viewer to your active sites. To accumulate credits in your bank you should disable this option. This option do not have any impact on credits purchased or already in the bank. ";
+$lang["account_tipMemberID"] = "This number is used to identify yourself when you contact customer support.";
+$lang["account_tipViewerRate"] = "Number of credits you earn each time you visit the site of another member using the viewer..";
+$lang["account_tipAvailableCredits"] = "Credits that are not distributed on your websites";
+$lang["account_tipTotalCredits"] = "This number includes both available credits and distributed on your website.";
+$lang["account_tipWebsitesViewedToday"] = "The number of websites you've visited today using the viewer.";
+$lang["account_tipReferanceCode"] = "This link is used to earn extra credits. By promoting Websyndic, you will earn 1 credits every time that page will be displayed on another computer (max 1 time / 24 hours). You can share this link on social networks or other autosurfs.";
+$lang["account_tipCreditsByPromotion"] = "Number of credits earned in the last 24 hours by promotion.";
+$lang["account_tipAutoDistribution"] = "When enabled, this option allows you to automatically distribute the credits earned through the viewer to your active sites. To accumulate credits in your bank you should disable this option. This option do not have any impact on credits purchased or already in the bank. ";
 
 //Blocked
 
-$lang["ListOfBlockedWebsites"] = "List of blocked websites";
-$lang["URL"] = "URL";
-$lang["Active"] = "Active";
+$lang["blocked_ListOfBlockedWebsites"] = "List of blocked websites";
+$lang["blocked_URL"] = "URL";
+$lang["blocked_Active"] = "Active";
 
 //Buy
 
-$lang["BuyExpOne"] = "If the viewer does not generate enough credits for your needs, you can increase the number of visits received per day on your site by purchasing additional credits. We offer several convenient payment options. SMS (Allopass), or by debit or credit card (Paypal). You can choose the currency - Euro or Dollars (US) - whichever suits you best.";
+$lang["buy_BuyExpOne"] = "If the viewer does not generate enough credits for your needs, you can increase the number of visits received per day on your site by purchasing additional credits. We offer several convenient payment options. SMS (Allopass), or by debit or credit card (Paypal). You can choose the currency - Euro or Dollars (US) - whichever suits you best.";
 
 //Register
 
-$lang["UserName"] = "User Name";
-$lang["EmailAddress"] = "Email Address";
-$lang["BuyExp1"] = "Password";
-$lang["BuyExp1"] = "Referral";
-$lang["NewMember"] = "New Member";
+$lang["register_UserName"] = "User Name";
+$lang["register_EmailAddress"] = "Email Address";
+$lang["register_Password"] = "Password";
+$lang["register_Refferal"] = "Referral";
+$lang["register_NewMember"] = "New Member";
+
+
+//Register tooltip
+$lang["register_tipRefferal"] = "tip will come";
+
 
 //Sites
 $lang["sites_EasyDistribution"] = "Easy Distribution";
-
-$lang["AvailableCredits"] = "Available Credits";
-$lang["EqualRatioDistrubition"] = "Equal Ratio Distrubition";
-$lang["PerSiteEqualDistribution"] = "Per Site Equal Distribution";
-
+$lang["sites_AvailableCredits"] = "Available Credits";
+$lang["sites_EqualRatioDistrubition"] = "Equal Ratio Distrubition";
+$lang["sites_PerSiteEqualDistribution"] = "Per Site Equal Distribution";
 $lang["sites_add"] = "Add";
 $lang["sites_addSite"] = "Add Website";
 $lang["sites_edit"] = "Edit";
-
 $lang["sites_MyWebSites"] = "My Websites";
 $lang["sites_tableName"] = "Site Name";
 $lang["sites_tableUrl"] = "Url";
@@ -102,6 +104,12 @@ $lang["sites_tableCredit"] = "Credit";
 $lang["sites_tableRTotal"] = "Received<br>total";
 $lang["sites_tableRToday"] = "Received<br>today";
 $lang["sites_tableEdit"] = "Edit";
+
+//Sites tip
+
+$lang["sites_tipEqualRatioDistrubition"] = "tip will come";
+$lang["sites_tipPerSiteEqualDistribution"] = "tip will come";
+
 
 //Earn
 $lang["earn_State"] = "State";

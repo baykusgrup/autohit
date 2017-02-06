@@ -2,7 +2,7 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
-            <span class="caption-subject font-blue-sharp bold uppercase"><?php echo lang("ListOfBlockedWebsites"); ?></span>
+            <span class="caption-subject font-blue-sharp bold uppercase"><?php echo lang("blocked_ListOfBlockedWebsites"); ?></span>
         </div>
     </div>
     <div class="portlet-body">
@@ -16,10 +16,10 @@
                     <tr>
                         <th>#</th>
                         <th>
-                            <?php echo lang("URL"); ?>
+                            <?php echo lang("blocked_URL"); ?>
                         </th>
                         <th>
-                            <?php echo lang("Active"); ?>
+                            <?php echo lang("blocked_Active"); ?>
                         </th>
                     </tr>
                     </thead>

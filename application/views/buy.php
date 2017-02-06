@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-12">
                 <p>
-                    <?php echo lang("BuyExpOne"); ?>
+                    <?php echo lang("buy_BuyExpOne"); ?>
                 </p>
 
             </div>

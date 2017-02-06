@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <form id="form_sample_4" class="form-horizontal">
                     <div class="form-body">
                         <div class="form-group">
-                            <label class="col-md-2"><?php echo lang("Username"); ?>  </label>
+                            <label class="col-md-2"><?php echo lang("register_UserName"); ?>  </label>
                             <div class="col-md-10">
                                 <input type="text" class="form-control"
                                        placeholder="Enter User Name.."
@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-2"> <?php echo lang("Email"); ?>  </label>
+                            <label class="col-md-2"> <?php echo lang("register_EmailAddress"); ?>  </label>
                             <div class="col-md-10">
                                 <input type="text" class="form-control"
                                        placeholder="Enter Mail Adress.."
@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-md-2"> <?php echo lang("Password"); ?>  </label>
+                            <label class="col-md-2"> <?php echo lang("register_Password"); ?>  </label>
                             <div class="col-md-10">
                                 <input type="text" class="form-control" placeholder="Enter Password.."
                                        name="password_member" id="password_member">
@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
 
                         <div class="form-group">
-                            <label class="col-md-2"> <?php echo lang("Refferal"); ?>  </label>
+                            <label class="col-md-2"> <?php echo lang("register_Refferal"); ?>  </label>
                             <div class="col-md-9">
                                 <input readonly type="text" class="form-control" placeholder="<?php
                                 if (isset($ref)) {
@@ -54,7 +54,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
 
                             <div class="tooltips col-md-1 " data-container="body" data-placement="bottom"
-                                 data-original-title="tooltips">
+                                 data-original-title="<?php echo lang("register_tipRefferal"); ?>">
                                 <span class="badge badge-primary badge-roundless"> ? </span>
                             </div>
 
@@ -67,7 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                         <div class="row">
                             <a role="button" onclick="insertMember();"
-                               class="btn blue btn-block"><?php echo lang("NewMember"); ?> </a>
+                               class="btn blue btn-block"><?php echo lang("register_NewMember"); ?> </a>
 
                         </div>
                     </div>
