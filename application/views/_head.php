@@ -314,34 +314,6 @@
                             </li>
 
 
-                            <li class="heading">
-                                <h3 class="uppercase">Extras</h3>
-                            </li>
-
-                            <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/LinkExchange" class="nav-link nav-toggle">
-                                    <i class="icon-wallet"></i>
-                                    <span class="title">LinkExchange</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/AutoBacklink" class="nav-link nav-toggle">
-                                    <i class="icon-wallet"></i>
-                                    <span class="title">AutoBacklink</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/MyInfo" class="nav-link nav-toggle">
-                                    <i class="icon-wallet"></i>
-                                    <span class="title">MyInfo</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/OnlineCodeEditor" class="nav-link nav-toggle">
-                                    <i class="icon-wallet"></i>
-                                    <span class="title">CodeEditor</span>
-                                </a>
-                            </li>
                         </ul>
                         <!-- END SIDEBAR MENU -->
                         <!-- END SIDEBAR MENU -->
@@ -441,34 +413,6 @@
                                 </a>
                             </li>
 
-                            <li class="heading">
-                                <h3 class="uppercase">Extras</h3>
-                            </li>
-
-                            <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/LinkExchange" class="nav-link nav-toggle">
-                                    <i class="icon-wallet"></i>
-                                    <span class="title">LinkExchange</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/AutoBacklink" class="nav-link nav-toggle">
-                                    <i class="icon-wallet"></i>
-                                    <span class="title">AutoBacklink</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/MyInfo" class="nav-link nav-toggle">
-                                    <i class="icon-wallet"></i>
-                                    <span class="title">MyInfo</span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/OnlineCodeEditor" class="nav-link nav-toggle">
-                                    <i class="icon-wallet"></i>
-                                    <span class="title">CodeEditor</span>
-                                </a>
-                            </li>
                         </ul>
                         <!-- END SIDEBAR MENU -->
                         <!-- END SIDEBAR MENU -->

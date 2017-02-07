@@ -1,6 +1,26 @@
 </div>
 <div class="col-md-3">
 
+    <!-- BEGIN ORDERED LISTS PORTLET-->
+
+    <div class="portlet box blue-ebonyclay">
+        <div class="portlet-title">
+            <div class="caption">
+                <i class="fa fa-gift"></i>Extras Product
+            </div>
+        </div>
+        <div class="portlet-body">
+            <ul style="margin-left: -25px;">
+                <li><a href="<?php echo base_url() ?>index.php/LinkExchange">Link Exchange</a></li>
+                <li><a href="<?php echo base_url() ?>index.php/AutoBacklink">Auto Backlink</a>
+                </li>
+                <li><a href="<?php echo base_url() ?>index.php/MyInfo">My Info</a></li>
+                <li><a href="<?php echo base_url() ?>index.php/OnlineCodeEditor">Code Editor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- END ORDERED LISTS PORTLET-->
 
     <!-- BEGIN ORDERED LISTS PORTLET-->
     <div class="portlet box blue">
@@ -75,6 +95,7 @@
         </div>
     </div>
     <!-- END UNSTYLED LISTS PORTLET-->
+
 </div>
 </div>
 </div>
