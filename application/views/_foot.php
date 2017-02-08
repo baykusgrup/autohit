@@ -11,11 +11,11 @@
         </div>
         <div class="portlet-body">
             <ul style="margin-left: -25px;">
-                <li><a href="<?php echo base_url() ?>index.php/LinkExchange">Link Exchange</a></li>
-                <li><a href="<?php echo base_url() ?>index.php/AutoBacklink">Auto Backlink</a>
+                <li><a href="<?php echo base_url() ?>LinkExchange">Link Exchange</a></li>
+                <li><a href="<?php echo base_url() ?>AutoBacklink">Auto Backlink</a>
                 </li>
-                <li><a href="<?php echo base_url() ?>index.php/MyInfo">My Info</a></li>
-                <li><a href="<?php echo base_url() ?>index.php/OnlineCodeEditor">Code Editor</a></li>
+                <li><a href="<?php echo base_url() ?>MyInfo">My Info</a></li>
+                <li><a href="<?php echo base_url() ?>OnlineCodeEditor">Code Editor</a></li>
             </ul>
         </div>
     </div>
@@ -39,7 +39,7 @@
                 }
                 ?>
                 <li><br/></li>
-                <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top"
+                <li class="text-center"><a href="<?php echo base_url() ?>Top"
                                            class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
             </ul>
         </div>
@@ -64,7 +64,7 @@
 
                 ?>
                 <li><br/></li>
-                <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top/Weekly"
+                <li class="text-center"><a href="<?php echo base_url() ?>Top/Weekly"
                                            class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
             </ul>
         </div>
@@ -89,7 +89,7 @@
 
                 ?>
                 <li><br/></li>
-                <li class="text-center"><a href="<?php echo base_url() ?>index.php/Top/Monthly"
+                <li class="text-center"><a href="<?php echo base_url() ?>Top/Monthly"
                                            class="font-red-mint"> <?php echo lang("SeeMore"); ?></a></li>
             </ul>
         </div>

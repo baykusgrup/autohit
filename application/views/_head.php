@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <!--[if IE 8]>
-<html lang="en" class="ie8 no-js"> <![endif]-->
+<html class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]>
-<html lang="en" class="ie9 no-js"> <![endif]-->
+<html class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="en">
+<html>
 <!--<![endif]-->
 <!-- BEGIN HEAD -->
 
@@ -264,7 +264,7 @@
                             <!-- END SIDEBAR TOGGLER BUTTON -->
 
                             <li class="nav-item start ">
-                                <a href="<?php echo base_url() ?>index.php/Home" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>" class="nav-link nav-toggle">
                                     <i class="icon-home"></i>
                                     <span class="title"><?php echo lang("HomePage"); ?></span>
                                 </a>
