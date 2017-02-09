@@ -42,21 +42,23 @@ $lang["Seconds"] = "Seconds";
 
 //Home
 
+
 $lang["home_home"] = "
     <p style=\"color: #0a6aa1;\">Ücretsiz Otomaik Surf Hizmetimiz Yakında Açılacaktır ^^</p>
-               <p>Şimdilik Ekstra Hizmetler Herkesin Kullanımına Açılmıştır. Güle Güle Kullanmanız dileğiyle...</p>
+               <p>Şimdilik Ekstra Hizmetler Herkesin Kullanımına Açılmıştır. Güle Güle Kullanmanız dileğiyle...</p>";
 
-
+$lang["home_what"] = "
                 <h2>Nedir ?</h2>
                 <p>NearlyWeb, ücretsiz ziyaretleri dağıtan, otomatik trafik değişimi ve web hizmetleri sistemidir.
                     Buradaki sistemler doğru kullanıldığında reklam gelirinizi, sıralamanızı, gösterimizini ve daha
-                    fazlasını artırmanıza olanak tanır.</p>
-
+                    fazlasını artırmanıza olanak tanır.</p>";
+$lang["home_how"] = "
                 <h3>Nasıl Çalışır ?</h3>
                 <p>Kayıt olduktan sonra, ziyaretçileri almak istediğiniz siteleri gönderebilirsiniz. İzleyiciyi
                     kullanarak, sitenize yapılan ziyaretlere karşı kullanabileceğiniz krediler kazanıyorsunuz.
                     NearlyWeb'i arkadaşlarınıza tavsiye ederek ek krediler kazanabilirsiniz.</p>
-
+";
+$lang["home_diff"] = "
                 <h3>Özellikleri ve Farkı Nedir?</h3>
 
                 <ul style=\"margin-left: -25px;\">
@@ -64,9 +66,8 @@ $lang["home_home"] = "
                     <li>Site ziyaret süresini belirlersiniz.</li>
                     <li>Hızlı ve akıcı bir sistemdir, kontrol sizdedir.</li>
                     <li>Otomatik kredi dağıtımı yapabilirsiniz.</li>
-                </ul>
-                <hr/>
-
+                </ul>";
+$lang["home_extra"] = "
                 <h3>Ekstra Hizmetler</h3>
                 <ul style=\"margin-left: -25px;\">
                     <li><a href=\"<?php echo base_url() ?>AutoBacklink\">Auto Backlink</a>: Sitenizin linkini yazdıktan
@@ -86,9 +87,7 @@ $lang["home_home"] = "
                         ilgili öğrenebileceği bütün bilgileri gösteren sayfamızdır. neleri görüp göremediğimizi bilmek
                         sizinde hakkınız diye düşündük.
                     </li>
-                </ul>
-";
-
+                </ul>";
 
 //Login
 
