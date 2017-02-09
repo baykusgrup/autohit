@@ -2,7 +2,7 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
-            <span class="caption-subject font-blue-sharp bold uppercase"><?php echo lang("BuyCredits"); ?></span>
+            <span class="caption-subject font-blue-sharp bold uppercase"><?php echo lang("linkexchange_LinkExchange"); ?></span>
         </div>
     </div>
     <div class="portlet-body">
@@ -10,18 +10,7 @@
 
             <div class="col-md-12">
 
-                <p style="text-align: center;"><strong>Hızlı Site Ekleme (Backlink Olarak)</strong></p>
-                <p style="text-align: center;"><strong>Kayıtlı Sitelere "dofollow" Direk Bağlantısı Olan Aşağıdaki Listeye,</strong>
-                    <strong> Form Doldurmadan Kaydolmak İçin Sadece Sayfanıza</strong>
-                    <strong> Aşağıdaki Kodu Yerleştirmeniz Yeterli Olacaktır.</strong></p>
-                <p style="text-align: center;"><strong>"Aşağıdaki Kodlardan Birini Sitenize Ekleyin Ve Bir Kez Tıklayın</strong>
-                    <strong> Sitemizin Akıllı Sistemi Kodunuzu Eklediğiniz Siteyi</strong>
-                    <strong> Otomatik Olarak Text-link (Backlink) Şeklinde Listemize Ekleyecekir..."</strong></p>
-                <hr />
-                <p style="text-align: center;"><strong>Rapid İnsertion Site (As A Backlink)</strong></p>
-                <p style="text-align: center;"><strong>"Add The Following Code To Your Site And</strong>
-                    <strong> Click Once You've Added Your Site To İntelligent Code System</strong>
-                    <strong> Automatic Text-link (Backlink) Will Add To Our List İn Figure..."</strong></p>
+                <?php echo lang("linkexchange_exp"); ?>
                 <hr />
                 <div style="text-align: center;"><img style="vertical-align: middle;" src="http://baykusgrup.com/_/blog/freebacklink-3.jpg" alt="" width="200" height="32" border="0" /> » <img style="vertical-align: middle;" src="http://baykusgrup.com/_/blog/freebacklink-1.jpg" alt="" width="200" height="32" border="0" /></div>
                 <div class="gist" data-gist="508166432c38486fb3ce" data-gist-file="show2.htm"></div>

@@ -51,11 +51,10 @@
                     </tr>
                     <tr>
                         <td><?php echo lang("earn_lightViewer"); ?></td>
-                        <td>
-                            <strong>  <?php
+                        <td><?php
                                 if (isset($earnShort)) {
                                     echo "<a href=\"" . $earnShort . "\" >" . $earnShort . "</a>";
-                                } ?></strong>
+                                } ?>
 
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"

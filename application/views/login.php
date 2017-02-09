@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
-            <span class="caption-subject font-blue-sharp bold uppercase">Autosurf Login</span>
+            <span class="caption-subject font-blue-sharp bold uppercase">NearlyWeb <?php echo lang("login_Login"); ?></span>
         </div>
     </div>
     <div class="portlet-body">
@@ -17,7 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <div class="alert alert-danger display-hide">
                         <button class="close" data-close="alert"></button>
-                        <span>Enter any username and password. </span>
+                        <span><?php echo lang("login_Enter_username_and_password"); ?> </span>
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
@@ -31,12 +31,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="col-sm-4">
                             <div class="rem-password">
                                 <label class="rememberme mt-checkbox mt-checkbox-outline">
-                                    <input type="checkbox" name="remember" value="1"/> Remember me <span></span> </label>
+                                    <input type="checkbox" name="remember"
+                                           value="1"/> <?php echo lang("login_Remember_me"); ?> <span></span> </label>
                             </div>
                         </div>
                         <div class="col-sm-8 text-right">
                             <div class="forgot-password">
-                                <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
+                                <a href="javascript:;" id="forget-password"
+                                   class="forget-password"><?php echo lang("login_Forgot_Password"); ?></a>
                             </div>
                             <button class="btn green" type="submit">Sign In</button>
                         </div>
@@ -44,8 +46,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </form>
                     <!-- BEGIN FORGOT PASSWORD FORM -->
                     <form class="forget-form" action="javascript:;" method="post">
-                        <h3 class="font-green">Forgot Password ?</h3>
-                        <p> Enter your e-mail address below to reset your password. </p>
+                        <h3 class="font-green"><?php echo lang("login_Forgot_Password"); ?></h3>
+                        <p> <?php echo lang("login_Enter_your_e_mail"); ?> </p>
 
                         <div class="form-group">
                             <input class="form-control placeholder-no-fix form-group" type="text" id="email_forgetpwd"
@@ -56,9 +58,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                              style="display:none;background-color:#ecf0f1;"></div>
 
                         <div class="form-actions">
-                            <button type="button" id="back-btn" class="btn green btn-outline">Back</button>
+                            <button type="button" id="back-btn"
+                                    class="btn green btn-outline"><?php echo lang("login_Back"); ?></button>
                             <button type="button" onclick="sendPassword();" id="forgetpwd_email"
-                                    class="btn btn-success uppercase pull-right">Submit
+                                    class="btn btn-success uppercase pull-right"><?php echo lang("login_Submit"); ?>
                             </button>
                         </div>
                     </form>

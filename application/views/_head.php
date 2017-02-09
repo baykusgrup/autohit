@@ -1,3 +1,6 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <!--[if IE 8]>
 <html class="ie8 no-js"> <![endif]-->
@@ -144,6 +147,7 @@
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/tr.png">
                                     Turkish
                                 </a></li>
+                            <!-- v2
                             <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/fa"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/fa.png">
                                     Persian
@@ -160,6 +164,7 @@
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/it.png">
                                     Italian
                                 </a></li>
+                                -->
                         </ul>
                     </li>
 
@@ -183,7 +188,7 @@
                                 <li class="divider"></li>
                                 <li>
                                     <a href="<?php echo base_url() ?>index.php/Register">
-                                        <i class="icon-key"></i> <?php echo lang("welcome"); ?> </a>
+                                        <i class="icon-key"></i> <?php echo lang("Register"); ?> </a>
                                 </li>
                                 <li class="divider"></li>
                             </ul>

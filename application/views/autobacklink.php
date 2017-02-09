@@ -2,7 +2,7 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
-            <span class="caption-subject font-blue-sharp bold uppercase">Automatic Backlink Generator</span>
+            <span class="caption-subject font-blue-sharp bold uppercase"><?php echo lang("autobacklink_autobacklink"); ?></span>
         </div>
     </div>
     <div class="portlet-body">
@@ -13,30 +13,23 @@
 
 
                 <div id="icerik-hizmet" class="icerik">
-                    <p>
-                        <b>Backlink</b> kazanmak için yapmanız gereken tek şey boş alana sitenizin alanını, uzantısını
-                        yazmak vede başlat butonuna basmak ve ücretsiz link veren sitelerin tümü bitene kadar açılan
-                        sayfayı kapatmamanız olacaktır...<br/>
-                        <br/>İşlem sonuna kadar açılan sayfayı kapatmamanız sizin için yararlı olacaktır...<br/>
-                        Sistemimiz ücretsizdir, Hayırlı Olsun...<br/>
-                        <br/><b>"Başlat"a tıkladıktan sonra işlem 10 dakika kadar sürecektir...</b>
-                    </p>
+                    <?php echo lang("autobacklink_exp"); ?>
 
                     <table>
                         <tr>
                             <td>
                                 <input type='hidden' id='currentk' value='0'>
-                                <input type='hidden' id='cwindow' value='0'>
-                                <h5>Site: http://www.</h5></td>
+                                <input type='hidden' id='cwindow' value='0'></td>
                             <td colspan='2'><input type='text' name='domain' id='domain' value='nearlyweb.com'></td>
-                            <td><input type='button' value='Başlat!' name='submit' onclick="beginu();"></td>
+                            <td><input type='button' value='<?php echo lang("autobacklink_start"); ?>' name='submit'
+                                       onclick="beginu();"></td>
                         </tr>
                         <tr>
                             <td colspan='4'>
-                                <p>
-                                    <b>Durum:</b> <span id='statusk'></span>
+                                <p><br/>
+                                    <b>  <?php echo lang("autobacklink_state"); ?></b> <span id='statusk'></span>
                                     <br/>
-                                    <b>Toplam Kazanılan Link Sayısı:</b><span id='totalbl'></span>
+                                    <b>  <?php echo lang("autobacklink_total_earned"); ?></b><span id='totalbl'></span>
                                 </p>
                             </td>
                         </tr>
@@ -44,8 +37,7 @@
 
 
                     <blockquote>
-                        <p>İşlem yaklaşık 10 dakika sürecektir ve sonunda site adresinize 140 adet link kazanmış
-                            olursunuz...</p>
+                        <p><?php echo lang("autobacklink_expp"); ?></p>
                     </blockquote>
                 </div>
 
