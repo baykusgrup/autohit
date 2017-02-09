@@ -279,18 +279,6 @@
                                 <h3 class="uppercase"><?php echo lang("OtherThinks"); ?></h3>
                             </li>
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Buy" class="nav-link nav-toggle">
-                                    <i class="icon-wallet"></i>
-                                    <span class="title"><?php echo lang("BuyCredits"); ?></span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Statistics" class="nav-link nav-toggle">
-                                    <i class="icon-bar-chart"></i>
-                                    <span class="title"><?php echo lang("Statistics"); ?></span>
-                                </a>
-                            </li>
-                            <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Help" class="nav-link nav-toggle">
                                     <i class="icon-directions"></i>
                                     <span class="title"><?php echo lang("Help"); ?></span>

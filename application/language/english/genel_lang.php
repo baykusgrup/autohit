@@ -24,7 +24,7 @@ $lang["Statistics"] = "Statistics";
 $lang["Help"] = "Help";
 $lang["ContactUs"] = "Contact Us";
 
-$lang["HomePage"] = "Home Page";
+$lang["HomePage"] = "Homepage";
 $lang["WelcomeSite"] = "Welcome Site";
 $lang["Register"] = "Register";
 $lang["Login"] = "Login";

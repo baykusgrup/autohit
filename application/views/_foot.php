@@ -15,7 +15,7 @@
                 <li><a href="<?php echo base_url() ?>AutoBacklink">Auto Backlink</a>
                 </li>
                 <li><a href="<?php echo base_url() ?>MyInfo">My Info</a></li>
-                <li><a href="<?php echo base_url() ?>OnlineCodeEditor">Code Editor</a></li>
+                <li><a href="<?php echo base_url() ?>CodeEditor">Code Editor</a></li>
             </ul>
         </div>
     </div>
