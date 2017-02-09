@@ -355,12 +355,14 @@
                             <li class="heading">
                                 <h3 class="uppercase"><?php echo lang("OtherThinks"); ?></h3>
                             </li>
+                            <!-- v2
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Buy" class="nav-link nav-toggle">
                                     <i class="icon-wallet"></i>
                                     <span class="title"><?php echo lang("BuyCredits"); ?></span>
                                 </a>
                             </li>
+                            -->
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Refferal" class="nav-link nav-toggle">
                                     <i class="icon-users"></i>
