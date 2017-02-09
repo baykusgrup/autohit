@@ -6,6 +6,9 @@ class Earnfast extends CI_Controller
 
     public function index()
     {
+        $this->load->helper(['language', 'lang', 'url']);
+        dilSecici();
+
         $ref = isset($_GET['ref']) ? $_GET['ref'] : '00000';
         $return = $this->user->getAllUserInfobyRefCode($ref);
         if ($return != null) {

@@ -13,19 +13,20 @@ class Earn extends CI_Controller
             dilSecici();
 
             $user_id = $this->session->userdata("user_id");
-            $data=array();
+            $data = array();
             $data["userInfo"] = $this->account_model->getUserAllInfoByUserID($user_id);
-            $data["todayTop250"]= $this->statics_model->getTop250DailyVisit();
-            $data["weeklyTop250"]= $this->statics_model->getTop250WeeklyVisit();
-            $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
+            $data["todayTop250"] = $this->statics_model->getTop250DailyVisit();
+            $data["weeklyTop250"] = $this->statics_model->getTop250WeeklyVisit();
+            $data["monthlyTop250"] = $this->statics_model->getTop250MountlyVisit();
+
+            $url = base_url() . "Earnfast/?ref=" . $data["userInfo"][0]["referance_code"];
+            $data["earnShort"] = $this->bitly->shorten($url);
 
             $this->load->view('_head');
-            $this->load->view('earn',$data);
+            $this->load->view('earn', $data);
             $this->load->view('_foot');
         }
     }
-
-
 
 
     public function getUrlsFromDatabase()
@@ -35,7 +36,7 @@ class Earn extends CI_Controller
 
         foreach ($result as $site) {
             $HTML .= "<tr>
-                        <td name='sites_selector'  site_id='".$site["websites_id"]."'  visit_cost='" . $site["visit_cost"] . "'  credits='" . $site["credits"] . "'  durations='" . $site["durations_sec"] . "'  >" . $site["url"] . "</td>
+                        <td name='sites_selector'  site_id='" . $site["websites_id"] . "'  visit_cost='" . $site["visit_cost"] . "'  credits='" . $site["credits"] . "'  durations='" . $site["durations_sec"] . "'  >" . $site["url"] . "</td>
                       </tr>";
         }
 
@@ -48,7 +49,7 @@ class Earn extends CI_Controller
         $result = $this->user->getIPInfo_Control($user_id);
         $deger = 0;
         if ($result != null) {
-            if ( $result[0]["user_ip"] ==  $_SERVER["REMOTE_ADDR"]  && $result[0]["record_status"] == "1") {  //$result[0]["record_status"] == "1"
+            if ($result[0]["user_ip"] == $_SERVER["REMOTE_ADDR"] && $result[0]["record_status"] == "1") {  //$result[0]["record_status"] == "1"
                 $deger = 1;
 
 
@@ -77,23 +78,21 @@ class Earn extends CI_Controller
 
     public function controllActiveViewer()
     {
-      $user_id =  $this->session->userdata("user_id");
+        $user_id = $this->session->userdata("user_id");
         $result = $this->user->controllActiveViewer($user_id);
         $HTML = "";
 
         foreach ($result as $ip) {
             $HTML .= "<tr>
-                        <td>".$ip["user_ip"]."</td>
+                        <td>" . $ip["user_ip"] . "</td>
                         <td>
-                            Type: ".$ip["user_browser"]."
+                            Type: " . $ip["user_browser"] . "
                         </td>
                     </tr>";
         }
 
         echo $HTML;
     }
-
-
 
 
 }

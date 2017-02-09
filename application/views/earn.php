@@ -11,7 +11,8 @@
                 <p> <?php echo lang("earn_State"); ?>: <span id='statusk'></span></p>
                 <p> <?php echo lang("earn_TotalEarnedLinkCount"); ?>:<span id='totalbl'></span></p>
                 <p><?php echo lang("earn_CurrentSite"); ?> : <span id="currentSite"></span></p>
-                <p><?php echo lang("earn_NextSite"); ?> <span id="duration_time"></span> <?php echo lang("earn_second"); ?>.</p>
+                <p><?php echo lang("earn_NextSite"); ?> <span
+                            id="duration_time"></span> <?php echo lang("earn_second"); ?>.</p>
                 <hr/>
                 <p> <?php echo lang("earn_youwillearn"); ?>.</p>
 
@@ -38,7 +39,7 @@
                         <td>
                             <label class="mt-checkbox mt-checkbox-outline">
 
-                                <input type="checkbox"  value="1" id="dis_selector" name="dis_selector"/>
+                                <input type="checkbox" value="1" id="dis_selector" name="dis_selector"/>
                                 <span></span>
                             </label>
                         </td>
@@ -51,10 +52,10 @@
                     <tr>
                         <td><?php echo lang("earn_lightViewer"); ?></td>
                         <td>
-                            <strong> <?php
-                                    if (isset($userInfo[0]["referance_code"])) {
-                                        echo "<a href=\"" . base_url() . "index.php/Earnfast/?ref=" . $userInfo[0]["referance_code"] . "\" >" . base_url() . "index.php/Earnfast/?id=" . $userInfo[0]["referance_code"] . "</a>";
-                                    } ?></strong>
+                            <strong>  <?php
+                                if (isset($earnShort)) {
+                                    echo "<a href=\"" . $earnShort . "\" >" . $earnShort . "</a>";
+                                } ?></strong>
 
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
@@ -171,56 +172,52 @@
                 document.getElementById("statusk").innerHTML = "Surfing...";
                 document.getElementById("currentk").value = currentk2;
                 var siteID = theurls[current1].site_id;
-                var value_s =$("#dis_selector").is(':checked');
-                var autoID =0;
-                if (value_s==true){
-                    autoID =1;
+                var value_s = $("#dis_selector").is(':checked');
+                var autoID = 0;
+                if (value_s == true) {
+                    autoID = 1;
                 }
 
                 $.ajax({
                     type: "POST",
-                    url: base_url + "/index.php/Distrubition/Surf/"+siteID+"/"+autoID,
+                    url: base_url + "/index.php/Distrubition/Surf/" + siteID + "/" + autoID,
                     cache: false,
                     success: function (result) {
-                            if(result=="1")
-                            {
+                        if (result == "1") {
 
-                                controllActiveViewer();
-                                timerId = setTimeout(geturl, 1000);
+                            controllActiveViewer();
+                            timerId = setTimeout(geturl, 1000);
 
-                            }else{
-                                url = theurls[current1].urls_g;
-                                window.open(url, "myWindow");
-                                urlLast.push("<li>" + url + "<a id='blockedStatus_" + theurls[current1].site_id + "' onclick='getBlocked(" + theurls[current1].site_id + ");'>Block</a></li>");
-                                document.getElementById("LastSites_5").innerHTML = urlLast.slice(Math.max(urlLast.length - 5, 0)).join(" ");
+                        } else {
+                            url = theurls[current1].urls_g;
+                            window.open(url, "myWindow");
+                            urlLast.push("<li>" + url + "<a id='blockedStatus_" + theurls[current1].site_id + "' onclick='getBlocked(" + theurls[current1].site_id + ");'>Block</a></li>");
+                            document.getElementById("LastSites_5").innerHTML = urlLast.slice(Math.max(urlLast.length - 5, 0)).join(" ");
 
-                                document.getElementById("currentSite").innerHTML = url;
-
+                            document.getElementById("currentSite").innerHTML = url;
 
 
-                                var downloadButton = document.getElementById("duration_time");
-                                var counter = theurls[current1].durations;
-                                var newElement = document.getElementById("duration_time");
-                                newElement.innerHTML = counter;
-                                var id;
+                            var downloadButton = document.getElementById("duration_time");
+                            var counter = theurls[current1].durations;
+                            var newElement = document.getElementById("duration_time");
+                            newElement.innerHTML = counter;
+                            var id;
 
-                                downloadButton.parentNode.replaceChild(newElement, downloadButton);
+                            downloadButton.parentNode.replaceChild(newElement, downloadButton);
 
-                                id = setInterval(function () {
-                                    counter--;
-                                    if (counter < 0) {
-                                        newElement.parentNode.replaceChild(downloadButton, newElement);
-                                        clearInterval(id);
-                                    } else {
-                                        newElement.innerHTML = counter.toString();
-                                    }
-                                }, 1000);
-
-
+                            id = setInterval(function () {
+                                counter--;
+                                if (counter < 0) {
+                                    newElement.parentNode.replaceChild(downloadButton, newElement);
+                                    clearInterval(id);
+                                } else {
+                                    newElement.innerHTML = counter.toString();
+                                }
+                            }, 1000);
 
 
-                                timerId = setTimeout(geturl, theurls[current1].durations * 1000);
-                            }
+                            timerId = setTimeout(geturl, theurls[current1].durations * 1000);
+                        }
                     }
                 });
 

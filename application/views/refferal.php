@@ -13,13 +13,13 @@
 
                 <p><strong> <?php
                         if (isset($userInfo[0]["referance_code"])) {
-                            echo "<a href=\"" . base_url() . "index.php/Register/?ref=" . $userInfo[0]["referance_code"] . "\" >" . base_url() . "index.php/Register/?ref=" . $userInfo[0]["referance_code"] . "</a>";
+                            echo "<a href=\"" . base_url() . "Register/?ref=" . $userInfo[0]["referance_code"] . "\" >" . base_url() . "Register/?ref=" . $userInfo[0]["referance_code"] . "</a>";
                         } ?></strong></p>
 
                 <p>Or, if you prefer, you can add this banner on your site:</p>
                 <textarea style="margin-bottom: 10px" class="col-md-12" rows="5"> <!--Autosurf NearlyWeb Banner--><a
                             href='<?php if (isset($userInfo[0]['referance_code'])) {
-                                echo base_url() . "index.php/Register/?ref=" . $userInfo[0]["referance_code"];
+                                echo base_url() . "Register/?ref=" . $userInfo[0]["referance_code"];
                             } ?>' title='autosurf' alt='autosurf'><img
                                 src='<?php echo base_url(); ?>/banners/ban2.gif' width='468' height='60' border='0'
                                 title='autosurf' alt='autosurf'></a><!--Autosurf NearlyWeb Banner--> </textarea>
