@@ -11,10 +11,10 @@
         </div>
         <div class="portlet-body">
             <ul style="margin-left: -25px;">
+                <li><a href="<?php echo base_url() ?>MyInfo"><?php echo lang("MyInfo"); ?></a></li>
                 <li><a href="<?php echo base_url() ?>LinkExchange"><?php echo lang("LinkExchange"); ?></a></li>
                 <li><a href="<?php echo base_url() ?>AutoBacklink"><?php echo lang("AutoBacklink"); ?></a>
                 </li>
-                <li><a href="<?php echo base_url() ?>MyInfo"><?php echo lang("MyInfo"); ?></a></li>
                 <li><a href="<?php echo base_url() ?>CodeEditor"><?php echo lang("CodeEditor"); ?></a></li>
             </ul>
         </div>

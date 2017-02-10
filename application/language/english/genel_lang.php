@@ -13,7 +13,7 @@ $lang["Saved"] = "Saved";
 //sidebar, head, foot
 
 
-$lang["title"] = "Autosurf | This autosurf can help you to increase your rankings.";
+$lang["title"] = "NearlyWeb | Autosurf, This autosurf can help you to increase your rankings.";
 $lang["description"] = "Autosurf, get free geo-targeted visitors to your video, website or blog. This autosurf can help you to increase your rankings. Helpful SEO tool.";
 
 $lang["MyAccount"] = "My Account";
@@ -54,48 +54,29 @@ $lang["CodeEditor"] = "Code Editor";
 
 
 $lang["home_home"] = "
-    <p style=\"color: #0a6aa1;\">Ücretsiz Otomaik Surf Hizmetimiz Yakında Açılacaktır ^^</p>
-               <p>Şimdilik Ekstra Hizmetler Herkesin Kullanımına Açılmıştır. Güle Güle Kullanmanız dileğiyle...</p>";
+    <p style=\"color: #0a6aa1;\">Free Auto Surf Service will be available soon ^^</p>
+               <p>Extra Services are now available for everyone. With good wishes :)</p>";
 
-$lang["home_what"] = "
-                <h2>Nedir ?</h2>
-                <p>NearlyWeb, ücretsiz ziyaretleri dağıtan, otomatik trafik değişimi ve web hizmetleri sistemidir.
-                    Buradaki sistemler doğru kullanıldığında reklam gelirinizi, sıralamanızı, gösterimizini ve daha
-                    fazlasını artırmanıza olanak tanır.</p>";
-$lang["home_how"] = "
-                <h3>Nasıl Çalışır ?</h3>
-                <p>Kayıt olduktan sonra, ziyaretçileri almak istediğiniz siteleri gönderebilirsiniz. İzleyiciyi
-                    kullanarak, sitenize yapılan ziyaretlere karşı kullanabileceğiniz krediler kazanıyorsunuz.
-                    NearlyWeb'i arkadaşlarınıza tavsiye ederek ek krediler kazanabilirsiniz.</p>
-";
-$lang["home_diff"] = "
-                <h3>Özellikleri ve Farkı Nedir?</h3>
-
+$lang["home_what"] = "<h2>What is?</h2>
+                <p>NearlyWeb is an automated traffic exchange and web services system that distributes free visits. These systems allow you to increase your advertising revenue, rankings, impressions and more when used correctly.</p>";
+$lang["home_how"] = "<h3>How it works ?</h3>
+                <p>Once you have registered, you can send the sites you want visitors to. Using the tracker, you earn credits that you can use against visits to your site. You can earn additional credits by recommending NearlyWeb to your friends.</p>";
+$lang["home_diff"] = "<h3>Features and Features?</h3>
                 <ul style=\"margin-left: -25px;\">
-                    <li>Frame açmadan direk link gönderir.</li>
-                    <li>Site ziyaret süresini belirlersiniz.</li>
-                    <li>Hızlı ve akıcı bir sistemdir, kontrol sizdedir.</li>
-                    <li>Otomatik kredi dağıtımı yapabilirsiniz.</li>
+                    <li>The visitor sends a direct link without opening the frame.</li>
+                    <li>You specify the time of the site visit.</li>
+                    <li>It's a fast and fluid system, control is yours.</li>
+                    <li>You can also use auto distrubution.</li>
                 </ul>";
-$lang["home_extra"] = "
-                <h3>Ekstra Hizmetler</h3>
+$lang["home_extra"] = "<h3>Extra Services</h3>
                 <ul style=\"margin-left: -25px;\">
-                    <li><a href=\"<?php echo base_url() ?>AutoBacklink\">Auto Backlink</a>: Sitenizin linkini yazdıktan
-                        sonra size belli bir sayıda otomatik backlink kazandıran sistemdir.
+                    <li><a href=\"MyInfo\">My Info</a>:  This is a web page that shows all the information a site can learn about you. We thought you were right to know what we could see.
                     </li>
-
-                    <li><a href=\"<?php echo base_url() ?>LinkExchange\">Link Exchange</a>: Sayfada yer alan kodu sitenize
-                        eklediğinizde bir partner sistemi oluşur ve sizin sitenizede NearlyWeb.com dan bir link çıkışı
-                        olur.
+                    <li><a href=\"AutoBacklink\">Auto Backlink</a>: This is a system that gives you a certain number of automatic backlinks after you've uploaded your site's link.
                     </li>
-
-                    <li><a href=\"<?php echo base_url() ?>OnlineCodeEditor\">Code Editor</a> Html, Css, Javascript
-                        kodlarınızı aktif olarak deneyip değişiklik yapabileceğiniz platform.
+                    <li><a href=\"LinkExchange\">Link Exchange</a>: When you add the code on the page to your site, a dating system will occur and you will get a link from NearlyWeb.com.
                     </li>
-
-                    <li><a href=\"<?php echo base_url() ?>MyInfo\">My Info</a>: Web dünyasında bir sitenin sizin ile
-                        ilgili öğrenebileceği bütün bilgileri gösteren sayfamızdır. neleri görüp göremediğimizi bilmek
-                        sizinde hakkınız diye düşündük.
+                    <li><a href=\"CodeEditor\">Code Editor</a> The platform where you can actively try and modify your Html, Css, Javascript codes.
                     </li>
                 </ul>";
 
@@ -161,8 +142,6 @@ $lang["register_NewMember"] = "New Member";
 $lang["register_tipRefferal"] = "tip will come";
 
 
-
-
 //Refferal
 
 $lang["refferal_Refferal"] = "Refferal";
@@ -188,7 +167,6 @@ $lang["statistics_VisitsDistributedToday"] = "Visits distributed today";
 $lang["statistics_YouveVisitedToday"] = "Sites you've visited today";
 $lang["statistics_YouveVisitedWeek"] = "Sites you've visited this week";
 $lang["statistics_YouveVisitedMonth"] = "Sites you've visited this month.";
-
 
 
 //Sites
@@ -262,5 +240,13 @@ $lang["autobacklink_start"] = "Start!";
 $lang["autobacklink_state"] = "State:";
 $lang["autobacklink_total_earned"] = "Total Earned Link Count:";
 $lang["autobacklink_expp"] = "İşlem yaklaşık 10 dakika sürecektir ve sonunda site adresinize 140 adet link kazanmış olursunuz...";
+
+
+//MyInfo
+
+$lang["myinfo_MyInfo"] = "My Information On Web";
+$lang["myinfo_MyInfoDec"] = "This is a web page that shows all the information a site can learn about you. We thought you were right to know what we could see.";
+
+
 
 ?>
