@@ -16,16 +16,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
     <?php if (isset($title)) {
         echo "<title>" . $title . "</title>";
-        echo "<meta name=\"description\" content=\" . $description . \"/>";
+        echo "<meta name=\"description\" content=\"" . $description . "\" />";
     } else {
-        echo "<title>Autosurf | This autosurf can help you to increase your rankings.</title>";
+        echo "<title>" . lang('title') . "</title>";
+        echo "<meta name=\"description\" content=\"" . lang('description') . "\" />";
     }
     ?>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta content="Autosurf, get free geo-targeted visitors to your video, website or blog. This autosurf can help you to increase your rankings. Helpful SEO tool."
-          name="description"/>
     <meta content="BaykusGrup" name="author"/>
     <link rel="shortcut icon" href="<?php echo base_url() ?>favicon.ico"/>
 
@@ -176,7 +175,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                data-close-others="true">
 
                             <span class="username username-hide-on-mobile"> <i class="icon-user"></i> <span
-                                        class="username username-hide-on-mobile"> USER AREA</span> <i
+                                        class="username username-hide-on-mobile"> <?php echo lang("UserArea"); ?></span> <i
                                         class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-default">

@@ -12,6 +12,10 @@ $lang["Saved"] = "Saved";
 
 //sidebar, head, foot
 
+
+$lang["title"] = "Autosurf | This autosurf can help you to increase your rankings.";
+$lang["description"] = "Autosurf, get free geo-targeted visitors to your video, website or blog. This autosurf can help you to increase your rankings. Helpful SEO tool.";
+
 $lang["MyAccount"] = "My Account";
 $lang["AboutSite"] = "ABOUT SITE";
 $lang["EarnCredits"] = "Earn Credits";
@@ -27,9 +31,11 @@ $lang["ContactUs"] = "Contact Us";
 $lang["HomePage"] = "Homepage";
 $lang["WelcomeSite"] = "Welcome Site";
 $lang["Register"] = "Register";
+$lang["UserArea"] = "USER AREA";
 $lang["Login"] = "Login";
 $lang["Logout"] = "Logout";
 
+$lang["ExtrasProduct"] = "Extras Product";
 $lang["DailyTop"] = "Daily Top";
 $lang["WeeklyTop"] = "Weekly Top";
 $lang["MonthlyTop"] = "Monthly Top";
@@ -39,6 +45,10 @@ $lang["NearlyWebBy"] = "NearlyWeb By";
 $lang["PageRenderedIn"] = "Page Rendered In";
 $lang["Seconds"] = "Seconds";
 
+$lang["LinkExchange"] = "Link Exchange";
+$lang["AutoBacklink"] = "Auto Backlink";
+$lang["MyInfo"] = "My Info";
+$lang["CodeEditor"] = "Code Editor";
 
 //Home
 
@@ -151,6 +161,36 @@ $lang["register_NewMember"] = "New Member";
 $lang["register_tipRefferal"] = "tip will come";
 
 
+
+
+//Refferal
+
+$lang["refferal_Refferal"] = "Refferal";
+$lang["refferal_Sponsorship"] = "Sponsorship";
+$lang["refferal_HeresYourReferral"] = "Here's your referral link to share:";
+$lang["refferal_ifYouPrefer"] = "Or, if you prefer, you can add this banner on your site:";
+$lang["refferal_YouEarnOf"] = "You earn 10% of all credits that members registered through your referral link will earn using the viewer.";
+$lang["refferal_BelowIsTheList"] = "Below is the list of members and the number of credits you have earned.";
+$lang["refferal_YourReferrals"] = "Your referrals";
+$lang["refferal_Username"] = "Username";
+$lang["refferal_Registered"] = "Registered";
+
+//Statistics
+
+$lang["statistics_Statistics"] = "Statistics";
+$lang["statistics_MembersOnline"] = "Members Online";
+$lang["statistics_statistics_MembersOnlineLast"] = "Members Online (last 24 hours)";
+$lang["statistics_RegisteredMembers"] = "Registered Members";
+$lang["statistics_NewMembers"] = "New Members(24 Hours)";
+$lang["statistics_Websites"] = "Websites";
+$lang["statistics_Visitstoday"] = "Visits today";
+$lang["statistics_VisitsDistributedToday"] = "Visits distributed today";
+$lang["statistics_YouveVisitedToday"] = "Sites you've visited today";
+$lang["statistics_YouveVisitedWeek"] = "Sites you've visited this week";
+$lang["statistics_YouveVisitedMonth"] = "Sites you've visited this month.";
+
+
+
 //Sites
 $lang["sites_EasyDistribution"] = "Easy Distribution";
 $lang["sites_AvailableCredits"] = "Available Credits";
@@ -174,6 +214,7 @@ $lang["sites_tipPerSiteEqualDistribution"] = "tip will come";
 
 
 //Earn
+$lang["earn_SurfTime"] = "Surf Time";
 $lang["earn_State"] = "State";
 $lang["earn_TotalEarnedLinkCount"] = "Total Earned Link Count";
 $lang["earn_CurrentSite"] = "Current Site";
@@ -191,7 +232,13 @@ $lang["earn_ActiveViewer"] = "Active Viewers";
 $lang["earn_IPAdress"] = "IP Address";
 $lang["earn_Browser"] = "Browser";
 
+$lang["earn_AutoDistribution"] = "Auto Distribution";
+
+
+//Earn tip
+
 $lang["tip_earn_lightViewer"] = "This is the Light Viewer. You can launch it on many computer at the time, as long as all the computer have a different IP. The more you have Viewer started, the more credits you will earn. For your security, you dont have to connect to your account. That way, your personal info cannot be seen.";
+$lang["earn_tipAutoDistribution"] = "When enabled, this option allows you to automatically distribute the credits earned through the viewer to your active sites. To accumulate credits in your bank you should disable this option. This option do not have any impact on credits purchased or already in the bank. ";
 
 //LinkExchange
 $lang["linkexchange_LinkExchange"] = "Free Link Exchange";

@@ -2,7 +2,7 @@
     <div class="portlet-title">
         <div class="caption">
             <i class="fa fa-hand-peace-o font-blue-sharp"></i>
-            <span class="caption-subject font-blue-sharp bold uppercase">Surf Time</span>
+            <span class="caption-subject font-blue-sharp bold uppercase"><?php echo lang("earn_SurfTime"); ?></span>
         </div>
     </div>
     <div class="portlet-body">
@@ -34,7 +34,7 @@
                     <tbody>
 
                     <tr>
-                        <td><?php echo lang("AutoDistribution"); ?></td>
+                        <td><?php echo lang("earn_AutoDistribution"); ?></td>
 
                         <td>
                             <label class="mt-checkbox mt-checkbox-outline">
@@ -44,7 +44,7 @@
                             </label>
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("tipAutoDistribution"); ?>">
+                            data-original-title="<?php echo lang("earn_tipAutoDistribution"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
 
                         </td>
@@ -52,9 +52,9 @@
                     <tr>
                         <td><?php echo lang("earn_lightViewer"); ?></td>
                         <td><?php
-                                if (isset($earnShort)) {
-                                    echo "<a href=\"" . $earnShort . "\" >" . $earnShort . "</a>";
-                                } ?>
+                            if (isset($earnShort)) {
+                                echo "<a href=\"" . $earnShort . "\" >" . $earnShort . "</a>";
+                            } ?>
 
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"

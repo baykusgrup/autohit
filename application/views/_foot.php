@@ -6,16 +6,16 @@
     <div class="portlet box blue-ebonyclay">
         <div class="portlet-title">
             <div class="caption">
-                <i class="fa fa-gift"></i>Extras Product
+                <i class="fa fa-gift"></i><?php echo lang("ExtrasProduct"); ?>
             </div>
         </div>
         <div class="portlet-body">
             <ul style="margin-left: -25px;">
-                <li><a href="<?php echo base_url() ?>LinkExchange">Link Exchange</a></li>
-                <li><a href="<?php echo base_url() ?>AutoBacklink">Auto Backlink</a>
+                <li><a href="<?php echo base_url() ?>LinkExchange"><?php echo lang("LinkExchange"); ?></a></li>
+                <li><a href="<?php echo base_url() ?>AutoBacklink"><?php echo lang("AutoBacklink"); ?></a>
                 </li>
-                <li><a href="<?php echo base_url() ?>MyInfo">My Info</a></li>
-                <li><a href="<?php echo base_url() ?>CodeEditor">Code Editor</a></li>
+                <li><a href="<?php echo base_url() ?>MyInfo"><?php echo lang("MyInfo"); ?></a></li>
+                <li><a href="<?php echo base_url() ?>CodeEditor"><?php echo lang("CodeEditor"); ?></a></li>
             </ul>
         </div>
     </div>
