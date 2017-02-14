@@ -12,16 +12,20 @@
 
                 <?php echo lang("linkexchange_exp"); ?>
                 <hr />
-                <div style="text-align: center;"><img style="vertical-align: middle;" src="http://baykusgrup.com/_/blog/freebacklink-3.jpg" alt="" width="200" height="32" border="0" /> » <img style="vertical-align: middle;" src="http://baykusgrup.com/_/blog/freebacklink-1.jpg" alt="" width="200" height="32" border="0" /></div>
-                <div class="gist" data-gist="508166432c38486fb3ce" data-gist-file="show2.htm"></div>
+                <p><a target="_blank" title="nearlyweb.com" href="http://nearlyweb.com/linkekle/"><img border="0" width="80" alt="nearlyweb.com" src="http://baykusgrup.com/_/tanitim/banner-80-15.png" height="15" /></a><!--NearlyWeb Banner-->
+                </p>
 
-                <hr />
+                <textarea style="margin-bottom: 10px" class="col-md-12" rows="5"> <!--NearlyWeb Banner--><a target="_blank" title="nearlyweb.com" href="http://nearlyweb.com/linkekle/"><img border="0" width="80" alt="nearlyweb.com" src="http://baykusgrup.com/_/tanitim/banner-80-15.png" height="15" /></a><!--NearlyWeb Banner--> </textarea>
 
-                <div style="text-align: center;"><img style="vertical-align: middle;" src="http://baykusgrup.com/_/blog/freebacklink-3.jpg" alt="" width="200" height="32" border="0" /> » <img style="vertical-align: middle;" src="http://baykusgrup.com/_/blog/freebacklink-2.jpg" alt="" width="200" height="32" border="0" /></div>
+                <p><hr /></p>
 
-                <div class="gist" data-gist="508166432c38486fb3ce" data-gist-file="show1.htm"></div>
-                <hr />
+                <p><a target="_blank" title="nearlyweb.com" href="http://nearlyweb.com/LinkExchange/">NearlyWeb.com</a>
 
+                </p>
+
+                <textarea style="margin-bottom: 10px" class="col-md-12" rows="4"> <!--NearlyWeb Banner--><a target="_blank" title="baykusgrup.com" href="http://nearlyweb.com/LinkExchange/">NearlyWeb.com</a><!--NearlyWeb Banner--> </textarea>
+
+                <p><hr /></p>
                     <div style="border: 1px solid rgb(153, 153, 153);
 overflow: auto;
 width: 100%;

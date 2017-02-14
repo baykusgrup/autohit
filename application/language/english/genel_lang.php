@@ -227,19 +227,14 @@ $lang["linkexchange_exp"] = "<p><strong>Rapid İnsertion Site (As A Backlink)</s
 
 //AutoBacklink
 $lang["autobacklink_autobacklink"] = "Free Automatic Backlink Generator";
-$lang["autobacklink_exp"] = "<p>
-                        <b>Backlink</b> kazanmak için yapmanız gereken tek şey boş alana sitenizin alanını, uzantısını
-                        yazmak vede başlat butonuna basmak ve ücretsiz link veren sitelerin tümü bitene kadar açılan
-                        sayfayı kapatmamanız olacaktır...<br/>
-                        <br/>İşlem sonuna kadar açılan sayfayı kapatmamanız sizin için yararlı olacaktır...<br/>
-                        Sistemimiz ücretsizdir, Hayırlı Olsun...<br/>
-                        <br/><b>\"Başlat\"a tıkladıktan sonra işlem 10 dakika kadar sürecektir...</b>
+$lang["autobacklink_exp"] = "<p>The only thing you need to do to win backlinks is to click on the start button and type in the extension of your site in the free space, and you will not be able to close the page until all of the sites giving up free links have finished ...<br/>
+                        <br/><b>After clicking \"Start\", the process will take about 10 minutes ...</b>
                     </p>";
 
 $lang["autobacklink_start"] = "Start!";
 $lang["autobacklink_state"] = "State:";
 $lang["autobacklink_total_earned"] = "Total Earned Link Count:";
-$lang["autobacklink_expp"] = "İşlem yaklaşık 10 dakika sürecektir ve sonunda site adresinize 140 adet link kazanmış olursunuz...";
+$lang["autobacklink_expp"] = "The process will take about 10 minutes and you will eventually get 140 links to your site address ...";
 
 
 //MyInfo
