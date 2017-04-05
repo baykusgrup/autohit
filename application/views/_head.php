@@ -29,7 +29,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link rel="shortcut icon" href="<?php echo base_url() ?>favicon.ico"/>
 
     <?php if (!isset($_COOKIE['dil'])) {
-        $_COOKIE['dil'] = "en";
+        $_COOKIE['dil'] = "us";
     }
     ?>
     <script language="javascript" type="text/javascript">
@@ -97,6 +97,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="<?php echo base_url() ?>assets/layouts/layout/css/themes/light2.min.css" rel="stylesheet"
           type="text/css" id="style_color"/>
     <link href="<?php echo base_url() ?>assets/layouts/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo base_url() ?>assets/nearlyweb.css" rel="stylesheet" type="text/css"/>
     <!-- END THEME LAYOUT STYLES -->
 </head>
 <!-- END HEAD -->
@@ -138,8 +139,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <span class="langname"><?php echo $_COOKIE['dil']; ?></span> <i
                                     class="fa fa-angle-down"></i> </a>
                         <ul class="dropdown-menu dropdown-menu-default">
-                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/en"> <img alt=""
-                                                                                                        src="<?php echo base_url() ?>assets/global/img/flags/en.png">
+                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/us"> <img alt=""
+                                                                                                        src="<?php echo base_url() ?>assets/global/img/flags/us.png">
                                     English
                                 </a></li>
                             <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/tr"> <img alt=""

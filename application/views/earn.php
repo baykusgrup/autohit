@@ -58,7 +58,7 @@
 
                         </td>
                         <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("tip_earn_lightViewer"); ?>">
+                            data-original-title="<?php echo lang("earn_tiplightViewer"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>

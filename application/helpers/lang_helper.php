@@ -79,7 +79,7 @@ function dilSec($gelen = "")
             return $url;
 //$ci->session->set_userdata('dil', $url);
         } else {
-            return "en";
+            return "us";
 //$ci->session->set_userdata('dil', "turkish");
         }
     } else {
@@ -87,7 +87,7 @@ function dilSec($gelen = "")
             return $gelen;
 //$ci->session->set_userdata('dil', $url);
         } else {
-            return "en";
+            return "us";
 //$ci->session->set_userdata('dil', "turkish");
         }
     }
@@ -103,7 +103,7 @@ function dilUrl()
 
 function dilDosyaIsmi($gelen)
 {
-    if ($gelen == "en") {
+    if ($gelen == "us") {
         return "english";
     } elseif ($gelen == "ar") {
         return "arabic";

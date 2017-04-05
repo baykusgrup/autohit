@@ -32,7 +32,6 @@ class Login extends CI_Controller
     public function dilDegistir($gelen)
     {
         $this->load->helper(['language', 'lang', 'url']);
-        $this->load->helper(['language', 'lang', 'url']);
         dilSecici($gelen);
         header("Location:" . $_SERVER['HTTP_REFERER'] . "");
     }

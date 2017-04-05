@@ -54,7 +54,8 @@ $lang["CodeEditor"] = "Code Editor";
 
 
 $lang["home_home"] = "
-    <p style=\"color: #0a6aa1;\">Free Auto Surf Service will be available soon ^^</p>
+    <p style=\"color: #0a6aa1;\">Free Auto Surf Service available ^^</p>
+               <p>You can <a href='Register'>register</a> and start get visit to your sites until now :)</p>
                <p>Extra Services are now available for everyone. With good wishes :)</p>";
 
 $lang["home_what"] = "<h2>What is?</h2>
@@ -215,7 +216,7 @@ $lang["earn_AutoDistribution"] = "Auto Distribution";
 
 //Earn tip
 
-$lang["tip_earn_lightViewer"] = "This is the Light Viewer. You can launch it on many computer at the time, as long as all the computer have a different IP. The more you have Viewer started, the more credits you will earn. For your security, you dont have to connect to your account. That way, your personal info cannot be seen.";
+$lang["earn_tiplightViewer"] = "This is the Light Viewer. You can launch it on many computer at the time, as long as all the computer have a different IP. The more you have Viewer started, the more credits you will earn. For your security, you dont have to connect to your account. That way, your personal info cannot be seen.";
 $lang["earn_tipAutoDistribution"] = "When enabled, this option allows you to automatically distribute the credits earned through the viewer to your active sites. To accumulate credits in your bank you should disable this option. This option do not have any impact on credits purchased or already in the bank. ";
 
 //LinkExchange
@@ -242,6 +243,15 @@ $lang["autobacklink_expp"] = "The process will take about 10 minutes and you wil
 $lang["myinfo_MyInfo"] = "My Information On Web";
 $lang["myinfo_MyInfoDec"] = "This is a web page that shows all the information a site can learn about you. We thought you were right to know what we could see.";
 
+$lang["myinfo_YourIPAddress"] = "Your IP Address:";
+$lang["myinfo_ServerName"] = "Server Name:";
+$lang["myinfo_ScriptLanguage"] = "Script Language:";
+$lang["myinfo_CodingType"] = "Coding Type:";
+$lang["myinfo_ServerPort"] = "Server Port:";
+$lang["myinfo_ConnectionType"] = "Connection Type:";
+$lang["myinfo_PreviousPage"] = "Previous Page:";
+$lang["myinfo_ServerVersion"] = "Server Version:";
+$lang["myinfo_BrowserVersion"] = "Browser Version:";
 
 
 ?>

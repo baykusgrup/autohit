@@ -1,0 +1,27 @@
+/* here you can put your own css to customize and override the theme */
+.logoimg {
+    margin-top: 5px;
+}
+
+.logoa {
+    font-family: initial;
+    text-decoration: none;
+    margin-top: 9px;
+    font-size: 25px;
+    color: #990000;
+}
+
+.logoa > span {
+    text-decoration: none;
+    color: #030719 !important;
+}
+
+.logoa:hover {
+    text-decoration: none;
+    color: #030719 !important
+}
+
+.logoa:hover > span {
+    text-decoration: none;
+    color: #990000 !important
+}
