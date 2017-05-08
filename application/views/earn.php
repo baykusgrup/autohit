@@ -154,7 +154,7 @@
         } else {
             if (myWindow.closed) {
                 document.getElementById("statusk").innerHTML = "Stopted...";
-
+                document.getElementById("currentk").value = 0;
                 $.ajax({
                     type: "POST",
                     url: base_url + "/index.php/Earn/closedIP",
