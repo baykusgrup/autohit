@@ -161,7 +161,7 @@
 <script src="<?php echo base_url() ?>assets/layouts/global/scripts/quick-sidebar.min.js"
         type="text/javascript"></script>
 <script src="<?php echo base_url() ?>assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
-<script src="<?php echo base_url() ?>assets/global/plugins/alert.js" type="text/javascript"></script>
+<script src="<?php echo base_url() ?>assets/v1/alert.js" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
 
 </body>
