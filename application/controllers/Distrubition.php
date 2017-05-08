@@ -210,7 +210,7 @@ class Distrubition extends CI_Controller {
             }
             else{
                 $this->SiteVisitInfoCalculate($siteID);
-                $this->SurfingCostCalculation($siteID);
+               // $this->SurfingCostCalculation($siteID);
                 echo "2";
             }
         }

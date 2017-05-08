@@ -137,7 +137,7 @@
 
         var sites_selector = document.getElementsByName("sites_selector");
         for (var i = 0; i < sites_selector.length; i++) {
-            theurls.push();
+           // theurls.push();
             theurls.push({
                 urls_g: sites_selector[i].innerText,
                 site_id: sites_selector[i].getAttribute("site_id"),
@@ -216,8 +216,13 @@
 
 
                             timerId = setTimeout(geturl, theurls[current1].durations * 1000);
+                          //setTimeout(calculateCost(theurls[current1].site_id), theurls[current1].durations * 1000);
+
+
+
                         }
                     }
+
                 });
 
                 //document.getElementById("duration_time").innerHTML = theurls[current1].durations;
@@ -225,6 +230,17 @@
             }
         }
 
+    }
+
+    function calculateCost(id) {
+        $.ajax({
+            type: "POST",
+            url: base_url + "/index.php/Distrubition/SurfingCostCalculation/" +id ,
+            cache: false,
+            success: function (result) {
+                alert("kontrol et");
+            }
+        });
     }
 
     function beginu() {
