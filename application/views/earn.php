@@ -7,63 +7,66 @@
     </div>
     <div class="portlet-body">
         <div class="row">
-            <ul class="col-md-12">
-                <p> <?php echo lang("earn_State"); ?>: <span id='statusk'></span></p>
-                <p> <?php echo lang("earn_TotalEarnedLinkCount"); ?>:<span id='totalbl'></span></p>
-                <p><?php echo lang("earn_CurrentSite"); ?> : <span id="currentSite"></span></p>
-                <p><?php echo lang("earn_NextSite"); ?> <span
-                            id="duration_time"></span> <?php echo lang("earn_second"); ?>.</p>
-                <hr/>
-                <p> <?php echo lang("earn_youwillearn"); ?>.</p>
+            <ul>
+                <li> <?php echo lang("earn_State"); ?>: <span id='statusk'></span></li>
+                <li> <?php echo lang("earn_TotalEarnedLinkCount"); ?>:<span id='totalbl'></span></li>
+                <li><?php echo lang("earn_CurrentSite"); ?> : <span id="currentSite"></span></li>
+                <li><?php echo lang("earn_NextSite"); ?> <span
+                            id="duration_time"></span> <?php echo lang("earn_second"); ?>.
+                </li>
+            </ul>
+            <hr/>
+            <ul>
+                <li> <?php echo lang("earn_youwillearn"); ?>.</li>
+                <li> <?php echo lang("earn_listofsites"); ?></li>
+            </ul>
+            <ul id="LastSites_5">
 
-                <p> <?php echo lang("earn_listofsites"); ?></p>
-                <ul id="LastSites_5">
+            </ul>
+            <table>
+                <tr>
+                    <td>
+                        <input type='hidden' id='currentk' value='0'>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <a role="button" onclick="beginu()" class="btn blue btn-block"> <?php echo lang("earn_viewer"); ?></a>
+            <br/>
+            <table class="table table-hover table-striped table-bordered">
+                <tbody>
 
-                </ul>
-                <table>
-                    <tr>
-                        <td>
-                            <input type='hidden' id='currentk' value='0'>
-                        </td>
-                    </tr>
-                </table>
-                <br/>
-                <a role="button" onclick="beginu()" class="btn blue btn-block"> <?php echo lang("earn_viewer"); ?></a>
-                <br/>
-                <table class="table table-hover table-striped table-bordered">
-                    <tbody>
+                <tr>
+                    <td><?php echo lang("earn_AutoDistribution"); ?></td>
 
-                    <tr>
-                        <td><?php echo lang("earn_AutoDistribution"); ?></td>
+                    <td>
+                        <label class="mt-checkbox mt-checkbox-outline">
 
-                        <td>
-                            <label class="mt-checkbox mt-checkbox-outline">
+                            <input type="checkbox" value="1" id="dis_selector" name="dis_selector"/>
+                            <span></span>
+                        </label>
+                    </td>
+                    <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
+                        data-original-title="<?php echo lang("earn_tipAutoDistribution"); ?>">
+                        <span class="badge badge-primary badge-roundless"> ? </span>
 
-                                <input type="checkbox" value="1" id="dis_selector" name="dis_selector"/>
-                                <span></span>
-                            </label>
-                        </td>
-                        <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("earn_tipAutoDistribution"); ?>">
-                            <span class="badge badge-primary badge-roundless"> ? </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><?php echo lang("earn_lightViewer"); ?></td>
+                    <td><?php
+                        if (isset($earnShort)) {
+                            echo "<a href=\"" . $earnShort . "\" >" . $earnShort . "</a>";
+                        } ?>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><?php echo lang("earn_lightViewer"); ?></td>
-                        <td><?php
-                            if (isset($earnShort)) {
-                                echo "<a href=\"" . $earnShort . "\" >" . $earnShort . "</a>";
-                            } ?>
-
-                        </td>
-                        <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
-                            data-original-title="<?php echo lang("earn_tiplightViewer"); ?>">
-                            <span class="badge badge-primary badge-roundless"> ? </span>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                    </td>
+                    <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
+                        data-original-title="<?php echo lang("earn_tiplightViewer"); ?>">
+                        <span class="badge badge-primary badge-roundless"> ? </span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
     <hr/>
@@ -126,7 +129,7 @@
             cache: false,
             success: function (result) {
                 document.getElementById("sites_urls").innerHTML = result;
-                geturl();
+                // geturl();
             }
         });
     }
@@ -137,7 +140,7 @@
 
         var sites_selector = document.getElementsByName("sites_selector");
         for (var i = 0; i < sites_selector.length; i++) {
-           // theurls.push();
+            // theurls.push();
             theurls.push({
                 urls_g: sites_selector[i].innerText,
                 site_id: sites_selector[i].getAttribute("site_id"),
@@ -215,9 +218,13 @@
                             }, 1000);
 
 
-                            timerId = setTimeout(geturl, theurls[current1].durations * 1000);
-                          //setTimeout(calculateCost(theurls[current1].site_id), theurls[current1].durations * 1000);
+                            timerId = setTimeout(function (){
+                                creditCalculation(theurls[current1].site_id);
+                                beginu();
+                              }, theurls[current1].durations * 1000);
 
+
+                            //setTimeout(calculateCost(theurls[current1].site_id), theurls[current1].durations * 1000);
 
 
                         }
@@ -235,12 +242,34 @@
     function calculateCost(id) {
         $.ajax({
             type: "POST",
-            url: base_url + "/index.php/Distrubition/SurfingCostCalculation/" +id ,
+            url: base_url + "/index.php/Distrubition/SurfingCostCalculation/" + id,
             cache: false,
             success: function (result) {
                 alert("kontrol et");
             }
         });
+    }
+
+    function beginu2() {
+
+        $.ajax({
+            type: "POST",
+            url: base_url + "/index.php/Earn/saveIP",
+            cache: false,
+            success: function (result) {
+                /*if (result == 1) {
+
+                 alert("hata2");
+                 }
+                 else */
+                {
+                    myWindow = window.open("", "myWindow");
+                    getUrlsFromDatabase();
+                }
+            }
+        });
+
+
     }
 
     function beginu() {
@@ -249,19 +278,38 @@
             type: "POST",
             url: base_url + "/index.php/Earn/saveIP",
             cache: false,
+            beforesend: function (result) {
+                myWindow = window.open("", "myWindow");
+                getUrlsFromDatabase();
+            },
             success: function (result) {
-                if (result == 1) {
+                geturl();
+            },
+            complete: function (result) {
 
-                    alert("hata");
-                }
-                else {
-                    myWindow = window.open("", "myWindow");
-                    getUrlsFromDatabase();
-                }
             }
         });
+    }
 
 
+    function deneme2() {
+        //idye kredi yükle
+        //denemeyi çağır
+        $.ajax({
+            type: "POST",
+            url: base_url + "/index.php/Earn/saveIP",
+            cache: false,
+            beforesend: function (result) {
+                myWindow = window.open("", "myWindow");
+                getUrlsFromDatabase();
+            },
+            success: function (result) {
+                geturl();
+            },
+            complete: function (result) {
+
+            }
+        });
     }
 
     function getFlashMovieObject(movieName) {

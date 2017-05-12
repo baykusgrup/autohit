@@ -2,7 +2,9 @@
     <div class="portlet-body">
         <div class="row">
             <div class="col-md-12">
-                <?php echo lang("home_home"); ?>
+                <?php
+                if ($this->session->userdata('user_id') == NULL) {  echo lang("home_home");  }
+                ?>
                 <?php echo lang("home_extra"); ?>
                 <hr/>
                 <?php echo lang("home_what"); ?>

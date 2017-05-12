@@ -56,7 +56,7 @@ $lang["CodeEditor"] = "Code Editor";
 $lang["home_home"] = "
     <p style=\"color: #0a6aa1;\">Free Auto Surf Service available ^^</p>
                <p>You can <a href='Register'>register</a> and start get visit to your sites until now :)</p>
-               <p>Extra Services are now available for everyone. With good wishes :)</p>";
+               ";
 
 $lang["home_what"] = "<h2>What is?</h2>
                 <p>NearlyWeb is an automated traffic exchange and web services system that distributes free visits. These systems allow you to increase your advertising revenue, rankings, impressions and more when used correctly.</p>";
@@ -69,7 +69,8 @@ $lang["home_diff"] = "<h3>Features and Features?</h3>
                     <li>It's a fast and fluid system, control is yours.</li>
                     <li>You can also use auto distrubution.</li>
                 </ul>";
-$lang["home_extra"] = "<h3>Extra Services</h3>
+$lang["home_extra"] = "<p>Extra Services are now available for everyone. With good wishes :)</p>
+<h3>Extra Services</h3>
                 <ul style=\"margin-left: -25px;\">
                     <li><a href=\"MyInfo\">My Info</a>:  This is a web page that shows all the information a site can learn about you. We thought you were right to know what we could see.
                     </li>
