@@ -219,4 +219,8 @@ class Distrubition extends CI_Controller {
 
 
     }
+
+    function controllSurfCredit($siteID){
+         $this->SurfingCostCalculation($siteID);
+    }
 }

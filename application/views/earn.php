@@ -35,7 +35,7 @@
             <br/>
             <table class="table table-hover table-striped table-bordered">
                 <tbody>
-
+                <a id="msg"></a>
                 <tr>
                     <td><?php echo lang("earn_AutoDistribution"); ?></td>
 
@@ -139,18 +139,18 @@
         var theurls = new Array();
 
         var sites_selector = document.getElementsByName("sites_selector");
-        for (var i = 0; i < sites_selector.length; i++) {
+       // for (var i = 0; i < sites_selector.length; i++) {
             // theurls.push();
             theurls.push({
-                urls_g: sites_selector[i].innerText,
-                site_id: sites_selector[i].getAttribute("site_id"),
-                visit_cost: sites_selector[i].getAttribute("visit_cost"),
-                durations: sites_selector[i].getAttribute("durations")
+                urls_g: sites_selector[0].innerText,
+                site_id: sites_selector[0].getAttribute("site_id"),
+                visit_cost: sites_selector[0].getAttribute("visit_cost"),
+                durations: sites_selector[0].getAttribute("durations")
             });
-        }
+       // }
 
 
-        current1 = parseInt(document.getElementById("currentk").value);
+        current1 = 0;
 
         if (!myWindow) {
             document.getElementById("msg").innerHTML = "Window has never been opened!";
@@ -218,10 +218,10 @@
                             }, 1000);
 
 
-                            timerId = setTimeout(function (){
-                                creditCalculation(theurls[current1].site_id);
+                            timerId = setTimeout(function(){
                                 beginu();
-                              }, theurls[current1].durations * 1000);
+                                controllSurfCredit(theurls[current1].site_id);
+                            }, theurls[current1].durations * 1000);
 
 
                             //setTimeout(calculateCost(theurls[current1].site_id), theurls[current1].durations * 1000);
@@ -278,39 +278,17 @@
             type: "POST",
             url: base_url + "/index.php/Earn/saveIP",
             cache: false,
-            beforesend: function (result) {
+            beforeSend : function (result) {
                 myWindow = window.open("", "myWindow");
                 getUrlsFromDatabase();
             },
-            success: function (result) {
+            success : function (result) {
                 geturl();
-            },
-            complete: function (result) {
-
             }
         });
     }
 
 
-    function deneme2() {
-        //idye kredi yükle
-        //denemeyi çağır
-        $.ajax({
-            type: "POST",
-            url: base_url + "/index.php/Earn/saveIP",
-            cache: false,
-            beforesend: function (result) {
-                myWindow = window.open("", "myWindow");
-                getUrlsFromDatabase();
-            },
-            success: function (result) {
-                geturl();
-            },
-            complete: function (result) {
-
-            }
-        });
-    }
 
     function getFlashMovieObject(movieName) {
         if (window.document[movieName]) {
@@ -381,4 +359,13 @@
         });
     }
 
+    function controllSurfCredit(id) {
+        $.ajax({
+            type: "POST",
+            url: base_url + "/index.php/Distrubition/controllSurfCredit/"+id,
+            cache: false,
+            success: function (result) {
+            }
+        });
+    }
 </script>
