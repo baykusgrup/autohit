@@ -338,6 +338,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="heading">
                                 <h3 class="uppercase"><?php echo lang("AboutSite"); ?></h3>
                             </li>
+                            <!-- v2
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Earn" class="nav-link nav-toggle">
                                     <i class="icon-settings"></i>
@@ -356,6 +357,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <span class="title"><?php echo lang("BlockedSites"); ?></span>
                                 </a>
                             </li>
+
+                            -->
+
+                            <li class="nav-item  ">
+                                <a href="<?php echo base_url() ?>BannerExchange" class="nav-link nav-toggle">
+                                    <i class="icon-settings"></i>
+                                    <span class="title"><?php echo lang("Banner_Exchange"); ?></span>
+                                </a>
+                            </li>
+
+
 
                             <li class="heading">
                                 <h3 class="uppercase"><?php echo lang("OtherThinks"); ?></h3>

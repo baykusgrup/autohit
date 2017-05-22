@@ -23,6 +23,41 @@ Class Sites_model extends CI_Model
         return $query->result_array();
 
     }
+
+
+    function getMyBannersByUserIDAllWithVisits($user_id){
+        $_SQL = "SELECT w.websites_id,w.url_title,w.url,w.url_img,w.visit_cost,w.duration_sec_id, w.record_status,
+                (select count(s.static_siteSurf_info_id)  from static_sitesurf_info s where s.website_id=w.websites_id and s.record_status=1) TotalVisit,
+                (select count(s.static_siteSurf_info_id)  from static_sitesurf_info s where s.website_id=w.websites_id and s.record_status=1 and (s.surf_date >=  DATE_ADD(NOW(), INTERVAL -1 DAY) 
+                 and s.surf_date <=  NOW()) ) TodayVisit
+                 FROM websitesbanner w 
+                 WHERE  w.user_id=".$user_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
+
+    function getBannerFromDatabaseNotBlockedAndNotMySites($user_id){
+        $_SQL = "SELECT w.`websites_id`,w.`url_title`,w.`url`,w.`url_img`,w.`visit_cost`,pd.`durations_sec` FROM websitesbanner w 
+				  inner join prt_durations pd on pd.`record_status`=1 and pd.`prt_durations_id`= w.`duration_sec_id`
+              	  where w.record_status=1 
+              	  and w.user_id!=".$user_id."
+                  and  w.`websites_id` NOT IN (select ub.blocked_webSite_id 
+                                               from users_blocked ub 
+                                               where ub.record_status=1 
+                                               and ub.blocked_webSite_id=w.`websites_id`)
+                  ORDER BY RAND() LIMIT 1";
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
+
+
+
  function getMySitesByUserIDAllWithVisits($user_id){
         $_SQL = "SELECT w.websites_id,w.page_title,w.url,w.credits,w.visit_cost,w.duration_sec_id, w.record_status,
                 (select count(s.static_siteSurf_info_id)  from static_sitesurf_info s where s.website_id=w.websites_id and s.record_status=1) TotalVisit,
@@ -36,6 +71,7 @@ Class Sites_model extends CI_Model
         return $query->result_array();
 
     }
+
 
        function getUrlsFromDatabase(){
         $_SQL = "SELECT w.`websites_id`,w.`page_title`,w.`url`,w.`credits`,w.`visit_cost`,pd.`durations_sec` FROM `websites` w 
@@ -72,7 +108,7 @@ Class Sites_model extends CI_Model
 
     }
     function getWalletByUserID($user_id){
-        $_SQL = "SELECT user_wallet_id,user_id,total_credits,earn_credits,wasted_credits  FROM user_wallet WHERE record_status=1 and user_id=".$user_id;
+        $_SQL = "SELECT user_wallet_id,user_id,total_credits,earn_credits,wasted_credits,banner_credits  FROM user_wallet WHERE record_status=1 and user_id=".$user_id;
 
 
         $query = $this->db->query($_SQL);

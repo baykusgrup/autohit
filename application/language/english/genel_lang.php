@@ -46,9 +46,23 @@ $lang["PageRenderedIn"] = "Page Rendered In";
 $lang["Seconds"] = "Seconds";
 
 $lang["LinkExchange"] = "Link Exchange";
+$lang["BannerExchange"] = "Banner Exchange";
+
 $lang["AutoBacklink"] = "Auto Backlink";
 $lang["MyInfo"] = "My Info";
 $lang["CodeEditor"] = "Code Editor";
+
+
+
+$lang["Auto_Surf"] = "Auto Surf";
+$lang["Banner_Exchange"] = "Banner Exchange";
+$lang["MyBanner"] = "My Banners";
+$lang["MyBannerCode"] = "Banner Code";
+$lang["MyBanners"] = "My Banners";
+
+$lang["BannerCredit"] = "will be shown (times)";
+$lang["AddBanner"] = "Add Banner";
+
 
 //Home
 
