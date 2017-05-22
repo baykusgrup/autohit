@@ -31,7 +31,7 @@
                 </tr>
             </table>
             <br/>
-            <a id="beginid" role="button" onclick="beginu()" class="btn blue btn-block"> <?php echo lang("earn_viewer"); ?></a>
+            <a role="button" onclick="beginu()" class="btn blue btn-block"> <?php echo lang("earn_viewer"); ?></a>
             <br/>
             <table class="table table-hover table-striped table-bordered">
                 <tbody>
@@ -246,10 +246,8 @@
             url: base_url + "/index.php/Earn/saveIP",
             cache: false,
             beforeSend: function (result) {
-                document.getElementById('beginid').style.display='none';
                 myWindow = window.open("", "myWindow");
                 getUrlsFromDatabase();
-
             },
             success: function (result) {
                 geturl();
