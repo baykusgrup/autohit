@@ -244,30 +244,39 @@
         var status = $("#siteStatus_selector").val();
 
         var dataString = "title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost + "&status=" + status;
+        if(url.indexOf("http://") >=0 || url.indexOf("https://") >= 0 ){
 
-        if (site_id == "-2") {
-            if (parseFloat(i_credit) >= parseFloat(credits)) {
-                $.ajax({
-                    type: "POST",
-                    url: base_url + "/index.php/Sites/addSite",
-                    data: dataString,
-                    cache: false,
-                    success: function (result) {
-                        //alert(dataString);
-                        SuccessAlert("We added your url! ", "addSite_alert");
-                        controllCredits();
-                        controllSites();
-                    }
-                });
+            if (site_id == "-2") {
+                if (parseFloat(i_credit) >= parseFloat(credits)) {
+                    $.ajax({
+                        type: "POST",
+                        url: base_url + "/index.php/Sites/addSite",
+                        data: dataString,
+                        cache: false,
+                        success: function (result) {
+                            //alert(dataString);
+                            SuccessAlert("We added your url! ", "addSite_alert");
+                            $( "#search_UserClose" ).click();
+                            controllCredits();
+                            controllSites();
+
+                        }
+                    });
+                }
+                else {
+                    WarningAlert("Your credits arent lower than site credits ", "addSite_alert");
+                }
+
             }
             else {
-                WarningAlert("Your credits arent lower than site credits ", "addSite_alert");
+                updateSite();
             }
+        } else {
+            WarningAlert("Your URL must include 'http://' or 'https://'   ", "addSite_alert");
+        }
 
-        }
-        else {
-            updateSite();
-        }
+
+
 
 
     }
@@ -282,22 +291,33 @@
         var status = $("#siteStatus_selector").val();
 
         var dataString = "siteID=" + site_id + "&title=" + title + "&url=" + url + "&credits=" + credits + "&duration_id=" + duration_id + "&visits_cost=" + visits_cost + "&status=" + status;
-        if (parseFloat(i_credit) >= parseFloat(credits)) {
-            $.ajax({
-                type: "POST",
-                url: base_url + "/index.php/Sites/updateSite",
-                data: dataString,
-                cache: false,
-                success: function (result) {
-                    //alert(dataString);
-                    SuccessAlert("We updated your url! ", "addSite_alert");
-                    controllCredits();
-                    controllSites();
-                }
-            });
-        } else {
-            WarningAlert("Your credits arent lower than site credits ", "addSite_alert");
+
+        if(url.indexOf("http://") >=0 || url.indexOf("https://") >= 0 ){
+            if (parseFloat(i_credit) >= parseFloat(credits)) {
+                $.ajax({
+                    type: "POST",
+                    url: base_url + "/index.php/Sites/updateSite",
+                    data: dataString,
+                    cache: false,
+                    success: function (result) {
+                        //alert(dataString);
+                        SuccessAlert("We updated your url! ", "addSite_alert");
+                        $( "#search_UserClose" ).click();
+                        controllCredits();
+                        controllSites();
+
+                    }
+                });
+            } else {
+                WarningAlert("Your credits arent lower than site credits ", "addSite_alert");
+            }
+
         }
+        else {
+            WarningAlert("Your URL must include 'http://' or 'https://'   ", "addSite_alert");
+        }
+
+
 
 
     }
@@ -311,7 +331,9 @@
             success: function (result) {
                 //alert(dataString);
                 SuccessAlert("We inactivated your url! ", "addSite_alert");
+                $( "#search_UserClose" ).click();
                 controllSites();
+
             }
         });
 

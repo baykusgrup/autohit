@@ -50,7 +50,8 @@ class Earn extends CI_Controller
         $result = $this->user->getIPInfo_Control($user_id);
         $deger = 0;
         if ($result != null) {
-            if ($result[0]["user_ip"] == $_SERVER["REMOTE_ADDR"] && $result[0]["record_status"] == "1") {  //$result[0]["record_status"] == "1"
+            if ($result[0]["user_ip"] == $_SERVER["REMOTE_ADDR"] && $result[0]["record_status"] == "1") {
+
                 $deger = 1;
 
 

@@ -54,8 +54,20 @@ class Sites extends CI_Controller {
         $dataSites["update_date"] = $dateTime;
         $dataSites["update_user"]= 0;
 
+
         $site_id = $this->generalTables_model->insertTables("websites",$dataSites);
-        return $site_id ;
+
+        if($site_id!=null){
+
+            $user_id= $this->session->userdata("user_id");
+            $userWallet=$this->sites_model->getWalletByUserID($user_id);
+            $dataWallet['total_credits'] =     $userWallet[0]['total_credits'] - $dataSites["credits"];
+
+            $updateID = $this->generalTables_model->updateTable("user_wallet",$userWallet[0]['user_wallet_id'],$dataWallet);
+            return $site_id ;
+        }
+
+
     }
 
     public function updateSite()
@@ -81,7 +93,17 @@ class Sites extends CI_Controller {
         $dataSites["update_user"]= $this->session->userdata("user_id");
 
         $site_id = $this->generalTables_model->updateTable("websites",$site_id,$dataSites);
-        return $site_id ;
+
+        if($site_id!=null){
+
+            $user_id= $this->session->userdata("user_id");
+            $userWallet=$this->sites_model->getWalletByUserID($user_id);
+            $dataWallet['total_credits'] =     $userWallet[0]['total_credits'] - $dataSites["credits"];
+
+            $updateID = $this->generalTables_model->updateTable("user_wallet",$userWallet[0]['user_wallet_id'],$dataWallet);
+            return $site_id ;
+        }
+
     }
 
     public function deleteSite($site_id)
@@ -95,6 +117,7 @@ class Sites extends CI_Controller {
 
     public function controllMySites()
     {
+        $this->load->helper(['language', 'lang', 'url']);
         $user_id = $this->session->userdata("user_id");
         $return = $this->sites_model->getMySitesByUserIDAllWithVisits($user_id);
         $HTML ="";
