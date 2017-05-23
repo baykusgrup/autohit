@@ -94,6 +94,10 @@ $lang["earn_ActiveViewer"] = "Aktif Ziyaret Motorları";
 $lang["earn_IPAdress"] = "IP Adresi";
 $lang["earn_Browser"] = "Tarayıcı";
 
+$lang["Banner_text"] = "Aşağıda verilen HTML kodununu sitenize eklediğinizde reklam değişim ağına dahil olmuş sayılırsınız. Sizin ne kadar çok gösterim sayınız var ise sizin reklamınızda okadar gösterilecektir. Ücretsiz değişim ağına şimiden hoş geldiniz.";
+
+
+$lang["banner_title"] = "Site Title";
 
 
 ?>

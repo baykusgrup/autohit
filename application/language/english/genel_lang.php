@@ -56,12 +56,16 @@ $lang["CodeEditor"] = "Code Editor";
 
 $lang["Auto_Surf"] = "Auto Surf";
 $lang["Banner_Exchange"] = "Banner Exchange";
-$lang["MyBanner"] = "My Banners";
+$lang["MyBanner"] = "Banners";
 $lang["MyBannerCode"] = "Banner Code";
 $lang["MyBanners"] = "My Banners";
 
-$lang["BannerCredit"] = "will be shown (times)";
+$lang["BannerCredit"] = "credit";
 $lang["AddBanner"] = "Add Banner";
+
+$lang["Banner_text"] = "If you add the HTML code below to your site, you will be included in the ad exchange network. The more impressions you have, the more numerous you will be shown to your ad as well. Welcome to the free exchange network.";
+
+$lang["banner_title"] = "Site Title";
 
 
 //Home

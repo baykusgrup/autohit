@@ -24,21 +24,6 @@ Class Sites_model extends CI_Model
 
     }
 
-
-    function getMyBannersByUserIDAllWithVisits($user_id){
-        $_SQL = "SELECT w.websites_id,w.url_title,w.url,w.url_img,w.visit_cost,w.duration_sec_id, w.record_status,
-                (select count(s.static_siteSurf_info_id)  from static_sitesurf_info s where s.website_id=w.websites_id and s.record_status=1) TotalVisit,
-                (select count(s.static_siteSurf_info_id)  from static_sitesurf_info s where s.website_id=w.websites_id and s.record_status=1 and (s.surf_date >=  DATE_ADD(NOW(), INTERVAL -1 DAY) 
-                 and s.surf_date <=  NOW()) ) TodayVisit
-                 FROM websitesbanner w 
-                 WHERE  w.user_id=".$user_id;
-
-
-        $query = $this->db->query($_SQL);
-        return $query->result_array();
-
-    }
-
     function getBannerFromDatabaseNotBlockedAndNotMySites($user_id){
         $_SQL = "SELECT w.`websites_id`,w.`url_title`,w.`url`,w.`url_img`,w.`visit_cost`,pd.`durations_sec` FROM websitesbanner w 
 				  inner join prt_durations pd on pd.`record_status`=1 and pd.`prt_durations_id`= w.`duration_sec_id`
@@ -56,6 +41,33 @@ Class Sites_model extends CI_Model
 
     }
 
+
+    function getBannersInfoBySiteID($site_id){
+        $_SQL = "SELECT wb.user_id,uw.user_wallet_id,uw.banner_credits,wb.websites_id,wb.url_title,wb.url,wb.showed,wb.visit_cost, wb.duration_sec_id,wb.unique_ip,wb.hide_referer,wb.random_referer
+                	 FROM websitesbanner wb 
+					inner JOIN user_wallet uw on wb.user_id=uw.user_id
+                 WHERE wb.record_status=1 and wb.websites_id=".$site_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
+
+
+    function getMyBannerByUserIDAllWithVisits($user_id){
+        $_SQL = "SELECT w.websites_id,w.url_title,w.url,url_img,w.visit_cost,w.duration_sec_id, w.record_status,
+                (select count(s.static_banner_info_id)  from static_banner_info s where s.website_id=w.websites_id and s.record_status=1) TotalVisit,
+                (select count(s.static_banner_info_id)  from static_banner_info s where s.website_id=w.websites_id and s.record_status=1 and (s.surf_date >=  DATE_ADD(NOW(), INTERVAL -1 DAY) 
+                 and s.surf_date <=  NOW()) ) TodayVisit
+                 FROM websitesbanner w 
+                 WHERE  w.user_id=".$user_id;
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
 
 
  function getMySitesByUserIDAllWithVisits($user_id){
