@@ -43,13 +43,13 @@ class BannerExchange extends CI_Controller
         $dataBanner["url_title"] = $this->input->post("title");
         $dataBanner["url"] = $this->input->post("url");
         $dataBanner["visit_cost"] = "1";
-        $dataBanner["duration_sec_id"] = "15";
+        $dataBanner["duration_sec_id"] = "1";
 
         $dataBanner["record_status"] = 1;
         $dataBanner["insert_date"] = $dateTime;
         $dataBanner["insert_user"] = 0;
         $dataBanner["update_date"] = $dateTime;
-        $dataBanner["update_user"] = 0;
+        $dataBanner["update_user"] = 1;
 
         $config = array();
         $config['upload_path'] = "./assets/uploads";
@@ -252,7 +252,6 @@ class BannerExchange extends CI_Controller
 
     public function RecordShowed($siteid)
     {
-
         $dateTime = date('Y-m-d H:i:s');
 
         $userWallet = $this->sites_model->getBannersInfoBySiteID($siteid);
@@ -261,11 +260,10 @@ class BannerExchange extends CI_Controller
 
         $userDetail = $this->sites_model->getMyBannerByUserIDAllWithVisits($user_id);
 
-
         $dataSites = array();
         $dataSites["user_id"] = $userWallet[0]["user_id"];
-        $dataSites["website_id"] = $userDetail[0]["websites_id"];
         $dataSites["ip"] = $_SERVER["REMOTE_ADDR"];
+        $dataSites["website_id"] = $userDetail[0]["websites_id"];
         $dataSites["surf_date"] = $dateTime;
         $dataSites["record_status"] = "1";
         $dataSites["insert_date"] = $dateTime;
@@ -273,8 +271,7 @@ class BannerExchange extends CI_Controller
         $dataSites["update_date"] = $dateTime;
         $dataSites["update_user"] = $user_id;
 
-        $wallet_id = $this->generalTables_model->insertTables("static_banner_info", $dataSites);
-
+        $user_id = $this->generalTables_model->insertTables("static_banner_info", $dataSites);
     }
 
 
