@@ -50,7 +50,7 @@
                                                 <td id='updateSite_siteID_" . $site["websites_id"] . "' >" . $site["websites_id"] . "</td>
                                                 <td id='updateSite_title_" . $site["websites_id"] . "'>" . substr($site["url_title"], 0, 15) . "</td>
                                                 <td id='updateSite_url_" . $site["websites_id"] . "'>" . substr(preg_replace('#^https?://#', '', rtrim($site["url"], '/')), 0, 20) . "</td>
-                                                <td style='display:none' id='updateBanner_img_url_" . $site["websites_id"] . "'>" . $site["url_img"] . "</td>
+                                        
                                                      <td style='display:none' id='updatebanner_logo_" . $site["websites_id"] . "'>" . $site["banner_logo"] . "</td>
                                                 <td style='display: none' id='updateSite_status_" . $site["websites_id"] . "'>" . $site["record_status"] . "</td>
                                                 
@@ -118,9 +118,7 @@
                                     <div class="col-md-9">
                                         <input type="text" class="form-control" placeholder="Site Title.."
                                                name="site_title" id="site_title"/>
-                                        <div class="help-block">
-                                            enter a brief description of the site.
-                                        </div>
+
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -133,13 +131,6 @@
 
                                 <div class="form-group">
                                     <label class="col-md-3">Banner URL (468x60) :</label>
-                                    <div class="col-md-9">
-                                        <input type="text" class="form-control" placeholder="Banner URL.."
-                                               name="banner_img_url" id="banner_img_url"/>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-3">Logo</label>
                                     <div class="col-md-4">
                                         <input readonly class="form-control spinner" type="text"
                                                placeholder="Upload Logo" name="banner_logo"
@@ -202,7 +193,6 @@
         var site_id = document.getElementById("site_id").value;
         var title = document.getElementById("site_title").value;
         var url = document.getElementById("site_url").value;
-        var banner_img_url = document.getElementById("banner_img_url").value;
         var status = $("#siteStatus_selector").val();
 
         var logo_old = $("#banner_logo_old").val();
@@ -210,7 +200,6 @@
         var logoText = $("input[name=files]").val();
         var fileToUpload = logo[0].files[0];
 
-        var dataString = "title=" + title + "&url=" + url + "&banner_img_url=" + banner_img_url + "&status=" + status;
 
         if (site_id == "-2") {
 
@@ -222,7 +211,6 @@
                     formData.append("file", fileToUpload);
                     formData.append("title", title);
                     formData.append("url", url);
-                    formData.append("banner_img_url", banner_img_url);
                     formData.append("logo", logo);
                     formData.append("status", status);
                     $.ajax({
@@ -265,7 +253,6 @@
         var site_id = document.getElementById("site_id").value;
         var title = document.getElementById("site_title").value;
         var url = document.getElementById("site_url").value;
-        var banner_img_url = document.getElementById("banner_img_url").value;
         var status = $("#siteStatus_selector").val();
 
 
@@ -280,7 +267,6 @@
             var formData = new FormData();
             formData.append("title", title);
             formData.append("url", url);
-            formData.append("banner_img_url", banner_img_url);
             formData.append("status", status);
             formData.append("site_id", site_id);
 
@@ -307,7 +293,6 @@
                 var formData = new FormData();
                 formData.append("title", title);
                 formData.append("url", url);
-                formData.append("banner_img_url", banner_img_url);
                 formData.append("status", status);
                 formData.append("site_id", site_id);
 
@@ -377,7 +362,6 @@
         document.getElementById("site_id").value = document.getElementById("updateSite_siteID_" + id).innerText;
         document.getElementById("site_title").value = document.getElementById("updateSite_title_" + id).innerText;
         document.getElementById("site_url").value = document.getElementById("updateSite_url_" + id).innerText;
-        document.getElementById("banner_img_url").value = document.getElementById("updateBanner_img_url_" + id).innerText;
 
         var logo = document.getElementById("updatebanner_logo_" + id).innerText;
         document.getElementById("banner_logo").value = logo;

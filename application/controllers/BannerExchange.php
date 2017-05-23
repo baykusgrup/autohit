@@ -42,7 +42,6 @@ class BannerExchange extends CI_Controller
         $dataBanner["user_id"] = $this->session->userdata("user_id");
         $dataBanner["url_title"] = $this->input->post("title");
         $dataBanner["url"] = $this->input->post("url");
-        $dataBanner["url_img"] = $this->input->post("banner_img_url");
         $dataBanner["visit_cost"] = "1";
         $dataBanner["duration_sec_id"] = "15";
 
@@ -80,7 +79,6 @@ class BannerExchange extends CI_Controller
 
         $dataBanner["url_title"] = $this->input->post("title");
         $dataBanner["url"] = $this->input->post("url");
-        $dataBanner["url_img"] = $this->input->post("banner_img_url");
         $dataBanner["visit_cost"] = "1";
         $dataBanner["duration_sec_id"] = "15";
 
@@ -108,7 +106,6 @@ class BannerExchange extends CI_Controller
 
         $dataBanner["url_title"] = $this->input->post("title");
         $dataBanner["url"] = $this->input->post("url");
-        $dataBanner["url_img"] = $this->input->post("banner_img_url");
         $dataBanner["visit_cost"] = "1";
         $dataBanner["duration_sec_id"] = "15";
 
@@ -158,7 +155,7 @@ class BannerExchange extends CI_Controller
                                                 <td id='updateSite_siteID_" . $site["websites_id"] . "' >" . $site["websites_id"] . "</td>
                                                 <td id='updateSite_title_" . $site["websites_id"] . "'>" . substr($site["url_title"], 0, 15) . "</td>
                                                 <td id='updateSite_url_" . $site["websites_id"] . "'>" . substr(preg_replace('#^https?://#', '', rtrim($site["url"], '/')), 0, 20) . "</td>
-                                                <td style='display:none' id='updateBanner_img_url_" . $site["websites_id"] . "'>" . $site["url_img"] . "</td>
+                                      
                                                 
                                                 <td style='display: none' id='updateSite_status_" . $site["websites_id"] . "'>" . $site["record_status"] . "</td>
                                                 

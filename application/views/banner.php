@@ -55,7 +55,7 @@
     image = new image();
     media = 0;
 
-    image[media++] = '<a target="_blank" href="<?php if (isset($visitsite[0]["url"])) {echo $visitsite[0]["url"];} ?>"><img border="0" src="<?php if (isset($visitsite[0]["url_img"])) {echo $visitsite[0]["url_img"];} ?>" alt="<?php if (isset($visitsite[0]["url_title"])) {echo $visitsite[0]["url_title"];} ?>" title="<?php if (isset($visitsite[0]["url_title"])) {echo $visitsite[0]["url_title"];} ?>" style="width: 468px; height: 60px;" /></a>'
+    image[media++] = '<a target="_blank" href="<?php if (isset($visitsite[0]["url"])) {echo $visitsite[0]["url"];} ?>"><img border="0" src="<?php if (isset($visitsite[0]["banner_logo"])) {echo base_url() . $visitsite[0]["banner_logo"];} ?>" alt="<?php if (isset($visitsite[0]["url_title"])) {echo $visitsite[0]["url_title"];} ?>" title="<?php if (isset($visitsite[0]["url_title"])) {echo $visitsite[0]["url_title"];} ?>" style="width: 468px; height: 60px;" /></a>'
 
     media = Math.floor(Math.random() * media);
     document.write(image[media]);
