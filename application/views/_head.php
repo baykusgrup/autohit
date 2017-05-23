@@ -379,7 +379,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <span class="title"><?php echo lang("BuyCredits"); ?></span>
                                 </a>
                             </li>
-                            -->
+
                             <li class="nav-item  ">
                                 <a href="<?php echo base_url() ?>index.php/Refferal" class="nav-link nav-toggle">
                                     <i class="icon-users"></i>
@@ -397,9 +397,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <i class="icon-directions"></i>
                                     <span class="title"><?php echo lang("Help"); ?></span>
                                 </a>
-                            </li>
+                            </li>-->
                             <li class="nav-item  ">
-                                <a href="mailto:info@autohit.com?subject=#sss Comments&body=Hi!"
+                                <a href="mailto:info@nearlyweb.com"
                                    class="nav-link nav-toggle">
                                     <i class="icon-envelope-letter"></i>
                                     <span class="title"><?php echo lang("ContactUs"); ?> </span>

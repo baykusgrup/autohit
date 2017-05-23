@@ -121,6 +121,7 @@
                         </td>
 
                     </tr>
+                    <!--
                     <tr>
                         <td> <?php echo lang("account_ViewerRate"); ?></td>
                         <td>
@@ -170,6 +171,7 @@
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
+                    -->
                     <tr>
                         <td> <?php echo lang("account_ReferanceCode"); ?></td>
                         <td>
@@ -178,12 +180,13 @@
                                 echo "<a href=\"" . $referanceShort . "\" >" . $referanceShort . "</a>";
                             } ?>
                         </td>
-
-                        <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
+<td></td>
+                        <!-- <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
                             data-original-title="<?php echo lang("account_tipReferanceCode"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
-                        </td>
+                        </td>-->
                     </tr>
+                  <!--
                     <tr>
                         <td> <?php echo lang("account_CreditsByPromotion"); ?>
                         </td>
@@ -194,10 +197,13 @@
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
+
+                    -->
                     </tbody>
                 </table>
             </div>
         </div>
+        <!--
         <hr/>
         <div class="row">
             <div class="col-md-12">
@@ -228,7 +234,7 @@
                 </table>
             </div>
         </div>
-
+-->
     </div>
 </div>
 

@@ -75,16 +75,14 @@
                 </p>
                 <hr/>
                 <p style="text-align: center">
-                    468x60
+                   <b>468x60</b>
                 </p>
                 <p style="text-align: center">
                     <script language="javascript"
                             src="<?php echo base_url() ?>BannerExchange/Call/468x60/<?php echo $userid ?>"></script>
                 </p>
 
-                <textarea style="margin-bottom: 10px" class="col-md-12" rows="3"> <!--NearlyWeb Banner--><script
-                            language="javascript"
-                            src="<?php echo base_url() ?>BannerExchange/Call/468x60/<?php echo $userid ?>"></script>
+                <textarea style="margin-bottom: 10px" class="col-md-12" rows="3"> <!--NearlyWeb Banner--><script language="javascript" src="<?php echo base_url() ?>BannerExchange/Call/468x60/<?php echo $userid ?>"></script>
                     <!--NearlyWeb Banner--> </textarea>
 
             </div>
@@ -97,7 +95,7 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal"
                                     aria-hidden="true"></button>
-                            <h4 class="modal-title">Add Site Detail</h4>
+                            <h4 class="modal-title"><?php echo lang("add_site_detail"); ?></h4>
                         </div>
                         <div class="modal-body">
                             <form class="form-horizontal" role="form" id="addSite_form">
@@ -143,7 +141,7 @@
                                     <div id="tab_images_uploader_container" class="margin-bottom-10 col-md-5">
                                         <div id="notification"></div>
                                         <label for="file-upload" class="md-col-5 btn green" style="cursor: pointer;">
-                                            <i class="fa fa-plus"></i> Upload
+                                            <i class="fa fa-plus"> </i><?php echo lang("upload"); ?>
                                         </label>
                                         <input id="file-upload" style="display:none;" type="file"
                                                onchange="writefileName();" name="files">
@@ -152,13 +150,13 @@
 
 
                                 <div class="form-group">
-                                    <label class="col-md-3">Banner Status :</label>
+                                    <label class="col-md-3"><?php echo lang("banner_status"); ?></label>
                                     <div class="col-md-9">
                                         <select id="siteStatus_selector"
                                                 class="form-control" name="siteStatus_selector">
-                                            <option value="-1"> Select Status</option>
-                                            <option value="0"> Passive</option>
-                                            <option value="1"> Active</option>
+                                            <option value="-1"><?php echo lang("select_status"); ?></option>
+                                            <option value="0"><?php echo lang("passive"); ?> </option>
+                                            <option value="1"><?php echo lang("active"); ?> </option>
 
 
                                         </select>
