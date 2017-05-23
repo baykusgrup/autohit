@@ -13,7 +13,7 @@ $lang["Saved"] = "Kaydedildi";
 //sidebar, head, foot
 
 
-$lang["title"] = "NearlyWeb | Autosurf, This autosurf can help you to increase your rankings.";
+$lang["title"] = "NearlyWeb | Banner değişimi, Bu otomatik sistem, reklamınızı yapmak için size yardım edecektir.";
 $lang["description"] = "Autosurf, get free geo-targeted visitors to your video, website or blog. This autosurf can help you to increase your rankings. Helpful SEO tool.";
 
 
@@ -109,7 +109,7 @@ $lang["home_home_be"] = "
 $lang["home_what_be"] = "<h2>Nedir?</h2>
                 <p>NearlyWeb kısaca sen benim reklamımı gösteriyorsan bende senin reklamını gösteririm mantığıyla çalışmaktadır.</p>";
 $lang["home_how_be"] = "<h3>Nasıl Çalışır ?</h3>
-                <p>BannerExchange Sayfasındaki HTML kodunu eklerseniz, reklam değişim ağına dahil olursunuz. Ne kadar çok gösterimde bulunursanız, sizin reklamınıza o kadar çok sayıda gösterilir. Ücretsiz Banner Değişim ağına hoş geldiniz.Reklam aşağıdaki gibi bir görüntüye sahip olacaktır.</p> <center><script language=\"javascript\" src=\"http://127.0.0.1/autohit/BannerExchange/Call/468x60/2\"></script></center> ";
+                <p>BannerExchange Sayfasındaki HTML kodunu eklerseniz, reklam değişim ağına dahil olursunuz. Ne kadar çok gösterimde bulunursanız, sizin reklamınıza o kadar çok sayıda gösterilir. Ücretsiz Banner Değişim ağına hoş geldiniz.Reklam aşağıdaki gibi bir görüntüye sahip olacaktır.</p> <center><script language=\"javascript\" src=\"http://nearlyweb.com/BannerExchange/Call/468x60/2\"></script></center> ";
 $lang["home_diff_be"] = "<h3>Özellikler?</h3>
                 <ul style=\"margin-left: -25px;\">
                     <li>Ziyaretçi, frame içinde olmaksızın doğrudan bir bağlantı gönderir.</li>
@@ -117,7 +117,7 @@ $lang["home_diff_be"] = "<h3>Özellikler?</h3>
                 </ul>";
 
 //Login
-
+$lang["user"]= "Kullanıcı";
 $lang["login_Login"] = "Login";
 $lang["login_Enter_username_and_password"] = "Enter any username and password.";
 $lang["login_Remember_me"] = "Remember me";
@@ -168,11 +168,11 @@ $lang["buy_BuyExpOne"] = "If the viewer does not generate enough credits for you
 
 //Register
 
-$lang["register_UserName"] = "User Name";
-$lang["register_EmailAddress"] = "Email Address";
-$lang["register_Password"] = "Password";
-$lang["register_Refferal"] = "Referral";
-$lang["register_NewMember"] = "New Member";
+$lang["register_UserName"] = "Kullanıcı Adı";
+$lang["register_EmailAddress"] = "Email Addresi";
+$lang["register_Password"] = "Şifre";
+$lang["register_Refferal"] = "Referans";
+$lang["register_NewMember"] = "Yeni Üye";
 
 
 //Register tooltip
@@ -188,7 +188,7 @@ $lang["refferal_ifYouPrefer"] = "Or, if you prefer, you can add this banner on y
 $lang["refferal_YouEarnOf"] = "You earn 10% of all credits that members registered through your referral link will earn using the viewer.";
 $lang["refferal_BelowIsTheList"] = "Below is the list of members and the number of credits you have earned.";
 $lang["refferal_YourReferrals"] = "Your referrals";
-$lang["refferal_Username"] = "Username";
+$lang["refferal_Username"] = "Kullanıcı Adı";
 $lang["refferal_Registered"] = "Registered";
 
 //Statistics

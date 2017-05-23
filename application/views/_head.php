@@ -28,6 +28,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta content="BaykusGrup" name="author"/>
     <link rel="shortcut icon" href="<?php echo base_url() ?>favicon.ico"/>
 
+    <meta name="google-site-verification" content="qjeMpLELZbdZy5xx3FG0hGfml0dOcqcU9nNFYPC6U3E" />
+
+
     <?php if (!isset($_COOKIE['dil'])) {
         $_COOKIE['dil'] = "us";
     }
@@ -204,7 +207,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                data-close-others="true">
 
                             <span class="username username-hide-on-mobile"> <i class="icon-user"></i> <span
-                                        class="username username-hide-on-mobile"> USER </span> <i
+                                        class="username username-hide-on-mobile"> <?php echo lang("user"); ?> </span> <i
                                         class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-default">

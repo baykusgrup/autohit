@@ -13,8 +13,8 @@ $lang["Saved"] = "Saved";
 //sidebar, head, foot
 
 
-$lang["title"] = "NearlyWeb | Autosurf, This autosurf can help you to increase your rankings.";
-$lang["description"] = "Autosurf, get free geo-targeted visitors to your video, website or blog. This autosurf can help you to increase your rankings. Helpful SEO tool.";
+$lang["title"] = "NearlyWeb | Banner exchange, This auto exchange can help you to increase your rankings.";
+$lang["description"] = "Banner, Reklam değişimi bugünün en popüler ücretsiz tanıtım araçlarından biridir. Sitenize iyi bir miktar trafik çekebilirsiniz. Yararlı bir SEO aracı.";
 
 $lang["MyAccount"] = "My Account";
 $lang["AboutSite"] = "ABOUT SITE";
@@ -107,7 +107,7 @@ $lang["home_home_be"] = "
 $lang["home_what_be"] = "<h2>What is?</h2>
                 <p>NearlyWeb  idea is If you show my banner i will show yours...</p>";
 $lang["home_how_be"] = "<h3>How it works ?</h3>
-                <p>If you add the HTML code on BannerExchange Page, you will be included in the ad exchange network. The more impressions you have, the more numerous you will be shown to your ad as well. Welcome to the free exchange network. Add will be like bottom</p><center><script language=\"javascript\" src=\"http://127.0.0.1/autohit/BannerExchange/Call/468x60/2\"></script></center>";
+                <p>If you add the HTML code on BannerExchange Page, you will be included in the ad exchange network. The more impressions you have, the more numerous you will be shown to your ad as well. Welcome to the free exchange network. Add will be like bottom</p><center><script language=\"javascript\" src=\"http://nearlyweb.com/BannerExchange/Call/468x60/2\"></script></center>";
 $lang["home_diff_be"] = "<h3>Features and Features?</h3>
                 <ul style=\"margin-left: -25px;\">
                     <li>The visitor sends a direct link without opening the frame.</li>
@@ -116,6 +116,7 @@ $lang["home_diff_be"] = "<h3>Features and Features?</h3>
 
 //Login
 
+$lang["user"]= "USER";
 $lang["login_Login"] = "Login";
 $lang["login_Enter_username_and_password"] = "Enter any username and password.";
 $lang["login_Remember_me"] = "Remember me";
