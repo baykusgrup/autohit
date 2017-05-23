@@ -35,43 +35,105 @@ class BannerExchange extends CI_Controller
     {
 
         $dateTime = date('Y-m-d H:i:s');
+        $unique = uniqid();
 
-        $dataSites = array();
-        $dataSites["user_id"] = $this->session->userdata("user_id");
-        $dataSites["url_title"] = $this->input->post("title");
-        $dataSites["url"] = $this->input->post("url");
-        $dataSites["url_img"] = $this->input->post("banner_img_url");
-        $dataSites["visit_cost"] = "1";
-        $dataSites["duration_sec_id"] = "15";
+        $dataBanner = array();
 
-        $dataSites["record_status"] = 1;
-        $dataSites["insert_date"] = $dateTime;
-        $dataSites["insert_user"] = 0;
-        $dataSites["update_date"] = $dateTime;
-        $dataSites["update_user"] = 0;
+        $dataBanner["user_id"] = $this->session->userdata("user_id");
+        $dataBanner["url_title"] = $this->input->post("title");
+        $dataBanner["url"] = $this->input->post("url");
+        $dataBanner["url_img"] = $this->input->post("banner_img_url");
+        $dataBanner["visit_cost"] = "1";
+        $dataBanner["duration_sec_id"] = "15";
 
-        $site_id = $this->generalTables_model->insertTables("websitesbanner", $dataSites);
-        return $site_id;
+        $dataBanner["record_status"] = 1;
+        $dataBanner["insert_date"] = $dateTime;
+        $dataBanner["insert_user"] = 0;
+        $dataBanner["update_date"] = $dateTime;
+        $dataBanner["update_user"] = 0;
+
+        $config = array();
+        $config['upload_path'] = "./assets/uploads";
+        $config["allowed_types"] = 'jpg|jpeg';
+        $config["overwrite"] = true;
+        $config["file_name"] = "banner_" . $unique . ".jpg";
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload("file")) {
+            $path = "assets/uploads/";
+            $dataBanner["banner_logo"] = $path . $config["file_name"];
+            $dataBanner["uniqueid"] = $unique;
+            $record_id = $this->generalTables_model->insertTables("websitesbanner", $dataBanner);
+            echo $record_id;
+        } else {
+            echo "Error";
+        }
+
     }
 
-    public function updateSite()
-    {
-        $site_id = $this->input->post("site_id");
+    public function updateSiteOnly(){
+
         $dateTime = date('Y-m-d H:i:s');
 
-        $dataSites = array();
-        $dataSites["url_title"] = $this->input->post("title");
-        $dataSites["url"] = $this->input->post("url");
-        $dataSites["url_img"] = $this->input->post("banner_img_url");
-        $dataSites["visit_cost"] = "1";
-        $dataSites["duration_sec_id"] = "15";
+        $site_id = $this->input->post("site_id");
+        $dataBanner = array();
 
-        $dataSites["record_status"] = $this->input->post("status");
-        $dataSites["update_date"] = $dateTime;
-        $dataSites["update_user"] = $this->session->userdata("user_id");
+        $dataBanner["url_title"] = $this->input->post("title");
+        $dataBanner["url"] = $this->input->post("url");
+        $dataBanner["url_img"] = $this->input->post("banner_img_url");
+        $dataBanner["visit_cost"] = "1";
+        $dataBanner["duration_sec_id"] = "15";
 
-        $site_id = $this->generalTables_model->updateTable("websitesbanner", $site_id, $dataSites);
-        return $site_id;
+        $dataBanner["record_status"] = $this->input->post("status");
+        $dataBanner["update_date"] = $dateTime;
+        $dataBanner["update_user"] = $this->session->userdata("user_id");
+
+
+        $site_id = $this->generalTables_model->updateTable("websitesbanner", $site_id, $dataBanner);
+        echo $site_id;
+
+
+    }
+
+
+    public function updateSiteAll()
+    {
+
+        $dateTime = date('Y-m-d H:i:s');
+
+        $site_id = $this->input->post("site_id");
+        $data = $this->sites_model->getBannerUniqueID($site_id);
+        $unique = $data[0]["uniqueid"];
+        $dataBanner = array();
+
+        $dataBanner["url_title"] = $this->input->post("title");
+        $dataBanner["url"] = $this->input->post("url");
+        $dataBanner["url_img"] = $this->input->post("banner_img_url");
+        $dataBanner["visit_cost"] = "1";
+        $dataBanner["duration_sec_id"] = "15";
+
+        $dataBanner["record_status"] = $this->input->post("status");
+        $dataBanner["update_date"] = $dateTime;
+        $dataBanner["update_user"] = $this->session->userdata("user_id");
+
+
+        $config = array();
+        $config['upload_path'] = "./assets/uploads";
+        $config["allowed_types"] = 'jpg|jpeg';
+        $config["overwrite"] = true;
+        $config["file_name"] = "banner_" . $unique . ".jpg";
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload("file")) {
+            $path = "assets/uploads/";
+            $dataBanner["banner_logo"] = $path . $config["file_name"];
+            $record_id = $this->generalTables_model->updateTable("websitesbanner", $site_id, $dataBanner);
+            echo $record_id;
+        } else {
+            echo "Error";
+        }
+
+
     }
 
     public function deleteSite($site_id)

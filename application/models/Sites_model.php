@@ -56,7 +56,7 @@ Class Sites_model extends CI_Model
 
 
     function getMyBannerByUserIDAllWithVisits($user_id){
-        $_SQL = "SELECT w.websites_id,w.url_title,w.url,url_img,w.visit_cost,w.duration_sec_id, w.record_status,
+        $_SQL = "SELECT w.websites_id,w.url_title,w.url,w.banner_logo,w.url_img,w.visit_cost,w.duration_sec_id, w.record_status,
                 (select count(s.static_banner_info_id)  from static_banner_info s where s.website_id=w.websites_id and s.record_status=1) TotalVisit,
                 (select count(s.static_banner_info_id)  from static_banner_info s where s.website_id=w.websites_id and s.record_status=1 and (s.surf_date >=  DATE_ADD(NOW(), INTERVAL -1 DAY) 
                  and s.surf_date <=  NOW()) ) TodayVisit
@@ -67,6 +67,13 @@ Class Sites_model extends CI_Model
         $query = $this->db->query($_SQL);
         return $query->result_array();
 
+    }
+
+    function getBannerUniqueID($site_id){
+        $_SQL = "SELECT websites_id,record_status,uniqueid FROM websitesbanner
+                  WHERE record_status=1 and websites_id=".$site_id;
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
     }
 
 
