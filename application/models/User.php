@@ -86,12 +86,13 @@ Class User extends CI_Model
         $data["ip"] = $_SERVER["REMOTE_ADDR"];
         $data["tarayiciversiyonu"] = $_SERVER["HTTP_USER_AGENT"];
         $data["serverversiyonu"] = $_SERVER["SERVER_SOFTWARE"];
-        $data["scriptdili"] = $_SERVER["GATEWAY_INTERFACE"];
         $data["baglantituru"] = $_SERVER["HTTP_CONNECTION"];
         $data["serveradi"] = $_SERVER["SERVER_NAME"];
         $data["kodlamaturu"] = $_SERVER["HTTP_ACCEPT_ENCODING"];
         $data["serverportu"] = $_SERVER["SERVER_PORT"];
-        $data["oncekisayfa"] = $_SERVER["HTTP_REFERER"];
+
+        if (isset($_SERVER['GATEWAY_INTERFACE'])) { $data["scriptdili"] = $_SERVER["GATEWAY_INTERFACE"];}
+        if (isset($_SERVER['HTTP_REFERER'])) { $data["oncekisayfa"] = $_SERVER["HTTP_REFERER"];}
 
         return $data;
 

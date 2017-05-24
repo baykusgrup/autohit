@@ -78,7 +78,7 @@
                    <b>468x60</b>
                 </p>
                 <p style="text-align: center">
-                    <script language="javascript" src="<?php echo base_url() ?>BannerExchange/Call/468x60/<?php echo $userid ?>"></script>
+                    <script language="javascript" src="<?php echo base_url() ?>bannerexchange/Call/468x60/<?php echo $userid ?>"></script>
                 </p>
 
                 <textarea style="margin-bottom: 10px" class="col-md-12" rows="3"> <!--NearlyWeb Banner--><script language="javascript" src="<?php echo base_url() ?>BannerExchange/Call/468x60/<?php echo $userid ?>"></script>

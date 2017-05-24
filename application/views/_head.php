@@ -142,28 +142,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <span class="langname"><?php echo $_COOKIE['dil']; ?></span> <i
                                     class="fa fa-angle-down"></i> </a>
                         <ul class="dropdown-menu dropdown-menu-default">
-                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/us"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/us"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/us.png">
                                     English
                                 </a></li>
-                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/tr"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/tr"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/tr.png">
                                     Turkish
                                 </a></li>
                             <!-- v2
-                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/fa"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/fa"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/fa.png">
                                     Persian
                                 </a></li>
-                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/de"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/de"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/de.png">
                                     German
                                 </a></li>
-                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/ru"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/ru"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/ru.png">
                                     Russian
                                 </a></li>
-                            <li><a href="<?php echo base_url(); ?>index.php/Login/dilDegistir/it"> <img alt=""
+                            <li><a href="<?php echo base_url(); ?>Login/dilDegistir/it"> <img alt=""
                                                                                                         src="<?php echo base_url() ?>assets/global/img/flags/it.png">
                                     Italian
                                 </a></li>
@@ -185,12 +185,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <ul class="dropdown-menu dropdown-menu-default">
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="<?php echo base_url() ?>index.php/Login">
+                                    <a href="<?php echo base_url() ?>Login">
                                         <i class="icon-home"></i> <?php echo lang("Login"); ?> </a>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="<?php echo base_url() ?>index.php/Register">
+                                    <a href="<?php echo base_url() ?>Register">
                                         <i class="icon-key"></i> <?php echo lang("Register"); ?> </a>
                                 </li>
                                 <li class="divider"></li>
@@ -212,12 +212,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </a>
                             <ul class="dropdown-menu dropdown-menu-default">
                                 <li>
-                                    <a href="<?php echo base_url() ?>index.php/Account">
+                                    <a href="<?php echo base_url() ?>Account">
                                         <i class="icon-home"></i> <?php echo lang("MyAccount"); ?> </a>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="<?php echo base_url() ?>index.php/VerifyLogin/sessionDestroy">
+                                    <a href="<?php echo base_url() ?>VerifyLogin/sessionDestroy">
                                         <i class="icon-key"></i> <?php echo lang("Logout"); ?> </a>
                                 </li>
                             </ul>
@@ -272,13 +272,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <h3 class="uppercase"><?php echo lang("WelcomeSite"); ?></h3>
                             </li>
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Login" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>Login" class="nav-link nav-toggle">
                                     <i class="icon-settings"></i>
                                     <span class="title"><?php echo lang("Login"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Register" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>Register" class="nav-link nav-toggle">
                                     <i class="icon-user"></i>
                                     <span class="title"><?php echo lang("Register"); ?></span>
                                 </a>
@@ -286,12 +286,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <li class="heading">
                                 <h3 class="uppercase"><?php echo lang("OtherThinks"); ?></h3>
                             </li>
+                            <!--
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Help" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>Help" class="nav-link nav-toggle">
                                     <i class="icon-directions"></i>
                                     <span class="title"><?php echo lang("Help"); ?></span>
                                 </a>
-                            </li>
+                            </li>-->
                             <li class="nav-item  ">
                                 <a href="mailto:info@nearlyweb.com?subject=#NearlyWeb Comments&body=Hi!"
                                    class="nav-link nav-toggle">
@@ -333,7 +334,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </a>
                             </li>
                             <li class="nav-item start ">
-                                <a href="<?php echo base_url() ?>index.php/Account" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>Account" class="nav-link nav-toggle">
                                     <i class="icon-user"></i>
                                     <span class="title"><?php echo lang("MyAccount"); ?></span>
                                 </a>
@@ -343,19 +344,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </li>
                             <!-- v2
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Earn" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>Earn" class="nav-link nav-toggle">
                                     <i class="icon-settings"></i>
                                     <span class="title"><?php echo lang("EarnCredits"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Sites" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>Sites" class="nav-link nav-toggle">
                                     <i class="icon-diamond"></i>
                                     <span class="title"><?php echo lang("MySites"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Blocked" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>Blocked" class="nav-link nav-toggle">
                                     <i class="icon-dislike"></i>
                                     <span class="title"><?php echo lang("BlockedSites"); ?></span>
                                 </a>
@@ -377,26 +378,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </li>
                             <!-- v2
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Buy" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>Buy" class="nav-link nav-toggle">
                                     <i class="icon-wallet"></i>
                                     <span class="title"><?php echo lang("BuyCredits"); ?></span>
                                 </a>
                             </li>
 
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Refferal" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>Refferal" class="nav-link nav-toggle">
                                     <i class="icon-users"></i>
                                     <span class="title"><?php echo lang("Refferal"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Statistics" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>Statistics" class="nav-link nav-toggle">
                                     <i class="icon-bar-chart"></i>
                                     <span class="title"><?php echo lang("Statistics"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>index.php/Help" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>Help" class="nav-link nav-toggle">
                                     <i class="icon-directions"></i>
                                     <span class="title"><?php echo lang("Help"); ?></span>
                                 </a>
