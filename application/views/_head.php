@@ -72,8 +72,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- END PAGE LEVEL PLUGINS -->
         <?php
     } else {
-        ?>
-
+        ?> <!-- BEGIN PAGE LEVEL PLUGINS -->
+        <link href="<?php echo base_url(); ?>assets/global/plugins/codemirror/lib/codemirror.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>assets/global/plugins/codemirror/theme/neat.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>assets/global/plugins/codemirror/theme/ambiance.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>assets/global/plugins/codemirror/theme/material.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>assets/global/plugins/codemirror/theme/neo.css" rel="stylesheet" type="text/css" />
+        <!-- END PAGE LEVEL PLUGINS -->
         <?php
     }
     ?>

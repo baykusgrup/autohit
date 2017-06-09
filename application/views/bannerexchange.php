@@ -16,16 +16,18 @@
 
 
                 <div class="portlet-fit ">
+                     <span colspan="2" class="font-red-intense">
+                            <?php echo lang("MyBanner"); ?> - <?php echo lang("BannerCredit"); ?>: <a style="color:#000;"
+                                 id="i_credit"><?php if (isset($userWallet[0]["banner_credits"])) {
+                                 echo $userWallet[0]["banner_credits"];
+                             } ?></a></span>
                     <div class="table-scrollable">
+
+
                         <table class="table table-bordered table-hover">
                             <tr>
-                                <th colspan="4" class="font-red-intense">
-                                    <?php echo lang("MyBanner"); ?> - <?php echo lang("BannerCredit"); ?>: <a
-                                            id="i_credit"><?php if (isset($userWallet[0]["banner_credits"])) {
-                                            echo $userWallet[0]["banner_credits"];
-                                        } ?></a></th>
 
-                                <th colspan="2">
+                                <th colspan="5">
 
                                     <a type="button" onclick="clearAddbannerForm();"
                                        href="#modal_addSite" class="btn blue btn-block"
@@ -35,7 +37,6 @@
 
                             </tr>
                             <tr>
-                                <th>#</th>
                                 <th><?php echo lang("banner_title"); ?></th>
                                 <th><?php echo lang("sites_tableUrl"); ?></th>
                                 <th><?php echo lang("sites_tableRTotal"); ?></th>
@@ -47,7 +48,7 @@
                             <?php
                             foreach ($sites as $site) {
                                 echo "<tr>
-                                                <td id='updateSite_siteID_" . $site["websites_id"] . "' >" . $site["websites_id"] . "</td>
+                                                <td  style='display:none' id='updateSite_siteID_" . $site["websites_id"] . "' >" . $site["websites_id"] . "</td>
                                                 <td id='updateSite_title_" . $site["websites_id"] . "'>" . substr($site["url_title"], 0, 15) . "</td>
                                                 <td id='updateSite_url_" . $site["websites_id"] . "'>" . substr(preg_replace('#^https?://#', '', rtrim($site["url"], '/')), 0, 20) . "</td>
                                         
@@ -77,12 +78,10 @@
                 <p style="text-align: center">
                    <b>468x60</b>
                 </p>
-                <p style="text-align: center">
-                    <script language="javascript" src="<?php echo base_url() ?>bannerexchange/Call/468x60/<?php echo $userid ?>"></script>
-                </p>
-
-                <textarea style="margin-bottom: 10px" class="col-md-12" rows="3"> <!--NearlyWeb Banner--><script language="javascript" src="<?php echo base_url() ?>BannerExchange/Call/468x60/<?php echo $userid ?>"></script>
-                    <!--NearlyWeb Banner--> </textarea>
+                <p style="text-align: center"><!--NearlyWeb Banner--> <script language="javascript" src="<?php echo base_url() ?>BannerExchange/Call/468x60/<?php echo $userid ?>"></script></p>
+<p>
+<textarea id="code_editor_demo_1"><!--NearlyWeb Banner--> <script language="javascript" src="<?php echo base_url() ?>BannerExchange/Call/468x60/<?php echo $userid ?>"></script>
+                    </textarea></p>
 
             </div>
 
