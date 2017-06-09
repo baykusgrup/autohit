@@ -20,6 +20,16 @@ Class User extends CI_Model
 
     }
 
+    function controllbyEmail($username,$email){
+
+        $_SQL = "SELECT * FROM users WHERE username='".$username."' or email='".$email."'";
+
+
+        $query = $this->db->query($_SQL);
+        return $query->result_array();
+
+    }
+
     function getAllUserInfobyRefCode($refCode){
         $this -> db -> select('user_id, e_mail AS email');
         $this -> db -> where('referance_code', $refCode);
