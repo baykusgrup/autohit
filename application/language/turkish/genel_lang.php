@@ -50,9 +50,9 @@ $lang["Seconds"] = "Saniye";
 $lang["LinkExchange"] = "Link Exchange";
 $lang["BannerExchange"] = "Banner Değişim";
 
-$lang["AutoBacklink"] = "Auto Backlink";
-$lang["MyInfo"] = "My Info";
-$lang["CodeEditor"] = "Code Editor";
+$lang["AutoBacklink"] = "Oto Backlink";
+$lang["MyInfo"] = "Bilgilerim";
+$lang["CodeEditor"] = "Kod Editör";
 
 $lang["Auto_Surf"] = "Auto Surf";
 $lang["Banner_Exchange"] = "Banner Değişim";
@@ -109,7 +109,7 @@ $lang["home_home_be"] = "
 $lang["home_what_be"] = "<h2>Nedir?</h2>
                 <p>NearlyWeb kısaca sen benim reklamımı gösteriyorsan bende senin reklamını gösteririm mantığıyla çalışmaktadır.</p>";
 $lang["home_how_be"] = "<h3>Nasıl Çalışır ?</h3>
-                <p>BannerExchange Sayfasındaki HTML kodunu eklerseniz, reklam değişim ağına dahil olursunuz. Ne kadar çok gösterimde bulunursanız, sizin reklamınıza o kadar çok sayıda gösterilir. Ücretsiz Banner Değişim ağına hoş geldiniz.Reklam aşağıdaki gibi bir görüntüye sahip olacaktır.</p> <center><script language=\"javascript\" src=\"http://nearlyweb.com/BannerExchange/Call/468x60/2\"></script></center> ";
+                <p>BannerExchange Sayfasındaki HTML kodunu eklerseniz, reklam değişim ağına dahil olursunuz. Ne kadar çok gösterimde bulunursanız, sizin reklamınıza o kadar çok sayıda gösterilir. Ücretsiz Banner Değişim ağına hoş geldiniz.Reklam aşağıdaki gibi bir görüntüye sahip olacaktır.</p> <center><script language=\"javascript\" src=\"https://nearlyweb.com/BannerExchange/Call/468x60/2\"></script></center> ";
 $lang["home_diff_be"] = "<h3>Özellikler?</h3>
                 <ul style=\"margin-left: -25px;\">
                     <li>Ziyaretçi, frame içinde olmaksızın doğrudan bir bağlantı gönderir.</li>

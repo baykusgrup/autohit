@@ -107,7 +107,7 @@ $lang["home_home_be"] = "
 $lang["home_what_be"] = "<h2>What is?</h2>
                 <p>NearlyWeb  idea is If you show my banner i will show yours...</p>";
 $lang["home_how_be"] = "<h3>How it works ?</h3>
-                <p>If you add the HTML code on BannerExchange Page, you will be included in the ad exchange network. The more impressions you have, the more numerous you will be shown to your ad as well. Welcome to the free exchange network. Add will be like bottom</p><center><script language=\"javascript\" src=\"http://nearlyweb.com/BannerExchange/Call/468x60/2\"></script></center>";
+                <p>If you add the HTML code on BannerExchange Page, you will be included in the ad exchange network. The more impressions you have, the more numerous you will be shown to your ad as well. Welcome to the free exchange network. Add will be like bottom</p><center><script language=\"javascript\" src=\"https://nearlyweb.com/BannerExchange/Call/468x60/2\"></script></center>";
 $lang["home_diff_be"] = "<h3>Features and Features?</h3>
                 <ul style=\"margin-left: -25px;\">
                     <li>The visitor sends a direct link without opening the frame.</li>

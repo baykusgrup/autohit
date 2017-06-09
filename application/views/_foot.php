@@ -148,10 +148,6 @@
         type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/global/plugins/backstretch/jquery.backstretch.min.js?vLogin"
         type="text/javascript"></script>
-<script src="<?php echo base_url(); ?>assets/global/plugins/codemirror/lib/codemirror.js" type="text/javascript"></script>
-<script src="<?php echo base_url(); ?>assets/global/plugins/codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
-<script src="<?php echo base_url(); ?>assets/global/plugins/codemirror/mode/htmlmixed/htmlmixed.js" type="text/javascript"></script>
-<script src="<?php echo base_url(); ?>assets/global/plugins/codemirror/mode/css/css.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 
 <!-- BEGIN THEME GLOBAL SCRIPTS -->
@@ -159,7 +155,6 @@
 <!-- END THEME GLOBAL SCRIPTS -->
 
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="<?php echo base_url(); ?>assets/pages/scripts/components-code-editors.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url(); ?>assets/pages/scripts/login-5.js?vLogin" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <!-- BEGIN THEME LAYOUT SCRIPTS -->

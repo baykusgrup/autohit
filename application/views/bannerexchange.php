@@ -80,7 +80,7 @@
                 </p>
                 <p style="text-align: center"><!--NearlyWeb Banner--> <script language="javascript" src="<?php echo base_url() ?>BannerExchange/Call/468x60/<?php echo $userid ?>"></script></p>
 <p>
-<textarea id="code_editor_demo_1"><!--NearlyWeb Banner--> <script language="javascript" src="<?php echo base_url() ?>BannerExchange/Call/468x60/<?php echo $userid ?>"></script>
+<textarea class="col-md-12"><!--NearlyWeb Banner--> <script language="javascript" src="<?php echo base_url() ?>BannerExchange/Call/468x60/<?php echo $userid ?>"></script>
                     </textarea></p>
 
             </div>

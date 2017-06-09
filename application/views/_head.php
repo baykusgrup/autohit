@@ -40,7 +40,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         if ($_SERVER['SERVER_NAME'] === '127.0.0.1') {
             echo 'var base_url = "http://127.0.0.1/autohit";';
         } else {
-            echo 'var base_url = "http://nearlyweb.com";';
+            echo 'var base_url = "https://nearlyweb.com";';
         }
         ?>
     </script>
@@ -73,12 +73,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php
     } else {
         ?> <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <link href="<?php echo base_url(); ?>assets/global/plugins/codemirror/lib/codemirror.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url(); ?>assets/global/plugins/codemirror/theme/neat.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url(); ?>assets/global/plugins/codemirror/theme/ambiance.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url(); ?>assets/global/plugins/codemirror/theme/material.css" rel="stylesheet" type="text/css" />
-        <link href="<?php echo base_url(); ?>assets/global/plugins/codemirror/theme/neo.css" rel="stylesheet" type="text/css" />
-        <!-- END PAGE LEVEL PLUGINS -->
+      <!-- END PAGE LEVEL PLUGINS -->
         <?php
     }
     ?>
@@ -217,12 +212,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </a>
                             <ul class="dropdown-menu dropdown-menu-default">
                                 <li>
-                                    <a href="<?php echo base_url() ?>Account">
+                                    <a href="<?php echo base_url() ?>account">
                                         <i class="icon-home"></i> <?php echo lang("MyAccount"); ?> </a>
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="<?php echo base_url() ?>VerifyLogin/sessionDestroy">
+                                    <a href="<?php echo base_url() ?>verifyLogin/sessionDestroy">
                                         <i class="icon-key"></i> <?php echo lang("Logout"); ?> </a>
                                 </li>
                             </ul>
@@ -277,13 +272,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <h3 class="uppercase"><?php echo lang("WelcomeSite"); ?></h3>
                             </li>
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>Login" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>login" class="nav-link nav-toggle">
                                     <i class="icon-settings"></i>
                                     <span class="title"><?php echo lang("Login"); ?></span>
                                 </a>
                             </li>
                             <li class="nav-item  ">
-                                <a href="<?php echo base_url() ?>Register" class="nav-link nav-toggle">
+                                <a href="<?php echo base_url() ?>register" class="nav-link nav-toggle">
                                     <i class="icon-user"></i>
                                     <span class="title"><?php echo lang("Register"); ?></span>
                                 </a>

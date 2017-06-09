@@ -256,7 +256,7 @@
         if (pass == controll_pass && pass != "") {
             $.ajax({
                 type: "POST",
-                url: base_url + "/index.php/Account/changePassword",
+                url: base_url + "/account/changepassword",
                 data: dataString,
                 cache: false,
                 success: function (result) {
@@ -297,7 +297,7 @@
         if (username != "") {
             $.ajax({
                 type: "POST",
-                url: base_url + "/index.php/Account/changeUsername",
+                url: base_url + "/account/changeusername",
                 data: dataString,
                 cache: false,
                 success: function (result) {
@@ -326,7 +326,7 @@
         if (email != "") {
             $.ajax({
                 type: "POST",
-                url: base_url + "/index.php/Account/changeEmail",
+                url: base_url + "/account/changeEmail",
                 data: dataString,
                 cache: false,
                 success: function (result) {
