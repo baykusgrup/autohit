@@ -23,16 +23,20 @@ Class Sites_model extends CI_Model
         return $query->result_array();
 
     }
-
+    /*SELECT w.`websites_id`,w.`url_title`,w.`url`,w.`url_img`,w.`banner_logo`,w.`visit_cost`,pd.`durations_sec` FROM websitesbanner w
+                      inner join prt_durations pd on pd.`record_status`=1 and pd.`prt_durations_id`= w.`duration_sec_id`
+                        where w.record_status=1
+                        and w.user_id!=".$user_id."
+                      and  w.`websites_id` NOT IN (select ub.blocked_webSite_id
+                                                   from users_blocked ub
+                                                   where ub.record_status=1
+                                                   and ub.blocked_webSite_id=w.`websites_id`)
+                      ORDER BY RAND() LIMIT 1*/
     function getBannerFromDatabaseNotBlockedAndNotMySites($user_id){
-        $_SQL = "SELECT w.`websites_id`,w.`url_title`,w.`url`,w.`url_img`,w.`banner_logo`,w.`visit_cost`,pd.`durations_sec` FROM websitesbanner w 
-				  inner join prt_durations pd on pd.`record_status`=1 and pd.`prt_durations_id`= w.`duration_sec_id`
+        $_SQL = "SELECT DISTINCT w.`websites_id`,w.`url_title`,w.`url`,w.`url_img`,w.`banner_logo`,w.`visit_cost` FROM websitesbanner w 
               	  where w.record_status=1 
               	  and w.user_id!=".$user_id."
-                  and  w.`websites_id` NOT IN (select ub.blocked_webSite_id 
-                                               from users_blocked ub 
-                                               where ub.record_status=1 
-                                               and ub.blocked_webSite_id=w.`websites_id`)
+                  and  w.`websites_id`
                   ORDER BY RAND() LIMIT 1";
 
 
