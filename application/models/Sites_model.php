@@ -33,10 +33,12 @@ Class Sites_model extends CI_Model
                                                    and ub.blocked_webSite_id=w.`websites_id`)
                       ORDER BY RAND() LIMIT 1*/
     function getBannerFromDatabaseNotBlockedAndNotMySites($user_id){
-        $_SQL = "SELECT DISTINCT w.`websites_id`,w.`url_title`,w.`url`,w.`url_img`,w.`banner_logo`,w.`visit_cost` FROM websitesbanner w 
-              	  where w.record_status=1 
+        $_SQL = "SELECT DISTINCT w.`websites_id`,w.`url_title`,w.`url`,w.`url_img`,w.`banner_logo`,w.`visit_cost` FROM websitesbanner w
+  inner join user_wallet uw on uw.user_id=w.user_id
+              	  where w.record_status=1
               	  and w.user_id!=".$user_id."
                   and  w.`websites_id`
+  and uw.banner_credits > 0
                   ORDER BY RAND() LIMIT 1";
 
 
@@ -131,7 +133,8 @@ Class Sites_model extends CI_Model
 
     }
     function getWalletByUserID($user_id){
-        $_SQL = "SELECT user_wallet_id,user_id,total_credits,earn_credits,wasted_credits,banner_credits  FROM user_wallet WHERE record_status=1 and user_id=".$user_id;
+        $_SQL = "SELECT user_wallet_id,user_id,total_credits,earn_credits,wasted_credits,banner_credits  
+FROM user_wallet WHERE record_status=1 and user_id=".$user_id;
 
 
         $query = $this->db->query($_SQL);

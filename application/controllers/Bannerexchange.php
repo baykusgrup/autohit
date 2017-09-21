@@ -182,6 +182,9 @@ class BannerExchange extends CI_Controller
         $data["userid"] = $userid;
         $data["visitsite"] = $this->sites_model->getBannerFromDatabaseNotBlockedAndNotMySites($userid);
 
+
+
+
         $this->GiveCreditToShower($userid);
         $this->TakeCreditFromShowed($data["visitsite"][0]["websites_id"]);
         $this->RecordShowed($data["visitsite"][0]["websites_id"]);
@@ -225,6 +228,7 @@ class BannerExchange extends CI_Controller
 
         $wallet_id = $userWallet[0]["user_wallet_id"];
 
+
         $userWallet[0]["banner_credits"] = $userWallet[0]["banner_credits"] - 1;
 
         $dataSites = array();
@@ -258,12 +262,12 @@ class BannerExchange extends CI_Controller
 
         $user_id = $userWallet[0]["user_id"];
 
-        $userDetail = $this->sites_model->getMyBannerByUserIDAllWithVisits($user_id);
+        //$userDetail = $this->sites_model->getMyBannerByUserIDAllWithVisits($user_id);
 
         $dataSites = array();
         $dataSites["user_id"] = $userWallet[0]["user_id"];
         $dataSites["ip"] = $_SERVER["REMOTE_ADDR"];
-        $dataSites["website_id"] = $userDetail[0]["websites_id"];
+        $dataSites["website_id"] = $siteid;
         $dataSites["surf_date"] = $dateTime;
         $dataSites["record_status"] = "1";
         $dataSites["insert_date"] = $dateTime;
