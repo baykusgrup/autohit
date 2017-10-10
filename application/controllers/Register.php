@@ -29,64 +29,71 @@ class Register extends CI_Controller
     {
         $dateTime = date('Y-m-d H:i:s');
 
-        $dataUser = array();
-        $dataUser["username"] = $this->input->post("username_member");
-        $dataUser["email"] = $this->input->post("e_mail");
-        $dataUser["password"] = $this->input->post("password");
-        $dataUser["password_md5"] = md5($this->input->post("password"));
+        $user_name= $this->input->post("username_member");
+        $e_mail = $this->input->post("e_mail");
+        $useryok=$this->user->controllbyEmail($user_name, $e_mail);
+        if($useryok==null){
 
-        $dataUser["record_status"] = 1;
-        $dataUser["insert_date"] = $dateTime;
-        $dataUser["insert_user"] = 0;
-        $dataUser["update_date"] = $dateTime;
-        $dataUser["update_user"] = 0;
+            $dataUser = array();
+            $dataUser["username"] = $this->input->post("username_member");
+            $dataUser["email"] = $this->input->post("e_mail");
+            $dataUser["password"] = $this->input->post("password");
+            $dataUser["password_md5"] = md5($this->input->post("password"));
 
-        $user_id = $this->generalTables_model->insertTables("users", $dataUser);
+            $dataUser["record_status"] = 1;
+            $dataUser["insert_date"] = $dateTime;
+            $dataUser["insert_user"] = 0;
+            $dataUser["update_date"] = $dateTime;
+            $dataUser["update_user"] = 0;
+            $user_id = $this->generalTables_model->insertTables("users", $dataUser);
 
-        if ($user_id != 0) {
-            $dataDetail = array();
-            $dataDetail["user_id"] = $user_id;
-            $dataDetail["e_mail"] = $this->input->post("e_mail");
-            $dataDetail["registered_date"] = $dateTime;
-            $dataDetail["view_rate"] = 0.8;
-            $dataDetail["referance_code"] = uniqid();
+            if ($user_id != 0) {
+                $dataDetail = array();
+                $dataDetail["user_id"] = $user_id;
+                $dataDetail["e_mail"] = $this->input->post("e_mail");
+                $dataDetail["registered_date"] = $dateTime;
+                $dataDetail["view_rate"] = 0.8;
+                $dataDetail["referance_code"] = uniqid();
 
-            if ($this->input->post("referral") != "") {
-                $dataDetail["referance_code_to"] = $this->input->post("referral");
-            } else {
-                $dataDetail["referance_code_to"] = 0;
+                if ($this->input->post("referral") != "") {
+                    $dataDetail["referance_code_to"] = $this->input->post("referral");
+                } else {
+                    $dataDetail["referance_code_to"] = 0;
+                }
+
+                $dataDetail["record_status"] = 1;
+                $dataDetail["insert_date"] = $dateTime;
+                $dataDetail["insert_user"] = 0;
+                $dataDetail["update_date"] = $dateTime;
+                $dataDetail["update_user"] = 0;
+
+                $userDetail_id = $this->generalTables_model->insertTables("users_detail", $dataDetail);
+
             }
 
-            $dataDetail["record_status"] = 1;
-            $dataDetail["insert_date"] = $dateTime;
-            $dataDetail["insert_user"] = 0;
-            $dataDetail["update_date"] = $dateTime;
-            $dataDetail["update_user"] = 0;
-
-            $userDetail_id = $this->generalTables_model->insertTables("users_detail", $dataDetail);
-
-        }
-
-        if ($user_id != 0) {
-            $dataWallet = array();
-            $dataWallet["user_id"] = $user_id;
-            $dataWallet["total_credits"] = 0;
-            $dataWallet["earn_credits"] = 0;
-            $dataWallet["wasted_credits"] = 0;
+            if ($user_id != 0) {
+                $dataWallet = array();
+                $dataWallet["user_id"] = $user_id;
+                $dataWallet["total_credits"] = 0;
+                $dataWallet["earn_credits"] = 0;
+                $dataWallet["wasted_credits"] = 0;
 
 
-            $dataWallet["record_status"] = 1;
-            $dataWallet["insert_date"] = $dateTime;
-            $dataWallet["insert_user"] = 0;
-            $dataWallet["update_date"] = $dateTime;
-            $dataWallet["update_user"] = 0;
+                $dataWallet["record_status"] = 1;
+                $dataWallet["insert_date"] = $dateTime;
+                $dataWallet["insert_user"] = 0;
+                $dataWallet["update_date"] = $dateTime;
+                $dataWallet["update_user"] = 0;
 
-            $wallet_id = $this->generalTables_model->insertTables("user_wallet", $dataWallet);
+                $wallet_id = $this->generalTables_model->insertTables("user_wallet", $dataWallet);
+                echo $user_id;
+            }
 
+        }else{
+           echo "0";
         }
 
 
-        return $user_id;
 
     }
 

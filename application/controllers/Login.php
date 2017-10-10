@@ -33,7 +33,11 @@ class Login extends CI_Controller
     {
         $this->load->helper(['language', 'lang', 'url']);
         dilSecici($gelen);
-        header("Location:" . $_SERVER['HTTP_REFERER'] . "");
+        if($_SERVER['HTTP_REFERER']==NULL){
+            redirect("Home");
+        }else{
+            header("Location:" . $_SERVER['HTTP_REFERER'] . "");
+        }
     }
 
 }

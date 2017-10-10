@@ -1,4 +1,9 @@
 <?php
+$server_url = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+if ($server_url !== strtolower($server_url))
+{
+    header('Location: http://' . strtolower($server_url), TRUE, 301);
+}
 /**
  * CodeIgniter
  *
