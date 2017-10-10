@@ -20,16 +20,6 @@ Class User extends CI_Model
 
     }
 
-    function controllbyEmail($username,$email){
-
-        $_SQL = "SELECT * FROM users WHERE username='".$username."' or email='".$email."'";
-
-
-        $query = $this->db->query($_SQL);
-        return $query->result_array();
-
-    }
-
     function getAllUserInfobyRefCode($refCode){
         $this -> db -> select('user_id, e_mail AS email');
         $this -> db -> where('referance_code', $refCode);
@@ -96,13 +86,12 @@ Class User extends CI_Model
         $data["ip"] = $_SERVER["REMOTE_ADDR"];
         $data["tarayiciversiyonu"] = $_SERVER["HTTP_USER_AGENT"];
         $data["serverversiyonu"] = $_SERVER["SERVER_SOFTWARE"];
+        $data["scriptdili"] = $_SERVER["GATEWAY_INTERFACE"];
         $data["baglantituru"] = $_SERVER["HTTP_CONNECTION"];
         $data["serveradi"] = $_SERVER["SERVER_NAME"];
         $data["kodlamaturu"] = $_SERVER["HTTP_ACCEPT_ENCODING"];
         $data["serverportu"] = $_SERVER["SERVER_PORT"];
-
-        if (isset($_SERVER['GATEWAY_INTERFACE'])) { $data["scriptdili"] = $_SERVER["GATEWAY_INTERFACE"];}
-        if (isset($_SERVER['HTTP_REFERER'])) { $data["oncekisayfa"] = $_SERVER["HTTP_REFERER"];}
+        $data["oncekisayfa"] = $_SERVER["HTTP_REFERER"];
 
         return $data;
 

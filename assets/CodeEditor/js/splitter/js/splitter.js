@@ -147,10 +147,10 @@
         });
         self.bind('splitter.resize', function(e) {
             var pos = self.position();
-            if (self.orientation == 'vertical' &&
+            if (self.orientation == 'vertical' && 
                 pos > self.width()) {
                 pos = self.width() - self.limit-1;
-            } else if (self.orientation == 'horizontal' &&
+            } else if (self.orientation == 'horizontal' && 
                        pos > self.height()) {
                 pos = self.height() - self.limit-1;
             }
@@ -189,7 +189,7 @@
                 $(".CodeMirror-scroll").css("overflow-y","hidden");
                 if (splitter_id !== null) {
                     //** **/
-
+                    
                     $("#previewmask").css("display","block");
                     $("#previewoutputsize").fadeIn("fast");
 
@@ -230,7 +230,7 @@
                 codeeditorjs.setSize('100%', '100%');
 
                 if (current_splitter !== null) {
-
+                    
                 /**/
 
 

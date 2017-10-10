@@ -50,12 +50,6 @@ class logProcess_model extends CI_Model {
             case "user_wallet";
                 $tableid="user_wallet_id";
                 break;
-            case "websitesbanner";
-                $tableid="websites_id";
-                break;
-            case "static_banner_info";
-                $tableid="static_banner_info_id";
-                break;
             default:
                 echo "Hata";
                 break;

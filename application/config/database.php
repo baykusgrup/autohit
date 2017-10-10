@@ -102,9 +102,9 @@ if ($_SERVER['SERVER_NAME'] === '127.0.0.1') {
     $db['default'] = array(
         'dsn' => '',
         'hostname' => 'localhost',
-        'username' => 'nea4752_web',
-        'password' => 'zT6Lw7Hf@1',
-        'database' => 'nea4752_web',
+        'username' => 'vt',
+        'password' => 'Dp5K!ZC@Jsr3',
+        'database' => 'nearlyweb',
         'dbdriver' => 'mysqli',
         'dbprefix' => '',
         'pconnect' => FALSE,

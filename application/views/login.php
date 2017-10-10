@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-md-12 login-container bs-reset">
                 <div class="login-content">
                     <?php echo validation_errors(); ?>
-                    <?php echo form_open('index.php/verifyLogin', array('class' => 'login-form')); ?>
+                    <?php echo form_open('index.php/VerifyLogin', array('class' => 'login-form')); ?>
 
                     <div class="alert alert-danger display-hide">
                         <button class="close" data-close="alert"></button>
@@ -101,7 +101,7 @@ if (isset($js_function)) {
         var dataString = "email=" + $.trim($("#email_forgetpwd").val());
         $.ajax({
             type: "POST",
-            url: base_url + "/index.php/berifylogin/getnewpassword/",
+            url: base_url + "/index.php/VerifyLogin/getNewPassword/",
             data: dataString,
             cache: false,
 

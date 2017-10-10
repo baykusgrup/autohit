@@ -13,8 +13,8 @@ $lang["Saved"] = "Saved";
 //sidebar, head, foot
 
 
-$lang["title"] = "NearlyWeb | Banner exchange, This auto exchange can help you to increase your rankings.";
-$lang["description"] = "Banner, Reklam değişimi bugünün en popüler ücretsiz tanıtım araçlarından biridir. Sitenize iyi bir miktar trafik çekebilirsiniz. Yararlı bir SEO aracı.";
+$lang["title"] = "NearlyWeb | Autosurf, This autosurf can help you to increase your rankings.";
+$lang["description"] = "Autosurf, get free geo-targeted visitors to your video, website or blog. This autosurf can help you to increase your rankings. Helpful SEO tool.";
 
 $lang["MyAccount"] = "My Account";
 $lang["AboutSite"] = "ABOUT SITE";
@@ -41,33 +41,14 @@ $lang["WeeklyTop"] = "Weekly Top";
 $lang["MonthlyTop"] = "Monthly Top";
 $lang["SeeMore"] = "See More";
 
-$lang["NearlyWebBy"] = "NearlyWeb";
+$lang["NearlyWebBy"] = "NearlyWeb By";
 $lang["PageRenderedIn"] = "Page Rendered In";
 $lang["Seconds"] = "Seconds";
 
 $lang["LinkExchange"] = "Link Exchange";
-$lang["BannerExchange"] = "Banner Exchange";
-
 $lang["AutoBacklink"] = "Auto Backlink";
 $lang["MyInfo"] = "My Info";
 $lang["CodeEditor"] = "Code Editor";
-
-$lang["Auto_Surf"] = "Auto Surf";
-$lang["Banner_Exchange"] = "Banner Exchange";
-$lang["MyBanner"] = "Banners";
-$lang["MyBannerCode"] = "Banner Code";
-$lang["MyBanners"] = "My Banners";
-$lang["BannerCredit"] = "credit";
-$lang["AddBanner"] = "Add Banner";
-$lang["Banner_text"] = "If you add the HTML code below to your site, you will be included in the ad exchange network. The more impressions you have, the more numerous you will be shown to your ad as well. Welcome to the free exchange network.";
-$lang["banner_title"] = "Site Title";
-
-$lang["add_site_detail"] = "Add Site Detail";
-$lang["upload"] = "Upload";
-$lang["banner_status"] = "Banner Status :";
-$lang["select_status"] = "Select Status";
-$lang["passive"] = "Passive";
-$lang["active"] = "Active";
 
 //Home
 
@@ -95,28 +76,14 @@ $lang["home_extra"] = "<p>Extra Services are now available for everyone. With go
                     </li>
                     <li><a href=\"AutoBacklink\">Auto Backlink</a>: This is a system that gives you a certain number of automatic backlinks after you've uploaded your site's link.
                     </li>
+                    <li><a href=\"LinkExchange\">Link Exchange</a>: When you add the code on the page to your site, a dating system will occur and you will get a link from NearlyWeb.com.
+                    </li>
                     <li><a href=\"CodeEditor\">Code Editor</a> The platform where you can actively try and modify your Html, Css, Javascript codes.
                     </li>
                 </ul>";
 
-$lang["home_home_be"] = "
-    <p style=\"color: #0a6aa1;\">Free Banner Exchange, Ad Exchange Service available ^</p>
-               <p>You can <a href='Register'>register</a> and start get visit to your sites until now :)</p><hr />
-               ";
-
-$lang["home_what_be"] = "<h2>What is?</h2>
-                <p>NearlyWeb  idea is If you show my banner i will show yours...</p>";
-$lang["home_how_be"] = "<h3>How it works ?</h3>
-                <p>If you add the HTML code on BannerExchange Page, you will be included in the ad exchange network. The more impressions you have, the more numerous you will be shown to your ad as well. Welcome to the free exchange network. Add will be like bottom</p><center><script language=\"javascript\" src=\"https://nearlyweb.com/BannerExchange/Call/468x60/2\"></script></center>";
-$lang["home_diff_be"] = "<h3>Features and Features?</h3>
-                <ul style=\"margin-left: -25px;\">
-                    <li>The visitor sends a direct link without opening the frame.</li>
-                    <li>It's a fast and fluid system, control is yours.</li>
-                </ul>";
-
 //Login
 
-$lang["user"]= "USER";
 $lang["login_Login"] = "Login";
 $lang["login_Enter_username_and_password"] = "Enter any username and password.";
 $lang["login_Remember_me"] = "Remember me";
