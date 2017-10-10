@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3d98c8e-0fdb-45ac-818a-3c5cfe2682d5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/Sites.php" afterPath="$PROJECT_DIR$/application/controllers/Sites.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/sites.php" afterPath="$PROJECT_DIR$/application/views/sites.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Sites.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Sites.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="543">
+              <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+              <folding>
+                <marker date="1507634852898" expanded="true" signature="4545:6044" ph="..." />
+                <marker date="1507634852898" expanded="true" signature="5038:5051" ph="..." />
+                <marker date="1507634852898" expanded="true" signature="5335:5347" ph="..." />
+                <marker date="1507634852898" expanded="true" signature="5662:5994" ph="..." />
+                <marker date="1507634852898" expanded="true" signature="5877:5989" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sites.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/sites.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="543">
+              <caret line="471" column="0" lean-forward="true" selection-start-line="471" selection-start-column="0" selection-end-line="471" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <marker date="1507634852770" expanded="true" signature="5421:6969" ph="..." />
+                <marker date="1507634852770" expanded="false" signature="5959:5972" ph="..." />
+                <marker date="1507634852770" expanded="false" signature="6256:6268" ph="..." />
+                <marker date="1507634852770" expanded="true" signature="6583:6919" ph="..." />
+                <marker date="1507634852770" expanded="true" signature="6798:6914" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>user_mo</find>
+      <find>language</find>
+      <find>lang_ignore</find>
+      <find>side</find>
+      <find>function gizle</find>
+      <find>welcome</find>
+      <find>form_validation</find>
+      <find>index.php/</find>
+      <find>dil</find>
+      <find>switch_uri</find>
+      <find>lang</find>
+      <find>lan</find>
+      <find>tr</find>
+      <find>/tr</find>
+      <find>user_lang</find>
+      <find>helper</find>
+      <find>libraries</find>
+      <find>home_what_be</find>
+      <find>show</find>
+      <find>ns2.wh24.at</find>
+      <find>getWalletByUserID</find>
+      <find>redirect</find>
+      <find>getBannerFromDatabaseNotBlockedAndNotMySites</find>
+      <find>GiveCreditToShower</find>
+      <find>getBannersInfoBySiteID</find>
+      <find>TakeCreditFromShowed</find>
+      <find>static_banner_info</find>
+      <find>RecordShowed</find>
+      <find>getMyBannerByUserIDAllWithVisits</find>
+      <find>468</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>https://nearlyweb.com/</replace>
+      <replace>https://nearlyweb.com</replace>
+      <replace>&quot;&lt;?php echo base_url(); ?&gt;</replace>
+      <replace>/</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\xampp\htdocs\autohit</dir>
+      <dir>C:\xampp\htdocs\autohit\application\controllers</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../dictionary/application/config/database.php" />
+        <option value="$PROJECT_DIR$/../sozluk/application/config/database.php" />
+        <option value="$PROJECT_DIR$/../sozluk/application/config/config.php" />
+        <option value="$PROJECT_DIR$/../sozluk/application/views/yonlendir.php" />
+        <option value="$PROJECT_DIR$/../sozluk/application/controllers/Welcome.php" />
+        <option value="$PROJECT_DIR$/../sozluk/ayar.php" />
+        <option value="$PROJECT_DIR$/../sozluk/search.php" />
+        <option value="$PROJECT_DIR$/../sozluk/application/views/sol_frame.php" />
+        <option value="$PROJECT_DIR$/../sozluk/application/views/header.php" />
+        <option value="$USER_HOME$/Downloads/CI_Language-master/CI_Language-master/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/application/controllers/About.php" />
+        <option value="$PROJECT_DIR$/application/language/english/genel_lang.php" />
+        <option value="$PROJECT_DIR$/application/language/turkish/genel_lang.php" />
+        <option value="$PROJECT_DIR$/application/views/About.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Codeeditor.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Account.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Blocked.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Buy.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Earn.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Earnfast.php" />
+        <option value="$PROJECT_DIR$/application/controllers/EN.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Help.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Linkexchange.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Refferal.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Statistics.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Top.php" />
+        <option value="$PROJECT_DIR$/application/views/login2.php" />
+        <option value="$PROJECT_DIR$/application/controllers/VerifyLogin.php" />
+        <option value="$PROJECT_DIR$/application/views/login.php" />
+        <option value="$PROJECT_DIR$/application/config/hooks.php" />
+        <option value="$USER_HOME$/Downloads/CodeIgniter-Language-Switch-master/CodeIgniter-Language-Switch-master/config/language.php" />
+        <option value="$PROJECT_DIR$/application/config/language.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Register.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Login.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Myinfo.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Autobacklink.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Language.php" />
+        <option value="$PROJECT_DIR$/application/hooks/Language.php" />
+        <option value="$PROJECT_DIR$/application/views/_head.php" />
+        <option value="$PROJECT_DIR$/application/controllers/LanguageSwitcher.php" />
+        <option value="$PROJECT_DIR$/application/config/autoload.php" />
+        <option value="$PROJECT_DIR$/application/config/kitlang.php" />
+        <option value="$PROJECT_DIR$/application/core/MY_Lang.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Home.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/models/Sites_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Bannerexchange.php" />
+        <option value="$PROJECT_DIR$/application/config/database.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Sites.php" />
+        <option value="$PROJECT_DIR$/application/views/sites.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-128" />
+    <option name="y" value="269" />
+    <option name="width" value="1378" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="autohit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autohit" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="autohit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autohit" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="autohit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autohit" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="autohit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autohit" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\autohit\application\controllers" />
+      <recent name="C:\xampp\htdocs\autohit\application\hooks" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\autohit\system\language" />
+      <recent name="C:\xampp\htdocs\autohit\application\controllers" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3d98c8e-0fdb-45ac-818a-3c5cfe2682d5" name="Default" comment="" />
+      <created>1496260065357</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1496260065357</updated>
+      <workItem from="1496260066527" duration="479000" />
+      <workItem from="1497013483068" duration="14000" />
+      <workItem from="1497013507073" duration="15000" />
+      <workItem from="1497013535011" duration="8817000" />
+      <workItem from="1497090963550" duration="2115000" />
+      <workItem from="1497107004768" duration="1942000" />
+      <workItem from="1497178022848" duration="612000" />
+      <workItem from="1497608258685" duration="2213000" />
+      <workItem from="1497636140749" duration="1442000" />
+      <workItem from="1497942982186" duration="1392000" />
+      <workItem from="1498027592914" duration="599000" />
+      <workItem from="1498031272551" duration="9000" />
+      <workItem from="1501229512246" duration="1938000" />
+      <workItem from="1501246644013" duration="5123000" />
+      <workItem from="1501394552789" duration="6583000" />
+      <workItem from="1501414564599" duration="9530000" />
+      <workItem from="1501443412966" duration="2008000" />
+      <workItem from="1501502349358" duration="11000" />
+      <workItem from="1504615413118" duration="333000" />
+      <workItem from="1504686822262" duration="574000" />
+      <workItem from="1505928217814" duration="778000" />
+      <workItem from="1505989502868" duration="5799000" />
+      <workItem from="1505995340423" duration="621000" />
+      <workItem from="1506684586543" duration="1539000" />
+      <workItem from="1506702750361" duration="10000" />
+      <workItem from="1506932529437" duration="607000" />
+      <workItem from="1507020236776" duration="51000" />
+      <workItem from="1507021702747" duration="95000" />
+      <workItem from="1507617839664" duration="1710000" />
+      <workItem from="1507634772102" duration="19000" />
+      <workItem from="1507634811753" duration="45000" />
+    </task>
+    <task id="LOCAL-00001" summary="news">
+      <created>1497015752970</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1497015752970</updated>
+    </task>
+    <task id="LOCAL-00002" summary="news 2">
+      <created>1497016721593</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1497016721593</updated>
+    </task>
+    <task id="LOCAL-00003" summary="news 3">
+      <created>1497018719819</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1497018719819</updated>
+    </task>
+    <task id="LOCAL-00004" summary="news 4">
+      <created>1497019589213</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1497019589213</updated>
+    </task>
+    <task id="LOCAL-00005" summary="banner exchange mantık düzeltildi">
+      <created>1505995298663</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1505995298664</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="57023000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34920636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32961783" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="news" />
+    <MESSAGE value="news 2" />
+    <MESSAGE value="news 3" />
+    <MESSAGE value="news 4" />
+    <MESSAGE value="banner exchange mantık düzeltildi" />
+    <option name="LAST_COMMIT_MESSAGE" value="banner exchange mantık düzeltildi" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Seo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Statistics.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/TR.php" />
+    <entry file="file://$PROJECT_DIR$/application/controllers/Top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/login2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="100" column="30" lean-forward="false" selection-start-line="100" selection-start-column="30" selection-end-line="100" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/language/english/form_validation_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/language/turkish/index.html" />
+    <entry file="file://$PROJECT_DIR$/application/controllers/VerifyLogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="121" column="43" lean-forward="false" selection-start-line="121" selection-start-column="43" selection-end-line="121" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/About.php" />
+    <entry file="file://$PROJECT_DIR$/application/views/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="15" column="52" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/CI_Language-master/CI_Language-master/application/config/routes.php" />
+    <entry file="file://$USER_HOME$/Downloads/CI_Language-master/CI_Language-master/application/config/config.php" />
+    <entry file="file://$USER_HOME$/Downloads/CodeIgniter-Language-Switch-master/CodeIgniter-Language-Switch-master/config/autoload.php" />
+    <entry file="file://$USER_HOME$/Downloads/CodeIgniter-Language-Switch-master/CodeIgniter-Language-Switch-master/config/hooks.php" />
+    <entry file="file://$USER_HOME$/Downloads/CodeIgniter-Language-Switch-master/CodeIgniter-Language-Switch-master/config/language.php" />
+    <entry file="file://$PROJECT_DIR$/application/config/language.php" />
+    <entry file="file://$PROJECT_DIR$/application/config/hooks.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/MyInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/AutoBacklink.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/LinkExchange.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Register.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Distrubition.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="48" lean-forward="false" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/_head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="144" column="96" lean-forward="false" selection-start-line="144" selection-start-column="96" selection-end-line="144" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/CI_Language-master/CI_Language-master/application/config/routes.php" />
+    <entry file="file://$USER_HOME$/Desktop/CI_Language-master/CI_Language-master/application/config/config.php" />
+    <entry file="file://$PROJECT_DIR$/application/controllers/LanguageSwitcher.php" />
+    <entry file="file://$USER_HOME$/Desktop/codeigniter-kitlang-master/config/autoload.php" />
+    <entry file="file://$PROJECT_DIR$/application/config/kitlang.php" />
+    <entry file="file://$PROJECT_DIR$/application/helpers/kitlang_helper.php" />
+    <entry file="file://$PROJECT_DIR$/application/helpers/lang_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/MY_url_helper.php" />
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1547">
+          <caret line="91" column="60" lean-forward="false" selection-start-line="91" selection-start-column="60" selection-end-line="91" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Config.php" />
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Lang.php" />
+    <entry file="file://$USER_HOME$/Desktop/codeigniter-minimize-url-master/application/config/routes.php" />
+    <entry file="file://$PROJECT_DIR$/application/controllers/Webpages.php" />
+    <entry file="file://$PROJECT_DIR$/application/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="29" column="1" lean-forward="false" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="51" column="36" lean-forward="false" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="31" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/english/genel_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="109" column="0" lean-forward="false" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="386" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/bannercall.php" />
+    <entry file="file://$PROJECT_DIR$/application/models/Sites_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Bannerexchange.php" />
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="93" column="27" lean-forward="true" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/bannerexchange.php" />
+    <entry file="file://$PROJECT_DIR$/application/controllers/Sites.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding>
+            <marker date="1507634852898" expanded="true" signature="4545:6044" ph="..." />
+            <marker date="1507634852898" expanded="true" signature="5038:5051" ph="..." />
+            <marker date="1507634852898" expanded="true" signature="5335:5347" ph="..." />
+            <marker date="1507634852898" expanded="true" signature="5662:5994" ph="..." />
+            <marker date="1507634852898" expanded="true" signature="5877:5989" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/sites.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="471" column="0" lean-forward="true" selection-start-line="471" selection-start-column="0" selection-end-line="471" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <marker date="1507634852770" expanded="true" signature="5421:6969" ph="..." />
+            <marker date="1507634852770" expanded="false" signature="5959:5972" ph="..." />
+            <marker date="1507634852770" expanded="false" signature="6256:6268" ph="..." />
+            <marker date="1507634852770" expanded="true" signature="6583:6919" ph="..." />
+            <marker date="1507634852770" expanded="true" signature="6798:6914" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
