@@ -92,11 +92,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         $.ajax({
             type: "POST",
-            url: base_url + "/index.php/Register/insertMember",
+            url: base_url + "/index.php/register/insertmember",
             data: dataString,
             cache: false,
             success: function (result) {
-                SuccessAlert("We added you successfull", "register_alert");
+                if(result!="0"){
+
+                    SuccessAlert("We added you successfull", "register_alert");
+
+                }else{
+
+                    WarningAlert("Your credidantals have already taken! ", "register_alert");
+                }
             }
         });
 

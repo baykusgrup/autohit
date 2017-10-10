@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class LinkExchange extends CI_Controller {
+class Autobacklink extends CI_Controller {
 
     public function index()
     {
@@ -15,7 +15,7 @@ class LinkExchange extends CI_Controller {
             $data["monthlyTop250"]= $this->statics_model->getTop250MountlyVisit();
 
             $this->load->view('_head');
-            $this->load->view('linkexchange',$data);
+            $this->load->view('autobacklink',$data);
             $this->load->view('_foot');
     }
 }

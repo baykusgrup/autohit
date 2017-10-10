@@ -12,7 +12,7 @@
         <div class="portlet-body">
             <ul style="margin-left: -25px;">
                 <li><a href="<?php echo base_url() ?>MyInfo"><?php echo lang("MyInfo"); ?></a></li>
-                <li><a href="<?php echo base_url() ?>LinkExchange"><?php echo lang("LinkExchange"); ?></a></li>
+                <!--   <li><a href="<?php echo base_url() ?>LinkExchange"><?php echo lang("LinkExchange"); ?></a></li>-->
                 <li><a href="<?php echo base_url() ?>AutoBacklink"><?php echo lang("AutoBacklink"); ?></a>
                 </li>
                 <li><a href="<?php echo base_url() ?>CodeEditor"><?php echo lang("CodeEditor"); ?></a></li>
@@ -22,7 +22,7 @@
 
     <!-- END ORDERED LISTS PORTLET-->
 
-    <!-- BEGIN ORDERED LISTS PORTLET-->
+    <!-- BEGIN ORDERED LISTS PORTLET
     <div class="portlet box blue">
         <div class="portlet-title">
             <div class="caption">
@@ -44,8 +44,8 @@
             </ul>
         </div>
     </div>
-    <!-- END ORDERED LISTS PORTLET-->
-    <!-- BEGIN UNSTYLED LISTS PORTLET-->
+     END ORDERED LISTS PORTLET-->
+    <!-- BEGIN UNSTYLED LISTS PORTLET
     <div class="portlet box yellow">
         <div class="portlet-title">
             <div class="caption">
@@ -69,9 +69,9 @@
             </ul>
         </div>
     </div>
-    <!-- END UNSTYLED LISTS PORTLET-->
+     END UNSTYLED LISTS PORTLET-->
 
-    <!-- BEGIN UNSTYLED LISTS PORTLET-->
+    <!-- BEGIN UNSTYLED LISTS PORTLET
     <div class="portlet box red">
         <div class="portlet-title">
             <div class="caption">
@@ -94,7 +94,7 @@
             </ul>
         </div>
     </div>
-    <!-- END UNSTYLED LISTS PORTLET-->
+     END UNSTYLED LISTS PORTLET-->
 
 </div>
 </div>
@@ -110,8 +110,8 @@
 <div class="container">
     <!-- BEGIN FOOTER -->
     <div class="page-footer">
-        <div class="page-footer-inner">2017 &copy; <?php echo lang("NearlyWebBy"); ?>
-            <a target="_blank" href="http://baykusgrup.com">BaykusGrup</a> | <?php echo lang("PageRenderedIn"); ?>
+        <div class="page-footer-inner">
+            Copyright © 2017 <?php echo lang("NearlyWebBy"); ?>. All Right Reserved. Made with <i class="fa fa-heart-o"></i> <a target="_blank" href="http://baykusgrup.com">BaykusGrup</a> | <?php echo lang("PageRenderedIn"); ?>
             <strong>{elapsed_time}</strong> <?php echo lang("Seconds"); ?>
         </div>
         <div class="scroll-to-top">
@@ -122,6 +122,8 @@
 </div>
 </div>
 
+
+<script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
 
 <!--[if lt IE 9]>
 <script src="<?php echo base_url() ?>assets/global/plugins/respond.min.js"></script>
@@ -163,6 +165,5 @@
 <script src="<?php echo base_url() ?>assets/layouts/global/scripts/quick-nav.min.js" type="text/javascript"></script>
 <script src="<?php echo base_url() ?>assets/v1/alert.js" type="text/javascript"></script>
 <!-- END THEME LAYOUT SCRIPTS -->
-
 </body>
 </html>

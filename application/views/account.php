@@ -121,6 +121,7 @@
                         </td>
 
                     </tr>
+                    <!--
                     <tr>
                         <td> <?php echo lang("account_ViewerRate"); ?></td>
                         <td>
@@ -170,6 +171,7 @@
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
+                    -->
                     <tr>
                         <td> <?php echo lang("account_ReferanceCode"); ?></td>
                         <td>
@@ -178,12 +180,13 @@
                                 echo "<a href=\"" . $referanceShort . "\" >" . $referanceShort . "</a>";
                             } ?>
                         </td>
-
-                        <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
+<td></td>
+                        <!-- <td width="20px" class="tooltips" data-container="body" data-placement="bottom"
                             data-original-title="<?php echo lang("account_tipReferanceCode"); ?>">
                             <span class="badge badge-primary badge-roundless"> ? </span>
-                        </td>
+                        </td>-->
                     </tr>
+                  <!--
                     <tr>
                         <td> <?php echo lang("account_CreditsByPromotion"); ?>
                         </td>
@@ -194,10 +197,13 @@
                             <span class="badge badge-primary badge-roundless"> ? </span>
                         </td>
                     </tr>
+
+                    -->
                     </tbody>
                 </table>
             </div>
         </div>
+        <!--
         <hr/>
         <div class="row">
             <div class="col-md-12">
@@ -228,7 +234,7 @@
                 </table>
             </div>
         </div>
-
+-->
     </div>
 </div>
 
@@ -250,7 +256,7 @@
         if (pass == controll_pass && pass != "") {
             $.ajax({
                 type: "POST",
-                url: base_url + "/index.php/Account/changePassword",
+                url: base_url + "/account/changepassword",
                 data: dataString,
                 cache: false,
                 success: function (result) {
@@ -291,7 +297,7 @@
         if (username != "") {
             $.ajax({
                 type: "POST",
-                url: base_url + "/index.php/Account/changeUsername",
+                url: base_url + "/account/changeusername",
                 data: dataString,
                 cache: false,
                 success: function (result) {
@@ -320,7 +326,7 @@
         if (email != "") {
             $.ajax({
                 type: "POST",
-                url: base_url + "/index.php/Account/changeEmail",
+                url: base_url + "/account/changeEmail",
                 data: dataString,
                 cache: false,
                 success: function (result) {

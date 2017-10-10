@@ -34,7 +34,7 @@
 <body style="background:#ddd">
 <form id="codeform" method="post">
     <div id="header">
-        <a style="color: wheat" href="http://127.0.0.1/autohit/"><h1 class="logoa"><span>Nearly</span>Web</h1></a>
+        <a style="color: wheat" href="<?php echo base_url() ?>"><h1 class="logoa"><span>Nearly</span>Web</h1></a>
     </div>
     <div id="widget">
         <div id="foo">
