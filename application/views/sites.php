@@ -162,7 +162,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-3">Remaining Credits :</label>
+                                    <label class="col-md-3" id='remainingCredits'>Remaining Credits :</label>
                                     <div class="col-md-9">
                                         <input type="number" min="0" class="form-control" placeholder="Enter Credits.."
                                                name="credits" id="credits"/>
@@ -354,7 +354,7 @@
     }
 
     function setUpdateSite(id) {
-
+        document.getElementById('remainingCredits').innerText = 'Remaining Credits (' + document.getElementById("i_credit").innerText + '):';
         document.getElementById("site_id").value = document.getElementById("updateSite_siteID_" + id).innerText;
         document.getElementById("site_title").value = document.getElementById("updateSite_title_" + id).innerText;
         document.getElementById("site_url").value = document.getElementById("updateSite_url_" + id).innerText;
@@ -366,6 +366,7 @@
     }
 
     function clearAddsiteForm() {
+        document.getElementById('remainingCredits').innerText = 'Remaining Credits (' + document.getElementById("i_credit").innerText + '):';
         document.getElementById("addSite_form").reset();
     }
 
