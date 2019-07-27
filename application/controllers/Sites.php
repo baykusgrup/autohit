@@ -67,7 +67,6 @@ class Sites extends CI_Controller {
             return $site_id ;
         }
 
-
     }
 
     public function updateSite()
@@ -108,10 +107,19 @@ class Sites extends CI_Controller {
 
     public function deleteSite($site_id)
     {
+        $site = $this->sites_model->getSitesInfoBySiteID($site_id);
         $user_id=$this->session->userdata("user_id");
+        $userWallet=$this->sites_model->getWalletByUserID($user_id);
+
         $this->db->where('websites_id', $site_id);
         $this->db->where('user_id', $user_id );
-        $this->db->delete('websites');
+        $delete = $this->db->delete('websites');
+
+        if($delete){
+            $dataWallet['total_credits'] = $userWallet[0]['total_credits'] + $site[0]["credits"];
+            $updateUserID = $this->generalTables_model->updateTable("user_wallet",$userWallet[0]['user_wallet_id'],$dataWallet);
+            echo  json_encode($dataWallet['total_credits'],true);
+        }
         return true;
     }
 

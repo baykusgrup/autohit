@@ -272,7 +272,7 @@
                 updateSite();
             }
         } else {
-            WarningAlert("Your URL must include 'http://' or 'https://'   ", "addSite_alert");
+            WarningAlert("Your URL must include 'http://' or 'https://'", "addSite_alert");
         }
 
 
@@ -329,7 +329,7 @@
             url: base_url + "/index.php/Sites/deleteSite/" + site_id,
             cache: false,
             success: function (result) {
-                //alert(dataString);
+                document.getElementById("i_credit").innerHTML = result;
                 SuccessAlert("We inactivated your url! ", "addSite_alert");
                 $( "#search_UserClose" ).click();
                 controllSites();
